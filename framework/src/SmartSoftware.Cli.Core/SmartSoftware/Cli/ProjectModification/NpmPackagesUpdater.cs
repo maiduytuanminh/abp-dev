@@ -118,7 +118,6 @@ public class NpmPackagesUpdater : ITransientDependency
         var fileName = Path.Combine(directoryName, ".npmrc");
         var ssRegistry = "@smartsoftware:registry=https://www.myget.org/F/ss-nightly/npm";
         var smartsoftwareRegistry = "@smartsoftware:registry=https://www.myget.org/F/ss-commercial-npm-nightly/npm";
-        var smartsoftwareRegistry = "@smartsoftware:registry=https://www.myget.org/F/ss-commercial-npm-nightly/npm";
 
         if (await NpmrcFileExistAsync(directoryName))
         {

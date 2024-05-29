@@ -13,10 +13,10 @@ using SmartSoftware;
 using SmartSoftware.Account;
 using SmartSoftware.Account.Web;
 using SmartSoftware.AspNetCore.Components.Server;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme;
-using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Components.Server.BasicTheme;
+using SmartSoftware.AspNetCore.Components.Server.BasicTheme.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using SmartSoftware.AspNetCore.Components.Web.Theming.Routing;
 using SmartSoftware.AspNetCore.Mvc;
 using SmartSoftware.AspNetCore.Mvc.Localization;
@@ -66,8 +66,8 @@ namespace MyCompanyName.MyProjectName;
     typeof(SmartSoftwareAutoMapperModule),
     typeof(SmartSoftwareSwashbuckleModule),
     typeof(SmartSoftwareAspNetCoreSerilogModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
-    typeof(SmartSoftwareAspNetCoreComponentsServerLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
+    typeof(SmartSoftwareAspNetCoreComponentsServerBasicThemeModule),
 
     // Account module packages
     typeof(SmartSoftwareAccountApplicationModule),
@@ -211,7 +211,7 @@ public class MyProjectNameModule : SmartSoftwareModule
         {
             // MVC UI
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");
@@ -220,7 +220,7 @@ public class MyProjectNameModule : SmartSoftwareModule
 
             //BLAZOR UI
             options.StyleBundles.Configure(
-                BlazorLeptonXLiteThemeBundles.Styles.Global,
+                BlazorBasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/blazor-global-styles.css");

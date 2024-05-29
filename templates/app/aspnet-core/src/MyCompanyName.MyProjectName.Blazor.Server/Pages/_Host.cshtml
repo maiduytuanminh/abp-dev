@@ -1,8 +1,8 @@
 ﻿@page "/"
 @namespace MyCompanyName.MyProjectName.Blazor.Server.Pages
 @using System.Globalization
-@using SmartSoftware.AspNetCore.Components.Web.LeptonXLiteTheme.Themes.LeptonXLite
-@using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling
+@using SmartSoftware.AspNetCore.Components.Web.BasicTheme.Themes.Basic
+@using SmartSoftware.AspNetCore.Components.Server.BasicTheme.Bundling
 @using SmartSoftware.Localization
 @using Microsoft.AspNetCore.Components.Web
 @{
@@ -18,7 +18,7 @@
     <title>MyCompanyName.MyProjectName.Blazor.Server</title>
     <base href="~/" />
     
-    <ss-style-bundle name="@BlazorLeptonXLiteThemeBundles.Styles.Global" />
+    <ss-style-bundle name="@BlazorBasicThemeBundles.Styles.Global" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body class="ss-application-layout bg-light @rtl">
@@ -36,6 +36,6 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <ss-script-bundle name="@BlazorLeptonXLiteThemeBundles.Scripts.Global" />
+    <ss-script-bundle name="@BlazorBasicThemeBundles.Scripts.Global" />
 </body>
 </html>

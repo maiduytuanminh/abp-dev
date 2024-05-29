@@ -21,7 +21,7 @@
     <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.WebAssembly\SmartSoftware.Http.Client.IdentityModel.WebAssembly.csproj" />
     <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
     <!-- </TEMPLATE-REMOVE> -->
-    <PackageReference Include="SmartSoftware.AspNetCore.Components.WebAssembly.LeptonXLiteTheme" Version="3.2.*-*" />
+    <ProjectReference Include="..\..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme\SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme.csproj" />
   </ItemGroup>
 
   <ItemGroup>

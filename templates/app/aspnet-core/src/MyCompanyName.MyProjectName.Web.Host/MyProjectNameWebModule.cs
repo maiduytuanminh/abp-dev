@@ -22,8 +22,8 @@ using SmartSoftware.AspNetCore.Mvc.Localization;
 using SmartSoftware.AspNetCore.Mvc.UI;
 using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap;
 using SmartSoftware.AspNetCore.Mvc.UI.Bundling;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared;
 using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
 using SmartSoftware.AspNetCore.Serilog;
@@ -55,7 +55,7 @@ namespace MyCompanyName.MyProjectName.Web;
     typeof(SmartSoftwareAspNetCoreAuthenticationOpenIdConnectModule),
     typeof(SmartSoftwareAspNetCoreMvcClientModule),
     typeof(SmartSoftwareHttpClientWebModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
     typeof(SmartSoftwareAutofacModule),
     typeof(SmartSoftwareCachingStackExchangeRedisModule),
     typeof(SmartSoftwareDistributedLockingModule),
@@ -104,7 +104,7 @@ public class MyProjectNameWebModule : SmartSoftwareModule
         Configure<SmartSoftwareBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");

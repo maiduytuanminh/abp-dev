@@ -239,7 +239,6 @@ public abstract class ProjectCreationCommandBase
             mobileApp,
             publicWebSite,
             gitHubSmartSoftwareLocalRepositoryPath,
-            gitHubSmartSoftwareLocalRepositoryPath,
             templateSource,
             commandLineArgs.Options,
             connectionString,

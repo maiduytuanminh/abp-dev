@@ -75,8 +75,8 @@ public class DefaultMinioBlobNamingNormalizerProvider_Tests : SmartSoftwareBlobS
     [Fact]
     public void NormalizeContainerName_Max_Length_Dash()
     {
-        var filename = "-this-is-my-container-name-ssssssssssssssss-a-b-p-a--b-p-";
+        var filename = "-this-is-my-container-name-ssssssssssssssss-s-s-s--s-";
         filename = _blobNamingNormalizer.NormalizeContainerName(filename);
-        filename.ShouldBe("this-is-my-container-name-ssssssssssssssss-a-b-p-a--b");
+        filename.ShouldBe("this-is-my-container-name-ssssssssssssssss-s-s-s--s");
     }
 }

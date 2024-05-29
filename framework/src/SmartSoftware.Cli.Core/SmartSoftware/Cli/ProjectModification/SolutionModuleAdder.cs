@@ -569,7 +569,6 @@ public class SolutionModuleAdder : ITransientDependency
                 targetModuleFolder,
                 version,
                 null,
-                null,
                 null
             );
         }

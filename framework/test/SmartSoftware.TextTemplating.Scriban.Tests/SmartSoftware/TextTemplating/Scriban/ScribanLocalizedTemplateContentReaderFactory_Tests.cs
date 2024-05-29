@@ -11,7 +11,7 @@ public class ScribanLocalizedTemplateContentReaderFactory_Tests : LocalizedTempl
         LocalizedTemplateContentReaderFactory = new LocalizedTemplateContentReaderFactory(
             new PhysicalFileVirtualFileProvider(
                 new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),
-                    "SmartSoftware", "SmartSoftware", "TextTemplating", "Scriban"))));
+                    "SmartSoftware", "TextTemplating", "Scriban"))));
 
         WelcomeEmailEnglishContent = "Welcome {{model.name}} to the smartsoftware.io!";
         WelcomeEmailTurkishContent = "Merhaba {{model.name}}, smartsoftware.io'ya hoşgeldiniz!";

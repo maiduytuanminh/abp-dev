@@ -3,7 +3,7 @@
 @using Microsoft.AspNetCore.Authentication
 @using Microsoft.AspNetCore.Http
 @using Microsoft.Extensions.Hosting
-@using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling
+@using SmartSoftware.AspNetCore.Components.Server.BasicTheme.Bundling
 @using SmartSoftware.AspNetCore.Components.Web.Theming.Bundling
 @using SmartSoftware.AspNetCore.Components.WebAssembly.WebApp
 @inject IHostEnvironment Env
@@ -20,7 +20,7 @@
     <title>MyCompanyName.MyProjectName.Blazor.Server</title>
     <base href="/" />
 
-    <SmartSoftwareStyles BundleName="@BlazorLeptonXLiteThemeBundles.Styles.Global" WebAssemblyStyleFiles="GlobalStyles" @rendermode="InteractiveAuto" />
+    <SmartSoftwareStyles BundleName="@BlazorBasicThemeBundles.Styles.Global" WebAssemblyStyleFiles="GlobalStyles" @rendermode="InteractiveAuto" />
 
     <HeadOutlet @rendermode="InteractiveAuto" />
 
@@ -29,7 +29,7 @@
 
     <Routes @rendermode="InteractiveAuto" />
 
-    <SmartSoftwareScripts BundleName="@BlazorLeptonXLiteThemeBundles.Scripts.Global" WebAssemblyScriptFiles="GlobalScripts" @rendermode="InteractiveAuto" />
+    <SmartSoftwareScripts BundleName="@BlazorBasicThemeBundles.Scripts.Global" WebAssemblyScriptFiles="GlobalScripts" @rendermode="InteractiveAuto" />
 
     <script src="_framework/blazor.web.js"></script>
 

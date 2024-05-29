@@ -12,14 +12,12 @@ public class RazorLocalizedTemplateContentReaderFactory_Tests : LocalizedTemplat
         LocalizedTemplateContentReaderFactory = new LocalizedTemplateContentReaderFactory(
             new PhysicalFileVirtualFileProvider(
                 new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),
-                    "SmartSoftware", "SmartSoftware", "TextTemplating", "Razor"))));
+                    "SmartSoftware", "TextTemplating", "Razor"))));
 
-        WelcomeEmailEnglishContent = "@inherits SmartSoftware.TextTemplating.Razor.RazorTemplatePageBase<SmartSoftware.TextTemplating.Razor.RazorTemplateRendererProvider_Tests.WelcomeEmailModel>" +
-                         Environment.NewLine +
+        WelcomeEmailEnglishContent = "@inherits SmartSoftware.TextTemplating.Razor.RazorTemplatePageBase<SmartSoftware.TextTemplating.Razor.RazorTemplateRendererProvider_Tests.WelcomeEmailModel>\n" +
                          "Welcome @Model.Name to the smartsoftware.io!";
 
-        WelcomeEmailTurkishContent = "@inherits SmartSoftware.TextTemplating.Razor.RazorTemplatePageBase<SmartSoftware.TextTemplating.Razor.RazorTemplateRendererProvider_Tests.WelcomeEmailModel>" +
-                         Environment.NewLine +
+        WelcomeEmailTurkishContent = "@inherits SmartSoftware.TextTemplating.Razor.RazorTemplatePageBase<SmartSoftware.TextTemplating.Razor.RazorTemplateRendererProvider_Tests.WelcomeEmailModel>\n" +
                          "Merhaba @Model.Name, smartsoftware.io'ya hoşgeldiniz!";
     }
 }

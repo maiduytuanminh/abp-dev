@@ -30,8 +30,8 @@
     <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Server.Theming\SmartSoftware.AspNetCore.Components.Server.Theming.csproj" />
     <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
     <!-- </TEMPLATE-REMOVE> -->
-    <PackageReference Include="SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme" Version="3.2.*-*" />
-    <PackageReference Include="SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.2.*-*" />
+    <ProjectReference Include="..\..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Components.Server.BasicTheme\SmartSoftware.AspNetCore.Components.Server.BasicTheme.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
   </ItemGroup>
 
   <ItemGroup>

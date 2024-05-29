@@ -13,7 +13,7 @@ public class SmartSoftwareDatetimeToEnum_Tests : SmartSoftwareJsonSystemTextJson
 {
     [Theory]
     [InlineData("tr", "14.02.2024")]
-    [InlineData("en-US", "2/14/2024")]
+    [InlineData("en-US", "02/14/2024")]
     [InlineData("en-GB", "14/02/2024")]
     public void Test_Read(string culture, string datetime)
     {

@@ -10,8 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyCompanyName.MyProjectName.EntityFrameworkCore;
 using MyCompanyName.MyProjectName.MultiTenancy;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Microsoft.OpenApi.Models;
 using OpenIddict.Validation.AspNetCore;
 using SmartSoftware;
@@ -38,7 +38,7 @@ namespace MyCompanyName.MyProjectName;
     typeof(SmartSoftwareAspNetCoreMultiTenancyModule),
     typeof(MyProjectNameApplicationModule),
     typeof(MyProjectNameEntityFrameworkCoreModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
     typeof(SmartSoftwareAccountWebOpenIddictModule),
     typeof(SmartSoftwareAspNetCoreSerilogModule),
     typeof(SmartSoftwareSwashbuckleModule)
@@ -86,7 +86,7 @@ public class MyProjectNameHttpApiHostModule : SmartSoftwareModule
         Configure<SmartSoftwareBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");

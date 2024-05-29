@@ -11,8 +11,8 @@ using SmartSoftware.Account.Web;
 using SmartSoftware.AspNetCore.Mvc;
 using SmartSoftware.AspNetCore.Mvc.Localization;
 using SmartSoftware.AspNetCore.Mvc.UI.Bundling;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared;
 using SmartSoftware.AspNetCore.Serilog;
 using SmartSoftware.AuditLogging.MongoDB;
@@ -59,7 +59,7 @@ namespace MyCompanyName.MyProjectName;
     typeof(SmartSoftwareAutoMapperModule),
     typeof(SmartSoftwareSwashbuckleModule),
     typeof(SmartSoftwareAspNetCoreSerilogModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
 
     // Account module packages
     typeof(SmartSoftwareAccountApplicationModule),
@@ -198,7 +198,7 @@ public class MyProjectNameModule : SmartSoftwareModule
         Configure<SmartSoftwareBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");

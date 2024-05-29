@@ -48,16 +48,10 @@ public class GetSourceCommand : IConsoleCommand, ITransientDependency
             Logger.LogInformation("GitHub SmartSoftware Local Repository Path: " + gitHubSmartSoftwareLocalRepositoryPath);
         }
 
-        var gitHubSmartSoftwareLocalRepositoryPath = commandLineArgs.Options.GetOrNull(Options.GitHubSmartSoftwareLocalRepositoryPath.Long);
-        if (gitHubSmartSoftwareLocalRepositoryPath != null)
-        {
-            Logger.LogInformation("GitHub SmartSoftware Local Repository Path: " + gitHubSmartSoftwareLocalRepositoryPath);
-        }
-
         commandLineArgs.Options.Add(CliConsts.Command, commandLineArgs.Command);
 
         await _sourceCodeDownloadService.DownloadModuleAsync(
-            commandLineArgs.Target, outputFolder, version, gitHubSmartSoftwareLocalRepositoryPath, gitHubSmartSoftwareLocalRepositoryPath, commandLineArgs.Options);
+            commandLineArgs.Target, outputFolder, version, gitHubSmartSoftwareLocalRepositoryPath, commandLineArgs.Options);
     }
 
     private static string GetOutPutFolder(CommandLineArgs commandLineArgs)
@@ -116,11 +110,6 @@ public class GetSourceCommand : IConsoleCommand, ITransientDependency
         {
             public const string Short = "o";
             public const string Long = "output-folder";
-        }
-
-        public static class GitHubSmartSoftwareLocalRepositoryPath
-        {
-            public const string Long = "ss-path";
         }
 
         public static class GitHubSmartSoftwareLocalRepositoryPath

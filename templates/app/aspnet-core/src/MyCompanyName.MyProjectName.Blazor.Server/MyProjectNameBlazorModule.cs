@@ -19,10 +19,10 @@ using OpenIddict.Validation.AspNetCore;
 using SmartSoftware;
 using SmartSoftware.Account.Web;
 using SmartSoftware.AspNetCore.Components.Server;
-using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme;
-using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Components.Server.BasicTheme;
+using SmartSoftware.AspNetCore.Components.Server.BasicTheme.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using SmartSoftware.AspNetCore.Components.Web.Theming.Routing;
 using SmartSoftware.AspNetCore.Mvc;
 using SmartSoftware.AspNetCore.Mvc.Localization;
@@ -55,8 +55,8 @@ namespace MyCompanyName.MyProjectName.Blazor.Server;
     typeof(SmartSoftwareSwashbuckleModule),
     typeof(SmartSoftwareAspNetCoreSerilogModule),
     typeof(SmartSoftwareAccountWebOpenIddictModule),
-    typeof(SmartSoftwareAspNetCoreComponentsServerLeptonXLiteThemeModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreComponentsServerBasicThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
     typeof(SmartSoftwareIdentityBlazorServerModule),
     typeof(SmartSoftwareTenantManagementBlazorServerModule),
     typeof(SmartSoftwareSettingManagementBlazorServerModule)
@@ -154,7 +154,7 @@ public class MyProjectNameBlazorModule : SmartSoftwareModule
         {
             // MVC UI
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");
@@ -163,7 +163,7 @@ public class MyProjectNameBlazorModule : SmartSoftwareModule
 
             //BLAZOR UI
             options.StyleBundles.Configure(
-                BlazorLeptonXLiteThemeBundles.Styles.Global,
+                BlazorBasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/blazor-global-styles.css");

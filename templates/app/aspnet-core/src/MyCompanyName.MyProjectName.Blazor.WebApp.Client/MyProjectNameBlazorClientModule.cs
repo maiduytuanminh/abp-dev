@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using MyCompanyName.MyProjectName.Blazor.WebApp.Client.Menus;
 using SmartSoftware.AspNetCore.Components.Server;
 using SmartSoftware.AspNetCore.Components.Web.Theming.Routing;
-using SmartSoftware.AspNetCore.Components.WebAssembly.LeptonXLiteTheme;
+using SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme;
 using SmartSoftware.Autofac.WebAssembly;
 using SmartSoftware.AutoMapper;
 using SmartSoftware.Identity.Blazor.WebAssembly;
@@ -23,7 +23,7 @@ namespace MyCompanyName.MyProjectName.Blazor.WebApp.Client;
 [DependsOn(
     typeof(SmartSoftwareAutofacWebAssemblyModule),
     typeof(MyProjectNameHttpApiClientModule),
-    typeof(SmartSoftwareAspNetCoreComponentsWebAssemblyLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreComponentsWebAssemblyBasicThemeModule),
     typeof(SmartSoftwareIdentityBlazorWebAssemblyModule),
     typeof(SmartSoftwareTenantManagementBlazorWebAssemblyModule),
     typeof(SmartSoftwareSettingManagementBlazorWebAssemblyModule)

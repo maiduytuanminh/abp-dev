@@ -2,7 +2,6 @@
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <Version>8.3.0-preview</Version>
-    <LeptonXVersion>3.3.0-preview</LeptonXVersion>
     <NoWarn>$(NoWarn);CS1591;CS0436</NoWarn>
     <PackageIconUrl>https://smartsoftware.io/assets/ss_nupkg.png</PackageIconUrl>
     <PackageProjectUrl>https://smartsoftware.io/</PackageProjectUrl>

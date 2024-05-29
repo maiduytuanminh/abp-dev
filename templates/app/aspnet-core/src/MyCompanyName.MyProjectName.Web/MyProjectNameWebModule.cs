@@ -19,8 +19,8 @@ using SmartSoftware.AspNetCore.Mvc.UI;
 using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap;
 using SmartSoftware.AspNetCore.Mvc.UI.Bundling;
 using SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic;
+using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared;
 using SmartSoftware.AspNetCore.Serilog;
 using SmartSoftware.Autofac;
@@ -50,7 +50,7 @@ namespace MyCompanyName.MyProjectName.Web;
     typeof(SmartSoftwareIdentityWebModule),
     typeof(SmartSoftwareSettingManagementWebModule),
     typeof(SmartSoftwareAccountWebOpenIddictModule),
-    typeof(SmartSoftwareAspNetCoreMvcUiLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreMvcUiBasicThemeModule),
     typeof(SmartSoftwareTenantManagementWebModule),
     typeof(SmartSoftwareAspNetCoreSerilogModule),
     typeof(SmartSoftwareSwashbuckleModule)
@@ -135,7 +135,7 @@ public class MyProjectNameWebModule : SmartSoftwareModule
         Configure<SmartSoftwareBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                LeptonXLiteThemeBundles.Styles.Global,
+                BasicThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");

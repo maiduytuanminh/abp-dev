@@ -61,7 +61,6 @@ public class ProjectBuildArgs
         MobileApp? mobileApp = null,
         bool publicWebSite = false,
         [CanBeNull] string ssGitHubLocalRepositoryPath = null,
-        [CanBeNull] string smartsoftwareGitHubLocalRepositoryPath = null,
         [CanBeNull] string templateSource = null,
         Dictionary<string, string> extraProperties = null,
         [CanBeNull] string connectionString = null,
@@ -81,7 +80,6 @@ public class ProjectBuildArgs
         MobileApp = mobileApp;
         PublicWebSite = publicWebSite;
         SmartSoftwareGitHubLocalRepositoryPath = ssGitHubLocalRepositoryPath;
-        SmartSoftwareGitHubLocalRepositoryPath = smartsoftwareGitHubLocalRepositoryPath;
         TemplateSource = templateSource;
         ExtraProperties = extraProperties ?? new Dictionary<string, string>();
         ConnectionString = connectionString;

@@ -1,7 +1,7 @@
 ﻿@using SmartSoftware.Localization
 @using System.Globalization
 @using Microsoft.Extensions.Hosting
-@using SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling
+@using SmartSoftware.AspNetCore.Components.Server.BasicTheme.Bundling
 @using SmartSoftware.AspNetCore.Components.Web.Theming.Bundling
 @inject IHostEnvironment Env
 @{
@@ -17,7 +17,7 @@
     <title>MyCompanyName.MyProjectName.Blazor.Server</title>
     <base href="/" />
 
-    <SmartSoftwareStyles BundleName="@BlazorLeptonXLiteThemeBundles.Styles.Global" />
+    <SmartSoftwareStyles BundleName="@BlazorBasicThemeBundles.Styles.Global" />
 
     <HeadOutlet @rendermode="InteractiveServer" />
 
@@ -26,7 +26,7 @@
 
     <Routes @rendermode="InteractiveServer" />
 
-    <SmartSoftwareScripts BundleName="@BlazorLeptonXLiteThemeBundles.Scripts.Global" />
+    <SmartSoftwareScripts BundleName="@BlazorBasicThemeBundles.Scripts.Global" />
 
     <script src="_framework/blazor.web.js"></script>
 

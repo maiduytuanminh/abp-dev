@@ -6,9 +6,9 @@ using MyCompanyName.MyProjectName.Menus;
 using MyCompanyName.MyProjectName;
 using OpenIddict.Abstractions;
 using SmartSoftware.Account;
-using SmartSoftware.AspNetCore.Components.Web.LeptonXLiteTheme.Themes.LeptonXLite;
+using SmartSoftware.AspNetCore.Components.Web.BasicTheme.Themes.Basic;
 using SmartSoftware.AspNetCore.Components.Web.Theming.Routing;
-using SmartSoftware.AspNetCore.Components.WebAssembly.LeptonXLiteTheme;
+using SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme;
 using SmartSoftware.Autofac.WebAssembly;
 using SmartSoftware.AutoMapper;
 using SmartSoftware.FeatureManagement;
@@ -30,7 +30,7 @@ namespace MyCompanyName.MyProjectName;
 
     // SS Framework packages
     typeof(SmartSoftwareAutofacWebAssemblyModule),
-    typeof(SmartSoftwareAspNetCoreComponentsWebAssemblyLeptonXLiteThemeModule),
+    typeof(SmartSoftwareAspNetCoreComponentsWebAssemblyBasicThemeModule),
 
     // Account module packages
     typeof(SmartSoftwareAccountHttpApiClientModule),
