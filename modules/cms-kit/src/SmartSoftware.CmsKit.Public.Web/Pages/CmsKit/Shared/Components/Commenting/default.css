@@ -1,0 +1,26 @@
+.cms-reaction-select-icon:hover{
+    text-decoration: none;
+}
+.comment-links:hover { 
+    text-decoration: none;
+}
+body .smartsoftware-captcha img {
+    border: 1px outset #dddcdc;
+    border-radius: 4px;
+    height: 45px;
+}
+
+body .smartsoftware-captcha .d-flex .form-group {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    body .smartsoftware-captcha #Input_Captcha {
+        margin-left: 0px;
+    }
+}
+
+body .form-control {
+    border: 1px outset #e3e3e3 !important;
+    padding: 10px !important;
+}

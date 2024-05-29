@@ -1,0 +1,6 @@
+﻿namespace SmartSoftware.BackgroundJobs.EntityFrameworkCore;
+
+public class BackgroundJobRepositoryTests : BackgroundJobRepository_Tests<SmartSoftwareBackgroundJobsEntityFrameworkCoreTestModule>
+{
+
+}

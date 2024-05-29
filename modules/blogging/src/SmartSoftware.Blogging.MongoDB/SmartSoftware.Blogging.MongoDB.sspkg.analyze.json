@@ -1,0 +1,132 @@
+{
+  "name": "SmartSoftware.Blogging.MongoDB",
+  "hash": "4487b4df01fcd98b0ce2e7d2d11c9ba5",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Blogging.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Domain",
+          "namespace": "SmartSoftware.Blogging",
+          "name": "BloggingDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Users.MongoDB",
+          "namespace": "SmartSoftware.Users.MongoDB",
+          "name": "SmartSoftwareUsersMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BloggingMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Blogging.MongoDB",
+      "connectionStringName": "Blogging",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.Blogging.Blogs.Blog",
+          "contentType": "databaseCollection",
+          "name": "BlgBlogs",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Blogging.Comments.Comment",
+          "contentType": "databaseCollection",
+          "name": "BlgComments",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Blogging.Users.BlogUser",
+          "contentType": "databaseCollection",
+          "name": "BlgUsers",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Blogging.Tagging.Tag",
+          "contentType": "databaseCollection",
+          "name": "BlgTags",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Blogging.Posts.Post",
+          "contentType": "databaseCollection",
+          "name": "BlgPosts",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IBloggingMongoDbContext",
+          "namespace": "SmartSoftware.Blogging.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.Blogging.MongoDB",
+          "fullName": "SmartSoftware.Blogging.MongoDB.IBloggingMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "BloggingMongoDbContext",
+      "summary": null
+    }
+  ]
+}

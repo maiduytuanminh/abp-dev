@@ -1,0 +1,19 @@
+{
+  "culture": "sk",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP cez SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP cez SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Server host",
+    "Description:SmartSoftware.Ldap.ServerHost": "Server host",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Server port",
+    "Description:SmartSoftware.Ldap.ServerPort": "Server post",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Základný komponent domény",
+    "Description:SmartSoftware.Ldap.BaseDc": "Základný komponent domény",
+    "DisplayName:SmartSoftware.Ldap.Domain": "doména",
+    "Description:SmartSoftware.Ldap.Domain": "doména",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Používateľské meno",
+    "Description:SmartSoftware.Ldap.UserName": "Používateľské meno",
+    "DisplayName:SmartSoftware.Ldap.Password": "Heslo",
+    "Description:SmartSoftware.Ldap.Password": "Heslo"
+  }
+}

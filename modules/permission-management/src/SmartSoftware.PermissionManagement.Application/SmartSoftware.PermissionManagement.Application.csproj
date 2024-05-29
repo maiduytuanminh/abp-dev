@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.PermissionManagement.Application</AssemblyName>
+    <PackageId>SmartSoftware.PermissionManagement.Application</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.PermissionManagement.Application.Contracts\SmartSoftware.PermissionManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SmartSoftware.PermissionManagement.Domain\SmartSoftware.PermissionManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Application\SmartSoftware.Ddd.Application.csproj" />
+  </ItemGroup>
+
+</Project>

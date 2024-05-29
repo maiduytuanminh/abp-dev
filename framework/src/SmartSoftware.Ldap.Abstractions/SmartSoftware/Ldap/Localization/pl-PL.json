@@ -1,0 +1,19 @@
+{
+  "culture": "pl-PL",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP przez SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP przez SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Host serwera",
+    "Description:SmartSoftware.Ldap.ServerHost": "Host serwera",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Port serwera",
+    "Description:SmartSoftware.Ldap.ServerPort": "Port serwera",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Podstawowy składnik domeny",
+    "Description:SmartSoftware.Ldap.BaseDc": "Podstawowy składnik domeny",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Domena",
+    "Description:SmartSoftware.Ldap.Domain": "Domena",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Nazwa użytkownika",
+    "Description:SmartSoftware.Ldap.UserName": "Nazwa użytkownika",
+    "DisplayName:SmartSoftware.Ldap.Password": "Hasło",
+    "Description:SmartSoftware.Ldap.Password": "Hasło"
+  }
+}

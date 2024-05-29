@@ -1,0 +1,187 @@
+{
+  "name": "SmartSoftware.BlobStoring.Database.Domain",
+  "hash": "4c72530134504ee1792b7e24248dc384",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "namespace": "SmartSoftware.Domain",
+          "name": "SmartSoftwareDddDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring",
+          "namespace": "SmartSoftware.BlobStoring",
+          "name": "SmartSoftwareBlobStoringModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.Domain.Shared",
+          "namespace": "SmartSoftware.BlobStoring.Database",
+          "name": "BlobStoringDatabaseDomainSharedModule"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BlobStoringDatabaseDomainModule",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "AggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data"
+        },
+        {
+          "name": "IMultiTenant",
+          "namespace": "SmartSoftware.MultiTenancy",
+          "declaringAssemblyName": "SmartSoftware.MultiTenancy"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "isAsync": false,
+          "name": "SetContent",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "Byte[]",
+              "name": "content",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "primaryKeyType": "Guid",
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "contentType": "aggregateRoot",
+      "name": "DatabaseBlob",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "AggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data"
+        },
+        {
+          "name": "IMultiTenant",
+          "namespace": "SmartSoftware.MultiTenancy",
+          "declaringAssemblyName": "SmartSoftware.MultiTenancy"
+        }
+      ],
+      "methods": [],
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "primaryKeyType": "Guid",
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "contentType": "aggregateRoot",
+      "name": "DatabaseBlobContainer",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.BlobStoring.Database",
+        "primaryKeyType": "Guid",
+        "collectionProperties": {},
+        "navigationProperties": {},
+        "contentType": "entity",
+        "name": "DatabaseBlobContainer",
+        "summary": null
+      },
+      "contentType": "repositoryInterface",
+      "name": "IDatabaseBlobContainerRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.BlobStoring.Database",
+        "primaryKeyType": "Guid",
+        "collectionProperties": {},
+        "navigationProperties": {},
+        "contentType": "entity",
+        "name": "DatabaseBlob",
+        "summary": null
+      },
+      "contentType": "repositoryInterface",
+      "name": "IDatabaseBlobRepository",
+      "summary": null
+    }
+  ]
+}

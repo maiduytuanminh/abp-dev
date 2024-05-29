@@ -1,0 +1,8 @@
+{
+  "culture": "ar",
+  "texts": {
+    "SmartSoftware.Feature:010001": "لم يتم تمكين الميزة: {FeatureName}",
+    "SmartSoftware.Feature:010002": "الميزات المطلوبة غير ممكّنة. يجب تمكين كل هذه الميزات: {FeatureNames}",
+    "SmartSoftware.Feature:010003": "الميزات المطلوبة غير ممكّنة. يجب تمكين واحدة على الأقل من هذه الميزات: {FeatureNames}"
+  }
+}

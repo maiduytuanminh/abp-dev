@@ -1,0 +1,9 @@
+{
+  "culture": "tr",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Menu:Home": "Ana sayfa",
+    "Welcome": "Hoşgeldiniz",
+    "LongWelcomeMessage": "Uygulamaya hoşgeldiniz. Bu, SS framework'ü üzerine bina edilmiş bir başlangıç projesidir. Daha fazla bilgi için smartsoftware.io adresini ziyaret edebilirsiniz."
+  }
+}

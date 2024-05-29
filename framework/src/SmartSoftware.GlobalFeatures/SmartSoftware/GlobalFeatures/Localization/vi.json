@@ -1,0 +1,6 @@
+{
+  "culture": "vi",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "Dịch vụ '{ServiceName}' cần bật tính năng '{GlobalFeatureName}'."
+  }
+}

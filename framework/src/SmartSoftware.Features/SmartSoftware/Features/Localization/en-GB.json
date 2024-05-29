@@ -1,0 +1,8 @@
+{
+  "culture": "en-GB",
+  "texts": {
+    "SmartSoftware.Feature:010001": "Feature is not enabled: {FeatureName}",
+    "SmartSoftware.Feature:010002": "Required features are not enabled. All of these features must be enabled: {FeatureNames}",
+    "SmartSoftware.Feature:010003": "Required features are not enabled. At least one of these features must be enabled: {FeatureNames}"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "culture": "en",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Default from address",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Default from display name",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Host",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "User name",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Password",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domain",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Enable SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Use default credentials",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "The default from address",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "The default from display name",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "The name or IP address of the host used for SMTP transactions.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "The port used for SMTP transactions.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "User name associated with the credentials.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "The password for the user name associated with the credentials.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "The domain or computer name that verifies the credentials.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Whether the SmtpClient uses Secure Sockets Layer (SSL) to encrypt the connection.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Whether the DefaultCredentials are sent with requests.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Default email layout template",
+    "TextTemplate:StandardEmailTemplates.Message": "Simple message template for emails"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "name": "SmartSoftware.TenantManagement.Application.Contracts",
+  "hash": "e1f3dac6048d2ca6284ea045f63842a6",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.TenantManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Domain.Shared",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization.Abstractions",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationAbstractionsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareTenantManagementApplicationContractsModule",
+      "summary": null
+    },
+    {
+      "displayName": "Tenant management",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants",
+      "summary": null
+    },
+    {
+      "displayName": "Create",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants.Create",
+      "summary": null
+    },
+    {
+      "displayName": "Edit",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants.Update",
+      "summary": null
+    },
+    {
+      "displayName": "Delete",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants.Delete",
+      "summary": null
+    },
+    {
+      "displayName": "Manage features",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants.ManageFeatures",
+      "summary": null
+    },
+    {
+      "displayName": "Manage connection strings",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareTenantManagement.Tenants.ManageConnectionStrings",
+      "summary": null
+    }
+  ]
+}

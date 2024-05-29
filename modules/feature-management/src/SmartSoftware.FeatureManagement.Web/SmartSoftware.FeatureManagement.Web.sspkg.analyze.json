@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.FeatureManagement.Web",
+  "hash": "448e16aaf1a76101ee1902adbe650fb1",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application.Contracts",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "name": "SmartSoftwareAspNetCoreMvcUiThemeSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.Web",
+          "namespace": "SmartSoftware.SettingManagement.Web",
+          "name": "SmartSoftwareSettingManagementWebModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareFeatureManagementWebModule",
+      "summary": null
+    }
+  ]
+}

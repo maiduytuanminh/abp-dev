@@ -1,0 +1,73 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Comments
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.CmsKit.Localization
+
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@model IndexModel
+
+@{
+    PageLayout.Content.Title = L["Comments"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.Comments.CommentsMenu;
+}
+
+@section styles{
+    <ss-style-bundle>
+        <ss-style src="/Pages/CmsKit/Comments/index.css" />
+    </ss-style-bundle>
+}
+
+@section scripts {
+    <ss-script-bundle>
+        <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+        <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+        <ss-script src="/Pages/CmsKit/Comments/index.js"/>
+    </ss-script-bundle>
+}
+
+<ss-card class="mb-4">
+    <ss-card-body>
+        <div id="CmsKitCommentsWrapper">
+            <form id="CmsKitCommentsFilterForm" method="post">
+                <ss-row class="align-items-end">
+                    <ss-column size-lg="_4" size-md="_12">
+                        <ss-row>
+                            <ss-column size-lg="_6" size-md="_6">
+                                <ss-input asp-for="@Model.CreationStartDate" class="singledatepicker" label="@L["StartDate"].Value" type="text" />
+                            </ss-column>
+                            <ss-column size-lg="_6" size-md="_6">
+                                <ss-input asp-for="@Model.CreationEndDate" class="singledatepicker" label="@L["EndDate"].Value" type="text" />
+                            </ss-column>
+                        </ss-row>
+                    </ss-column>
+
+                    <ss-column size-lg="_3" size-md="_6">
+                        <ss-input asp-for="@Model.Author" label="@L["Username"].Value" type="text" />
+                    </ss-column>
+
+                    <ss-column size-lg="_3" size-md="_6">
+                        <ss-input asp-for="@Model.EntityType" label="@L["EntityType"].Value" type="text" />
+                    </ss-column>
+
+                    <ss-column size-lg="_2" size-md="_6">
+                        <ss-button class="w-100 mb-3" button-type="Primary" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </ss-button>
+                    </ss-column>
+                </ss-row>
+            </form>
+        </div>
+    </ss-card-body>
+</ss-card>
+
+<ss-card>
+    <ss-card-body>
+        <ss-table  id="CommentsTable" class="nowrap"></ss-table>
+    </ss-card-body>
+</ss-card>

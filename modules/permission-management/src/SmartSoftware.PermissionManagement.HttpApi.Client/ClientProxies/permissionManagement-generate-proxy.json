@@ -1,0 +1,293 @@
+{
+  "modules": {
+    "permissionManagement": {
+      "rootPath": "permissionManagement",
+      "remoteServiceName": "SmartSoftwarePermissionManagement",
+      "controllers": {
+        "SmartSoftware.PermissionManagement.PermissionsController": {
+          "controllerName": "Permissions",
+          "controllerGroupName": "Permissions",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.PermissionManagement.PermissionsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.PermissionManagement.IPermissionAppService",
+              "name": "IPermissionAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "providerName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "providerKey",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.PermissionManagement.GetPermissionListResultDto",
+                    "typeSimple": "SmartSoftware.PermissionManagement.GetPermissionListResultDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "providerName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "providerKey",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.PermissionManagement.UpdatePermissionsDto, SmartSoftware.PermissionManagement.Application.Contracts",
+                      "type": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                      "typeSimple": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsyncByProviderNameAndProviderKey": {
+              "uniqueName": "GetAsyncByProviderNameAndProviderKey",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/permission-management/permissions",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "providerName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "providerKey",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "providerName",
+                  "name": "providerName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "providerKey",
+                  "name": "providerKey",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.PermissionManagement.GetPermissionListResultDto",
+                "typeSimple": "SmartSoftware.PermissionManagement.GetPermissionListResultDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.PermissionManagement.IPermissionAppService"
+            },
+            "UpdateAsyncByProviderNameAndProviderKeyAndInput": {
+              "uniqueName": "UpdateAsyncByProviderNameAndProviderKeyAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/permission-management/permissions",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "providerName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "providerKey",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.PermissionManagement.UpdatePermissionsDto, SmartSoftware.PermissionManagement.Application.Contracts",
+                  "type": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                  "typeSimple": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "providerName",
+                  "name": "providerName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "providerKey",
+                  "name": "providerKey",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                  "typeSimple": "SmartSoftware.PermissionManagement.UpdatePermissionsDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.PermissionManagement.IPermissionAppService"
+            }
+          }
+        },
+        "SmartSoftware.PermissionManagement.Integration.PermissionIntegrationController": {
+          "controllerName": "PermissionIntegration",
+          "controllerGroupName": "PermissionIntegration",
+          "isRemoteService": true,
+          "isIntegrationService": true,
+          "apiVersion": null,
+          "type": "SmartSoftware.PermissionManagement.Integration.PermissionIntegrationController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.PermissionManagement.Integration.IPermissionIntegrationService",
+              "name": "IPermissionIntegrationService",
+              "methods": [
+                {
+                  "name": "IsGrantedAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "System.Collections.Generic.List`1[[SmartSoftware.PermissionManagement.IsGrantedRequest, SmartSoftware.PermissionManagement.Domain.Shared, Version=7.4.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib",
+                      "type": "System.Collections.Generic.List<SmartSoftware.PermissionManagement.IsGrantedRequest>",
+                      "typeSimple": "[SmartSoftware.PermissionManagement.IsGrantedRequest]",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.PermissionManagement.IsGrantedResponse>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.PermissionManagement.IsGrantedResponse>"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "IsGrantedAsyncByInput": {
+              "uniqueName": "IsGrantedAsyncByInput",
+              "name": "IsGrantedAsync",
+              "httpMethod": "GET",
+              "url": "integration-api/permission-management/permissions/is-granted",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "System.Collections.Generic.List`1[[SmartSoftware.PermissionManagement.IsGrantedRequest, SmartSoftware.PermissionManagement.Domain.Shared, Version=7.4.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib",
+                  "type": "System.Collections.Generic.List<SmartSoftware.PermissionManagement.IsGrantedRequest>",
+                  "typeSimple": "[SmartSoftware.PermissionManagement.IsGrantedRequest]",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "System.Collections.Generic.List<SmartSoftware.PermissionManagement.IsGrantedRequest>",
+                  "typeSimple": "[SmartSoftware.PermissionManagement.IsGrantedRequest]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.PermissionManagement.IsGrantedResponse>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.PermissionManagement.IsGrantedResponse>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.PermissionManagement.Integration.IPermissionIntegrationService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

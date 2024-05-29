@@ -1,0 +1,139 @@
+{
+  "name": "SmartSoftware.Identity.MongoDB",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Identity.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Domain",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Users.MongoDB",
+          "namespace": "SmartSoftware.Users.MongoDB",
+          "name": "SmartSoftwareUsersMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.MongoDB",
+      "connectionStringName": "SmartSoftwareIdentity",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentityLinkUser",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareLinkUsers",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentityUserDelegation",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareUserDelegations",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentityClaimType",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareClaimTypes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.OrganizationUnit",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareOrganizationUnits",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentitySecurityLog",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareSecurityLogs",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentityRole",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareRoles",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Identity.IdentityUser",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareUsers",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ISmartSoftwareIdentityMongoDbContext",
+          "namespace": "SmartSoftware.Identity.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.Identity.MongoDB",
+          "fullName": "SmartSoftware.Identity.MongoDB.ISmartSoftwareIdentityMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "SmartSoftwareIdentityMongoDbContext",
+      "summary": null
+    }
+  ]
+}

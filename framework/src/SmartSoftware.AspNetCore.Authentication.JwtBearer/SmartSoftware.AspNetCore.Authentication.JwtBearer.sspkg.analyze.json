@@ -1,0 +1,63 @@
+{
+  "name": "SmartSoftware.AspNetCore.Authentication.JwtBearer",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.AspNetCore.Authentication.JwtBearer",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Security",
+          "namespace": "SmartSoftware.Security",
+          "name": "SmartSoftwareSecurityModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAspNetCoreAuthenticationJwtBearerModule",
+      "summary": null
+    }
+  ]
+}

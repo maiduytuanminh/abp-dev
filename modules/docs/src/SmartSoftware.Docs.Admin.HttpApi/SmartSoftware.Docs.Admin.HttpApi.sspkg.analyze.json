@@ -1,0 +1,68 @@
+{
+  "name": "SmartSoftware.Docs.Admin.HttpApi",
+  "hash": "6661b70996cefd1caa9f3072d98aeab3",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Docs.Admin",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Docs.Admin.Application.Contracts",
+          "namespace": "SmartSoftware.Docs.Admin",
+          "name": "DocsAdminApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc",
+          "namespace": "SmartSoftware.AspNetCore.Mvc",
+          "name": "SmartSoftwareAspNetCoreMvcModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "DocsAdminHttpApiModule",
+      "summary": null
+    }
+  ]
+}

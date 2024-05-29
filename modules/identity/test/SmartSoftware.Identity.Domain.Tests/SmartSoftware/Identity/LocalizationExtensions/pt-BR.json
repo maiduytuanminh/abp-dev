@@ -1,0 +1,7 @@
+{
+  "culture": "pt-BR",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "O comprimento da senha deve ser maior que {0} caracteres.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "A senha deve conter pelo menos um caractere não alfanumérico."
+  }
+}

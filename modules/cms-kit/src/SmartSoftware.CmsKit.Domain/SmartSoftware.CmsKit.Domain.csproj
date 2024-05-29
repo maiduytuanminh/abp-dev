@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Slugify.Core" />
+    <PackageReference Include="Unidecode.NET" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Domain.Shared\SmartSoftware.CmsKit.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\users\src\SmartSoftware.Users.Domain\SmartSoftware.Users.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.BlobStoring\SmartSoftware.BlobStoring.csproj" />
+  </ItemGroup>
+
+</Project>

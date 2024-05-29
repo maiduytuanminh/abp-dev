@@ -1,0 +1,19 @@
+{
+  "culture": "hr",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP preko SSL-a",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP preko SSL-a",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Domaćin poslužitelja",
+    "Description:SmartSoftware.Ldap.ServerHost": "Domaćin poslužitelja",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Port poslužitelja",
+    "Description:SmartSoftware.Ldap.ServerPort": "Port poslužitelja",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Komponenta osnovne domene",
+    "Description:SmartSoftware.Ldap.BaseDc": "Komponenta osnovne domene",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Domena",
+    "Description:SmartSoftware.Ldap.Domain": "Domena",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Korisničko ime",
+    "Description:SmartSoftware.Ldap.UserName": "Korisničko ime",
+    "DisplayName:SmartSoftware.Ldap.Password": "Lozinka",
+    "Description:SmartSoftware.Ldap.Password": "Lozinka"
+  }
+}

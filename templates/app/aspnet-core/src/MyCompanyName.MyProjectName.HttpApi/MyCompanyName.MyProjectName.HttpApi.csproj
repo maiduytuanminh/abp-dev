@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.Application.Contracts\MyCompanyName.MyProjectName.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi\SmartSoftware.PermissionManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.HttpApi\SmartSoftware.TenantManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.HttpApi\SmartSoftware.FeatureManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.HttpApi\SmartSoftware.SettingManagement.HttpApi.csproj" />
+  </ItemGroup>
+
+</Project>

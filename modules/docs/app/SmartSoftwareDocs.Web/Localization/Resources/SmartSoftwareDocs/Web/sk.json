@@ -1,0 +1,10 @@
+{
+  "culture": "sk",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Vitajte vo SmartSoftwareDocs!",
+    "NoProjectWarning": "Zatiaľ nie je definovaný žiadny projekt!",
+    "CreateYourFirstProject": "Kliknutím sem spustíte svoj prvý projekt",
+    "NoProject": "Žiadny projekt!"
+  }
+}

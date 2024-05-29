@@ -1,0 +1,9 @@
+{
+  "culture": "cs",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Menu:Home": "Úvod",
+    "Welcome": "Vítejte",
+    "LongWelcomeMessage": "Vítejte v aplikaci. Toto je startovací projekt založený na SS frameworku. Pro více informací, navštivte smartsoftware.io."
+  }
+}

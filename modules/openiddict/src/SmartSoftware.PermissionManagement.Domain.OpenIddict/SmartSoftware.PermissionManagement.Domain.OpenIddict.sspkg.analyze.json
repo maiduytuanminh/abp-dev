@@ -1,0 +1,68 @@
+{
+  "name": "SmartSoftware.PermissionManagement.Domain.OpenIddict",
+  "hash": "d28a5be6e62c73647baf9dcad873fcbb",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.PermissionManagement.OpenIddict",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.OpenIddict.Domain.Shared",
+          "namespace": "SmartSoftware.OpenIddict",
+          "name": "SmartSoftwareOpenIddictDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementDomainModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwarePermissionManagementDomainOpenIddictModule",
+      "summary": null
+    }
+  ]
+}

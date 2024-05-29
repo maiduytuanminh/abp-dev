@@ -1,0 +1,182 @@
+{
+  "name": "SmartSoftware.Emailing",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Emailing",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Settings",
+          "namespace": "SmartSoftware.Settings",
+          "name": "SmartSoftwareSettingsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.VirtualFileSystem",
+          "namespace": "SmartSoftware.VirtualFileSystem",
+          "name": "SmartSoftwareVirtualFileSystemModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.Abstractions",
+          "namespace": "SmartSoftware.BackgroundJobs",
+          "name": "SmartSoftwareBackgroundJobsAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Localization",
+          "namespace": "SmartSoftware.Localization",
+          "name": "SmartSoftwareLocalizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TextTemplating",
+          "namespace": "SmartSoftware.TextTemplating",
+          "name": "SmartSoftwareTextTemplatingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareEmailingModule",
+      "summary": null
+    },
+    {
+      "defaultValue": "127.0.0.1",
+      "displayName": "Sunucu",
+      "description": "SMTP üzerinden e-posta göndermek için kullanılacak sunucunun IP adresi ya da adı.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.Host",
+      "summary": null
+    },
+    {
+      "defaultValue": "25",
+      "displayName": "Port",
+      "description": "Sunucunun SMTP portu.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.Port",
+      "summary": null
+    },
+    {
+      "defaultValue": null,
+      "displayName": "Kullanıcı adı",
+      "description": "Varsayılan kimlik kullanılmaması durumunda kullanılacak kullanıcı adı.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.UserName",
+      "summary": null
+    },
+    {
+      "defaultValue": null,
+      "displayName": "Şifre",
+      "description": "Varsayılan kimlik kullanılmaması durumunda kullanılacak şifre.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": true,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.Password",
+      "summary": null
+    },
+    {
+      "defaultValue": null,
+      "displayName": "Domain",
+      "description": "Kimlik bilgilerinin doğrulanacağı sunucu/domain.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.Domain",
+      "summary": null
+    },
+    {
+      "defaultValue": "false",
+      "displayName": "SSL aktif",
+      "description": "Email gönderiminde SSL kullanılıp kullanılmayacağı.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.EnableSsl",
+      "summary": null
+    },
+    {
+      "defaultValue": "true",
+      "displayName": "Varsayılan kimlik kullan",
+      "description": "Varsayılan kimlik bilgilerinin kullanılıp kullanılmayacağı.",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.Smtp.UseDefaultCredentials",
+      "summary": null
+    },
+    {
+      "defaultValue": "noreply@smartsoftware.io",
+      "displayName": "Varsayılan gönderici adresi",
+      "description": "Varsayılan gönderici adresi",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.DefaultFromAddress",
+      "summary": null
+    },
+    {
+      "defaultValue": "SS application",
+      "displayName": "Varsayılan gönderici adı",
+      "description": "Varsayılan gönderici adı",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Mailing.DefaultFromDisplayName",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "SmartSoftware.BlobStoring.Database.Domain.Shared",
+  "hash": "ca71bff6138a518c84899353b3d88f2e",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BlobStoringDatabaseDomainSharedModule",
+      "summary": null
+    }
+  ]
+}

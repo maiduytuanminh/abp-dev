@@ -1,0 +1,82 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.ListGroupsDemo
+
+<ss-component-demo-section title="Basic example" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item>Cras justo odio</ss-list-group-item>
+        <ss-list-group-item>Dapibus ac facilisis in</ss-list-group-item>
+        <ss-list-group-item>Morbi leo risus</ss-list-group-item>
+        <ss-list-group-item>Vestibulum at eros</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Active & disabled items" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item>Cras justo odio</ss-list-group-item>
+        <ss-list-group-item active="true">Dapibus ac facilisis in</ss-list-group-item>
+        <ss-list-group-item>Morbi leo risus</ss-list-group-item>
+        <ss-list-group-item disabled="true">Vestibulum at eros</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Links" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item href="#" active="true">Cras justo odio</ss-list-group-item>
+        <ss-list-group-item href="#">Dapibus ac facilisis in</ss-list-group-item>
+        <ss-list-group-item href="#">Morbi leo risus</ss-list-group-item>
+        <ss-list-group-item href="#" disabled="true">Vestibulum at eros</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Buttons" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item tag-type="Button" active="true">Cras justo odio</ss-list-group-item>
+        <ss-list-group-item tag-type="Button">Dapibus ac facilisis in</ss-list-group-item>
+        <ss-list-group-item tag-type="Button">Morbi leo risus</ss-list-group-item>
+        <ss-list-group-item tag-type="Button" disabled="true">Vestibulum at eros</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Flush" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group flush="true">
+        <ss-list-group-item>Cras justo odio</ss-list-group-item>
+        <ss-list-group-item>Dapibus ac facilisis in</ss-list-group-item>
+        <ss-list-group-item>Morbi leo risus</ss-list-group-item>
+        <ss-list-group-item>Vestibulum at eros</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Contextual classes" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item>Cras justo odio</ss-list-group-item>
+        <ss-list-group-item type="Primary">A simple Primary list group item</ss-list-group-item>
+        <ss-list-group-item type="Secondary">A simple Secondary list group item</ss-list-group-item>
+        <ss-list-group-item type="Success">A simple Success list group item</ss-list-group-item>
+        <ss-list-group-item type="Danger">A simple Danger list group item</ss-list-group-item>
+        <ss-list-group-item type="Warning">A simple Warning list group item</ss-list-group-item>
+        <ss-list-group-item type="Info">A simple Info list group item</ss-list-group-item>
+        <ss-list-group-item type="Light">A simple Light list group item</ss-list-group-item>
+        <ss-list-group-item type="Dark">A simple Dark list group item</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Contextual classes with link" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item href="#">Cras justo odio</ss-list-group-item>
+        <ss-list-group-item href="#" type="Primary">A simple Primary list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Secondary">A simple Secondary list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Success">A simple Success list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Danger">A simple Danger list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Warning">A simple Warning list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Info">A simple Info list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Light">A simple Light list group item</ss-list-group-item>
+        <ss-list-group-item href="#" type="Dark">A simple Dark list group item</ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="With badges" view-path="@ListGroupsDemoViewComponent.ViewPath">
+    <ss-list-group>
+        <ss-list-group-item>Cras justo odio <span ss-badge-pill="Primary">14</span></ss-list-group-item>
+        <ss-list-group-item>Dapibus ac facilisis in <span ss-badge-pill="Primary">2</span></ss-list-group-item>
+        <ss-list-group-item>Morbi leo risus <span ss-badge-pill="Primary">1</span></ss-list-group-item>
+    </ss-list-group>
+</ss-component-demo-section>

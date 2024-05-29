@@ -1,0 +1,7 @@
+{
+  "culture": "hu",
+  "texts": {
+    "DisplayName:SmartSoftware.Localization.DefaultLanguage": "Alapértelmezett nyelv",
+    "Description:SmartSoftware.Localization.DefaultLanguage": "Az alkalmazás alapértelmezett nyelve."
+  }
+}

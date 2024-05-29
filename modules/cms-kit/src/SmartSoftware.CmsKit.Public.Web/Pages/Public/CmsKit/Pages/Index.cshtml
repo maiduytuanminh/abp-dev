@@ -1,0 +1,38 @@
+﻿@page "/cmskit/page"
+
+@addTagHelper *, SmartSoftware.AspNetCore.Mvc.UI.Bootstrap
+@using SmartSoftware.CmsKit.Contents
+@using SmartSoftware.CmsKit.Web.Pages.CmsKit.Components.Contents
+@model SmartSoftware.CmsKit.Public.Web.Pages.Public.CmsKit.Pages.IndexModel
+
+@section styles{
+    
+    <ss-style src="/Pages/Public/CmsKit/Pages/index.css" />
+    @if (!Model.ViewModel.Style.IsNullOrEmpty())
+    {
+        <style>
+            @Html.Raw(Model.ViewModel.Style)
+        </style>
+    }
+}
+
+@section scripts{
+    @if (!Model.ViewModel.Script.IsNullOrEmpty())
+    {
+        <script>
+            @Html.Raw(Model.ViewModel.Script)
+        </script>
+    }
+}
+
+<ss-card>
+    <ss-card-body>
+        @(await Component.InvokeAsync(typeof(ContentFragmentViewComponent), new DefaultContentDto
+        {
+            ContentFragments = Model.ViewModel.ContentFragments,
+            PreventXSS = false,
+            AllowHtmlTags = true,
+        }))
+    </ss-card-body>
+</ss-card>
+

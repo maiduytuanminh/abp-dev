@@ -1,0 +1,213 @@
+{
+  "name": "SmartSoftware.CmsKit.Web.Unified",
+  "hash": "bc7a929d06b0a9f1718337a1b4b55aca",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Web",
+          "namespace": "SmartSoftware.CmsKit.Web",
+          "name": "CmsKitWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Application",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.HttpApi",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.EntityFrameworkCore",
+          "namespace": "SmartSoftware.CmsKit.EntityFrameworkCore",
+          "name": "CmsKitEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AuditLogging.EntityFrameworkCore",
+          "namespace": "SmartSoftware.AuditLogging.EntityFrameworkCore",
+          "name": "SmartSoftwareAuditLoggingEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Web",
+          "namespace": "SmartSoftware.Account.Web",
+          "name": "SmartSoftwareAccountWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.HttpApi",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "namespace": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "name": "SmartSoftwareEntityFrameworkCoreSqlServerModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.SettingManagement.EntityFrameworkCore",
+          "name": "SmartSoftwareSettingManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "name": "SmartSoftwarePermissionManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Application",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.HttpApi",
+          "namespace": "SmartSoftware.PermissionManagement.HttpApi",
+          "name": "SmartSoftwarePermissionManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Web",
+          "namespace": "SmartSoftware.Identity.Web",
+          "name": "SmartSoftwareIdentityWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.HttpApi",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.EntityFrameworkCore",
+          "namespace": "SmartSoftware.Identity.EntityFrameworkCore",
+          "name": "SmartSoftwareIdentityEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain.Identity",
+          "namespace": "SmartSoftware.PermissionManagement.Identity",
+          "name": "SmartSoftwarePermissionManagementDomainIdentityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.HttpApi",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.FeatureManagement.EntityFrameworkCore",
+          "name": "SmartSoftwareFeatureManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Web",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Web",
+          "namespace": "SmartSoftware.TenantManagement.Web",
+          "name": "SmartSoftwareTenantManagementWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Application",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.HttpApi",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "name": "SmartSoftwareTenantManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "name": "SmartSoftwareAspNetCoreMvcUiBasicThemeModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Serilog",
+          "namespace": "SmartSoftware.AspNetCore.Serilog",
+          "name": "SmartSoftwareAspNetCoreSerilogModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+          "namespace": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+          "name": "BlobStoringDatabaseEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Swashbuckle",
+          "namespace": "SmartSoftware.Swashbuckle",
+          "name": "SmartSoftwareSwashbuckleModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitWebUnifiedModule",
+      "summary": null
+    }
+  ]
+}

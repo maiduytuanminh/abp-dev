@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SmartSoftware.Auditing</AssemblyName>
+    <PackageId>SmartSoftware.Auditing</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Auditing.Contracts\SmartSoftware.Auditing.Contracts.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Data\SmartSoftware.Data.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Json\SmartSoftware.Json.csproj" />
+    <ProjectReference Include="..\SmartSoftware.MultiTenancy\SmartSoftware.MultiTenancy.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Security\SmartSoftware.Security.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Threading\SmartSoftware.Threading.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Timing\SmartSoftware.Timing.csproj" />
+  </ItemGroup>
+
+</Project>

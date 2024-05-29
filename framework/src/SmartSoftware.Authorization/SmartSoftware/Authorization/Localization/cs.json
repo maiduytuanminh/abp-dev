@@ -1,0 +1,10 @@
+{
+  "culture": "cs",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Autorizace se nezdařila! Daná politika nebyla udělena.",
+    "SmartSoftware.Authorization:010002": "Autorizace se nezdařila! Dané zásady nebyly uděleny: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Autorizace se nezdařila! Dané zásady nebyly uděleny pro daný zdroj: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Autorizace se nezdařila! Daný požadavek nebyl udělen pro daný zdroj: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Autorizace se nezdařila! Dané požadavky nebyly uděleny pro daný zdroj: {ResourceName}"
+  }
+}

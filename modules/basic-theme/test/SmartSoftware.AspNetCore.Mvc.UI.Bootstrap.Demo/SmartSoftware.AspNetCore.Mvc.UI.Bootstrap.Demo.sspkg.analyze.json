@@ -1,0 +1,68 @@
+{
+  "name": "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo",
+  "hash": "323bf27ff0789b0164dbab9ca015e82a",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "name": "SmartSoftwareAspNetCoreMvcUiBasicThemeModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAspNetCoreMvcUiBootstrapDemoModule",
+      "summary": null
+    }
+  ]
+}

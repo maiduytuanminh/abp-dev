@@ -1,0 +1,10 @@
+{
+  "culture": "tr",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Yetkilendirme başarısız! Belirtilen izin sağlanmamış.",
+    "SmartSoftware.Authorization:010002": "Yetkilendirme başarısız! Bu izin sağlanmamış: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Yetkilendirme başarısız! Bu izin, bu kaynak için sağlanmamış: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Yetkilendirme başarısız! Bu kaynak belirtilen gerekliliği sağlamamış: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Yetkilendirme başarısız! Bu kaynak belirtilen gereklilikleri sağlamamış: {ResourceName}"
+  }
+}

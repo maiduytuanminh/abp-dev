@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Components.Web\SmartSoftware.AspNetCore.Components.Web.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Authorization\SmartSoftware.Authorization.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Ddd.Application.Contracts\SmartSoftware.Ddd.Application.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Blazorise" />
+        <PackageReference Include="Blazorise.DataGrid" />
+        <PackageReference Include="Blazorise.Snackbar" />
+        <PackageReference Include="Blazorise.Components" />
+    </ItemGroup>
+
+</Project>

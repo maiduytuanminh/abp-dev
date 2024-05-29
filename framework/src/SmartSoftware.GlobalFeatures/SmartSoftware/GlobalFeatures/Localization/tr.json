@@ -1,0 +1,6 @@
+{
+  "culture": "tr",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "'{ServiceName}' hizmetinin '{GlobalFeatureName}' özelliğini etkinleştirmesi gerekiyor."
+  }
+}

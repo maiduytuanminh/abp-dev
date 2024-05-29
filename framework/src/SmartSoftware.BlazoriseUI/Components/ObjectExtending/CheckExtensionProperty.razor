@@ -1,0 +1,21 @@
+﻿@typeparam TEntity
+@typeparam TResourceType
+@using SmartSoftware.BlazoriseUI
+@using SmartSoftware.Localization
+@inherits ExtensionPropertyComponentBase<TEntity, TResourceType>
+
+@if (PropertyInfo != null && Entity != null)
+{
+    <Validation Validator="@Validate" MessageLocalizer="@LH.Localize">
+        <Field>
+            <Check TValue="bool" @bind-Checked="@Value" Disabled="IsReadonlyField">
+                <ChildContent>
+                    @PropertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)
+                </ChildContent>
+                <Feedback>
+                    <ValidationError/>
+                </Feedback>
+            </Check>
+        </Field>
+    </Validation>
+}

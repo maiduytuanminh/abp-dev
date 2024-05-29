@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.CmsKit": {
+      "path": "SmartSoftware.CmsKit.ssmdl"
+    }
+  }
+}

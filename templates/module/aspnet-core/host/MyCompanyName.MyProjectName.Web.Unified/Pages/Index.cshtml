@@ -1,0 +1,26 @@
+﻿@page
+@using Localization.Resources.SmartSoftwareUi
+@using Microsoft.Extensions.Localization
+@using MyCompanyName.MyProjectName.Pages
+@using SmartSoftware.Users
+@model IndexModel
+@inject IStringLocalizer<SmartSoftwareUiResource> Localizer
+@inject ICurrentUser CurrentUser
+
+<ss-card>
+    <ss-card-header>Welcome</ss-card-header>
+    <ss-card-body>
+        @if (!CurrentUser.IsAuthenticated)
+        {
+            <a href="~/Account/Login">@Localizer["Login"]</a>
+        }
+        else
+        {
+            <span>Welcome: @CurrentUser.UserName</span>
+        }
+        <hr />
+        <p class="text-end"><a href="https://smartsoftware.io?ref=tmpl" target="_blank">smartsoftware.io</a></p>
+    </ss-card-body>
+</ss-card>
+
+

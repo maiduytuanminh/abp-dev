@@ -1,0 +1,50 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Codemirror
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.GlobalResources
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.CmsKit.Localization
+
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@model IndexModel
+
+@{
+    PageLayout.Content.Title = L["GlobalResources"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.GlobalResources.GlobalResourcesMenu;
+}
+
+@section styles{
+    <ss-style type="typeof(CodemirrorStyleContributor)" />
+}
+
+@section scripts {
+    <ss-script-bundle>
+        <ss-script type="typeof(CodemirrorScriptContributor )"/>
+        <ss-script src="/libs/codemirror/mode/css/css.js"/>
+        <ss-script src="/libs/codemirror/mode/javascript/javascript.js"/>
+        <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+        <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+        <ss-script src="/Pages/CmsKit/GlobalResources/index.js"/>
+    </ss-script-bundle>
+}
+
+<ss-card>
+    <ss-card-body>
+        <ss-tabs>
+            <ss-tab title="@L["Script"].Value">
+                <ss-input asp-for="ScriptContent" suppress-label="true"></ss-input>
+            </ss-tab>
+            <ss-tab title="@L["Style"].Value">
+                <ss-input asp-for="StyleContent" suppress-label="true"></ss-input>
+            </ss-tab>
+        </ss-tabs>
+    </ss-card-body>
+    <ss-card-footer>
+        <ss-button button-type="Primary" id="SaveResourcesButton" class="float-end">@L["SaveChanges"]</ss-button>
+    </ss-card-footer>
+</ss-card>

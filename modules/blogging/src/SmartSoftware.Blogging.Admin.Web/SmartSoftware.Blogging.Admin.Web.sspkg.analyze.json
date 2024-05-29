@@ -1,0 +1,78 @@
+{
+  "name": "SmartSoftware.Blogging.Admin.Web",
+  "hash": "f00cd39c07130843c7103cc1f6caf9a2",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Blogging.Admin",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Admin.Application.Contracts",
+          "namespace": "SmartSoftware.Blogging.Admin",
+          "name": "BloggingAdminApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap",
+          "name": "SmartSoftwareAspNetCoreMvcUiBootstrapModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Bundling",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Bundling",
+          "name": "SmartSoftwareAspNetCoreMvcUiBundlingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BloggingAdminWebModule",
+      "summary": null
+    }
+  ]
+}

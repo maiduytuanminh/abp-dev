@@ -1,0 +1,6 @@
+{
+  "culture": "pl-PL",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "Usługa „{ServiceName}” musi włączyć funkcję „{GlobalFeatureName}”."
+  }
+}

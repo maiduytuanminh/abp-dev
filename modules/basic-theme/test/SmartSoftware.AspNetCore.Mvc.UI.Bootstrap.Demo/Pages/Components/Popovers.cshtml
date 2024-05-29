@@ -1,0 +1,71 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.PopoversModel
+@{
+    ViewData["Title"] = "Popovers";
+}
+
+
+<h2>Popovers</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/popovers")" target="_blank"> Bootstrap Popovers</a>.</p>
+
+
+<h4>Example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-button ss-popover="Hi, i'm popover content!">
+            Popover Default
+        </ss-button>
+        <ss-button ss-popover-top="Hi, i'm hoverable popover content!" title="Popover Title" hoverable="true">
+            Popover With Title
+        </ss-button>
+        <ss-button ss-popover-right="Hi, i'm dismissible popover content!" title="Popover Title" dismissible="true">
+            Dismissible Popover
+        </ss-button>
+        <ss-button ss-popover-left="Hi, i'm disabled popover content!" title="Popover Title" disabled="true">
+            Disabled Popover
+        </ss-button>
+        <ss-button ss-popover="Hi, i'm disabled dismissible hoverable popover content!" title="Popover Title" disabled="true" dismissible="true" hoverable="true">
+            Disabled Popover
+        </ss-button>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper" active="true">
+                <pre><code>
+&lt;ss-button ss-popover=&quot;Hi, i&apos;m popover content!&quot;&gt;
+       Popover Default
+&lt;/ss-button&gt;
+&lt;ss-button ss-popover-top=&quot;Hi, i&apos;m popover content!&quot; title=&quot;Popover Title&quot;&gt;
+       Popover With Title
+&lt;/ss-button&gt;
+&lt;ss-button ss-popover-right=&quot;Hi, i&apos;m popover content!&quot; title=&quot;Popover Title&quot; dismissible=&quot;true&quot;&gt;
+       Dismissible Popover
+&lt;/ss-button&gt;
+&lt;ss-button ss-popover-left=&quot;Hi, i&apos;m popover content!&quot; title=&quot;Popover Title&quot; disabled=&quot;true&quot;&gt;
+       Disabled Popover
+&lt;/ss-button&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;button class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;bottom&quot; data-bs-content=&quot;Hi, i&apos;m popover content!&quot; data-bs-original-title=&quot;&quot; title=&quot;&quot;&gt;
+      Popover Default
+&lt;/button&gt;
+&lt;button title=&quot;&quot; class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;top&quot; data-bs-content=&quot;Hi, i&apos;m popover content!&quot; data-bs-original-title=&quot;Popover Title&quot;&gt;
+      Popover With Title
+&lt;/button&gt;
+&lt;button title=&quot;&quot; class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;right&quot; data-bs-content=&quot;Hi, i&apos;m popover content!&quot; data-bs-trigger=&quot;focus&quot; data-bs-original-title=&quot;Popover Title&quot;&gt;
+      Dismissible Popover
+&lt;/button&gt;
+&lt;span class=&quot;d-inline-block&quot; title=&quot;&quot; data-bs-placement=&quot;left&quot; data-bs-toggle=&quot;popover&quot; data-bs-content=&quot;Hi, i&apos;m popover content!&quot; data-bs-original-title=&quot;Popover Title&quot;&gt;&lt;button title=&quot;Popover Title&quot; class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; style=&quot;pointer-events: none;&quot;&gt;
+      Disabled Popover
+&lt;/button&gt;&lt;/span&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

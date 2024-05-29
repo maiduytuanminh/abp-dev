@@ -1,0 +1,158 @@
+{
+  "name": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+  "hash": "eb61591475ebf7d3ac246f0c25e300ce",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Domain",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareTenantManagementEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+      "connectionStringName": "SmartSoftwareTenantManagement",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.TenantManagement.Tenant",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwareTenants",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.TenantManagement.TenantConnectionString",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwareTenantConnectionStrings",
+          "summary": null
+        }
+      ],
+      "replacedDbContexts": [],
+      "implementingInterfaces": [
+        {
+          "name": "IInfrastructure<IServiceProvider>",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IServiceProvider>"
+        },
+        {
+          "name": "IDbContextDependencies",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies"
+        },
+        {
+          "name": "IDbSetCache",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbSetCache"
+        },
+        {
+          "name": "IDbContextPoolable",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable"
+        },
+        {
+          "name": "IResettableService",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IResettableService"
+        },
+        {
+          "name": "IDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IDisposable"
+        },
+        {
+          "name": "IAsyncDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IAsyncDisposable"
+        },
+        {
+          "name": "ISmartSoftwareEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.ISmartSoftwareEfCoreDbContext"
+        },
+        {
+          "name": "IEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.IEfCoreDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ITenantManagementDbContext",
+          "namespace": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "fullName": "SmartSoftware.TenantManagement.EntityFrameworkCore.ITenantManagementDbContext"
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "TenantManagementDbContext",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,781 @@
+{
+  "name": "SmartSoftware.Identity.Application",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Identity",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Domain",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Application",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementApplicationModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity",
+      "baseClass": {
+        "name": "IdentityAppServiceBase",
+        "namespace": "SmartSoftware.Identity",
+        "declaringAssemblyName": "SmartSoftware.Identity.Application",
+        "fullName": "SmartSoftware.Identity.IdentityAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IIdentityRoleAppService",
+          "namespace": "SmartSoftware.Identity",
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "fullName": "SmartSoftware.Identity.IIdentityRoleAppService"
+        },
+        {
+          "name": "ICrudAppService<IdentityRoleDto, Guid, GetIdentityRolesInput, IdentityRoleCreateDto, IdentityRoleUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICrudAppService<IdentityRoleDto, Guid, GetIdentityRolesInput, IdentityRoleCreateDto, IdentityRoleUpdateDto>"
+        },
+        {
+          "name": "ICrudAppService<IdentityRoleDto, IdentityRoleDto, Guid, GetIdentityRolesInput, IdentityRoleCreateDto, IdentityRoleUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICrudAppService<IdentityRoleDto, IdentityRoleDto, Guid, GetIdentityRolesInput, IdentityRoleCreateDto, IdentityRoleUpdateDto>"
+        },
+        {
+          "name": "IReadOnlyAppService<IdentityRoleDto, IdentityRoleDto, Guid, GetIdentityRolesInput>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IReadOnlyAppService<IdentityRoleDto, IdentityRoleDto, Guid, GetIdentityRolesInput>"
+        },
+        {
+          "name": "ICreateUpdateAppService<IdentityRoleDto, Guid, IdentityRoleCreateDto, IdentityRoleUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICreateUpdateAppService<IdentityRoleDto, Guid, IdentityRoleCreateDto, IdentityRoleUpdateDto>"
+        },
+        {
+          "name": "ICreateAppService<IdentityRoleDto, IdentityRoleCreateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICreateAppService<IdentityRoleDto, IdentityRoleCreateDto>"
+        },
+        {
+          "name": "IUpdateAppService<IdentityRoleDto, Guid, IdentityRoleUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IUpdateAppService<IdentityRoleDto, Guid, IdentityRoleUpdateDto>"
+        },
+        {
+          "name": "IDeleteAppService<Guid>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IDeleteAppService<Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "IdentityRoleDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ListResultDto<IdentityRoleDto>",
+          "name": "GetAllListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "PagedResultDto<IdentityRoleDto>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "GetIdentityRolesInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityRoleDto",
+          "name": "CreateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "IdentityRoleCreateDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityRoleDto",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            },
+            {
+              "type": "IdentityRoleUpdateDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "IdentityRoleAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity",
+      "baseClass": {
+        "name": "IdentityAppServiceBase",
+        "namespace": "SmartSoftware.Identity",
+        "declaringAssemblyName": "SmartSoftware.Identity.Application",
+        "fullName": "SmartSoftware.Identity.IdentityAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IIdentityUserAppService",
+          "namespace": "SmartSoftware.Identity",
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "fullName": "SmartSoftware.Identity.IIdentityUserAppService"
+        },
+        {
+          "name": "ICrudAppService<IdentityUserDto, Guid, GetIdentityUsersInput, IdentityUserCreateDto, IdentityUserUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICrudAppService<IdentityUserDto, Guid, GetIdentityUsersInput, IdentityUserCreateDto, IdentityUserUpdateDto>"
+        },
+        {
+          "name": "ICrudAppService<IdentityUserDto, IdentityUserDto, Guid, GetIdentityUsersInput, IdentityUserCreateDto, IdentityUserUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICrudAppService<IdentityUserDto, IdentityUserDto, Guid, GetIdentityUsersInput, IdentityUserCreateDto, IdentityUserUpdateDto>"
+        },
+        {
+          "name": "IReadOnlyAppService<IdentityUserDto, IdentityUserDto, Guid, GetIdentityUsersInput>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IReadOnlyAppService<IdentityUserDto, IdentityUserDto, Guid, GetIdentityUsersInput>"
+        },
+        {
+          "name": "ICreateUpdateAppService<IdentityUserDto, Guid, IdentityUserCreateDto, IdentityUserUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICreateUpdateAppService<IdentityUserDto, Guid, IdentityUserCreateDto, IdentityUserUpdateDto>"
+        },
+        {
+          "name": "ICreateAppService<IdentityUserDto, IdentityUserCreateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.ICreateAppService<IdentityUserDto, IdentityUserCreateDto>"
+        },
+        {
+          "name": "IUpdateAppService<IdentityUserDto, Guid, IdentityUserUpdateDto>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IUpdateAppService<IdentityUserDto, Guid, IdentityUserUpdateDto>"
+        },
+        {
+          "name": "IDeleteAppService<Guid>",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IDeleteAppService<Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "IdentityUserDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "PagedResultDto<IdentityUserDto>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "GetIdentityUsersInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ListResultDto<IdentityRoleDto>",
+          "name": "GetRolesAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ListResultDto<IdentityRoleDto>",
+          "name": "GetAssignableRolesAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "IdentityUserDto",
+          "name": "CreateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "IdentityUserCreateDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityUserDto",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            },
+            {
+              "type": "IdentityUserUpdateDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "UpdateRolesAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            },
+            {
+              "type": "IdentityUserUpdateRolesDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityUserDto",
+          "name": "FindByUsernameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "userName",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityUserDto",
+          "name": "FindByEmailAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "email",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "IdentityUserAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity",
+      "baseClass": {
+        "name": "IdentityAppServiceBase",
+        "namespace": "SmartSoftware.Identity",
+        "declaringAssemblyName": "SmartSoftware.Identity.Application",
+        "fullName": "SmartSoftware.Identity.IdentityAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IIdentityUserLookupAppService",
+          "namespace": "SmartSoftware.Identity",
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "fullName": "SmartSoftware.Identity.IIdentityUserLookupAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "UserData",
+          "name": "FindByIdAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "UserData",
+          "name": "FindByUserNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "userName",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ListResultDto<UserData>",
+          "name": "SearchAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "UserLookupSearchInputDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Int64",
+          "name": "GetCountAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "UserLookupCountInputDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "IdentityUserLookupAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Integration",
+      "baseClass": {
+        "name": "IdentityAppServiceBase",
+        "namespace": "SmartSoftware.Identity",
+        "declaringAssemblyName": "SmartSoftware.Identity.Application",
+        "fullName": "SmartSoftware.Identity.IdentityAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IIdentityUserIntegrationService",
+          "namespace": "SmartSoftware.Identity.Integration",
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "fullName": "SmartSoftware.Identity.Integration.IIdentityUserIntegrationService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "String[]",
+          "name": "GetRoleNamesAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "IdentityUserIntegrationService",
+      "summary": null
+    }
+  ]
+}

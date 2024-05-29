@@ -1,0 +1,114 @@
+﻿@page
+@using Microsoft.AspNetCore.Http.Extensions
+@using Microsoft.AspNetCore.Mvc.Localization
+@using MyCompanyName.MyProjectName.Pages
+@using MyCompanyName.MyProjectName.Localization
+@using SmartSoftware.Users
+@using SmartSoftware.AspNetCore.Mvc.UI.Theming
+@using SmartSoftware.Ui.Branding
+@model IndexModel
+@inject IHtmlLocalizer<MyProjectNameResource> L
+@inject ICurrentUser CurrentUser
+@inject IBrandingProvider BrandingProvider
+@inject ITheme Theme
+
+@{
+    Layout = Theme.GetEmptyLayout();
+}
+
+@section styles {
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+}
+
+<div class="d-flex align-items-center" style="min-height: 100vh;">
+    <div class="container">
+        <ss-row>
+            <div class="col mx-auto account-column">
+                <div class="account-brand p-4 text-center mb-1">
+                    @if (!BrandingProvider.LogoUrl.IsNullOrEmpty())
+                    {
+                        <a class="navbar-brand" href="~/" alt="@BrandingProvider.AppName"></a>
+                    }
+                    else
+                    {
+                        <h1>@BrandingProvider.AppName</h1>
+                    }
+                </div>
+
+                <ss-card>
+                    <ss-card-body>
+                        <div class="container">
+                            <ss-row>
+                                <ss-column size="_6">
+                                    <div class="mr-auto p-2 float-start">
+                                            <div class="">
+                                                @if (CurrentUser.IsAuthenticated)
+                                                {
+                                                    <div class="">
+                                                        <a ss-button="Outline_Primary" asp-controller="Manage" asp-action="Index" asp-area="Account" class="me-2">@L["MyAccount"]</a>
+                                                        <a ss-button="Primary" asp-controller="Logout" asp-action="Index" asp-area="Account" asp-route-returnUrl="/" >@L["Logout"]</a>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <a ss-button="Primary" asp-controller="Login" asp-action="Index" asp-area="Account">@L["Login"]</a>
+                                                }
+                                            </div>
+                                    </div>
+                                </ss-column>
+
+                                <ss-column size="_6">
+                                    <div class="ml-auto p-2 float-end">
+                                        <ss-dropdown>
+                                            <ss-dropdown-button text="@Model.CurrentLanguage" />
+                                            @if (@Model.Languages != null)
+                                            {
+                                                <ss-dropdown-menu>
+                                                    @foreach (var language in Model.Languages)
+                                                    {
+                                                        var languageUrl = Url.Content($"~/SmartSoftware/Languages/Switch?culture={language.CultureName}&uiCulture={language.UiCultureName}&returnUrl={System.Net.WebUtility.UrlEncode(Request.GetEncodedPathAndQuery())}");
+                                                        <ss-dropdown-item href="@languageUrl">@language.DisplayName</ss-dropdown-item>
+                                                    }
+                                                </ss-dropdown-menu>
+                                            }
+                                        </ss-dropdown>
+                                    </div>
+                                </ss-column>
+                            </ss-row>
+
+                            @if (Model.Applications != null)
+                            {
+                                <hr class="m-2" />
+
+                                <ss-row class="mt-3">
+                                    @foreach (var application in Model.Applications)
+                                    {
+                                        <ss-column size-md="@SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Grid.ColumnSize._4" class="mb-2">
+                                            <ss-card>
+                                                <ss-card-body>
+                                                    @if (!application.LogoUri.IsNullOrEmpty())
+                                                    {
+                                                        <div class="mx-auto">
+                                                            <img src="@application.LogoUri" style="height:64px" class="mb-3"/>
+                                                        </div>
+                                                    }
+
+                                                    <h4>@application.DisplayName</h4>
+                                                    <a href="@application.ClientUri" class="text-muted stretched-link">@application.ClientUri</a>
+                                                </ss-card-body>
+                                            </ss-card>
+                                        </ss-column>
+                                    }
+                                </ss-row>
+                            }
+                        </div>
+                    </ss-card-body>
+                </ss-card>
+            </div>
+        </ss-row>
+    </div>
+</div>

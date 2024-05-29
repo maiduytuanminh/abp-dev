@@ -1,0 +1,23 @@
+﻿@page
+@model SmartSoftwareDocs.Web.Pages.IndexModel
+@{
+}
+
+@if (!Model.Projects.Any())
+{
+    <ss-alert alert-type="Warning">
+        <strong>No projects found!</strong><br />
+        See <a href=" https://docs.smartsoftware.io/en/ss/latest/Modules/Docs">documentation</a> to see how you can create a new one.
+    </ss-alert>
+}
+else
+{
+    <h1>Projects</h1>
+
+    <ss-list-group class="mt-5">
+        @foreach (var project in Model.Projects)
+        {
+            <ss-list-group-item href="@Model.GetUrlForProject(project)">@project.Name</ss-list-group-item>
+        }
+    </ss-list-group>
+}

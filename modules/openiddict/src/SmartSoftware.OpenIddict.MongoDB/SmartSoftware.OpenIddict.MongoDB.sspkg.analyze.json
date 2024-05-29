@@ -1,0 +1,121 @@
+{
+  "name": "SmartSoftware.OpenIddict.MongoDB",
+  "hash": "c523d1992cdfef4210763a2d4609779e",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.OpenIddict.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.OpenIddict.Domain",
+          "namespace": "SmartSoftware.OpenIddict",
+          "name": "SmartSoftwareOpenIddictDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareOpenIddictMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.OpenIddict.MongoDB",
+      "connectionStringName": "SmartSoftwareOpenIddict",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Scopes.OpenIddictScope",
+          "contentType": "databaseCollection",
+          "name": "OpenIddictScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Authorizations.OpenIddictAuthorization",
+          "contentType": "databaseCollection",
+          "name": "OpenIddictAuthorizations",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Tokens.OpenIddictToken",
+          "contentType": "databaseCollection",
+          "name": "OpenIddictTokens",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Applications.OpenIddictApplication",
+          "contentType": "databaseCollection",
+          "name": "OpenIddictApplications",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IOpenIddictMongoDbContext",
+          "namespace": "SmartSoftware.OpenIddict.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.OpenIddict.MongoDB",
+          "fullName": "SmartSoftware.OpenIddict.MongoDB.IOpenIddictMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "OpenIddictMongoDbContext",
+      "summary": null
+    }
+  ]
+}

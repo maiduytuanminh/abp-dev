@@ -1,0 +1,21 @@
+﻿@model SmartSoftware.AspNetCore.Mvc.UI.Widgets.Components.WidgetResourcesViewModel
+@if (Model.Widgets.Any())
+{
+    var resourceItems = Model.Widgets.SelectMany(w => w.Scripts).ToArray();
+    if (resourceItems.Any())
+    {
+        <ss-script-bundle>
+            @foreach (var resourceItem in resourceItems)
+            {
+                if (resourceItem.Src != null)
+                {
+                    <ss-script src="@resourceItem.Src" />
+                }
+                else
+                {
+                    <ss-script type="@resourceItem.Type" />
+                }
+            }
+        </ss-script-bundle>
+    }
+}

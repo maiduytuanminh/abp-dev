@@ -1,0 +1,10 @@
+{
+  "culture": "is",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Velkomin í SmartSoftwareDocs!",
+    "NoProjectWarning": "Það er ekkert skilgreint verkefni ennþá!",
+    "CreateYourFirstProject": "Smelltu hér til að hefja fyrsta verkefnið þitt",
+    "NoProject": "Ekkert verkefni!"
+  }
+}

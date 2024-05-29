@@ -1,0 +1,103 @@
+{
+  "name": "SmartSoftware.TenantManagement.MongoDB",
+  "hash": "c1aa3fe8ddd85fb93f1c2d76eddb273a",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.TenantManagement.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Domain",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareTenantManagementMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.TenantManagement.MongoDB",
+      "connectionStringName": "SmartSoftwareTenantManagement",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.TenantManagement.Tenant",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareTenants",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ITenantManagementMongoDbContext",
+          "namespace": "SmartSoftware.TenantManagement.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.MongoDB",
+          "fullName": "SmartSoftware.TenantManagement.MongoDB.ITenantManagementMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "TenantManagementMongoDbContext",
+      "summary": null
+    }
+  ]
+}

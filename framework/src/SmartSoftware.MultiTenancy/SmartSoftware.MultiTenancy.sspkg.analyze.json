@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.MultiTenancy",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.MultiTenancy",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "namespace": "SmartSoftware.Data",
+          "name": "SmartSoftwareDataModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Security",
+          "namespace": "SmartSoftware.Security",
+          "name": "SmartSoftwareSecurityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EventBus.Abstractions",
+          "namespace": "SmartSoftware.EventBus.Abstractions",
+          "name": "SmartSoftwareEventBusAbstractionsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareMultiTenancyModule",
+      "summary": null
+    }
+  ]
+}

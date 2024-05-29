@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "name": "smartsoftware.docstestapp",
+  "private": true,
+  "dependencies": {
+    "@smartsoftware/aspnetcore.mvc.ui.theme.basic": "~8.2.0-rc.3",
+    "@smartsoftware/docs": "~8.2.0-rc.3"
+  }
+}

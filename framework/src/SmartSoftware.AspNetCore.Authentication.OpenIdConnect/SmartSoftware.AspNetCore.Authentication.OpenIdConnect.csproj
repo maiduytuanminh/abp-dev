@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\configureawait.props" />
+    <Import Project="..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.MultiTenancy\SmartSoftware.AspNetCore.MultiTenancy.csproj" />
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Authentication.OAuth\SmartSoftware.AspNetCore.Authentication.OAuth.csproj" />
+        <ProjectReference Include="..\SmartSoftware.RemoteServices\SmartSoftware.RemoteServices.csproj" />
+        <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" />
+    </ItemGroup>
+
+</Project>

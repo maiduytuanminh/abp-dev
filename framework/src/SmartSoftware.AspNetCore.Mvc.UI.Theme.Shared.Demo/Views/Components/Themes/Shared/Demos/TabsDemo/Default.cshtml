@@ -1,0 +1,63 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.TabsDemo
+
+<ss-component-demo-section title="Example" view-path="@TabsDemoViewComponent.ViewPath">
+    <ss-tabs>
+        <ss-tab title="Home">
+            Content_Home
+        </ss-tab>
+        <ss-tab-link title="Link" href="#" />
+        <ss-tab title="profile">
+            Content_Profile
+        </ss-tab>
+        <ss-tab-dropdown title="Contact" name="ContactDropdown">
+            <ss-tab title="Contact 1" parent-dropdown-name="ContactDropdown">
+                Content_1_Content
+            </ss-tab>
+            <ss-tab title="Contact 2" parent-dropdown-name="ContactDropdown">
+                Content_2_Content
+            </ss-tab>
+        </ss-tab-dropdown>
+    </ss-tabs>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Tab attributes" view-path="@TabsDemoViewComponent.ViewPath">
+    <ss-tabs>
+        <ss-tab name="nav-home" title="Home">
+            Content_Home
+        </ss-tab>
+        <ss-tab name="nav-profile" active="true" title="profile">
+            Content_Profile
+        </ss-tab>
+        <ss-tab name="nav-contact" title="Contact">
+            Content_Contact
+        </ss-tab>
+    </ss-tabs>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Pill Example" view-path="@TabsDemoViewComponent.ViewPath">
+    <ss-tabs tab-style="Pill">
+        <ss-tab title="Home">
+            Content_Home
+        </ss-tab>
+        <ss-tab title="profile">
+            Content_Profile
+        </ss-tab>
+        <ss-tab title="Contact">
+            Content_Contact
+        </ss-tab>
+    </ss-tabs>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Vertical Example" view-path="@TabsDemoViewComponent.ViewPath">
+    <ss-tabs tab-style="PillVertical" vertical-header-size="_2">
+        <ss-tab active="true" title="Home">
+            Content_Home
+        </ss-tab>
+        <ss-tab title="profile">
+            Content_Profile
+        </ss-tab>
+        <ss-tab title="Contact">
+            Content_Contact
+        </ss-tab>
+    </ss-tabs>
+</ss-component-demo-section>

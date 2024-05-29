@@ -1,0 +1,68 @@
+{
+  "name": "SmartSoftware.CmsKit.Admin.HttpApi.Client",
+  "hash": "ef3894ffa45c8acb929d4feba96f8075",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit.Admin",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Admin.Application.Contracts",
+          "namespace": "SmartSoftware.CmsKit.Admin",
+          "name": "CmsKitAdminApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Common.HttpApi.Client",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitCommonHttpApiClientModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitAdminHttpApiClientModule",
+      "summary": null
+    }
+  ]
+}

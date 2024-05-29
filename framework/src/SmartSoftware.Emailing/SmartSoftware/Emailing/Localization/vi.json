@@ -1,0 +1,25 @@
+{
+  "culture": "vi",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Mặc định từ địa chỉ",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Mặc định từ tên hiển thị",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Tổ chức",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Hải cảng",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Tên tài khoản",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Mật khẩu",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Lãnh địa",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Bật SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Sử dụng thông tin đăng nhập mặc định",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Địa chỉ từ mặc định",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Mặc định từ tên hiển thị",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Tên hoặc địa chỉ IP của máy chủ được sử dụng cho các giao dịch SMTP.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Cổng được sử dụng cho các giao dịch SMTP.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Tên người dùng được liên kết với thông tin xác thực.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Mật khẩu cho tên người dùng được liên kết với thông tin đăng nhập.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Miền hoặc tên máy tính xác minh thông tin đăng nhập.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "SmtpClient có sử dụng Lớp cổng bảo mật (SSL) để mã hóa kết nối hay không.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Thông tin đăng nhập mặc định có được gửi cùng với các yêu cầu hay không.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Mẫu bố cục email mặc định",
+    "TextTemplate:StandardEmailTemplates.Message": "Mẫu tin nhắn đơn giản cho email"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "culture": "ro-RO",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP peste SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP peste SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Server host",
+    "Description:SmartSoftware.Ldap.ServerHost": "Server host",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Server port",
+    "Description:SmartSoftware.Ldap.ServerPort": "Server port",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Componenta domeniului de bază",
+    "Description:SmartSoftware.Ldap.BaseDc": "Componenta domeniului de bază",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Domeniu",
+    "Description:SmartSoftware.Ldap.Domain": "Domeniu",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Nume de utilizator",
+    "Description:SmartSoftware.Ldap.UserName": "Nume de utilizator",
+    "DisplayName:SmartSoftware.Ldap.Password": "Parola",
+    "Description:SmartSoftware.Ldap.Password": "Parola"
+  }
+}

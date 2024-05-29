@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Identity.EntityFrameworkCore</AssemblyName>
+    <PackageId>SmartSoftware.Identity.EntityFrameworkCore</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\users\src\SmartSoftware.Users.EntityFrameworkCore\SmartSoftware.Users.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Identity.Domain\SmartSoftware.Identity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

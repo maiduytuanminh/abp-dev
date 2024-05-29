@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.Extensions.Hosting" />
+        <PackageReference Include="Serilog.Sinks.File" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\SmartSoftware.SettingManagement.Application\SmartSoftware.SettingManagement.Application.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.SettingManagement.HttpApi\SmartSoftware.SettingManagement.HttpApi.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.SettingManagement.Web\SmartSoftware.SettingManagement.Web.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application\SmartSoftware.PermissionManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi\SmartSoftware.PermissionManagement.HttpApi.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.EntityFrameworkCore\SmartSoftware.Identity.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Web\SmartSoftware.Account.Web.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Application\SmartSoftware.Account.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+        <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Web\SmartSoftware.Identity.Web.csproj" />
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Pages\**\*.js">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Pages\**\*.css">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\_ViewStart.cshtml" />
+    </ItemGroup>
+
+</Project>

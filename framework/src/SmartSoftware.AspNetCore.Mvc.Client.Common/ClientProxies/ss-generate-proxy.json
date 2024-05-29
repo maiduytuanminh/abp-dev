@@ -1,0 +1,260 @@
+{
+  "modules": {
+    "ss": {
+      "rootPath": "ss",
+      "remoteServiceName": "ss",
+      "controllers": {
+        "Pages.SmartSoftware.MultiTenancy.SmartSoftwareTenantController": {
+          "controllerName": "SmartSoftwareTenant",
+          "controllerGroupName": "SmartSoftwareTenant",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "Pages.SmartSoftware.MultiTenancy.SmartSoftwareTenantController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.ISmartSoftwareTenantAppService"
+            }
+          ],
+          "actions": {
+            "FindTenantByNameAsyncByName": {
+              "uniqueName": "FindTenantByNameAsyncByName",
+              "name": "FindTenantByNameAsync",
+              "httpMethod": "GET",
+              "url": "api/ss/multi-tenancy/tenants/by-name/{name}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.FindTenantResultDto",
+                "typeSimple": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.FindTenantResultDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.ISmartSoftwareTenantAppService"
+            },
+            "FindTenantByIdAsyncById": {
+              "uniqueName": "FindTenantByIdAsyncById",
+              "name": "FindTenantByIdAsync",
+              "httpMethod": "GET",
+              "url": "api/ss/multi-tenancy/tenants/by-id/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.FindTenantResultDto",
+                "typeSimple": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.FindTenantResultDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.AspNetCore.Mvc.MultiTenancy.ISmartSoftwareTenantAppService"
+            }
+          }
+        },
+        "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.SmartSoftwareApplicationConfigurationController": {
+          "controllerName": "SmartSoftwareApplicationConfiguration",
+          "controllerGroupName": "SmartSoftwareApplicationConfiguration",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.SmartSoftwareApplicationConfigurationController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ISmartSoftwareApplicationConfigurationAppService"
+            }
+          ],
+          "actions": {
+            "GetAsyncByOptions": {
+              "uniqueName": "GetAsyncByOptions",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/ss/application-configuration",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "options",
+                  "typeAsString": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions, SmartSoftware.AspNetCore.Mvc.Contracts",
+                  "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions",
+                  "typeSimple": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "options",
+                  "name": "IncludeLocalizationResources",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "options"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto",
+                "typeSimple": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ISmartSoftwareApplicationConfigurationAppService"
+            }
+          }
+        },
+        "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.SmartSoftwareApplicationLocalizationController": {
+          "controllerName": "SmartSoftwareApplicationLocalization",
+          "controllerGroupName": "SmartSoftwareApplicationLocalization",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.SmartSoftwareApplicationLocalizationController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ISmartSoftwareApplicationLocalizationAppService"
+            }
+          ],
+          "actions": {
+            "GetAsyncByInput": {
+              "uniqueName": "GetAsyncByInput",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/ss/application-localization",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto, SmartSoftware.AspNetCore.Mvc.Contracts",
+                  "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto",
+                  "typeSimple": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "CultureName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "OnlyDynamics",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto",
+                "typeSimple": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.AspNetCore.Mvc.ApplicationConfigurations.ISmartSoftwareApplicationLocalizationAppService"
+            }
+          }
+        },
+        "SmartSoftware.AspNetCore.Mvc.ApiExploring.SmartSoftwareApiDefinitionController": {
+          "controllerName": "SmartSoftwareApiDefinition",
+          "controllerGroupName": "SmartSoftwareApiDefinition",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "SmartSoftware.AspNetCore.Mvc.ApiExploring.SmartSoftwareApiDefinitionController",
+          "interfaces": [],
+          "actions": {
+            "GetByModel": {
+              "uniqueName": "GetByModel",
+              "name": "Get",
+              "httpMethod": "GET",
+              "url": "api/ss/api-definition",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "model",
+                  "typeAsString": "SmartSoftware.Http.Modeling.ApplicationApiDescriptionModelRequestDto, SmartSoftware.Http",
+                  "type": "SmartSoftware.Http.Modeling.ApplicationApiDescriptionModelRequestDto",
+                  "typeSimple": "SmartSoftware.Http.Modeling.ApplicationApiDescriptionModelRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "model",
+                  "name": "IncludeTypes",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "model"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Http.Modeling.ApplicationApiDescriptionModel",
+                "typeSimple": "SmartSoftware.Http.Modeling.ApplicationApiDescriptionModel"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.AspNetCore.Mvc.ApiExploring.SmartSoftwareApiDefinitionController"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

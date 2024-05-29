@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+</Project>

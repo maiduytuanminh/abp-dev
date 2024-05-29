@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.IdentityServer.Domain</AssemblyName>
+    <PackageId>SmartSoftware.IdentityServer.Domain</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.IdentityServer.Domain.Shared\SmartSoftware.IdentityServer.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Domain\SmartSoftware.Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Security\SmartSoftware.Security.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching\SmartSoftware.Caching.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Validation\SmartSoftware.Validation.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.BackgroundWorkers\SmartSoftware.BackgroundWorkers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" />
+  </ItemGroup>
+
+</Project>

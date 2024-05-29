@@ -1,0 +1,1326 @@
+{
+  "modules": {
+    "blogging": {
+      "rootPath": "blogging",
+      "remoteServiceName": "Blogging",
+      "controllers": {
+        "SmartSoftware.Blogging.BlogFilesController": {
+          "controllerName": "BlogFiles",
+          "controllerGroupName": "BlogFiles",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.BlogFilesController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Files.IFileAppService",
+              "name": "IFileAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "name",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Files.RawFileDto",
+                    "typeSimple": "SmartSoftware.Blogging.Files.RawFileDto"
+                  }
+                },
+                {
+                  "name": "GetFileAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "name",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Content.IRemoteStreamContent",
+                    "typeSimple": "SmartSoftware.Content.IRemoteStreamContent"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Files.FileUploadInputDto, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Files.FileUploadInputDto",
+                      "typeSimple": "SmartSoftware.Blogging.Files.FileUploadInputDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Files.FileUploadOutputDto",
+                    "typeSimple": "SmartSoftware.Blogging.Files.FileUploadOutputDto"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsyncByName": {
+              "uniqueName": "GetAsyncByName",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/files/{name}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Files.RawFileDto",
+                "typeSimple": "SmartSoftware.Blogging.Files.RawFileDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Files.IFileAppService"
+            },
+            "GetFileAsyncByName": {
+              "uniqueName": "GetFileAsyncByName",
+              "name": "GetFileAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/files/www/{name}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Content.IRemoteStreamContent",
+                "typeSimple": "SmartSoftware.Content.IRemoteStreamContent"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Files.IFileAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/blogging/files/images/upload",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Files.FileUploadInputDto, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Files.FileUploadInputDto",
+                  "typeSimple": "SmartSoftware.Blogging.Files.FileUploadInputDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "File",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Content.IRemoteStreamContent",
+                  "typeSimple": "SmartSoftware.Content.IRemoteStreamContent",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "FormFile",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Files.FileUploadOutputDto",
+                "typeSimple": "SmartSoftware.Blogging.Files.FileUploadOutputDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Files.IFileAppService"
+            }
+          }
+        },
+        "SmartSoftware.Blogging.BlogsController": {
+          "controllerName": "Blogs",
+          "controllerGroupName": "Blogs",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.BlogsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Blogs.IBlogAppService",
+              "name": "IBlogAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>"
+                  }
+                },
+                {
+                  "name": "GetByShortNameAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "shortName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                    "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                    "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Blogs.IBlogAppService"
+            },
+            "GetByShortNameAsyncByShortName": {
+              "uniqueName": "GetByShortNameAsyncByShortName",
+              "name": "GetByShortNameAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs/by-shortname/{shortName}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "shortName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "shortName",
+                  "name": "shortName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Blogs.IBlogAppService"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Blogs.IBlogAppService"
+            }
+          }
+        },
+        "SmartSoftware.Blogging.CommentsController": {
+          "controllerName": "Comments",
+          "controllerGroupName": "Comments",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.CommentsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Comments.ICommentAppService",
+              "name": "ICommentAppService",
+              "methods": [
+                {
+                  "name": "GetHierarchicalListOfPostAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "postId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Comments.Dtos.CommentWithRepliesDto>",
+                    "typeSimple": "[SmartSoftware.Blogging.Comments.Dtos.CommentWithRepliesDto]"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                      "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                      "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetHierarchicalListOfPostAsyncByPostId": {
+              "uniqueName": "GetHierarchicalListOfPostAsyncByPostId",
+              "name": "GetHierarchicalListOfPostAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/comments/hierarchical/{postId}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "postId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "postId",
+                  "name": "postId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Comments.Dtos.CommentWithRepliesDto>",
+                "typeSimple": "[SmartSoftware.Blogging.Comments.Dtos.CommentWithRepliesDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Comments.ICommentAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/blogging/comments",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                  "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                  "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CreateCommentDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Comments.ICommentAppService"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/blogging/comments/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                  "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                  "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.UpdateCommentDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Comments.Dtos.CommentWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Comments.ICommentAppService"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/blogging/comments/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Comments.ICommentAppService"
+            }
+          }
+        },
+        "SmartSoftware.Blogging.PostsController": {
+          "controllerName": "Posts",
+          "controllerGroupName": "Posts",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.PostsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Posts.IPostAppService",
+              "name": "IPostAppService",
+              "methods": [
+                {
+                  "name": "GetListByBlogIdAndTagNameAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "blogId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "tagName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>"
+                  }
+                },
+                {
+                  "name": "GetTimeOrderedListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "blogId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>"
+                  }
+                },
+                {
+                  "name": "GetForReadingAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Posts.GetPostInput, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Posts.GetPostInput",
+                      "typeSimple": "SmartSoftware.Blogging.Posts.GetPostInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Posts.CreatePostDto, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                      "typeSimple": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Posts.UpdatePostDto, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                      "typeSimple": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "GetListByUserIdAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "userId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                    "typeSimple": "[SmartSoftware.Blogging.Posts.PostWithDetailsDto]"
+                  }
+                },
+                {
+                  "name": "GetLatestBlogPostsAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "blogId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "count",
+                      "typeAsString": "System.Int32, System.Private.CoreLib",
+                      "type": "System.Int32",
+                      "typeSimple": "number",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                    "typeSimple": "[SmartSoftware.Blogging.Posts.PostWithDetailsDto]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListByBlogIdAndTagNameAsyncByBlogIdAndTagName": {
+              "uniqueName": "GetListByBlogIdAndTagNameAsyncByBlogIdAndTagName",
+              "name": "GetListByBlogIdAndTagNameAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/{blogId}/all",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "blogId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "tagName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "blogId",
+                  "name": "blogId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "tagName",
+                  "name": "tagName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "GetTimeOrderedListAsyncByBlogId": {
+              "uniqueName": "GetTimeOrderedListAsyncByBlogId",
+              "name": "GetTimeOrderedListAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/{blogId}/all/by-time",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "blogId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "blogId",
+                  "name": "blogId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Posts.PostWithDetailsDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "GetForReadingAsyncByInput": {
+              "uniqueName": "GetForReadingAsyncByInput",
+              "name": "GetForReadingAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/read",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Posts.GetPostInput, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Posts.GetPostInput",
+                  "typeSimple": "SmartSoftware.Blogging.Posts.GetPostInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Url",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "BlogId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/blogging/posts",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Posts.CreatePostDto, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                  "typeSimple": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                  "typeSimple": "SmartSoftware.Blogging.Posts.CreatePostDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/blogging/posts/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Posts.UpdatePostDto, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                  "typeSimple": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                  "typeSimple": "SmartSoftware.Blogging.Posts.UpdatePostDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Posts.PostWithDetailsDto",
+                "typeSimple": "SmartSoftware.Blogging.Posts.PostWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "GetListByUserIdAsyncByUserId": {
+              "uniqueName": "GetListByUserIdAsyncByUserId",
+              "name": "GetListByUserIdAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/user/{userId}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "userId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "userId",
+                  "name": "userId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                "typeSimple": "[SmartSoftware.Blogging.Posts.PostWithDetailsDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "GetLatestBlogPostsAsyncByBlogIdAndCount": {
+              "uniqueName": "GetLatestBlogPostsAsyncByBlogIdAndCount",
+              "name": "GetLatestBlogPostsAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/posts/{blogId}/latest/{count}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "blogId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "count",
+                  "typeAsString": "System.Int32, System.Private.CoreLib",
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "blogId",
+                  "name": "blogId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "count",
+                  "name": "count",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Posts.PostWithDetailsDto>",
+                "typeSimple": "[SmartSoftware.Blogging.Posts.PostWithDetailsDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/blogging/posts/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Posts.IPostAppService"
+            }
+          }
+        },
+        "SmartSoftware.Blogging.TagsController": {
+          "controllerName": "Tags",
+          "controllerGroupName": "Tags",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.TagsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Tagging.ITagAppService",
+              "name": "ITagAppService",
+              "methods": [
+                {
+                  "name": "GetPopularTagsAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "blogId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput, SmartSoftware.Blogging.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput",
+                      "typeSimple": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Tagging.Dtos.TagDto>",
+                    "typeSimple": "[SmartSoftware.Blogging.Tagging.Dtos.TagDto]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetPopularTagsAsyncByBlogIdAndInput": {
+              "uniqueName": "GetPopularTagsAsyncByBlogIdAndInput",
+              "name": "GetPopularTagsAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/tags/popular/{blogId}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "blogId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput, SmartSoftware.Blogging.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput",
+                  "typeSimple": "SmartSoftware.Blogging.Tagging.Dtos.GetPopularTagsInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "blogId",
+                  "name": "blogId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "ResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MinimumPostCount",
+                  "jsonName": null,
+                  "type": "System.Int32?",
+                  "typeSimple": "number?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Blogging.Tagging.Dtos.TagDto>",
+                "typeSimple": "[SmartSoftware.Blogging.Tagging.Dtos.TagDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Tagging.ITagAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

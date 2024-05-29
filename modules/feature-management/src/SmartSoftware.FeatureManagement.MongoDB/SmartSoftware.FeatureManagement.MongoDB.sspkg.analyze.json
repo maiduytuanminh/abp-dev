@@ -1,0 +1,115 @@
+{
+  "name": "SmartSoftware.FeatureManagement.MongoDB",
+  "hash": "1287dca2b75f3753abc23921cc0263b4",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.FeatureManagement.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Domain",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareFeatureManagementMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.FeatureManagement.MongoDB",
+      "connectionStringName": "SmartSoftwareFeatureManagement",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.FeatureManagement.FeatureValue",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareFeatureValues",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.FeatureManagement.FeatureDefinitionRecord",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareFeatures",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.FeatureManagement.FeatureGroupDefinitionRecord",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareFeatureGroups",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IFeatureManagementMongoDbContext",
+          "namespace": "SmartSoftware.FeatureManagement.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.MongoDB",
+          "fullName": "SmartSoftware.FeatureManagement.MongoDB.IFeatureManagementMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "FeatureManagementMongoDbContext",
+      "summary": null
+    }
+  ]
+}

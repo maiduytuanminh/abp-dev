@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.MongoDB\SmartSoftware.MongoDB.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Domain\SmartSoftware.CmsKit.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\users\src\SmartSoftware.Users.MongoDB\SmartSoftware.Users.MongoDB.csproj" />
+  </ItemGroup>
+
+</Project>

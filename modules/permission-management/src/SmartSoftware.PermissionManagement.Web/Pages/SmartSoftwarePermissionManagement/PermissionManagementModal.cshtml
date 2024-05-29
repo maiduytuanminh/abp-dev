@@ -1,0 +1,58 @@
+@page
+@using System.Web;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.Localization
+@using SmartSoftware.PermissionManagement.Localization
+@using SmartSoftware.PermissionManagement.Web.Pages.SmartSoftwarePermissionManagement
+@model PermissionManagementModal
+@inject IHtmlLocalizer<SmartSoftwarePermissionManagementResource> L
+@{
+    Layout = null;
+}
+
+<form method="post" asp-page="/SmartSoftwarePermissionManagement/PermissionManagementModal" data-script-class="ss.modals.PermissionManagement" id="PermissionManagementForm">
+    <ss-modal size="Large">
+        <ss-modal-header title="@(L["Permissions"].Value) - @(HttpUtility.HtmlEncode(Model.EntityDisplayName))"></ss-modal-header>
+        <ss-modal-body class="custom-scroll-container">
+            <ss-input asp-for="SelectAllInAllTabs" check-box-hidden-input-render-mode="CheckBoxHiddenInputRenderMode.None" label="@L["SelectAllInAllTabs"].Value" disabled="@Model.Groups.All(group => group.IsDisabled(Model.ProviderName))"/>
+            <hr class="my-2"/>
+            <input asp-for="@Model.ProviderKey"/>
+            <input asp-for="@Model.ProviderName"/>
+            <ss-tabs name="PermissionsTabs" tab-style="PillVertical" vertical-header-size="_4" class="custom-scroll-container">
+                @for (var i = 0; i < Model.Groups.Count; i++)
+                {
+                    var group = Model.Groups[i];
+                    <ss-tab title="@group.DisplayName" name="v-pills-tab-@group.GetNormalizedGroupName()">
+                        <div class="w-100" style="max-height: 640px;overflow-y: auto">
+                            <div class="ps-1">
+                                <ss-input asp-for="@group.IsAllPermissionsGranted"
+                                           check-box-hidden-input-render-mode="CheckBoxHiddenInputRenderMode.None"
+                                           name="SelectAllInThisTab"
+                                           id="SelectAllInThisTab-@group.GetNormalizedGroupName()"
+                                           data-tab-id="v-pills-tab-@group.GetNormalizedGroupName()"
+                                           label="@L["SelectAllInThisTab"].Value"
+                                           disabled="@group.IsDisabled(Model.ProviderName)" />
+                                <hr class="mb-3"/>
+                                @for (var j = 0; j < group.Permissions.Count; j++)
+                                {
+                                    var permission = group.Permissions[j];
+                                    <ss-input asp-for="@permission.IsGranted"
+                                               check-box-hidden-input-render-mode="CheckBoxHiddenInputRenderMode.None"
+                                               ss-id-name="@Model.Groups[i].Permissions[j].IsGranted"
+                                               label="@permission.GetShownName(Model.ProviderName)"
+                                               disabled="@permission.IsDisabled(Model.ProviderName)"
+                                               group-data-permission-name="@permission.Name"
+                                               group-data-parent-name="@(permission.ParentName ?? "")"
+                                               group-style="margin-inline-start: @(permission.Depth * 20)px"/>
+                                    <input asp-for="@permission.Name" ss-id-name="@Model.Groups[i].Permissions[j].Name"/>
+                                }
+                            </div>
+                        </div>
+                    </ss-tab>
+                }
+            </ss-tabs>
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

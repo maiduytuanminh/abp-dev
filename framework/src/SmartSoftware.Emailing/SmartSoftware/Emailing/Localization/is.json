@@ -1,0 +1,25 @@
+{
+  "culture": "is",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Sjálfgefið frá heimilisfang",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Sjálfgefið frá skjánafn",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Hýsill",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Notandanafn",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Lykilorð",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Lén",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Virkja SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Nota sjálfgefin auðkenni",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Sjálfgefið frá heimilisfangi",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Sjálfgefið frá skjánafni",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Nafn eða IP -tala gestgjafans sem notuð er fyrir SMTP færslur.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Portin sem notuð er fyrir SMTP færslur.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Notandanafn tengt auðkennum.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Lykilorðið fyrir notendanafnið sem tengist auðkennum.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Lénið eða tölvuheitið sem staðfestir auðkennin.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Hvort SmtpClient notar Secure Sockets Layer (SSL) til að dulkóða tenginguna.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Hvort DefaultCredentials eru sendar með beiðnum.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Sjálfgefið sniðmát fyrir tölvupóst",
+    "TextTemplate:StandardEmailTemplates.Message": "Einfalt skilaboðasniðmát fyrir tölvupósta"
+  }
+}

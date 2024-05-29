@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <AssemblyName>SmartSoftware.SettingManagement.Domain.Shared</AssemblyName>
+    <PackageId>SmartSoftware.SettingManagement.Domain.Shared</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\SettingManagement\Localization\Resources\SmartSoftwareSettingManagement\*.json" />
+    <Content Remove="SmartSoftware\SettingManagement\Localization\Resources\SmartSoftwareSettingManagement\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Localization\SmartSoftware.Localization.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Features\SmartSoftware.Features.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Validation\SmartSoftware.Validation.csproj" />
+  </ItemGroup>
+
+</Project>

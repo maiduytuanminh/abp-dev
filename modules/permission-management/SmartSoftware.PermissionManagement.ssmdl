@@ -1,0 +1,78 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.PermissionManagement.Web": {
+      "path": "src/SmartSoftware.PermissionManagement.Web/SmartSoftware.PermissionManagement.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Blazor": {
+      "path": "src/SmartSoftware.PermissionManagement.Blazor/SmartSoftware.PermissionManagement.Blazor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Blazor.Server": {
+      "path": "src/SmartSoftware.PermissionManagement.Blazor.Server/SmartSoftware.PermissionManagement.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Blazor.WebAssembly": {
+      "path": "src/SmartSoftware.PermissionManagement.Blazor.WebAssembly/SmartSoftware.PermissionManagement.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.HttpApi": {
+      "path": "src/SmartSoftware.PermissionManagement.HttpApi/SmartSoftware.PermissionManagement.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.HttpApi.Client": {
+      "path": "src/SmartSoftware.PermissionManagement.HttpApi.Client/SmartSoftware.PermissionManagement.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Application": {
+      "path": "src/SmartSoftware.PermissionManagement.Application/SmartSoftware.PermissionManagement.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Application.Contracts": {
+      "path": "src/SmartSoftware.PermissionManagement.Application.Contracts/SmartSoftware.PermissionManagement.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Domain": {
+      "path": "src/SmartSoftware.PermissionManagement.Domain/SmartSoftware.PermissionManagement.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Domain.Shared": {
+      "path": "src/SmartSoftware.PermissionManagement.Domain.Shared/SmartSoftware.PermissionManagement.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.PermissionManagement.EntityFrameworkCore/SmartSoftware.PermissionManagement.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Domain.Tests": {
+      "path": "test/SmartSoftware.PermissionManagement.Domain.Tests/SmartSoftware.PermissionManagement.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.PermissionManagement.TestBase": {
+      "path": "test/SmartSoftware.PermissionManagement.TestBase/SmartSoftware.PermissionManagement.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.PermissionManagement.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.PermissionManagement.EntityFrameworkCore.Tests/SmartSoftware.PermissionManagement.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.PermissionManagement.MongoDB": {
+      "path": "src/SmartSoftware.PermissionManagement.MongoDB/SmartSoftware.PermissionManagement.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.MongoDB.Tests": {
+      "path": "test/SmartSoftware.PermissionManagement.MongoDB.Tests/SmartSoftware.PermissionManagement.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.PermissionManagement.Application.Tests": {
+      "path": "test/SmartSoftware.PermissionManagement.Application.Tests/SmartSoftware.PermissionManagement.Application.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

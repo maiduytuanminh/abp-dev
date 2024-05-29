@@ -1,0 +1,83 @@
+{
+  "name": "SmartSoftware.Account.Web",
+  "hash": "93b7e37fb41330719f0911b2c1b31cf0",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Account.Web",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application.Contracts",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.AspNetCore",
+          "namespace": "SmartSoftware.Identity.AspNetCore",
+          "name": "SmartSoftwareIdentityAspNetCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "name": "SmartSoftwareAspNetCoreMvcUiThemeSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ExceptionHandling",
+          "namespace": "SmartSoftware.ExceptionHandling",
+          "name": "SmartSoftwareExceptionHandlingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAccountWebModule",
+      "summary": null
+    }
+  ]
+}

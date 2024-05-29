@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    <RootNamespace>MyCompanyName.MyProjectName.Blazor.WebApp.Tiered.Client</RootNamespace>
+    <!-- <TEMPLATE-REMOVE IF-NOT='PWA'> -->
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <!-- </TEMPLATE-REMOVE> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <TEMPLATE-REMOVE> -->
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.WebAssembly.Theming\SmartSoftware.AspNetCore.Components.WebAssembly.Theming.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.WebAssembly\SmartSoftware.Http.Client.IdentityModel.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
+    <!-- </TEMPLATE-REMOVE> -->
+    <PackageReference Include="SmartSoftware.AspNetCore.Components.WebAssembly.LeptonXLiteTheme" Version="3.2.*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Autofac.WebAssembly\SmartSoftware.Autofac.WebAssembly.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Blazor.WebAssembly\SmartSoftware.Identity.Blazor.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Blazor.WebAssembly\SmartSoftware.TenantManagement.Blazor.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Blazor.WebAssembly\SmartSoftware.SettingManagement.Blazor.WebAssembly.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyCompanyName.MyProjectName.HttpApi.Client\MyCompanyName.MyProjectName.HttpApi.Client.csproj" />
+  </ItemGroup>
+
+  <!-- <TEMPLATE-REMOVE IF-NOT='PWA'> -->
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+  <!-- </TEMPLATE-REMOVE> -->
+
+</Project>

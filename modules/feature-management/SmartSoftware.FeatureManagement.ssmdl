@@ -1,0 +1,78 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.FeatureManagement.Web": {
+      "path": "src/SmartSoftware.FeatureManagement.Web/SmartSoftware.FeatureManagement.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Blazor": {
+      "path": "src/SmartSoftware.FeatureManagement.Blazor/SmartSoftware.FeatureManagement.Blazor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Blazor.Server": {
+      "path": "src/SmartSoftware.FeatureManagement.Blazor.Server/SmartSoftware.FeatureManagement.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Blazor.WebAssembly": {
+      "path": "src/SmartSoftware.FeatureManagement.Blazor.WebAssembly/SmartSoftware.FeatureManagement.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.HttpApi": {
+      "path": "src/SmartSoftware.FeatureManagement.HttpApi/SmartSoftware.FeatureManagement.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.HttpApi.Client": {
+      "path": "src/SmartSoftware.FeatureManagement.HttpApi.Client/SmartSoftware.FeatureManagement.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Application": {
+      "path": "src/SmartSoftware.FeatureManagement.Application/SmartSoftware.FeatureManagement.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Domain": {
+      "path": "src/SmartSoftware.FeatureManagement.Domain/SmartSoftware.FeatureManagement.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Domain.Shared": {
+      "path": "src/SmartSoftware.FeatureManagement.Domain.Shared/SmartSoftware.FeatureManagement.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.Application.Contracts": {
+      "path": "src/SmartSoftware.FeatureManagement.Application.Contracts/SmartSoftware.FeatureManagement.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.FeatureManagement.EntityFrameworkCore/SmartSoftware.FeatureManagement.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.MongoDB": {
+      "path": "src/SmartSoftware.FeatureManagement.MongoDB/SmartSoftware.FeatureManagement.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FeatureManagement.TestBase": {
+      "path": "test/SmartSoftware.FeatureManagement.TestBase/SmartSoftware.FeatureManagement.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.FeatureManagement.Domain.Tests": {
+      "path": "test/SmartSoftware.FeatureManagement.Domain.Tests/SmartSoftware.FeatureManagement.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.FeatureManagement.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.FeatureManagement.EntityFrameworkCore.Tests/SmartSoftware.FeatureManagement.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.FeatureManagement.MongoDB.Tests": {
+      "path": "test/SmartSoftware.FeatureManagement.MongoDB.Tests/SmartSoftware.FeatureManagement.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.FeatureManagement.Application.Tests": {
+      "path": "test/SmartSoftware.FeatureManagement.Application.Tests/SmartSoftware.FeatureManagement.Application.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

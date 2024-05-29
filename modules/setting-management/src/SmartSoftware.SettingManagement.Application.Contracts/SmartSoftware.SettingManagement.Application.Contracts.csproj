@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+    
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.SettingManagement.Domain.Shared\SmartSoftware.SettingManagement.Domain.Shared.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Application.Contracts\SmartSoftware.Ddd.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Authorization.Abstractions\SmartSoftware.Authorization.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="SmartSoftware\SettingManagement\Localization\ApplicationContracts\*.json" />
+        <Content Remove="SmartSoftware\SettingManagement\Localization\ApplicationContracts\*.json" />
+    </ItemGroup>
+    
+</Project>

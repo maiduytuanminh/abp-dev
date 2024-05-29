@@ -1,0 +1,19 @@
+{
+  "culture": "el",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP μέσω SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP μέσω SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Κεντρικός διακομιστής",
+    "Description:SmartSoftware.Ldap.ServerHost": "Κεντρικός διακομιστής",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Θύρα",
+    "Description:SmartSoftware.Ldap.ServerPort": "Θύρα",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Στοιχείο Βασικού τομέα",
+    "Description:SmartSoftware.Ldap.BaseDc": "Στοιχείο Βασικού τομέα",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Τομέας",
+    "Description:SmartSoftware.Ldap.Domain": "Τομέας",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Όνομα χρήστη",
+    "Description:SmartSoftware.Ldap.UserName": "Όνομα χρήστη",
+    "DisplayName:SmartSoftware.Ldap.Password": "Κωδικός Πρόσβασης",
+    "Description:SmartSoftware.Ldap.Password": "Κωδικός Πρόσβασης"
+  }
+}

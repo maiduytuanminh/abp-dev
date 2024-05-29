@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.PermissionManagement.Application.Contracts",
+  "hash": "ff59ff5b2d869012729f9c27ff07fa59",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.PermissionManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain.Shared",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization.Abstractions",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationAbstractionsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwarePermissionManagementApplicationContractsModule",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\TextTemplating\Localization\**\*.json" />
+    <None Remove="SmartSoftware\TextTemplating\Localization\**\*.json" />
+    <EmbeddedResource Include="SmartSoftware\TextTemplating\SampleTemplates\**\*.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="SmartSoftware\TextTemplating\SampleTemplates\**\*.cshtml" />
+    <EmbeddedResource Include="SmartSoftware\TextTemplating\SampleTemplates\**\*.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="SmartSoftware\TextTemplating\SampleTemplates\**\*.tpl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Localization\SmartSoftware.Localization.csproj" />
+    <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.TextTemplating\SmartSoftware.TextTemplating.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.TextTemplating.Scriban\SmartSoftware.TextTemplating.Scriban.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.TextTemplating.Razor\SmartSoftware.TextTemplating.Razor.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+</Project>

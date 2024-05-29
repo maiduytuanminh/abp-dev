@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.BasicTheme": {
+      "path": "SmartSoftware.BasicTheme.ssmdl"
+    }
+  }
+}

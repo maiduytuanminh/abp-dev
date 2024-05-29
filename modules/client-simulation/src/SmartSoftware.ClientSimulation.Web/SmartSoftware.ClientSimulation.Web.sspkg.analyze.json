@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.ClientSimulation.Web",
+  "hash": "219a88f8096628953238e9590f6a5e56",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.ClientSimulation",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.ClientSimulation",
+          "namespace": "SmartSoftware.ClientSimulation",
+          "name": "ClientSimulationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Http.Client.IdentityModel.Web",
+          "namespace": "SmartSoftware.Http.Client.IdentityModel.Web",
+          "name": "SmartSoftwareHttpClientIdentityModelWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "name": "SmartSoftwareAspNetCoreMvcUiThemeSharedModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "ClientSimulationWebModule",
+      "summary": null
+    }
+  ]
+}

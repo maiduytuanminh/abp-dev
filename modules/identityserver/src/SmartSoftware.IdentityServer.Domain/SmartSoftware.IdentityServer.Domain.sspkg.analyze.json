@@ -1,0 +1,3796 @@
+{
+  "name": "SmartSoftware.IdentityServer.Domain",
+  "hash": "e92e0873e411d6a1c141aa10c5cfad37",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.IdentityServer",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain.Shared",
+          "namespace": "SmartSoftware.IdentityServer",
+          "name": "SmartSoftwareIdentityServerDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Domain",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Security",
+          "namespace": "SmartSoftware.Security",
+          "name": "SmartSoftwareSecurityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching",
+          "namespace": "SmartSoftware.Caching",
+          "name": "SmartSoftwareCachingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundWorkers",
+          "namespace": "SmartSoftware.BackgroundWorkers",
+          "name": "SmartSoftwareBackgroundWorkersModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityServerDomainModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "IdentityResourceId",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "IdentityResourceClaim",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "IdentityResourceId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Key",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "IdentityResourceProperty",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Type",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientClaim",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Origin",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientCorsOrigin",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "GrantType",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientGrantType",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Provider",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientIdPRestriction",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "PostLogoutRedirectUri",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientPostLogoutRedirectUri",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Key",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientProperty",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "RedirectUri",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientRedirectUri",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Scope",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientScope",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ClientId",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ClientSecret",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiScopeId",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiScopeClaim",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiScopeId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Key",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiScopeProperty",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiResourceId",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiResourceClaim",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiResourceId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Key",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiResourceProperty",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiResourceId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Scope",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiResourceScope",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "primaryKeyType": null,
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "ApiResourceId",
+          "summary": null
+        }
+      ],
+      "contentType": "entity",
+      "name": "ApiResourceSecret",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "FullAuditedAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities.Auditing",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Auditing.FullAuditedAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        },
+        {
+          "name": "ICreationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.ICreationAuditedObject"
+        },
+        {
+          "name": "IHasCreationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasCreationTime"
+        },
+        {
+          "name": "IMayHaveCreator",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IMayHaveCreator"
+        },
+        {
+          "name": "IAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditedObject"
+        },
+        {
+          "name": "IModificationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IModificationAuditedObject"
+        },
+        {
+          "name": "IHasModificationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasModificationTime"
+        },
+        {
+          "name": "IFullAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IFullAuditedObject"
+        },
+        {
+          "name": "IDeletionAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IDeletionAuditedObject"
+        },
+        {
+          "name": "IHasDeletionTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasDeletionTime"
+        },
+        {
+          "name": "ISoftDelete",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.ISoftDelete"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "name": "AddUserClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllUserClaims",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveUserClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityResourceClaim",
+          "name": "FindUserClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllProperties",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityResourceProperty",
+          "name": "FindProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {
+        "userClaims": {
+          "name": "IdentityResourceClaim",
+          "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResourceClaim"
+        },
+        "properties": {
+          "name": "IdentityResourceProperty",
+          "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResourceProperty"
+        }
+      },
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DisplayName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Enabled",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Required",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Emphasize",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "ShowInDiscoveryDocument",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.IdentityResources.IdentityResourceClaim]",
+          "name": "UserClaims",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.IdentityResources.IdentityResourceProperty]",
+          "name": "Properties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "IdentityResource",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "AggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.AggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        }
+      ],
+      "methods": [],
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.Grants",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "Key",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Type",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "SubjectId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "SessionId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.DateTime",
+          "name": "CreationTime",
+          "summary": null
+        },
+        {
+          "type": "System.Nullable`1[System.DateTime]",
+          "name": "Expiration",
+          "summary": null
+        },
+        {
+          "type": "System.Nullable`1[System.DateTime]",
+          "name": "ConsumedTime",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Data",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "PersistedGrant",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "CreationAuditedAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities.Auditing",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Auditing.CreationAuditedAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        },
+        {
+          "name": "ICreationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.ICreationAuditedObject"
+        },
+        {
+          "name": "IHasCreationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasCreationTime"
+        },
+        {
+          "name": "IMayHaveCreator",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IMayHaveCreator"
+        }
+      ],
+      "methods": [],
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.Devices",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "DeviceCode",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "UserCode",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "SubjectId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "SessionId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.Nullable`1[System.DateTime]",
+          "name": "Expiration",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Data",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "DeviceFlowCodes",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "FullAuditedAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities.Auditing",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Auditing.FullAuditedAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        },
+        {
+          "name": "ICreationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.ICreationAuditedObject"
+        },
+        {
+          "name": "IHasCreationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasCreationTime"
+        },
+        {
+          "name": "IMayHaveCreator",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IMayHaveCreator"
+        },
+        {
+          "name": "IAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditedObject"
+        },
+        {
+          "name": "IModificationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IModificationAuditedObject"
+        },
+        {
+          "name": "IHasModificationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasModificationTime"
+        },
+        {
+          "name": "IFullAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IFullAuditedObject"
+        },
+        {
+          "name": "IDeletionAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IDeletionAuditedObject"
+        },
+        {
+          "name": "IHasDeletionTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasDeletionTime"
+        },
+        {
+          "name": "ISoftDelete",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.ISoftDelete"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "name": "AddGrantType",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "grantType",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllAllowedGrantTypes",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveGrantType",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "grantType",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientGrantType",
+          "name": "FindGrantType",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "grantType",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<DateTime>",
+              "name": "expiration",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "description",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "ClientSecret",
+          "name": "FindSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllScopes",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientScope",
+          "name": "FindScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddCorsOrigin",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "origin",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "redirectUri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddPostLogoutRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "postLogoutRedirectUri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllCorsOrigins",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveCorsOrigin",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllRedirectUris",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllPostLogoutRedirectUris",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemovePostLogoutRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientCorsOrigin",
+          "name": "FindCorsOrigin",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientRedirectUri",
+          "name": "FindRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientPostLogoutRedirectUri",
+          "name": "FindPostLogoutRedirectUri",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "uri",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllProperties",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientProperty",
+          "name": "FindProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllClaims",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "List<ClientClaim>",
+          "name": "FindClaims",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientClaim",
+          "name": "FindClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddIdentityProviderRestriction",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "provider",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllIdentityProviderRestrictions",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveIdentityProviderRestriction",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "provider",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ClientIdPRestriction",
+          "name": "FindIdentityProviderRestriction",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "provider",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {
+        "allowedScopes": {
+          "name": "ClientScope",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientScope"
+        },
+        "clientSecrets": {
+          "name": "ClientSecret",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientSecret"
+        },
+        "allowedGrantTypes": {
+          "name": "ClientGrantType",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientGrantType"
+        },
+        "allowedCorsOrigins": {
+          "name": "ClientCorsOrigin",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientCorsOrigin"
+        },
+        "redirectUris": {
+          "name": "ClientRedirectUri",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientRedirectUri"
+        },
+        "postLogoutRedirectUris": {
+          "name": "ClientPostLogoutRedirectUri",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientPostLogoutRedirectUri"
+        },
+        "identityProviderRestrictions": {
+          "name": "ClientIdPRestriction",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientIdPRestriction"
+        },
+        "claims": {
+          "name": "ClientClaim",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientClaim"
+        },
+        "properties": {
+          "name": "ClientProperty",
+          "namespace": "SmartSoftware.IdentityServer.Clients",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.Clients.ClientProperty"
+        }
+      },
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "ClientId",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ClientName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ClientUri",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "LogoUri",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Enabled",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ProtocolType",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "RequireClientSecret",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "RequireConsent",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AllowRememberConsent",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AlwaysIncludeUserClaimsInIdToken",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "RequirePkce",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AllowPlainTextPkce",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "RequireRequestObject",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AllowAccessTokensViaBrowser",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "FrontChannelLogoutUri",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "FrontChannelLogoutSessionRequired",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "BackChannelLogoutUri",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "BackChannelLogoutSessionRequired",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AllowOfflineAccess",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "IdentityTokenLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "AllowedIdentityTokenSigningAlgorithms",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "AccessTokenLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "AuthorizationCodeLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Nullable`1[System.Int32]",
+          "name": "ConsentLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "AbsoluteRefreshTokenLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "SlidingRefreshTokenLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "RefreshTokenUsage",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "UpdateAccessTokenClaimsOnRefresh",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "RefreshTokenExpiration",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "AccessTokenType",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "EnableLocalLogin",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "IncludeJwtId",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "AlwaysSendClientClaims",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ClientClaimsPrefix",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "PairWiseSubjectSalt",
+          "summary": null
+        },
+        {
+          "type": "System.Nullable`1[System.Int32]",
+          "name": "UserSsoLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "UserCodeType",
+          "summary": null
+        },
+        {
+          "type": "System.Int32",
+          "name": "DeviceCodeLifetime",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientScope]",
+          "name": "AllowedScopes",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientSecret]",
+          "name": "ClientSecrets",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientGrantType]",
+          "name": "AllowedGrantTypes",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientCorsOrigin]",
+          "name": "AllowedCorsOrigins",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientRedirectUri]",
+          "name": "RedirectUris",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientPostLogoutRedirectUri]",
+          "name": "PostLogoutRedirectUris",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientIdPRestriction]",
+          "name": "IdentityProviderRestrictions",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientClaim]",
+          "name": "Claims",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.Clients.ClientProperty]",
+          "name": "Properties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "Client",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "FullAuditedAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities.Auditing",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Auditing.FullAuditedAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        },
+        {
+          "name": "ICreationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.ICreationAuditedObject"
+        },
+        {
+          "name": "IHasCreationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasCreationTime"
+        },
+        {
+          "name": "IMayHaveCreator",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IMayHaveCreator"
+        },
+        {
+          "name": "IAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditedObject"
+        },
+        {
+          "name": "IModificationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IModificationAuditedObject"
+        },
+        {
+          "name": "IHasModificationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasModificationTime"
+        },
+        {
+          "name": "IFullAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IFullAuditedObject"
+        },
+        {
+          "name": "IDeletionAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IDeletionAuditedObject"
+        },
+        {
+          "name": "IHasDeletionTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasDeletionTime"
+        },
+        {
+          "name": "ISoftDelete",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.ISoftDelete"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "name": "AddUserClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllUserClaims",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ApiScopeClaim",
+          "name": "FindClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllProperties",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ApiScopeProperty",
+          "name": "FindProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {
+        "userClaims": {
+          "name": "ApiScopeClaim",
+          "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScopeClaim"
+        },
+        "properties": {
+          "name": "ApiScopeProperty",
+          "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScopeProperty"
+        }
+      },
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.Boolean",
+          "name": "Enabled",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DisplayName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Required",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Emphasize",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "ShowInDiscoveryDocument",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiScopes.ApiScopeClaim]",
+          "name": "UserClaims",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiScopes.ApiScopeProperty]",
+          "name": "Properties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "ApiScope",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "FullAuditedAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities.Auditing",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Auditing.FullAuditedAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        },
+        {
+          "name": "IHasConcurrencyStamp",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "fullName": "SmartSoftware.Domain.Entities.IHasConcurrencyStamp"
+        },
+        {
+          "name": "ICreationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.ICreationAuditedObject"
+        },
+        {
+          "name": "IHasCreationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasCreationTime"
+        },
+        {
+          "name": "IMayHaveCreator",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IMayHaveCreator"
+        },
+        {
+          "name": "IAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditedObject"
+        },
+        {
+          "name": "IModificationAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IModificationAuditedObject"
+        },
+        {
+          "name": "IHasModificationTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasModificationTime"
+        },
+        {
+          "name": "IFullAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IFullAuditedObject"
+        },
+        {
+          "name": "IDeletionAuditedObject",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IDeletionAuditedObject"
+        },
+        {
+          "name": "IHasDeletionTime",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IHasDeletionTime"
+        },
+        {
+          "name": "ISoftDelete",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.ISoftDelete"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "name": "AddSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<DateTime>",
+              "name": "expiration",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "description",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "ApiResourceSecret",
+          "name": "FindSecret",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "ApiResourceScope",
+          "name": "AddScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddUserClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllUserClaims",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ApiResourceClaim",
+          "name": "FindClaim",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllSecrets",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllScopes",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ApiResourceScope",
+          "name": "FindScope",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scope",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "AddProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "value",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveAllProperties",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "RemoveProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ApiResourceProperty",
+          "name": "FindProperty",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {
+        "secrets": {
+          "name": "ApiResourceSecret",
+          "namespace": "SmartSoftware.IdentityServer.ApiResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceSecret"
+        },
+        "scopes": {
+          "name": "ApiResourceScope",
+          "namespace": "SmartSoftware.IdentityServer.ApiResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceScope"
+        },
+        "userClaims": {
+          "name": "ApiResourceClaim",
+          "namespace": "SmartSoftware.IdentityServer.ApiResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceClaim"
+        },
+        "properties": {
+          "name": "ApiResourceProperty",
+          "namespace": "SmartSoftware.IdentityServer.ApiResources",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "fullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceProperty"
+        }
+      },
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DisplayName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "Enabled",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "AllowedAccessTokenSigningAlgorithms",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "ShowInDiscoveryDocument",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiResources.ApiResourceSecret]",
+          "name": "Secrets",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiResources.ApiResourceScope]",
+          "name": "Scopes",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiResources.ApiResourceClaim]",
+          "name": "UserClaims",
+          "summary": null
+        },
+        {
+          "type": "System.Collections.Generic.List`1[SmartSoftware.IdentityServer.ApiResources.ApiResourceProperty]",
+          "name": "Properties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "ApiResource",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.IdentityResources",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "IdentityResource",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<IdentityResource, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<IdentityResource, Guid>"
+        },
+        {
+          "name": "IBasicRepository<IdentityResource>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<IdentityResource>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<IdentityResource>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<IdentityResource>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<IdentityResource, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<IdentityResource, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "List<IdentityResource>",
+          "name": "GetListByScopeNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String[]",
+              "name": "scopeNames",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<IdentityResource>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "sorting",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "skipCount",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Int64",
+          "name": "GetCountAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "IdentityResource",
+          "name": "FindByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Boolean",
+          "name": "CheckNameExistAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<Guid>",
+              "name": "expectedId",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IIdentityResourceRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Grants",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.Grants",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "PersistedGrant",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<PersistedGrant, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<PersistedGrant, Guid>"
+        },
+        {
+          "name": "IBasicRepository<PersistedGrant>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<PersistedGrant>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<PersistedGrant>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<PersistedGrant>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<PersistedGrant, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<PersistedGrant, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "List<PersistedGrant>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "subjectId",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "sessionId",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "clientId",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "PersistedGrant",
+          "name": "FindByKeyAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<PersistedGrant>",
+          "name": "GetListBySubjectIdAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "key",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<PersistedGrant>",
+          "name": "GetListByExpirationAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "DateTime",
+              "name": "maxExpirationDate",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "subjectId",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "sessionId",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "clientId",
+              "isOptional": true
+            },
+            {
+              "type": "String",
+              "name": "type",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IPersistentGrantRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Devices",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.Devices",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "DeviceFlowCodes",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<DeviceFlowCodes, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<DeviceFlowCodes, Guid>"
+        },
+        {
+          "name": "IBasicRepository<DeviceFlowCodes>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<DeviceFlowCodes>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<DeviceFlowCodes>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<DeviceFlowCodes>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<DeviceFlowCodes, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<DeviceFlowCodes, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "DeviceFlowCodes",
+          "name": "FindByUserCodeAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "userCode",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "DeviceFlowCodes",
+          "name": "FindByDeviceCodeAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "deviceCode",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<DeviceFlowCodes>",
+          "name": "GetListByExpirationAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "DateTime",
+              "name": "maxExpirationDate",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IDeviceFlowCodesRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.Clients",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.Clients",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "Client",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<Client, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<Client, Guid>"
+        },
+        {
+          "name": "IBasicRepository<Client>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<Client>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<Client>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<Client>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<Client, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<Client, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Client",
+          "name": "FindByClientIdAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "clientId",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<Client>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "sorting",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "skipCount",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Int64",
+          "name": "GetCountAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<String>",
+          "name": "GetAllDistinctAllowedCorsOriginsAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Boolean",
+          "name": "CheckClientIdExistAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "clientId",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<Guid>",
+              "name": "expectedId",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IClientRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.ApiScopes",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "ApiScope",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<ApiScope, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<ApiScope, Guid>"
+        },
+        {
+          "name": "IBasicRepository<ApiScope>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<ApiScope>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<ApiScope>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<ApiScope>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<ApiScope, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<ApiScope, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "ApiScope",
+          "name": "FindByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "scopeName",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<ApiScope>",
+          "name": "GetListByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String[]",
+              "name": "scopeNames",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<ApiScope>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "sorting",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "skipCount",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Int64",
+          "name": "GetCountAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Boolean",
+          "name": "CheckNameExistAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<Guid>",
+              "name": "expectedId",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IApiScopeRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.ApiResources",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.IdentityServer.ApiResources",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "ApiResource",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<ApiResource, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<ApiResource, Guid>"
+        },
+        {
+          "name": "IBasicRepository<ApiResource>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<ApiResource>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<ApiResource>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<ApiResource>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<ApiResource, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<ApiResource, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "ApiResource",
+          "name": "FindByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "apiResourceName",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<ApiResource>",
+          "name": "FindByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String[]",
+              "name": "apiResourceNames",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<ApiResource>",
+          "name": "GetListByScopesAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String[]",
+              "name": "scopeNames",
+              "isOptional": false
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<ApiResource>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "sorting",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "skipCount",
+              "isOptional": false
+            },
+            {
+              "type": "Int32",
+              "name": "maxResultCount",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "Boolean",
+              "name": "includeDetails",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Int64",
+          "name": "GetCountAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filter",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Boolean",
+          "name": "CheckNameExistAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "Nullable<Guid>",
+              "name": "expectedId",
+              "isOptional": true
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IApiResourceRepository",
+      "summary": null
+    }
+  ]
+}

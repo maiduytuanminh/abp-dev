@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <RuntimeIdentifiers>win-x64;osx-x64;linux-x64</RuntimeIdentifiers>
+    <UserSecretsId>5f11b41f-0025-4fe6-ab97-60ec1bd4e8c2</UserSecretsId>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Resources\SmartSoftwareDocs\Web\*.json" />
+    <Content Remove="Localization\Resources\SmartSoftwareDocs\Web\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Application\SmartSoftware.Docs.Application.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.HttpApi\SmartSoftware.Docs.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Admin.Application\SmartSoftware.Docs.Admin.Application.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Admin.HttpApi\SmartSoftware.Docs.Admin.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Web\SmartSoftware.Docs.Web.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Admin.Web\SmartSoftware.Docs.Admin.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching.StackExchangeRedis\SmartSoftware.Caching.StackExchangeRedis.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
+    <ProjectReference Include="..\SmartSoftwareDocs.EntityFrameworkCore\SmartSoftwareDocs.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Web\SmartSoftware.Identity.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application\SmartSoftware.PermissionManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi\SmartSoftware.PermissionManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Web\SmartSoftware.Account.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Application\SmartSoftware.Account.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\**\*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  
+</Project>

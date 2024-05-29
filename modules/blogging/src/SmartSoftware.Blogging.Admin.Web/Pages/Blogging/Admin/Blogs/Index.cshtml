@@ -1,0 +1,58 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using SmartSoftware.Blogging.Admin
+@using SmartSoftware.Blogging.Admin.Pages.Blogging.Admin.Blogs
+@using SmartSoftware.Blogging
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.Blogging.Localization
+@inherits SmartSoftware.Blogging.Admin.Pages.Blogging.BloggingAdminPage
+@model IndexModel
+@inject IHtmlLocalizer<BloggingResource> L
+@inject IAuthorizationService Authorization
+@{
+    ViewBag.PageTitle = "Blogs";
+}
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Blogs"].Value;
+    PageLayout.Content.MenuItemName = BloggingAdminMenuNames.Blogs;
+}
+
+@section scripts {
+    <ss-script-bundle name="@typeof(IndexModel).FullName">
+        <ss-script src="/client-proxies/bloggingAdmin-proxy.js"/>
+        <ss-script src="/Pages/Blogging/Admin/Blogs/index.js"/>
+        <ss-script src="/Pages/Blogging/Admin/Blogs/create.js"/>
+        <ss-script src="/Pages/Blogging/Admin/Blogs/edit.js"/>
+    </ss-script-bundle>
+}
+
+<ss-card>
+    <ss-card-header>
+        <ss-row>
+            <ss-column size-md="_6">
+                <h2>@L["Blogs"]</h2>
+            </ss-column>
+            <ss-column size-md="_6" class="text-end">
+                @if (await Authorization.IsGrantedAsync(BloggingPermissions.Blogs.Create))
+                {
+                    <ss-button icon="plus" text="@L["CreateANewBlog"].Value" button-type="Primary" id="CreateNewBlogButtonId"></ss-button>
+                }
+            </ss-column>
+        </ss-row>
+    </ss-card-header>
+    <ss-card-body>
+        <ss-table  id="BlogsTable" class="nowrap">
+            <thead>
+                <tr>
+                    <th>@L["Actions"]</th>
+                    <th>@L["Name"]</th>
+                    <th>@L["ShortName"]</th>
+                    <th>@L["CreationTime"]</th>
+                    <th>@L["Description"]</th>
+                </tr>
+            </thead>
+        </ss-table>
+    </ss-card-body>
+</ss-card>

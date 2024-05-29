@@ -1,0 +1,278 @@
+{
+  "modules": {
+    "settingManagement": {
+      "rootPath": "settingManagement",
+      "remoteServiceName": "SettingManagement",
+      "controllers": {
+        "SmartSoftware.SettingManagement.EmailSettingsController": {
+          "controllerName": "EmailSettings",
+          "controllerGroupName": "EmailSettings",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.SettingManagement.EmailSettingsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.SettingManagement.IEmailSettingsAppService",
+              "name": "IEmailSettingsAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "SmartSoftware.SettingManagement.EmailSettingsDto",
+                    "typeSimple": "SmartSoftware.SettingManagement.EmailSettingsDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto, SmartSoftware.SettingManagement.Application.Contracts",
+                      "type": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                      "typeSimple": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "SendTestEmailAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.SettingManagement.SendTestEmailInput, SmartSoftware.SettingManagement.Application.Contracts",
+                      "type": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                      "typeSimple": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/setting-management/emailing",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SmartSoftware.SettingManagement.EmailSettingsDto",
+                "typeSimple": "SmartSoftware.SettingManagement.EmailSettingsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.IEmailSettingsAppService"
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "POST",
+              "url": "api/setting-management/emailing",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto, SmartSoftware.SettingManagement.Application.Contracts",
+                  "type": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                  "typeSimple": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                  "typeSimple": "SmartSoftware.SettingManagement.UpdateEmailSettingsDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.IEmailSettingsAppService"
+            },
+            "SendTestEmailAsyncByInput": {
+              "uniqueName": "SendTestEmailAsyncByInput",
+              "name": "SendTestEmailAsync",
+              "httpMethod": "POST",
+              "url": "api/setting-management/emailing/send-test-email",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.SettingManagement.SendTestEmailInput, SmartSoftware.SettingManagement.Application.Contracts",
+                  "type": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                  "typeSimple": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                  "typeSimple": "SmartSoftware.SettingManagement.SendTestEmailInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.IEmailSettingsAppService"
+            }
+          }
+        },
+        "SmartSoftware.SettingManagement.TimeZoneSettingsController": {
+          "controllerName": "TimeZoneSettings",
+          "controllerGroupName": "TimeZoneSettings",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.SettingManagement.TimeZoneSettingsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.SettingManagement.ITimeZoneSettingsAppService",
+              "name": "ITimeZoneSettingsAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.String",
+                    "typeSimple": "string"
+                  }
+                },
+                {
+                  "name": "GetTimezonesAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.NameValue>",
+                    "typeSimple": "[SmartSoftware.NameValue]"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "timezone",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/setting-management/timezone",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.String",
+                "typeSimple": "string"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.ITimeZoneSettingsAppService"
+            },
+            "GetTimezonesAsync": {
+              "uniqueName": "GetTimezonesAsync",
+              "name": "GetTimezonesAsync",
+              "httpMethod": "GET",
+              "url": "api/setting-management/timezone/timezones",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.NameValue>",
+                "typeSimple": "[SmartSoftware.NameValue]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.ITimeZoneSettingsAppService"
+            },
+            "UpdateAsyncByTimezone": {
+              "uniqueName": "UpdateAsyncByTimezone",
+              "name": "UpdateAsync",
+              "httpMethod": "POST",
+              "url": "api/setting-management/timezone",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "timezone",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "timezone",
+                  "name": "timezone",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.SettingManagement.ITimeZoneSettingsAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

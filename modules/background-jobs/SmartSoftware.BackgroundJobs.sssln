@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.BackgroundJobs": {
+      "path": "SmartSoftware.BackgroundJobs.ssmdl"
+    }
+  }
+}

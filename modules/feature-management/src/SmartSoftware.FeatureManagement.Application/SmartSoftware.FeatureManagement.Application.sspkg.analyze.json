@@ -1,0 +1,211 @@
+{
+  "name": "SmartSoftware.FeatureManagement.Application",
+  "hash": "a9ca2b4f663694fa5d258984dc689f56",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Domain",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application.Contracts",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareFeatureManagementApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "baseClass": {
+        "name": "FeatureManagementAppServiceBase",
+        "namespace": "SmartSoftware.FeatureManagement",
+        "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application",
+        "fullName": "SmartSoftware.FeatureManagement.FeatureManagementAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IFeatureAppService",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application.Contracts",
+          "fullName": "SmartSoftware.FeatureManagement.IFeatureAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "GetFeatureListResultDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            },
+            {
+              "type": "UpdateFeaturesDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "FeatureAppService",
+      "summary": null
+    }
+  ]
+}

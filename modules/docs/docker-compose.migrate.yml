@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  smartsoftware-docs-migrator:
+    image: 'smartsoftware/smartsoftware-docs-migrator:${TAG:-latest}'
+    build:
+      context: ../../
+      dockerfile: modules/docs/app/SmartSoftwareDocs.Migrator/Dockerfile
+    environment:
+      - ConnectionString=Server=sqlserver;Database=SmartSoftwareDocs;Trusted_Connection=True;User=sa;Password=yourStrong(!)Password;Integrated Security=false
+    depends_on:
+      - sqlserver

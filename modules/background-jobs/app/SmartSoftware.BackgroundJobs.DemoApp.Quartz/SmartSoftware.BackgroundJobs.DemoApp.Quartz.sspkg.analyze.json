@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.BackgroundJobs.DemoApp.Quartz",
+  "hash": "04c9d2c41471882c5aed1a69db51d7df",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BackgroundJobs.DemoApp.Quartz",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.DemoApp.Shared",
+          "namespace": "SmartSoftware.BackgroundJobs.DemoApp.Shared",
+          "name": "DemoAppSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.Quartz",
+          "namespace": "SmartSoftware.BackgroundJobs.Quartz",
+          "name": "SmartSoftwareBackgroundJobsQuartzModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "DemoAppQuartzModule",
+      "summary": null
+    }
+  ]
+}

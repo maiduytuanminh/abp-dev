@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.Domain.Shared\MyCompanyName.MyProjectName.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Emailing\SmartSoftware.Emailing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Domain\SmartSoftware.Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\background-jobs\src\SmartSoftware.BackgroundJobs.Domain\SmartSoftware.BackgroundJobs.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.Domain\SmartSoftware.AuditLogging.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Domain\SmartSoftware.TenantManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Domain\SmartSoftware.FeatureManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Domain\SmartSoftware.SettingManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\openiddict\src\SmartSoftware.OpenIddict.Domain\SmartSoftware.OpenIddict.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\openiddict\src\SmartSoftware.PermissionManagement.Domain.OpenIddict\SmartSoftware.PermissionManagement.Domain.OpenIddict.csproj" />
+  </ItemGroup>
+
+</Project>

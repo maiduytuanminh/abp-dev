@@ -1,0 +1,19 @@
+{
+  "culture": "fa",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP از طریق SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP از طریق SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "میزبان سرور",
+    "Description:SmartSoftware.Ldap.ServerHost": "میزبان سرور",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "پورت سرور",
+    "Description:SmartSoftware.Ldap.ServerPort": "پورت سرور",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "کامپوننت پایه دامنه",
+    "Description:SmartSoftware.Ldap.BaseDc": "کامپوننت پایه دامنه",
+    "DisplayName:SmartSoftware.Ldap.Domain": "دامنه",
+    "Description:SmartSoftware.Ldap.Domain": "دامنه",
+    "DisplayName:SmartSoftware.Ldap.UserName": "نام کاربری",
+    "Description:SmartSoftware.Ldap.UserName": "نام کاربری",
+    "DisplayName:SmartSoftware.Ldap.Password": "رمز عبور",
+    "Description:SmartSoftware.Ldap.Password": "رمز عبور"
+  }
+}

@@ -1,0 +1,738 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.DropdownsModel
+@{
+    ViewData["Title"] = "Dropdowns";
+}
+
+
+<h2>Dropdowns</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/dropdowns")" target="_blank"> Bootstrap button</a>.</p>
+
+<h4>Single button</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-dropdown>
+            <ss-dropdown-button text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button text=&quot;Dropdown button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Another action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Something else here&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;demo-area&quot;&gt;
+    &lt;div class=&quot;btn-group&quot;&gt;
+       &lt;button class=&quot;dropdown-toggle btn&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Dropdown button&lt;/span&gt;&lt;/button&gt;
+      &lt;div class=&quot;dropdown-menu&quot;&gt;
+         &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" link="true" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; link=&quot;true&quot; text=&quot;Dropdown button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Another action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Something else here&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle btn btn-secondary&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; data-busy-text=&quot;Processing...&quot; roles=&quot;button&quot; href=&quot;#&quot;&gt;&lt;span&gt;Dropdown button&lt;/span&gt;&lt;/a&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+       &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+       &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+       &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Success" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Outline_Success" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Danger" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Outline_Danger" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;!-- Example single danger button --&gt;
+
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Danger&quot; text=&quot;Dropdown button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Another action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Something else here&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-divider /&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Separated link&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;!-- Example single danger button --&gt;
+
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;dropdown-toggle btn btn-danger&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Dropdown button&lt;/span&gt;&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+        &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Split button</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Outline_Warning" dropdown-style="Split" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Warning" dropdown-style="Split" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Primary" dropdown-style="Split" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Danger" dropdown-style="Split" text="Dropdown button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;!-- Example single danger button --&gt;
+
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Danger&quot; dropdown-style=&quot;Split&quot; text=&quot;Dropdown button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Another action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Something else here&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-divider /&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Separated link&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;!-- Example single danger button --&gt;
+
+&lt;div class=&quot;btn-group&quot;&gt;
+     &lt;button class=&quot;btn btn-danger&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Dropdown button&lt;/span&gt;&lt;/button&gt;
+     &lt;button data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle dropdown-toggle-split btn btn-danger&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;/button&gt;
+     &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+        &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+
+<h4>Split button</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-dropdown>
+            <ss-dropdown-button size="Large" button-type="Secondary" text="Large button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button size="Large" button-type="Secondary" dropdown-style="Split" text="Large split button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button size="Small" button-type="Secondary" text="Small button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown>
+            <ss-dropdown-button size="Small" button-type="Secondary" dropdown-style="Split" text="Small split button" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;!-- Example single danger button --&gt;
+
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button size=&quot;Large&quot; button-type=&quot;Secondary&quot; text=&quot;Large button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button size=&quot;Large&quot; button-type=&quot;Secondary&quot; dropdown-style=&quot;Split&quot; text=&quot;Large split button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button size=&quot;Small&quot; button-type=&quot;Secondary&quot; text=&quot;Small button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button size=&quot;Small&quot; button-type=&quot;Secondary&quot; dropdown-style=&quot;Split&quot; text=&quot;Small split button&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;!-- Large button groups (default and split) --&gt;
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;button class=&quot;dropdown-toggle btn btn-secondary btn-lg&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Large button&lt;/span&gt;&lt;/button&gt;
+            &lt;div class=&quot;dropdown-menu&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+                &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;button class=&quot;btn btn-secondary btn-lg&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Large split button&lt;/span&gt;&lt;/button&gt;
+            &lt;button data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle dropdown-toggle-split btn btn-secondary btn-lg&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;/button&gt;
+            &lt;div class=&quot;dropdown-menu&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+                &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;button class=&quot;dropdown-toggle btn btn-secondary btn-sm&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Small button&lt;/span&gt;&lt;/button&gt;
+            &lt;div class=&quot;dropdown-menu&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+                &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;button class=&quot;btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Small split button&lt;/span&gt;&lt;/button&gt;
+            &lt;button data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; class=&quot;dropdown-toggle dropdown-toggle-split btn btn-secondary btn-sm&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;/button&gt;
+            &lt;div class=&quot;dropdown-menu&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+                &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Separated link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+
+<h4>Directions</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-dropdown direction="Up">
+            <ss-dropdown-button button-type="Secondary" text="Dropup" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown direction="Right">
+            <ss-dropdown-button button-type="Secondary" text="dropright" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+        <ss-dropdown direction="Right">
+            <ss-dropdown-button button-type="Secondary" dropdown-style="Split" text="Split right" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown direction=&quot;Up&quot;&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Dropup&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+&lt;ss-dropdown direction=&quot;Right&quot;&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;dropright&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+&lt;ss-dropdown direction=&quot;Right&quot;&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; dropdown-style=&quot;Split&quot; text=&quot;Split right&quot; /&gt;
+    &lt;ss-dropdown-menu&gt;
+        ...
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group dropup&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropup
+  &lt;/button&gt;
+  &lt;div class=&quot;dropdown-menu&quot;&gt;
+    &lt;!-- Dropdown menu links --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btn-group dropright&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    dropright
+  &lt;/button&gt;
+  &lt;div class=&quot;dropdown-menu&quot;&gt;
+    &lt;!-- Dropdown menu links --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btn-group dropright&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Action&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger dropdown-toggle dropdown-toggle-split&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Split right&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class=&quot;dropdown-menu&quot;&gt;
+    &lt;!-- Dropdown menu links --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+
+<h4>Menu Items</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+            <ss-dropdown-menu>
+                <ss-dropdown-header>Dropdown Header</ss-dropdown-header>
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item active="true" href="#">Active action</ss-dropdown-item>
+                <ss-dropdown-item disabled="true" href="#">Disabled action</ss-dropdown-item>
+                <ss-dropdown-divider />
+                <ss-dropdown-item-text>Dropdown Item Text</ss-dropdown-item-text>
+                <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Dropdown&quot;/&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;ss-dropdown-header&gt;Dropdown Header&lt;/ss-dropdown-header&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item active=&quot;true&quot; href=&quot;#&quot;&gt;Active action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item disabled=&quot;true&quot; href=&quot;#&quot;&gt;Disabled action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-divider/&gt;
+        &lt;ss-dropdown-item-text&gt;Dropdown Item Text&lt;/ss-dropdown-item-text&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Something else here&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenuButton&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropdown button
+  &lt;/button&gt;
+  &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuButton&quot;&gt;
+      &lt;h6 class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/h6&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;
+      &lt;a class=&quot;dropdown-item active&quot; href=&quot;#&quot;&gt;Active action&lt;/a&gt;
+      &lt;a class=&quot;dropdown-item disabled&quot; href=&quot;#&quot;&gt;Disabled action&lt;/a&gt;
+      &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+      &lt;span class=&quot;dropdown-item-text&quot;&gt;Dropdown item text&lt;/span&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+
+<h4>Menu alignment</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" text="Right-aligned" />
+            <ss-dropdown-menu align="End">
+                <ss-dropdown-item href="#">Action</ss-dropdown-item>
+                <ss-dropdown-item active="true" href="#">Active action</ss-dropdown-item>
+                <ss-dropdown-item disabled="true" href="#">Disabled action</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Right-aligned&quot;/&gt;
+    &lt;ss-dropdown-menu align=&quot;Right&quot;&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item active=&quot;true&quot; href=&quot;#&quot;&gt;Active action&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item disabled=&quot;true&quot; href=&quot;#&quot;&gt;Disabled action&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot;&gt;
+        &lt;button class=&quot;dropdown-toggle btn btn-secondary&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Right-aligned&lt;/span&gt;&lt;/button&gt;
+    &lt;div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown-menu dropdown-menu-end&quot; x-placement=&quot;bottom-end&quot; style=&quot;position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(135px, 38px, 0px);&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item active&quot;&gt;Active action&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item disabled&quot;&gt;Disabled action&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Custom Content</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" text="Dropdown With Only Text" />
+            <ss-dropdown-menu class="p-4" style="max-width: 200px;">
+                <p>
+                    Some example text that's free-flowing within the dropdown menu.
+                </p>
+                <p class="mb-0">
+                    And this is more example text.
+                </p>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-dropdown&gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Dropdown With Only Text&quot; /&gt;
+    &lt;ss-dropdown-menu class=&quot;p-4&quot; style=&quot;max-width: 200px;&quot;&gt;
+        &lt;p&gt;
+             Some example text that&apos;s free-flowing within the dropdown menu.
+        &lt;/p&gt;
+        &lt;p class=&quot;mb-0&quot;&gt;
+             And this is more example text.
+        &lt;/p&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropdown With Only Text
+  &lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu p-4&quot; style=&quot;max-width: 200px;&quot;&gt;
+      &lt;p&gt;
+        Some example text that&apos;s free-flowing within the dropdown menu.
+      &lt;/p&gt;
+      &lt;p class=&quot;mb-0&quot;&gt;
+        And this is more example text.
+      &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-dropdown >
+            <ss-dropdown-button button-type="Secondary" text="Dropdown With Form"/>
+            <ss-dropdown-menu>
+                <form class="px-4 py-3">
+                    <ss-input asp-for="EmailAddress"></ss-input>
+                    <ss-input asp-for="Password"></ss-input>
+                    <ss-input asp-for="RememberMe"></ss-input>
+                    <ss-button button-type="Primary" text="Sign In" type="submit" />
+                </form>
+                <ss-dropdown-divider></ss-dropdown-divider>
+                <ss-dropdown-item href="#">New around here? Sign up</ss-dropdown-item>
+                <ss-dropdown-item href="#">Forgot password?</ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Model Class">
+                <pre><code>
+    public class DropdownsModel : PageModel
+    {
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email Address")]
+        public string EmailAddress { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password{ get; set; }
+
+        [Display(Name = "Remember Me")]
+        public bool RememberMe{ get; set; }
+
+
+        public void OnGet()
+        {
+
+        }
+    }
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Tag Helper" active="true">
+                <pre><code>
+&lt;ss-dropdown &gt;
+    &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Dropdown With Form&quot;/&gt;
+    &lt;ss-dropdown-menu&gt;
+        &lt;form class=&quot;px-4 py-3&quot;&gt;
+            &lt;ss-input asp-for=&quot;EmailAddress&quot;&gt;&lt;/ss-input&gt;
+            &lt;ss-input asp-for=&quot;Password&quot;&gt;&lt;/ss-input&gt;
+            &lt;ss-input asp-for=&quot;RememberMe&quot;&gt;&lt;/ss-input&gt;
+            &lt;ss-button button-type=&quot;Primary&quot; text=&quot;Sign In&quot; type=&quot;submit&quot; /&gt;
+        &lt;/form&gt;
+        &lt;ss-dropdown-divider&gt;&lt;/ss-dropdown-divider&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;New around here? Sign up&lt;/ss-dropdown-item&gt;
+        &lt;ss-dropdown-item href=&quot;#&quot;&gt;Forgot password?&lt;/ss-dropdown-item&gt;
+    &lt;/ss-dropdown-menu&gt;
+&lt;/ss-dropdown&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;dropdown-toggle btn btn-secondary&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Dropdown With Form&lt;/span&gt;&lt;/button&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div class=&quot;dropdown-menu&quot; x-placement=&quot;bottom-start&quot; style=&quot;position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);&quot;&gt;
+        &lt;form class=&quot;px-4 py-3&quot; novalidate=&quot;novalidate&quot;&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;EmailAddress&quot;&gt;Email Address&lt;/label&gt;
+                &lt;input type=&quot;email&quot; data-val=&quot;true&quot; data-val-required=&quot;The Email Address field is required.&quot; id=&quot;EmailAddress&quot; name=&quot;EmailAddress&quot; value=&quot;&quot; class=&quot;form-control input-validation-error&quot; aria-describedby=&quot;EmailAddress-error&quot;&gt;
+                &lt;span class=&quot;text-danger field-validation-error&quot; data-valmsg-for=&quot;EmailAddress&quot; data-valmsg-replace=&quot;true&quot;&gt;&lt;span id=&quot;EmailAddress-error&quot; class=&quot;&quot;&gt;The Email Address field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;Password&quot;&gt;Password&lt;/label&gt;
+                &lt;input type=&quot;password&quot; data-val=&quot;true&quot; data-val-required=&quot;The Password field is required.&quot; id=&quot;Password&quot; name=&quot;Password&quot; class=&quot;form-control input-validation-error&quot; aria-describedby=&quot;Password-error&quot;&gt;
+                &lt;span class=&quot;text-danger field-validation-error&quot; data-valmsg-for=&quot;Password&quot; data-valmsg-replace=&quot;true&quot;&gt;&lt;span id=&quot;Password-error&quot; class=&quot;&quot;&gt;The Password field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3 form-check&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; data-val=&quot;true&quot; data-val-required=&quot;The Remember Me field is required.&quot; id=&quot;RememberMe&quot; name=&quot;RememberMe&quot; value=&quot;true&quot; class=&quot;form-check-input valid&quot; aria-describedby=&quot;RememberMe-error&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;RememberMe&quot;&gt;Remember Me&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; data-busy-text=&quot;Processing...&quot;&gt;&lt;span&gt;Sign In&lt;/span&gt;&lt;/button&gt;
+            &lt;input name=&quot;RememberMe&quot; type=&quot;hidden&quot; value=&quot;false&quot;&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;New around here? Sign up&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Forgot password?&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

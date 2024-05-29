@@ -1,0 +1,188 @@
+{
+  "name": "SmartSoftware.CmsKit.IdentityServer",
+  "hash": "91bb151a8b87037091d5102c7f762541",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Web.IdentityServer",
+          "namespace": "SmartSoftware.Account.Web",
+          "name": "SmartSoftwareAccountWebIdentityServerModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.HttpApi",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy",
+          "name": "SmartSoftwareAspNetCoreMvcUiMultiTenancyModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc",
+          "namespace": "SmartSoftware.AspNetCore.Mvc",
+          "name": "SmartSoftwareAspNetCoreMvcModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "name": "SmartSoftwareAspNetCoreMvcUiBasicThemeModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AuditLogging.EntityFrameworkCore",
+          "namespace": "SmartSoftware.AuditLogging.EntityFrameworkCore",
+          "name": "SmartSoftwareAuditLoggingEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching.StackExchangeRedis",
+          "namespace": "SmartSoftware.Caching.StackExchangeRedis",
+          "name": "SmartSoftwareCachingStackExchangeRedisModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "namespace": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "name": "SmartSoftwareEntityFrameworkCoreSqlServerModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.EntityFrameworkCore",
+          "namespace": "SmartSoftware.Identity.EntityFrameworkCore",
+          "name": "SmartSoftwareIdentityEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.HttpApi",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+          "namespace": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+          "name": "SmartSoftwareIdentityServerEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain.Identity",
+          "namespace": "SmartSoftware.PermissionManagement.Identity",
+          "name": "SmartSoftwarePermissionManagementDomainIdentityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "name": "SmartSoftwarePermissionManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Application",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.HttpApi",
+          "namespace": "SmartSoftware.PermissionManagement.HttpApi",
+          "name": "SmartSoftwarePermissionManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.SettingManagement.EntityFrameworkCore",
+          "name": "SmartSoftwareSettingManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Application",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "namespace": "SmartSoftware.TenantManagement.EntityFrameworkCore",
+          "name": "SmartSoftwareTenantManagementEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Application",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.HttpApi",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Authentication.JwtBearer",
+          "namespace": "SmartSoftware.AspNetCore.Authentication.JwtBearer",
+          "name": "SmartSoftwareAspNetCoreAuthenticationJwtBearerModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Application.Contracts",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Serilog",
+          "namespace": "SmartSoftware.AspNetCore.Serilog",
+          "name": "SmartSoftwareAspNetCoreSerilogModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitIdentityServerModule",
+      "summary": null
+    }
+  ]
+}

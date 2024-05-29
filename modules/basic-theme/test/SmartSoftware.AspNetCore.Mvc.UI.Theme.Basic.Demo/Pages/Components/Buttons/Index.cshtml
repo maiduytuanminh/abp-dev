@@ -1,0 +1,13 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.ButtonsDemo
+@model SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Demo.Pages.Components.Buttons.IndexModel
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = "Buttons";
+}
+<h1>Buttons</h1>
+<p>Based on <a href="https://getbootstrap.com/docs/4.1/components/buttons/" target="_blank"> Bootstrap Buttons</a>.</p>
+<p>Check the <a href="https://docs.smartsoftware.io/en/ss/latest/UI/AspNetCore/Tag-Helpers/Buttons" target="_blank">SS Documentation</a>.</p>
+
+@await Component.InvokeAsync(typeof(ButtonsDemoViewComponent))

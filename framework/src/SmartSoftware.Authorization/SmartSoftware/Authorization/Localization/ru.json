@@ -1,0 +1,10 @@
+{
+  "culture": "ru",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Авторизация не удалась! Данная политика не предоставлена.",
+    "SmartSoftware.Authorization:010002": "Авторизация не удалась! Данная политика не предоставила: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Авторизация не удалась! Данная политика не предоставлена для данного ресурса: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Авторизация не удалась! Данное требование не выполнено для данного ресурса: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Авторизация не удалась! Указанные требования не удовлетворены для данного ресурса: {ResourceName}"
+  }
+}

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SmartSoftware.Ddd.Application</AssemblyName>
+    <PackageId>SmartSoftware.Ddd.Application</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Authorization\SmartSoftware.Authorization.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Ddd.Application.Contracts\SmartSoftware.Ddd.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Features\SmartSoftware.Features.csproj" />
+    <ProjectReference Include="..\SmartSoftware.GlobalFeatures\SmartSoftware.GlobalFeatures.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Http.Abstractions\SmartSoftware.Http.Abstractions.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Localization\SmartSoftware.Localization.csproj" />
+    <ProjectReference Include="..\SmartSoftware.ObjectMapping\SmartSoftware.ObjectMapping.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Security\SmartSoftware.Security.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Settings\SmartSoftware.Settings.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Validation\SmartSoftware.Validation.csproj" />
+  </ItemGroup>
+
+</Project>

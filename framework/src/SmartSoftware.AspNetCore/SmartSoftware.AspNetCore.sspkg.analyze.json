@@ -1,0 +1,98 @@
+{
+  "name": "SmartSoftware.AspNetCore",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.AspNetCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Auditing",
+          "namespace": "SmartSoftware.Auditing",
+          "name": "SmartSoftwareAuditingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Security",
+          "namespace": "SmartSoftware.Security",
+          "name": "SmartSoftwareSecurityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.VirtualFileSystem",
+          "namespace": "SmartSoftware.VirtualFileSystem",
+          "name": "SmartSoftwareVirtualFileSystemModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "namespace": "SmartSoftware.Uow",
+          "name": "SmartSoftwareUnitOfWorkModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Http",
+          "namespace": "SmartSoftware.Http",
+          "name": "SmartSoftwareHttpModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ExceptionHandling",
+          "namespace": "SmartSoftware.ExceptionHandling",
+          "name": "SmartSoftwareExceptionHandlingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAspNetCoreModule",
+      "summary": null
+    }
+  ]
+}

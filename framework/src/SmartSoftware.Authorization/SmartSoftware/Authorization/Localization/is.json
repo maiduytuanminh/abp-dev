@@ -1,0 +1,10 @@
+{
+  "culture": "is",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Heimild mistókst! Pólisía hefur ekki verið sett.",
+    "SmartSoftware.Authorization:010002": "Heimild mistókst! Eftirfarandi pólisía hefur ekki verið sett: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Heimild mistókst! Eftirfarandi pólisía hefur ekki verið sett fyrir: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Heimild mistókst! Eftirfarandi pólisía hefur ekki verið sett fyrir auðlind: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Heimild mistókst! Gefin krafa hefur ekki veitt fyrir tiltekna auðlind: {ResourceName}"
+  }
+}

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <AssemblyName>SmartSoftware.Docs.Application.Contracts</AssemblyName>
+    <PackageId>SmartSoftware.Docs.Application.Contracts</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Docs.Domain.Shared\SmartSoftware.Docs.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Application.Contracts\SmartSoftware.Ddd.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

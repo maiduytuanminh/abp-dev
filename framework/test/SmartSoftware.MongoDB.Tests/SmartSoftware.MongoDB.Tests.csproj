@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    <ProjectReference Include="..\SmartSoftware.MongoDB.Tests.SecondContext\SmartSoftware.MongoDB.Tests.SecondContext.csproj" />
+    <ProjectReference Include="..\SmartSoftware.TestApp\SmartSoftware.TestApp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EphemeralMongo.Core" />
+    <PackageReference Include="EphemeralMongo6.runtime.linux-x64" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <PackageReference Include="EphemeralMongo6.runtime.osx-x64" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <PackageReference Include="EphemeralMongo6.runtime.win-x64" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+</Project>

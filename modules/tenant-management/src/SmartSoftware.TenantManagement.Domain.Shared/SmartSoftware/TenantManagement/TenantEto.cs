@@ -1,0 +1,14 @@
+﻿using System;
+using SmartSoftware.Auditing;
+
+namespace SmartSoftware.TenantManagement;
+
+[Serializable]
+public class TenantEto : IHasEntityVersion
+{
+    public Guid Id { get; set; }
+
+    public string Name { get; set; }
+
+    public int EntityVersion { get; set; }
+}

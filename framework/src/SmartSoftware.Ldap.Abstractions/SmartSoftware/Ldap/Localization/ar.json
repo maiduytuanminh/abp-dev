@@ -1,0 +1,19 @@
+{
+  "culture": "ar",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP عبر SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP عبر SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "اسم الخادم",
+    "Description:SmartSoftware.Ldap.ServerHost": "اسم الخادم",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "منفذ الخادم",
+    "Description:SmartSoftware.Ldap.ServerPort": "منفذ الخادم",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "مكون المجال الأساسي",
+    "Description:SmartSoftware.Ldap.BaseDc": "مكون المجال الأساسي",
+    "DisplayName:SmartSoftware.Ldap.Domain": "اختصاص",
+    "Description:SmartSoftware.Ldap.Domain": "اختصاص",
+    "DisplayName:SmartSoftware.Ldap.UserName": "اسم المستخدم",
+    "Description:SmartSoftware.Ldap.UserName": "اسم المستخدم",
+    "DisplayName:SmartSoftware.Ldap.Password": "كلمة السر",
+    "Description:SmartSoftware.Ldap.Password": "كلمة السر"
+  }
+}

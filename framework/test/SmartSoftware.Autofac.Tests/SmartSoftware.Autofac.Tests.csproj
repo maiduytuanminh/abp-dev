@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Autofac.Tests</AssemblyName>
+    <PackageId>SmartSoftware.Autofac.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Core.Tests\SmartSoftware.Core.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+</Project>

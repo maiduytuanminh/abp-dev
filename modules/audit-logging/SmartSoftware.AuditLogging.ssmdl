@@ -1,0 +1,42 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.AuditLogging.Domain": {
+      "path": "src/SmartSoftware.AuditLogging.Domain/SmartSoftware.AuditLogging.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AuditLogging.Domain.Shared": {
+      "path": "src/SmartSoftware.AuditLogging.Domain.Shared/SmartSoftware.AuditLogging.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AuditLogging.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.AuditLogging.EntityFrameworkCore/SmartSoftware.AuditLogging.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AuditLogging.MongoDB": {
+      "path": "src/SmartSoftware.AuditLogging.MongoDB/SmartSoftware.AuditLogging.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AuditLogging.Tests": {
+      "path": "test/SmartSoftware.AuditLogging.Tests/SmartSoftware.AuditLogging.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AuditLogging.TestBase": {
+      "path": "test/SmartSoftware.AuditLogging.TestBase/SmartSoftware.AuditLogging.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AuditLogging.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.AuditLogging.EntityFrameworkCore.Tests/SmartSoftware.AuditLogging.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AuditLogging.MongoDB.Tests": {
+      "path": "test/SmartSoftware.AuditLogging.MongoDB.Tests/SmartSoftware.AuditLogging.MongoDB.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

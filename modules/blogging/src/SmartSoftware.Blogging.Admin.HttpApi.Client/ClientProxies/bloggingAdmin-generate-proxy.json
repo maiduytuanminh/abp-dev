@@ -1,0 +1,350 @@
+{
+  "modules": {
+    "bloggingAdmin": {
+      "rootPath": "bloggingAdmin",
+      "remoteServiceName": "BloggingAdmin",
+      "controllers": {
+        "SmartSoftware.Blogging.Admin.BlogManagementController": {
+          "controllerName": "BlogManagement",
+          "controllerGroupName": "BlogManagement",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Blogging.Admin.BlogManagementController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService",
+              "name": "IBlogManagementAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                    "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto, SmartSoftware.Blogging.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                      "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                    "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto, SmartSoftware.Blogging.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                      "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                    "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "ClearCacheAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs/admin",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Blogging.Blogs.Dtos.BlogDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs/admin/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/blogging/blogs/admin",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto, SmartSoftware.Blogging.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                  "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                  "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.CreateBlogDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/blogging/blogs/admin/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto, SmartSoftware.Blogging.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                  "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                  "typeSimple": "SmartSoftware.Blogging.Admin.Blogs.UpdateBlogDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto",
+                "typeSimple": "SmartSoftware.Blogging.Blogs.Dtos.BlogDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/blogging/blogs/admin/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            },
+            "ClearCacheAsyncById": {
+              "uniqueName": "ClearCacheAsyncById",
+              "name": "ClearCacheAsync",
+              "httpMethod": "GET",
+              "url": "api/blogging/blogs/admin/clear-cache/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Blogging.Admin.Blogs.IBlogManagementAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

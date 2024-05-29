@@ -1,0 +1,19 @@
+{
+  "culture": "tr",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "SSL üzerinden LDAP",
+    "Description:SmartSoftware.Ldap.Ldaps": "SSL üzerinden LDAP",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Sunucu Ana Bilgisayarı",
+    "Description:SmartSoftware.Ldap.ServerHost": "Sunucu Ana Bilgisayarı",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Sunucu portu",
+    "Description:SmartSoftware.Ldap.ServerPort": "Sunucu portu",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Temel alan bileşeni",
+    "Description:SmartSoftware.Ldap.BaseDc": "Temel alan bileşeni",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Alan adı",
+    "Description:SmartSoftware.Ldap.Domain": "Alan adı",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Kullanıcı adı",
+    "Description:SmartSoftware.Ldap.UserName": "Kullanıcı adı",
+    "DisplayName:SmartSoftware.Ldap.Password": "Parola",
+    "Description:SmartSoftware.Ldap.Password": "Parola"
+  }
+}

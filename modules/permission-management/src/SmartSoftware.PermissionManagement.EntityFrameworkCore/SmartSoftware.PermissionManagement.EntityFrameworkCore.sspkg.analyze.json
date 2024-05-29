@@ -1,0 +1,164 @@
+{
+  "name": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+  "hash": "0dd0efed5fec2360dd19217eb02c8343",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwarePermissionManagementEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+      "connectionStringName": "SmartSoftwarePermissionManagement",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionDefinitionRecord",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwarePermissions",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionGrant",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwarePermissionGrants",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionGroupDefinitionRecord",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwarePermissionGroups",
+          "summary": null
+        }
+      ],
+      "replacedDbContexts": [],
+      "implementingInterfaces": [
+        {
+          "name": "IInfrastructure<IServiceProvider>",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IServiceProvider>"
+        },
+        {
+          "name": "IDbContextDependencies",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies"
+        },
+        {
+          "name": "IDbSetCache",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbSetCache"
+        },
+        {
+          "name": "IDbContextPoolable",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable"
+        },
+        {
+          "name": "IResettableService",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IResettableService"
+        },
+        {
+          "name": "IDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IDisposable"
+        },
+        {
+          "name": "IAsyncDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IAsyncDisposable"
+        },
+        {
+          "name": "ISmartSoftwareEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.ISmartSoftwareEfCoreDbContext"
+        },
+        {
+          "name": "IEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.IEfCoreDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IPermissionManagementDbContext",
+          "namespace": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.EntityFrameworkCore",
+          "fullName": "SmartSoftware.PermissionManagement.EntityFrameworkCore.IPermissionManagementDbContext"
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "PermissionManagementDbContext",
+      "summary": null
+    }
+  ]
+}

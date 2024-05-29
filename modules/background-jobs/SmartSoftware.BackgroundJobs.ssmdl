@@ -1,0 +1,63 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "app": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.BackgroundJobs.DemoApp": {
+      "path": "app/SmartSoftware.BackgroundJobs.DemoApp/SmartSoftware.BackgroundJobs.DemoApp.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.BackgroundJobs.DemoApp.RabbitMq": {
+      "path": "app/SmartSoftware.BackgroundJobs.DemoApp.RabbitMq/SmartSoftware.BackgroundJobs.DemoApp.RabbitMq.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.BackgroundJobs.DemoApp.Quartz": {
+      "path": "app/SmartSoftware.BackgroundJobs.DemoApp.Quartz/SmartSoftware.BackgroundJobs.DemoApp.Quartz.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.BackgroundJobs.DemoApp.HangFire": {
+      "path": "app/SmartSoftware.BackgroundJobs.DemoApp.HangFire/SmartSoftware.BackgroundJobs.DemoApp.HangFire.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.BackgroundJobs.DemoApp.Shared": {
+      "path": "app/SmartSoftware.BackgroundJobs.DemoApp.Shared/SmartSoftware.BackgroundJobs.DemoApp.Shared.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.BackgroundJobs.Domain": {
+      "path": "src/SmartSoftware.BackgroundJobs.Domain/SmartSoftware.BackgroundJobs.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.Domain.Shared": {
+      "path": "src/SmartSoftware.BackgroundJobs.Domain.Shared/SmartSoftware.BackgroundJobs.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.BackgroundJobs.EntityFrameworkCore/SmartSoftware.BackgroundJobs.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.MongoDB": {
+      "path": "src/SmartSoftware.BackgroundJobs.MongoDB/SmartSoftware.BackgroundJobs.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.TestBase": {
+      "path": "test/SmartSoftware.BackgroundJobs.TestBase/SmartSoftware.BackgroundJobs.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BackgroundJobs.Domain.Tests": {
+      "path": "test/SmartSoftware.BackgroundJobs.Domain.Tests/SmartSoftware.BackgroundJobs.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BackgroundJobs.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.BackgroundJobs.EntityFrameworkCore.Tests/SmartSoftware.BackgroundJobs.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BackgroundJobs.MongoDB.Tests": {
+      "path": "test/SmartSoftware.BackgroundJobs.MongoDB.Tests/SmartSoftware.BackgroundJobs.MongoDB.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+@dotnet SmartSoftwareDocs.Migrator.dll

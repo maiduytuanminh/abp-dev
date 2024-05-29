@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.Identity": {
+      "path": "SmartSoftware.Identity.ssmdl"
+    }
+  }
+}

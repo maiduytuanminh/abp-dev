@@ -1,0 +1,79 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.BreadcrumbsModel
+@{
+    ViewData["Title"] = "Breadcrumbs";
+}
+
+<h2>Breadcrumbs</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/breadcrumb")" target="_blank"> Bootstrap Breadcrumb</a>.</p>
+
+<h4>Example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-breadcrumb>
+            <ss-breadcrumb-item title="Home" />
+        </ss-breadcrumb>
+
+        <ss-breadcrumb>
+            <ss-breadcrumb-item href="#" title="Home" />
+            <ss-breadcrumb-item title="Library" />
+        </ss-breadcrumb>
+
+        <ss-breadcrumb>
+            <ss-breadcrumb-item href="#" title="Home" />
+            <ss-breadcrumb-item href="#" title="Library"/>
+            <ss-breadcrumb-item title="Page"/>
+        </ss-breadcrumb>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+
+&lt;ss-breadcrumb&gt;
+    &lt;ss-breadcrumb-item title=&quot;Home&quot; /&gt;
+&lt;/ss-breadcrumb&gt;
+
+&lt;ss-breadcrumb&gt;
+    &lt;ss-breadcrumb-item href=&quot;#&quot; title=&quot;Home&quot; /&gt;
+    &lt;ss-breadcrumb-item title=&quot;Library&quot; /&gt;
+&lt;/ss-breadcrumb&gt;
+
+&lt;ss-breadcrumb&gt;
+    &lt;ss-breadcrumb-item href=&quot;#&quot; title=&quot;Home&quot; /&gt;
+    &lt;ss-breadcrumb-item href=&quot;#&quot; title=&quot;Library&quot;/&gt;
+    &lt;ss-breadcrumb-item title=&quot;Page&quot;/&gt;
+&lt;/ss-breadcrumb&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+  &lt;ol class=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Home&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+  &lt;ol class=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Library&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+  &lt;ol class=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Data&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

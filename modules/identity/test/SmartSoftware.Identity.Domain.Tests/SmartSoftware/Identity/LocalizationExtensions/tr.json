@@ -1,0 +1,7 @@
+{
+  "culture": "tr",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Şifre uzunluğu {0} karakterden uzun olmalıdır.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Parola en az bir alfasayısal olmayan karakter içermelidir."
+  }
+}

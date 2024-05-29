@@ -1,0 +1,108 @@
+{
+  "name": "SmartSoftware.Ddd.Application",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Application",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "namespace": "SmartSoftware.Domain",
+          "name": "SmartSoftwareDddDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Security",
+          "namespace": "SmartSoftware.Security",
+          "name": "SmartSoftwareSecurityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ObjectMapping",
+          "namespace": "SmartSoftware.ObjectMapping",
+          "name": "SmartSoftwareObjectMappingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Http.Abstractions",
+          "namespace": "SmartSoftware.Http",
+          "name": "SmartSoftwareHttpAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Settings",
+          "namespace": "SmartSoftware.Settings",
+          "name": "SmartSoftwareSettingsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Features",
+          "namespace": "SmartSoftware.Features",
+          "name": "SmartSoftwareFeaturesModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "name": "SmartSoftwareGlobalFeaturesModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareDddApplicationModule",
+      "summary": null
+    }
+  ]
+}

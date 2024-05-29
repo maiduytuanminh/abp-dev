@@ -1,0 +1,164 @@
+{
+  "name": "SmartSoftware.Docs.EntityFrameworkCore",
+  "hash": "cda98b30d45c0f9999f98a05e8368841",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Docs.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Docs.Domain",
+          "namespace": "SmartSoftware.Docs",
+          "name": "DocsDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "DocsEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Docs.EntityFrameworkCore",
+      "connectionStringName": "Docs",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.Docs.Documents.Document",
+          "contentType": "databaseTable",
+          "name": "DocsDocuments",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Docs.Documents.DocumentContributor",
+          "contentType": "databaseTable",
+          "name": "DocsDocumentContributors",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.Docs.Projects.Project",
+          "contentType": "databaseTable",
+          "name": "DocsProjects",
+          "summary": null
+        }
+      ],
+      "replacedDbContexts": [],
+      "implementingInterfaces": [
+        {
+          "name": "IInfrastructure<IServiceProvider>",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IServiceProvider>"
+        },
+        {
+          "name": "IDbContextDependencies",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies"
+        },
+        {
+          "name": "IDbSetCache",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbSetCache"
+        },
+        {
+          "name": "IDbContextPoolable",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable"
+        },
+        {
+          "name": "IResettableService",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IResettableService"
+        },
+        {
+          "name": "IDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IDisposable"
+        },
+        {
+          "name": "IAsyncDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IAsyncDisposable"
+        },
+        {
+          "name": "ISmartSoftwareEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.ISmartSoftwareEfCoreDbContext"
+        },
+        {
+          "name": "IEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.IEfCoreDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IDocsDbContext",
+          "namespace": "SmartSoftware.Docs.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.Docs.EntityFrameworkCore",
+          "fullName": "SmartSoftware.Docs.EntityFrameworkCore.IDocsDbContext"
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "DocsDbContext",
+      "summary": null
+    }
+  ]
+}

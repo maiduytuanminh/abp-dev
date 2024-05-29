@@ -1,0 +1,10 @@
+using SmartSoftware.DependencyInjection;
+using SmartSoftware.Security.Claims;
+
+namespace SmartSoftware.AspNetCore.Mvc.Client;
+
+[DisableConventionalRegistration]
+public class RemoteDynamicClaimsPrincipalContributor : RemoteDynamicClaimsPrincipalContributorBase<RemoteDynamicClaimsPrincipalContributor, RemoteDynamicClaimsPrincipalContributorCache>
+{
+
+}

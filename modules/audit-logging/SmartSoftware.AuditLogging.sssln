@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.AuditLogging": {
+      "path": "SmartSoftware.AuditLogging.ssmdl"
+    }
+  }
+}

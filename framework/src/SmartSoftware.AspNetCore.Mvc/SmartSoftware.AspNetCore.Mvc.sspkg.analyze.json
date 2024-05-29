@@ -1,0 +1,98 @@
+{
+  "name": "SmartSoftware.AspNetCore.Mvc",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.AspNetCore.Mvc",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore",
+          "namespace": "SmartSoftware.AspNetCore",
+          "name": "SmartSoftwareAspNetCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Localization",
+          "namespace": "SmartSoftware.Localization",
+          "name": "SmartSoftwareLocalizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ApiVersioning.Abstractions",
+          "namespace": "SmartSoftware.ApiVersioning",
+          "name": "SmartSoftwareApiVersioningAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.Contracts",
+          "namespace": "SmartSoftware.AspNetCore.Mvc",
+          "name": "SmartSoftwareAspNetCoreMvcContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.UI.Navigation",
+          "namespace": "SmartSoftware.UI.Navigation",
+          "name": "SmartSoftwareUiNavigationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "name": "SmartSoftwareGlobalFeaturesModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Json.SystemTextJson",
+          "namespace": "SmartSoftware.Json.SystemTextJson",
+          "name": "SmartSoftwareJsonSystemTextJsonModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAspNetCoreMvcModule",
+      "summary": null
+    }
+  ]
+}

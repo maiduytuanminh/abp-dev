@@ -1,0 +1,10 @@
+{
+  "culture": "en-GB",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Welcome to the SmartSoftwareDocs!",
+    "NoProjectWarning": "There`s no defined project yet!",
+    "CreateYourFirstProject": "Click here to start your first project",
+    "NoProject": "No project!"
+  }
+}

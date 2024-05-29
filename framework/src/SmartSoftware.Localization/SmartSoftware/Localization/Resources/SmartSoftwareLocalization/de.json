@@ -1,0 +1,7 @@
+{
+  "culture": "de",
+  "texts": {
+    "DisplayName:SmartSoftware.Localization.DefaultLanguage": "Standardsprache",
+    "Description:SmartSoftware.Localization.DefaultLanguage": "Die Standardsprache der Anwendung."
+  }
+}

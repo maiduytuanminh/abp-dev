@@ -1,0 +1,833 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.GridsModel
+@{
+    ViewData["Title"] = "Grids";
+}
+
+<h2>Grids</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("layout/grid")" target="_blank"> Bootstrap grid</a>.</p>
+
+<h4>Equal-width</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column>1 of 2</ss-column>
+                <ss-column>2 of 2</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column>1 of 3</ss-column>
+                <ss-column>2 of 3</ss-column>
+                <ss-column>3 of 3</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;1 of 2&lt;/ss-column&gt;
+                &lt;ss-column&gt;2 of 2&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;1 of 3&lt;/ss-column&gt;
+                &lt;ss-column&gt;2 of 3&lt;/ss-column&gt;
+                &lt;ss-column&gt;3 of 3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;1 of 2&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;2 of 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;1 of 3&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;2 of 3&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;3 of 3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Column Breaker</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+                <ss-column-breaker />
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column-breaker/&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Setting one column width</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column>1 of 3</ss-column>
+                <ss-column size="_6">2 of 3 (wider)</ss-column>
+                <ss-column>3 of 3</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column>1 of 3</ss-column>
+                <ss-column size="_5">2 of 3 (wider)</ss-column>
+                <ss-column>3 of 3</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;1 of 3&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_6&quot;&gt;2 of 3 (wider)&lt;/ss-column&gt;
+                &lt;ss-column&gt;3 of 3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;1 of 3&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_5&quot;&gt;2 of 3 (wider)&lt;/ss-column&gt;
+                &lt;ss-column&gt;3 of 3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;1 of 3&lt;/div&gt;
+                &lt;div class=&quot;col col-6&quot;&gt;2 of 3 (wider)&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;3 of 3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;1 of 3&lt;/div&gt;
+                &lt;div class=&quot;col col-5&quot;&gt;2 of 3 (wider)&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;3 of 3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Variable width content</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row h-align="Center">
+                <ss-column size-lg="_2">1 of 3</ss-column>
+                <ss-column size-md="Auto">Variable width content</ss-column>
+                <ss-column size-lg="_2">3 of 3</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column>1 of 3</ss-column>
+                <ss-column size-md="Auto">Variable width content</ss-column>
+                <ss-column size-lg="_2">3 of 3</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row h-align=&quot;Center&quot;&gt;
+                &lt;ss-column size-lg=&quot;_2&quot;&gt;1 of 3&lt;/ss-column&gt;
+                &lt;ss-column size-md=&quot;Auto&quot;&gt;Variable width content&lt;/ss-column&gt;
+                &lt;ss-column size-lg=&quot;_2&quot;&gt;3 of 3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;1 of 3&lt;/ss-column&gt;
+                &lt;ss-column size-md=&quot;Auto&quot;&gt;Variable width content&lt;/ss-column&gt;
+                &lt;ss-column size-lg=&quot;_2&quot;&gt;3 of 3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row justify-content-center&quot;&gt;
+                &lt;div class=&quot;col col-lg-2&quot;&gt;1 of 3&lt;/div&gt;
+                &lt;div class=&quot;col col-md-auto&quot;&gt;Variable width content&lt;/div&gt;
+                &lt;div class=&quot;col col-lg-2&quot;&gt;3 of 3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;1 of 3&lt;/div&gt;
+                &lt;div class=&quot;col col-md-auto&quot;&gt;Variable width content&lt;/div&gt;
+                &lt;div class=&quot;col col-lg-2&quot;&gt;3 of 3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Responsive classes</h4>
+
+<h5>All breakpoints</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-row>
+            <ss-column>col</ss-column>
+            <ss-column>col</ss-column>
+            <ss-column>col</ss-column>
+            <ss-column>col</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size="_8">col-8</ss-column>
+            <ss-column size="_4">col-4</ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+            &lt;ss-row&gt;
+                &lt;ss-column&gt;col&lt;/ss-column&gt;
+                &lt;ss-column&gt;col&lt;/ss-column&gt;
+                &lt;ss-column&gt;col&lt;/ss-column&gt;
+                &lt;ss-column&gt;col&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size=&quot;_8&quot;&gt;col-8&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;col-4&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-8&quot;&gt;col-8&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;col-4&lt;/div&gt;
+            &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h5>All breakpoints</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-row>
+            <ss-column size-sm="_8">col-sm-8</ss-column>
+            <ss-column size-sm="_4">col-sm-4</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size-sm="_">col-sm</ss-column>
+            <ss-column size-sm="_">col-sm</ss-column>
+            <ss-column size-sm="_">col-sm</ss-column>
+            <ss-column size-sm="_">col-sm</ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-row&gt;
+            &lt;ss-column size-sm=&quot;_8&quot;&gt;col-sm-8&lt;/ss-column&gt;
+            &lt;ss-column size-sm=&quot;_4&quot;&gt;col-sm-4&lt;/ss-column&gt;
+        &lt;/ss-row&gt;
+        &lt;ss-row&gt;
+            &lt;ss-column size-sm=&quot;_&quot;&gt;col-sm&lt;/ss-column&gt;
+            &lt;ss-column size-sm=&quot;_&quot;&gt;col-sm&lt;/ss-column&gt;
+            &lt;ss-column size-sm=&quot;_&quot;&gt;col-sm&lt;/ss-column&gt;
+            &lt;ss-column size-sm=&quot;_&quot;&gt;col-sm&lt;/ss-column&gt;
+        &lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+         &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col col-sm-8&quot;&gt;col-sm-8&lt;/div&gt;
+            &lt;div class=&quot;col col-sm-4&quot;&gt;col-sm-4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col col-sm&quot;&gt;col-sm&lt;/div&gt;
+            &lt;div class=&quot;col col-sm&quot;&gt;col-sm&lt;/div&gt;
+            &lt;div class=&quot;col col-sm&quot;&gt;col-sm&lt;/div&gt;
+            &lt;div class=&quot;col col-sm&quot;&gt;col-sm&lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h5>Mix and match</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-row>
+            <ss-column size="_12" size-md="_8">.col-12 .col-md-8</ss-column>
+            <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+            <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+            <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size="_6">.col-6</ss-column>
+            <ss-column size="_6">.col-6</ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        &lt;ss-row&gt;
+            &lt;ss-column size=&quot;_12&quot; size-md=&quot;_8&quot;&gt;.col-12 .col-md-8&lt;/ss-column&gt;
+            &lt;ss-column size=&quot;_6&quot; size-md=&quot;_4&quot;&gt;.col-6 .col-md-4&lt;/ss-column&gt;
+        &lt;/ss-row&gt;
+
+        &lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        &lt;ss-row&gt;
+            &lt;ss-column size=&quot;_6&quot; size-md=&quot;_4&quot;&gt;.col-6 .col-md-4&lt;/ss-column&gt;
+            &lt;ss-column size=&quot;_6&quot; size-md=&quot;_4&quot;&gt;.col-6 .col-md-4&lt;/ss-column&gt;
+            &lt;ss-column size=&quot;_6&quot; size-md=&quot;_4&quot;&gt;.col-6 .col-md-4&lt;/ss-column&gt;
+        &lt;/ss-row&gt;
+
+        &lt;!-- Columns are always 50% wide, on mobile and desktop -->
+        &lt;ss-row&gt;
+            &lt;ss-column size=&quot;_6&quot;&gt;.col-6&lt;/ss-column&gt;
+            &lt;ss-column size=&quot;_6&quot;&gt;.col-6&lt;/ss-column&gt;
+        &lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col col-12 col-md-8&quot;&gt;.col-12 .col-md-8&lt;/div&gt;
+            &lt;div class=&quot;col col-6 col-md-4&quot;&gt;.col-6 .col-md-4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col col-6 col-md-4&quot;&gt;.col-6 .col-md-4&lt;/div&gt;
+            &lt;div class=&quot;col col-6 col-md-4&quot;&gt;.col-6 .col-md-4&lt;/div&gt;
+            &lt;div class=&quot;col col-6 col-md-4&quot;&gt;.col-6 .col-md-4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col col-6&quot;&gt;.col-6&lt;/div&gt;
+            &lt;div class=&quot;col col-6&quot;&gt;.col-6&lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Alignment</h4>
+
+<h5>Vertical Alignment</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid large-row">
+        <ss-container>
+            <ss-row v-align="Start">
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+            </ss-row>
+            <ss-row v-align="Center">
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+            </ss-row>
+            <ss-row v-align="End">
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+                <ss-column>column</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row v-align=&quot;Start&quot;&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row v-align=&quot;Center&quot;&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row v-align=&quot;End&quot;&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+                &lt;ss-column&gt;column&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row align-items-start&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row align-items-center&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row align-items-end&quot;&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;column&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<div class="demo-with-code">
+    <div class="demo-area grid large-row">
+        <ss-container>
+            <ss-row v-align="Start">
+                <ss-column v-align="Start">column</ss-column>
+                <ss-column v-align="Center">column</ss-column>
+                <ss-column v-align="End">column</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row v-align=&quot;Start&quot;&gt;
+                &lt;ss-column v-align=&quot;Start&quot;&gt;column&lt;/ss-column&gt;
+                &lt;ss-column v-align=&quot;Center&quot;&gt;column&lt;/ss-column&gt;
+                &lt;ss-column v-align=&quot;End&quot;&gt;column&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row align-items-start&quot;&gt;
+                &lt;div class=&quot;col align-self-start&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col align-self-center&quot;&gt;column&lt;/div&gt;
+                &lt;div class=&quot;col align-self-end&quot;&gt;column&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h5>Horizontal alignment</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row h-align="Start">
+                <ss-column size="_4">One of two columns</ss-column>
+                <ss-column size="_4">One of two columns</ss-column>
+            </ss-row>
+            <ss-row h-align="Center">
+                <ss-column size="_4">One of two columns</ss-column>
+                <ss-column size="_4">One of two columns</ss-column>
+            </ss-row>
+            <ss-row h-align="End">
+                <ss-column size="_4">One of two columns</ss-column>
+                <ss-column size="_4">One of two columns</ss-column>
+            </ss-row>
+            <ss-row h-align="Around">
+                <ss-column size="_4">One of two columns</ss-column>
+                <ss-column size="_4">One of two columns</ss-column>
+            </ss-row>
+            <ss-row h-align="Between">
+                <ss-column size="_4">One of two columns</ss-column>
+                <ss-column size="_4">One of two columns</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row h-align=&quot;Start&quot;&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row h-align=&quot;Center&quot;&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row h-align=&quot;End&quot;&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row h-align=&quot;Around&quot;&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row h-align=&quot;Between&quot;&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row justify-content-start&quot;&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row justify-content-center&quot;&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row justify-content-end&quot;&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row justify-content-around&quot;&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row justify-content-between&quot;&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h5>No gutters</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-row gutters="false">
+            <ss-column size="_8">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+            &lt;ss-row gutters=&quot;false&quot;&gt;
+                &lt;ss-column size=&quot;_8&quot;&gt;One of two columns&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;One of two columns&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+            &lt;div class=&quot;row g-0&quot;&gt;
+                &lt;div class=&quot;col col-8&quot;&gt;One of two columns&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;One of two columns&lt;/div&gt;
+            &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h5>Column wrapping</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-row>
+            <ss-column size="_9">.col-9</ss-column>
+            <ss-column size="_4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</ss-column>
+            <ss-column size="_6">.col-6<br>Subsequent columns continue along the new line.s</ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+            &lt;ss-row&gt;
+                &lt;ss-column size=&quot;_9&quot;&gt;.col-9&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_4&quot;&gt;.col-4&lt;br&gt;Since 9 + 4 = 13 &amp;gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.&lt;/ss-column&gt;
+                &lt;ss-column size=&quot;_6&quot;&gt;.col-6&lt;br&gt;Subsequent columns continue along the new line.s&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-9&quot;&gt;.col-9&lt;/div&gt;
+                &lt;div class=&quot;col col-4&quot;&gt;.col-4&lt;br&gt;Since 9 + 4 = 13 &amp;gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.&lt;/div&gt;
+                &lt;div class=&quot;col col-6&quot;&gt;.col-6&lt;br&gt;Subsequent columns continue along the new line.s&lt;/div&gt;
+            &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Reordering</h4>
+
+<h5>Order classes</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column order="_12">First, but Last</ss-column>
+                <ss-column>Second, but unordered</ss-column>
+                <ss-column order="_6">Third, but Second</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column order=&quot;_12&quot;&gt;First, but Last&lt;/ss-column&gt;
+                &lt;ss-column&gt;Second, but unordered&lt;/ss-column&gt;
+                &lt;ss-column order=&quot;_6&quot;&gt;Third, but Second&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col order-12&quot;&gt;First, but Last&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;Second, but unordered&lt;/div&gt;
+                &lt;div class=&quot;col order-6&quot;&gt;Third, but Second&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column order="Last">First, but Last</ss-column>
+                <ss-column>Second, but unordered</ss-column>
+                <ss-column order="First">Third, but First</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column order=&quot;Last&quot;&gt;First, but Last&lt;/ss-column&gt;
+                &lt;ss-column&gt;Second, but unordered&lt;/ss-column&gt;
+                &lt;ss-column order=&quot;First&quot;&gt;Third, but First&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col order-last&quot;&gt;First, but Last&lt;/div&gt;
+                &lt;div class=&quot;col&quot;&gt;Second, but unordered&lt;/div&gt;
+                &lt;div class=&quot;col order-first&quot;&gt;Third, but First&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Offsetting columns</h4>
+
+<h5>Offset classes</h5>
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column size-md="_4">.col-md-4</ss-column>
+                <ss-column size-md="_4" offset-md="_4">.col-md-4 .offset-md-4</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column size-md="_3" offset-md="_3">.col-md-3 .offset-md-3</ss-column>
+                <ss-column size-md="_3" offset-md="_3">.col-md-3 .offset-md-3</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column size-md="_6" offset-md="_3">.col-md-6 .offset-md-3</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size-md=&quot;_4&quot;&gt;.col-md-4&lt;/ss-column&gt;
+                &lt;ss-column size-md=&quot;_4&quot; offset-md=&quot;_4&quot;&gt;.col-md-4 .offset-md-4&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size-md=&quot;_3&quot; offset-md=&quot;_3&quot;&gt;.col-md-3 .offset-md-3&lt;/ss-column&gt;
+                &lt;ss-column size-md=&quot;_3&quot; offset-md=&quot;_3&quot;&gt;.col-md-3 .offset-md-3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size-md=&quot;_6&quot; offset-md=&quot;_3&quot;&gt;.col-md-6 .offset-md-3&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+                &lt;div class=&quot;col col-md-4 offset-md-4&quot;&gt;.col-md-4 .offset-md-4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-md-3 offset-md-3&quot;&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+                &lt;div class=&quot;col col-md-3 offset-md-3&quot;&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-md-6 offset-md-3&quot;&gt;.col-md-6 .offset-md-3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+
+<div class="demo-with-code">
+    <div class="demo-area grid">
+        <ss-container>
+            <ss-row>
+                <ss-column size-sm="_5" size-md="_6">.col-sm-5 .col-md-6</ss-column>
+                <ss-column size-sm="_5" offset-sm="_2" size-md="_6" offset-md="_">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</ss-column>
+            </ss-row>
+            <ss-row>
+                <ss-column size-sm="_6" size-md="_5" size-lg="_6">col-sm-6 .col-md-5 .col-lg-6</ss-column>
+                <ss-column size-sm="_6" size-md="_5" offset-md="_2" size-lg="_6" offset-lg="_">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</ss-column>
+            </ss-row>
+        </ss-container>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-container&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size-sm=&quot;_5&quot; size-md=&quot;_6&quot;&gt;.col-sm-5 .col-md-6&lt;/ss-column&gt;
+                &lt;ss-column size-sm=&quot;_5&quot; offset-sm=&quot;_2&quot; size-md=&quot;_6&quot; offset-md=&quot;_&quot;&gt;.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+            &lt;ss-row&gt;
+                &lt;ss-column size-sm=&quot;_6&quot; size-md=&quot;_5&quot; size-lg=&quot;_6&quot;&gt;col-sm-6 .col-md-5 .col-lg-6&lt;/ss-column&gt;
+                &lt;ss-column size-sm=&quot;_6&quot; size-md=&quot;_5&quot; offset-md=&quot;_2&quot; size-lg=&quot;_6&quot; offset-lg=&quot;_&quot;&gt;.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0&lt;/ss-column&gt;
+            &lt;/ss-row&gt;
+        &lt;/ss-container&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-sm-5 col-md-6&quot;&gt;.col-sm-5 .col-md-6&lt;/div&gt;
+                &lt;div class=&quot;col col-sm-5 col-md-6 offset-sm-2 offset-md-0&quot;&gt;col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col col-sm-6 col-md-5 col-lg-6&quot;&gt;col-sm-6 .col-md-5 .col-lg-6&lt;/div&gt;
+                &lt;div class=&quot;col col-sm-6 col-md-5 col-lg-6 offset-md-2 offset-lg-0&quot;&gt;.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<hr />
+
+<a asp-page="../">&lt; back</a>

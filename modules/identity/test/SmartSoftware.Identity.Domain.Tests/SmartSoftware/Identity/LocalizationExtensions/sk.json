@@ -1,0 +1,7 @@
+{
+  "culture": "sk",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Dĺžka hesla musí byť väčšia ako {0} znakov.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Heslo musí obsahovať aspoň jeden nealfanumerický znak."
+  }
+}

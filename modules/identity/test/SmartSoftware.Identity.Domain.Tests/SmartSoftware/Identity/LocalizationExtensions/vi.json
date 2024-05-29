@@ -1,0 +1,7 @@
+{
+  "culture": "vi",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Độ dài mật khẩu phải lớn hơn {0} ký tự.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Mật khẩu phải chứa ít nhất một ký tự không phải chữ và số."
+  }
+}

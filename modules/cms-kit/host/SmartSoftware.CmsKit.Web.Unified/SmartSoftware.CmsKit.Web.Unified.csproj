@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartSoftware.CmsKit</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>SmartSoftware.CmsKit-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+    <!-- Options for DB: MongoDB, EntityFrameworkCore -->
+    <DefineConstants>$(DefineConstants);MongoDB</DefineConstants> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Swashbuckle\SmartSoftware.Swashbuckle.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Web\SmartSoftware.Account.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Application\SmartSoftware.Account.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application\SmartSoftware.PermissionManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi\SmartSoftware.PermissionManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Web\SmartSoftware.Identity.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Application\SmartSoftware.FeatureManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.HttpApi\SmartSoftware.FeatureManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Web\SmartSoftware.FeatureManagement.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Application\SmartSoftware.TenantManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.HttpApi\SmartSoftware.TenantManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Web\SmartSoftware.TenantManagement.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Application\SmartSoftware.CmsKit.Application.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.HttpApi\SmartSoftware.CmsKit.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Application\SmartSoftware.CmsKit.Application.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Web\SmartSoftware.CmsKit.Web.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Host.Shared\SmartSoftware.CmsKit.Host.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('EntityFrameworkCore'))">
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.EntityFrameworkCore\SmartSoftware.CmsKit.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.EntityFrameworkCore\SmartSoftware.TenantManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\blob-storing-database\src\SmartSoftware.BlobStoring.Database.EntityFrameworkCore\SmartSoftware.BlobStoring.Database.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.EntityFrameworkCore\SmartSoftware.FeatureManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.EntityFrameworkCore\SmartSoftware.Identity.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.EntityFrameworkCore\SmartSoftware.AuditLogging.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('MongoDB'))">
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.MongoDB\SmartSoftware.CmsKit.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.MongoDB\SmartSoftware.TenantManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\blob-storing-database\src\SmartSoftware.BlobStoring.Database.MongoDB\SmartSoftware.BlobStoring.Database.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.MongoDB\SmartSoftware.FeatureManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.MongoDB\SmartSoftware.Identity.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.MongoDB\SmartSoftware.PermissionManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.MongoDB\SmartSoftware.SettingManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.MongoDB\SmartSoftware.AuditLogging.MongoDB.csproj" />
+
+    <Compile Remove="Migrations\*.cs" />
+    <None Include="Migrations\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+    <Compile Update="Pages\Public.cshtml.cs">
+      <DependentUpon>Public.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\**\*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pages\**\*.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

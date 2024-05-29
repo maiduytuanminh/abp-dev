@@ -1,0 +1,19 @@
+{
+  "culture": "fi",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP SSL:n kautta",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP SSL:n kautta",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Palvelimen isäntä",
+    "Description:SmartSoftware.Ldap.ServerHost": "Palvelimen isäntä",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Palvelimen portti",
+    "Description:SmartSoftware.Ldap.ServerPort": "Palvelimen portti",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Perustoimialueen komponentti",
+    "Description:SmartSoftware.Ldap.BaseDc": "Perustoimialueen komponentti",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Verkkotunnus",
+    "Description:SmartSoftware.Ldap.Domain": "Verkkotunnus",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Käyttäjätunnus",
+    "Description:SmartSoftware.Ldap.UserName": "Käyttäjätunnus",
+    "DisplayName:SmartSoftware.Ldap.Password": "Salasana",
+    "Description:SmartSoftware.Ldap.Password": "Salasana"
+  }
+}

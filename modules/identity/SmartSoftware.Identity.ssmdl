@@ -1,0 +1,90 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.Identity.Web": {
+      "path": "src/SmartSoftware.Identity.Web/SmartSoftware.Identity.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.HttpApi": {
+      "path": "src/SmartSoftware.Identity.HttpApi/SmartSoftware.Identity.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.HttpApi.Client": {
+      "path": "src/SmartSoftware.Identity.HttpApi.Client/SmartSoftware.Identity.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Blazor": {
+      "path": "src/SmartSoftware.Identity.Blazor/SmartSoftware.Identity.Blazor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Blazor.Server": {
+      "path": "src/SmartSoftware.Identity.Blazor.Server/SmartSoftware.Identity.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Blazor.WebAssembly": {
+      "path": "src/SmartSoftware.Identity.Blazor.WebAssembly/SmartSoftware.Identity.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Domain": {
+      "path": "src/SmartSoftware.Identity.Domain/SmartSoftware.Identity.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Application": {
+      "path": "src/SmartSoftware.Identity.Application/SmartSoftware.Identity.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Application.Contracts": {
+      "path": "src/SmartSoftware.Identity.Application.Contracts/SmartSoftware.Identity.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Domain.Shared": {
+      "path": "src/SmartSoftware.Identity.Domain.Shared/SmartSoftware.Identity.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.Identity.EntityFrameworkCore/SmartSoftware.Identity.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.Application.Tests": {
+      "path": "test/SmartSoftware.Identity.Application.Tests/SmartSoftware.Identity.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Identity.MongoDB": {
+      "path": "src/SmartSoftware.Identity.MongoDB/SmartSoftware.Identity.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.MongoDB.Tests": {
+      "path": "test/SmartSoftware.Identity.MongoDB.Tests/SmartSoftware.Identity.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Identity.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.Identity.EntityFrameworkCore.Tests/SmartSoftware.Identity.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Identity.TestBase": {
+      "path": "test/SmartSoftware.Identity.TestBase/SmartSoftware.Identity.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Identity.Domain.Tests": {
+      "path": "test/SmartSoftware.Identity.Domain.Tests/SmartSoftware.Identity.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Identity.AspNetCore": {
+      "path": "src/SmartSoftware.Identity.AspNetCore/SmartSoftware.Identity.AspNetCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Domain.Identity": {
+      "path": "src/SmartSoftware.PermissionManagement.Domain.Identity/SmartSoftware.PermissionManagement.Domain.Identity.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Identity.AspNetCore.Tests": {
+      "path": "test/SmartSoftware.Identity.AspNetCore.Tests/SmartSoftware.Identity.AspNetCore.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

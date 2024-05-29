@@ -1,0 +1,43 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.CollapseDemo
+
+<ss-component-demo-section title="Example" view-path="@CollapseDemoViewComponent.ViewPath">
+    <ss-button button-type="Primary" ss-collapse-id="collapseExample" text="Button with data-target" />
+    <a ss-button="Primary" ss-collapse-id="collapseExample"> Link with href </a>
+
+    <ss-collapse-body id="collapseExample">
+        Anim pariatur wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </ss-collapse-body>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Multiple targets" view-path="@CollapseDemoViewComponent.ViewPath">
+    <a ss-button="Primary" ss-collapse-id="FirstCollapseExample"> Toggle first element </a>
+    <ss-button button-type="Primary" ss-collapse-id="SecondCollapseExample" text="Toggle second element" />
+    <ss-button button-type="Primary" ss-collapse-id="FirstCollapseExample SecondCollapseExample" text="Toggle both elements" />
+
+    <ss-row class="mt-3">
+        <ss-column size-sm="_6">
+            <ss-collapse-body id="FirstCollapseExample" multi="true">
+                Curabitur porta porttitor libero eu luctus. Praesent ultrices mattis commodo. Integer sodales massa risus, in molestie enim sagittis blandit
+            </ss-collapse-body>
+        </ss-column>
+        <ss-column size-sm="_6">
+            <ss-collapse-body id="SecondCollapseExample" multi="true">
+                Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            </ss-collapse-body>
+        </ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Accordion example" view-path="@CollapseDemoViewComponent.ViewPath">
+    <ss-accordion>
+        <ss-accordion-item title="Collapsible Group Item #1">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry rtat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </ss-accordion-item>
+        <ss-accordion-item title="Collapsible Group Item #2">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </ss-accordion-item>
+        <ss-accordion-item title="Collapsible Group Item #3">
+            Anim pariatur  wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </ss-accordion-item>
+    </ss-accordion>
+</ss-component-demo-section>

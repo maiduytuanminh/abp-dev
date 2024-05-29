@@ -1,0 +1,346 @@
+{
+  "name": "SmartSoftware.Account.Application",
+  "hash": "ebd6f98a2003938944d5a3790daf20af",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Account",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application.Contracts",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.UI.Navigation",
+          "namespace": "SmartSoftware.UI.Navigation",
+          "name": "SmartSoftwareUiNavigationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Emailing",
+          "namespace": "SmartSoftware.Emailing",
+          "name": "SmartSoftwareEmailingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAccountApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Account",
+      "baseClass": {
+        "name": "ApplicationService",
+        "namespace": "SmartSoftware.Application.Services",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Application",
+        "fullName": "SmartSoftware.Application.Services.ApplicationService"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IAccountAppService",
+          "namespace": "SmartSoftware.Account",
+          "declaringAssemblyName": "SmartSoftware.Account.Application.Contracts",
+          "fullName": "SmartSoftware.Account.IAccountAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "IdentityUserDto",
+          "name": "RegisterAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "RegisterDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "SendPasswordResetCodeAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "SendPasswordResetCodeDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Boolean",
+          "name": "VerifyPasswordResetTokenAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "VerifyPasswordResetTokenInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "ResetPasswordAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "ResetPasswordDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "AccountAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Account",
+      "baseClass": {
+        "name": "IdentityAppServiceBase",
+        "namespace": "SmartSoftware.Identity",
+        "declaringAssemblyName": "SmartSoftware.Identity.Application",
+        "fullName": "SmartSoftware.Identity.IdentityAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IProfileAppService",
+          "namespace": "SmartSoftware.Account",
+          "declaringAssemblyName": "SmartSoftware.Account.Application.Contracts",
+          "fullName": "SmartSoftware.Account.IProfileAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "ProfileDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "ProfileDto",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "UpdateProfileDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "ChangePasswordAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "ChangePasswordInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "ProfileAppService",
+      "summary": null
+    },
+    {
+      "defaultValue": "true",
+      "displayName": "Is self-registration enabled",
+      "description": "Whether a user can register the account by him or herself.",
+      "isVisibleToClient": true,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Account.IsSelfRegistrationEnabled",
+      "summary": null
+    },
+    {
+      "defaultValue": "true",
+      "displayName": "Authenticate with a local account",
+      "description": "Indicates if the server will allow users to authenticate with a local account.",
+      "isVisibleToClient": true,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Account.EnableLocalLogin",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "culture": "sk",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Autorizácia zlyhala! Daná politika nebola udelená.",
+    "SmartSoftware.Authorization:010002": "Autorizácia zlyhala! Daná politika nebola udelená: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Autorizácia zlyhala! Politika nebola udelená danému zdroju: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Autorizácia zlyhala! Daná požiadavka nebola udelená danému zdroju: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Autorizácia zlyhala! Dané požiadavky neboli udelené danému zdroju: {ResourceName}"
+  }
+}

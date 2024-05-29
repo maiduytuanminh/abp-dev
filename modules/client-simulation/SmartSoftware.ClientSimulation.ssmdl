@@ -1,0 +1,22 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "demo": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.ClientSimulation": {
+      "path": "src/SmartSoftware.ClientSimulation/SmartSoftware.ClientSimulation.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.ClientSimulation.Demo": {
+      "path": "demo/SmartSoftware.ClientSimulation.Demo/SmartSoftware.ClientSimulation.Demo.sspkg",
+      "folder": "demo"
+    },
+    "SmartSoftware.ClientSimulation.Web": {
+      "path": "src/SmartSoftware.ClientSimulation.Web/SmartSoftware.ClientSimulation.Web.sspkg",
+      "folder": "src"
+    }
+  }
+}

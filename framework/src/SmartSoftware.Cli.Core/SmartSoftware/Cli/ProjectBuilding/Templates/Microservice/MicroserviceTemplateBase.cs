@@ -1,0 +1,270 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using JetBrains.Annotations;
+using SmartSoftware.Cli.ProjectBuilding.Building;
+using SmartSoftware.Cli.ProjectBuilding.Building.Steps;
+
+namespace SmartSoftware.Cli.ProjectBuilding.Templates.Microservice;
+
+public abstract class MicroserviceTemplateBase : TemplateInfo
+{
+    protected MicroserviceTemplateBase([NotNull] string name)
+        : base(name)
+    {
+    }
+
+    public static bool IsMicroserviceTemplate(string templateName)
+    {
+        return templateName == MicroserviceProTemplate.TemplateName;
+    }
+
+    public override IEnumerable<ProjectBuildPipelineStep> GetCustomSteps(ProjectBuildContext context)
+    {
+        var steps = base.GetCustomSteps(context).ToList();
+
+        DeleteUnrelatedProjects(context, steps);
+        RandomizeStringEncryption(context, steps);
+        RandomizeAuthServerPassPhrase(context, steps);
+        UpdateNuGetConfig(context, steps);
+        UpdateDockerImages(context, steps);
+        ConfigureTheme(context, steps);
+
+        return steps;
+    }
+
+    protected void ConfigureTheme(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        if (!context.BuildArgs.Theme.HasValue)
+        {
+            return;
+        }
+
+        if (context.BuildArgs.Theme != Theme.NotSpecified)
+        {
+            context.Symbols.Add(context.BuildArgs.Theme.Value.ToString().ToUpper());
+        }
+
+        if (context.BuildArgs.Theme == Theme.LeptonX)
+        {
+            steps.Add(new ChangeThemeStyleStep());
+            return;
+        }
+
+        steps.Add(new ChangeThemeStep());
+        ReplaceLeptonXThemePackagesFromPackageJsonFiles(steps, uiFramework: context.BuildArgs.UiFramework, theme: context.BuildArgs.Theme, version: context.BuildArgs.Version ?? context.TemplateFile.Version);
+    }
+
+    private static void ReplaceLeptonXThemePackagesFromPackageJsonFiles(List<ProjectBuildPipelineStep> steps, UiFramework uiFramework, Theme? theme, string version)
+    {
+        var mvcUiPackageName = "@smartsoftware/smartsoftware.aspnetcore.mvc.ui.theme.leptonx";
+        var newMvcUiPackageName = theme switch
+        {
+            Theme.Basic => "@smartsoftware/aspnetcore.mvc.ui.theme.basic",
+            Theme.Lepton => "@smartsoftware/smartsoftware.aspnetcore.mvc.ui.theme.lepton",
+            Theme.LeptonXLite => "@smartsoftware/aspnetcore.mvc.ui.theme.leptonxlite",
+            Theme.LeptonX => "@smartsoftware/smartsoftware.aspnetcore.mvc.ui.theme.leptonx",
+            _ => throw new SmartSoftwareException("Unknown theme: " + theme?.ToString())
+        };
+        if (theme == Theme.LeptonX || theme == Theme.LeptonXLite)
+        {
+            version = null;
+        }
+        var packageJsonFilePaths = new List<string>
+        {
+            "/MyCompanyName.MyProjectName.AuthServer/package.json",
+            "/MyCompanyName.MyProjectName.Web/package.json"
+        };
+
+        foreach (var packageJsonFilePath in packageJsonFilePaths)
+        {
+            steps.Add(new ReplaceDependencyFromPackageJsonFileStep(packageJsonFilePath, mvcUiPackageName, newMvcUiPackageName, version));
+        }
+
+        if (uiFramework == UiFramework.BlazorServer || uiFramework == UiFramework.BlazorWebApp)
+        {
+            var blazorServerUiPackageName = "@smartsoftware/aspnetcore.components.server.leptonxtheme";
+            var newBlazorServerUiPackageName = theme switch
+            {
+                Theme.Basic => "@smartsoftware/aspnetcore.components.server.basictheme",
+                Theme.Lepton => "@smartsoftware/smartsoftware.aspnetcore.components.server.leptontheme",
+                Theme.LeptonXLite => "@smartsoftware/aspnetcore.components.server.leptonxlitetheme",
+                Theme.LeptonX => "@smartsoftware/aspnetcore.components.server.leptonxtheme",
+                _ => throw new SmartSoftwareException("Unknown theme: " + theme?.ToString())
+            };
+            var blazorServerPackageJsonFilePaths = new List<string>
+            {
+                "/MyCompanyName.MyProjectName.Blazor/package.json"
+            };
+
+            foreach (var blazorServerPackageJsonFilePath in blazorServerPackageJsonFilePaths)
+            {
+                steps.Add(new ReplaceDependencyFromPackageJsonFileStep(blazorServerPackageJsonFilePath, mvcUiPackageName, newMvcUiPackageName, version));
+                steps.Add(new ReplaceDependencyFromPackageJsonFileStep(blazorServerPackageJsonFilePath, blazorServerUiPackageName, newBlazorServerUiPackageName, version));
+            }
+        }
+        else if (uiFramework == UiFramework.Angular)
+        {
+            var ngUiPackageName = "@smartsoftware/ss.ng.theme.lepton-x";
+            var newNgUiPackageName = theme switch
+            {
+                Theme.Basic => "@smartsoftware/ng.theme.basic",
+                Theme.Lepton => "@smartsoftware/smartsoftware.ng.theme.lepton",
+                Theme.LeptonXLite => "@smartsoftware/ng.theme.lepton-x",
+                Theme.LeptonX => "@smartsoftware/ss.ng.theme.lepton-x",
+                _ => throw new SmartSoftwareException("Unknown theme: " + theme?.ToString())
+            };
+            var angularPackageJsonFilePaths = new List<string>
+            {
+                "/angular/package.json"
+            };
+
+            foreach (var angularPackageJsonFilePath in angularPackageJsonFilePaths)
+            {
+                steps.Add(new ReplaceDependencyFromPackageJsonFileStep(angularPackageJsonFilePath, ngUiPackageName, newNgUiPackageName, version));
+                if (theme == Theme.Basic || theme == Theme.Lepton)
+                {
+                    steps.Add(new RemoveDependencyFromPackageJsonFileStep(angularPackageJsonFilePath, "bootstrap-icons"));
+                }
+            }
+        }
+    }
+
+    private static void DeleteUnrelatedProjects(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        if (!context.BuildArgs.PublicWebSite)
+        {
+            steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.PublicWeb", null, "apps/public-web/src/MyCompanyName.MyProjectName.PublicWeb"));
+            steps.Add(new RemoveFolderStep("/apps/public-web"));
+            steps.Add(new RemoveProjectFromTyeStep("public-web"));
+            steps.Add(new RemoveProjectFromPrometheusStep("public-web"));
+        }
+
+        //TODO: move common tasks to methods
+        switch (context.BuildArgs.UiFramework)
+        {
+            case UiFramework.None:
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Web", null,
+                    "/apps/web/src/MyCompanyName.MyProjectName.Web"));
+                steps.Add(new RemoveFolderStep("/apps/web"));
+                steps.Add(new RemoveProjectFromTyeStep("web"));
+                steps.Add(new RemoveProjectFromPrometheusStep("web"));
+
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.ProductService.Blazor",
+                    "/services/product/MyCompanyName.MyProjectName.ProductService.sln",
+                    "/services/product/src/MyCompanyName.MyProjectName.ProductService.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor.Server", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor.Server"));
+                steps.Add(new RemoveFolderStep("/apps/blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor-server"));
+
+                steps.Add(new RemoveFolderStep("/apps/angular"));
+                break;
+
+            case UiFramework.Angular:
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Web", null,
+                    "/apps/web/src/MyCompanyName.MyProjectName.Web"));
+                steps.Add(new RemoveFolderStep("/apps/web"));
+                steps.Add(new RemoveProjectFromTyeStep("web"));
+                steps.Add(new RemoveProjectFromPrometheusStep("web"));
+
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.ProductService.Blazor",
+                    "/services/product/MyCompanyName.MyProjectName.ProductService.sln",
+                    "/services/product/src/MyCompanyName.MyProjectName.ProductService.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor.Server", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor.Server"));
+                steps.Add(new RemoveFolderStep("/apps/blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor-server"));
+
+                context.Symbols.Add("ui:angular");
+                break;
+
+            case UiFramework.Blazor:
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Web", null,
+                    "/apps/web/src/MyCompanyName.MyProjectName.Web"));
+                steps.Add(new RemoveFolderStep("/apps/web"));
+                steps.Add(new RemoveFolderStep("/apps/angular"));
+                steps.Add(new RemoveProjectFromTyeStep("web"));
+                steps.Add(new RemoveProjectFromPrometheusStep("web"));
+
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor.Server",
+                    "/apps/blazor/MyCompanyName.MyProjectName.Blazor.sln",
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor.Server"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor.Server",
+                    null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor.Server"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor-server"));
+
+                context.Symbols.Add("ui:blazor");
+                break;
+
+            case UiFramework.BlazorServer:
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Web", null,
+                    "/apps/web/src/MyCompanyName.MyProjectName.Web"));
+                steps.Add(new RemoveFolderStep("/apps/web"));
+                steps.Add(new RemoveFolderStep("/apps/angular"));
+                steps.Add(new RemoveProjectFromTyeStep("web"));
+                steps.Add(new RemoveProjectFromPrometheusStep("web"));
+
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor",
+                    "/apps/blazor/MyCompanyName.MyProjectName.Blazor.sln",
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor",
+                    null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor"));
+
+                steps.Add(new TemplateProjectRenameStep("MyCompanyName.MyProjectName.Blazor.Server",
+                    "MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RenameProjectInTyeStep("blazor-server", "blazor"));
+
+                context.Symbols.Add("ui:blazor-server");
+                break;
+
+            case UiFramework.Mvc:
+            case UiFramework.NotSpecified:
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.Blazor.Server", null,
+                    "/apps/blazor/src/MyCompanyName.MyProjectName.Blazor.Server"));
+                steps.Add(new RemoveProjectFromSolutionStep("MyCompanyName.MyProjectName.ProductService.Blazor",
+                    "/services/product/MyCompanyName.MyProjectName.ProductService.sln",
+                    "/services/product/src/MyCompanyName.MyProjectName.ProductService.Blazor"));
+                steps.Add(new RemoveFolderStep("/apps/blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor"));
+                steps.Add(new RemoveProjectFromTyeStep("blazor-server"));
+
+                steps.Add(new RemoveFolderStep("/apps/angular"));
+
+                context.Symbols.Add("ui:mvc");
+                break;
+        }
+
+        steps.Add(new RemoveFolderStep("/services/template"));
+    }
+
+    private static void RandomizeStringEncryption(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        steps.Add(new RandomizeStringEncryptionStep());
+    }
+
+    private static void UpdateNuGetConfig(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        steps.Add(new UpdateNuGetConfigStep("/NuGet.Config"));
+    }
+
+    private static void RandomizeAuthServerPassPhrase(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        steps.Add(new RandomizeAuthServerPassPhraseStep());
+    }
+
+    private static void UpdateDockerImages(ProjectBuildContext context, List<ProjectBuildPipelineStep> steps)
+    {
+        steps.Add(new UpdateDockerImagesStep("/etc/docker/docker-compose.infrastructure.yml"));
+    }
+}

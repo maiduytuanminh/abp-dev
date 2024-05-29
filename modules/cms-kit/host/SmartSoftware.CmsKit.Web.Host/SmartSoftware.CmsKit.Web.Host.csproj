@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartSoftware.CmsKit</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>SmartSoftware.CmsKit-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching.StackExchangeRedis\SmartSoftware.Caching.StackExchangeRedis.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.Client\SmartSoftware.AspNetCore.Mvc.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Authentication.OpenIdConnect\SmartSoftware.AspNetCore.Authentication.OpenIdConnect.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.Web\SmartSoftware.Http.Client.IdentityModel.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Web\SmartSoftware.Identity.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi.Client\SmartSoftware.Identity.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Web\SmartSoftware.FeatureManagement.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.HttpApi.Client\SmartSoftware.FeatureManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Web\SmartSoftware.TenantManagement.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.HttpApi.Client\SmartSoftware.TenantManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi.Client\SmartSoftware.PermissionManagement.HttpApi.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Web\SmartSoftware.CmsKit.Web.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.HttpApi.Client\SmartSoftware.CmsKit.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Host.Shared\SmartSoftware.CmsKit.Host.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\**\*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pages\**\*.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

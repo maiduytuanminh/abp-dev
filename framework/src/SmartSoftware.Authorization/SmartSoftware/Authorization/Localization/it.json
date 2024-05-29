@@ -1,0 +1,10 @@
+{
+  "culture": "it",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Autorizzazione fallita! Data la politica non ha concesso.",
+    "SmartSoftware.Authorization:010002": "Autorizzazione fallita! La norma data non ha concesso: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Autorizzazione fallita! La politica data non è stata concessa per una determinata risorsa: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Autorizzazione fallita! Il requisito dato non è stato concesso per la risorsa data: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Autorizzazione fallita! I requisiti dati non sono stati concessi per una determinata risorsa: {ResourceName}"
+  }
+}

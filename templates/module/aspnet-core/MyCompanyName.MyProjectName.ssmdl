@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "MyCompanyName.MyProjectName.Domain.Shared": {
+      "path": "src/MyCompanyName.MyProjectName.Domain.Shared/MyCompanyName.MyProjectName.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Domain": {
+      "path": "src/MyCompanyName.MyProjectName.Domain/MyCompanyName.MyProjectName.Domain.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Application.Contracts": {
+      "path": "src/MyCompanyName.MyProjectName.Application.Contracts/MyCompanyName.MyProjectName.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Application": {
+      "path": "src/MyCompanyName.MyProjectName.Application/MyCompanyName.MyProjectName.Application.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.EntityFrameworkCore": {
+      "path": "src/MyCompanyName.MyProjectName.EntityFrameworkCore/MyCompanyName.MyProjectName.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.MongoDB": {
+      "path": "src/MyCompanyName.MyProjectName.MongoDB/MyCompanyName.MyProjectName.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.HttpApi": {
+      "path": "src/MyCompanyName.MyProjectName.HttpApi/MyCompanyName.MyProjectName.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.HttpApi.Client": {
+      "path": "src/MyCompanyName.MyProjectName.HttpApi.Client/MyCompanyName.MyProjectName.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.TestBase": {
+      "path": "test/MyCompanyName.MyProjectName.TestBase/MyCompanyName.MyProjectName.TestBase.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.EntityFrameworkCore.Tests": {
+      "path": "test/MyCompanyName.MyProjectName.EntityFrameworkCore.Tests/MyCompanyName.MyProjectName.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.MongoDB.Tests": {
+      "path": "test/MyCompanyName.MyProjectName.MongoDB.Tests/MyCompanyName.MyProjectName.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.Domain.Tests": {
+      "path": "test/MyCompanyName.MyProjectName.Domain.Tests/MyCompanyName.MyProjectName.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.Application.Tests": {
+      "path": "test/MyCompanyName.MyProjectName.Application.Tests/MyCompanyName.MyProjectName.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.HttpApi.Host": {
+      "path": "host/MyCompanyName.MyProjectName.HttpApi.Host/MyCompanyName.MyProjectName.HttpApi.Host.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.Web": {
+      "path": "src/MyCompanyName.MyProjectName.Web/MyCompanyName.MyProjectName.Web.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/MyCompanyName.MyProjectName.HttpApi.Client.ConsoleTestApp/MyCompanyName.MyProjectName.HttpApi.Client.ConsoleTestApp.sspkg",
+      "folder": "test"
+    },
+    "MyCompanyName.MyProjectName.Web.Host": {
+      "path": "host/MyCompanyName.MyProjectName.Web.Host/MyCompanyName.MyProjectName.Web.Host.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.AuthServer": {
+      "path": "host/MyCompanyName.MyProjectName.AuthServer/MyCompanyName.MyProjectName.AuthServer.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.Host.Shared": {
+      "path": "host/MyCompanyName.MyProjectName.Host.Shared/MyCompanyName.MyProjectName.Host.Shared.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.Web.Unified": {
+      "path": "host/MyCompanyName.MyProjectName.Web.Unified/MyCompanyName.MyProjectName.Web.Unified.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.Blazor": {
+      "path": "src/MyCompanyName.MyProjectName.Blazor/MyCompanyName.MyProjectName.Blazor.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Blazor.Host": {
+      "path": "host/MyCompanyName.MyProjectName.Blazor.Host/MyCompanyName.MyProjectName.Blazor.Host.sspkg",
+      "folder": "host"
+    },
+    "MyCompanyName.MyProjectName.Blazor.Server": {
+      "path": "src/MyCompanyName.MyProjectName.Blazor.Server/MyCompanyName.MyProjectName.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Blazor.WebAssembly": {
+      "path": "src/MyCompanyName.MyProjectName.Blazor.WebAssembly/MyCompanyName.MyProjectName.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "MyCompanyName.MyProjectName.Blazor.Server.Host": {
+      "path": "host/MyCompanyName.MyProjectName.Blazor.Server.Host/MyCompanyName.MyProjectName.Blazor.Server.Host.sspkg",
+      "folder": "host"
+    }
+  }
+}

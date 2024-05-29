@@ -1,0 +1,103 @@
+{
+  "name": "SmartSoftware.AuditLogging.MongoDB",
+  "hash": "ce6dfe92b247a77b0138c47e0da4a98c",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.AuditLogging.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.AuditLogging.Domain",
+          "namespace": "SmartSoftware.AuditLogging",
+          "name": "SmartSoftwareAuditLoggingDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAuditLoggingMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.AuditLogging.MongoDB",
+      "connectionStringName": "SmartSoftwareAuditLogging",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.AuditLogging.AuditLog",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareAuditLogs",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IAuditLoggingMongoDbContext",
+          "namespace": "SmartSoftware.AuditLogging.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.AuditLogging.MongoDB",
+          "fullName": "SmartSoftware.AuditLogging.MongoDB.IAuditLoggingMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "AuditLoggingMongoDbContext",
+      "summary": null
+    }
+  ]
+}

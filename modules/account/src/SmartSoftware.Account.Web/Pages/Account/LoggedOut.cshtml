@@ -1,0 +1,35 @@
+﻿@page "/Account/LoggedOut"
+@model SmartSoftware.Account.Web.Pages.Account.LoggedOutModel
+@using SmartSoftware.Account.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.Account.Web.Pages.Account
+@using SmartSoftware.AspNetCore.Mvc.UI.Theming
+@inject IThemeManager ThemeManager
+@inject IHtmlLocalizer<AccountResource> L
+@{
+    Layout = ThemeManager.CurrentTheme.GetApplicationLayout();
+}
+@section scripts {
+    <ss-script-bundle name="@typeof(LoggedOutModel).FullName">
+        <ss-script src="/Pages/Account/LoggedOut.js" />
+    </ss-script-bundle>
+}
+
+@section styles {
+    <ss-style src="/Pages/Account/LoggedOut.css" />
+}
+
+<ss-card>
+    <ss-card-body>
+        <ss-card-title>@L["LoggedOutTitle"]</ss-card-title>
+        <ss-card-text>@L["LoggedOutText"]</ss-card-text>
+        @if (Model.PostLogoutRedirectUri != null)
+        {
+            <a ss-button="Primary" id="redirectButton" href="@Model.PostLogoutRedirectUri" cname="@Model.ClientName">@L["ReturnToText"]</a>
+        }
+        @if (Model.SignOutIframeUrl != null)
+        {
+            <iframe class="signout logoutiframe" src="@Model.SignOutIframeUrl"></iframe>
+        }
+    </ss-card-body>
+</ss-card>

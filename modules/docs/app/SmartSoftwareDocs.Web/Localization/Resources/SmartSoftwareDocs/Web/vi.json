@@ -1,0 +1,10 @@
+{
+  "culture": "vi",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Chào mừng đến với SmartSoftwareDocs!",
+    "NoProjectWarning": "Không có dự án nào!",
+    "CreateYourFirstProject": "Nhấn vào đây để bắt đầu dự án đầu tiên của bạn",
+    "NoProject": "Không có dự án!"
+  }
+}

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <AssemblyName>SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared</AssemblyName>
+    <PackageId>SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\**\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\**\*.*" />
+    <Content Remove="compilerconfig.json" />
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.UI.Bootstrap\SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.csproj" />
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.UI.Packages\SmartSoftware.AspNetCore.Mvc.UI.Packages.csproj" />
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.UI.Widgets\SmartSoftware.AspNetCore.Mvc.UI.Widgets.csproj" />
+  </ItemGroup>
+
+</Project>

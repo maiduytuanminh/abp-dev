@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\common.test.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <ProjectReference Include="..\..\src\SmartSoftware.Json.Newtonsoft\SmartSoftware.Json.Newtonsoft.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.Json.SystemTextJson\SmartSoftware.Json.SystemTextJson.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+        <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    </ItemGroup>
+</Project>

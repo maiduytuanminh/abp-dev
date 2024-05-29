@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.Account.HttpApi",
+  "hash": "caa7279a6d55f90db90b3ec2313a4e12",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Account",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application.Contracts",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.HttpApi",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc",
+          "namespace": "SmartSoftware.AspNetCore.Mvc",
+          "name": "SmartSoftwareAspNetCoreMvcModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareAccountHttpApiModule",
+      "summary": null
+    }
+  ]
+}

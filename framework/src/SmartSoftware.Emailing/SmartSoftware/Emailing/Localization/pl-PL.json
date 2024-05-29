@@ -1,0 +1,25 @@
+{
+  "culture": "pl-PL",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Domyślnie z adresu",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Domyślnie z wyświetlanej nazwy",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Gospodarz",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Nazwa użytkownika",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Hasło",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domena",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Włącz SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Użyj domyślnych danych logowania",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Domyślny z adresu",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Wartość domyślna z wyświetlanej nazwy",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Nazwa lub adres IP hosta używanego do transakcji SMTP.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Port używany do transakcji SMTP.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Nazwa użytkownika powiązana z poświadczeniami.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Hasło dla nazwy użytkownika powiązanej z poświadczeniami.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Nazwa domeny lub komputera, który weryfikuje poświadczenia.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Czy SmtpClient używa protokołu Secure Sockets Layer (SSL) do szyfrowania połączenia.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Czy DefaultCredentials są wysyłane z żądaniami.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Domyślny szablon układu wiadomości e-mail",
+    "TextTemplate:StandardEmailTemplates.Message": "Prosty szablon wiadomości na e-maile"
+  }
+}

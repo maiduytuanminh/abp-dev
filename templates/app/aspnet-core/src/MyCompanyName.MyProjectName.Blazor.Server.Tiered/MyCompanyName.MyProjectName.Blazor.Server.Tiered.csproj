@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>MyCompanyName.MyProjectName-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.4" />
+    <PackageReference Include="DistributedLock.Redis" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <TEMPLATE-REMOVE> -->
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared\SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Server.Theming\SmartSoftware.AspNetCore.Components.Server.Theming.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
+    <!-- </TEMPLATE-REMOVE> -->
+    <PackageReference Include="SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme" Version="3.2.*-*" />
+    <PackageReference Include="SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.2.*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.HttpApi.Client\MyCompanyName.MyProjectName.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Caching.StackExchangeRedis\SmartSoftware.Caching.StackExchangeRedis.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.DistributedLocking\SmartSoftware.DistributedLocking.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.Client\SmartSoftware.AspNetCore.Mvc.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Authentication.OpenIdConnect\SmartSoftware.AspNetCore.Authentication.OpenIdConnect.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.Web\SmartSoftware.Http.Client.IdentityModel.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Swashbuckle\SmartSoftware.Swashbuckle.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Blazor.Server\SmartSoftware.Identity.Blazor.Server.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Blazor.Server\SmartSoftware.TenantManagement.Blazor.Server.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Blazor.Server\SmartSoftware.SettingManagement.Blazor.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\**\*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pages\**\*.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

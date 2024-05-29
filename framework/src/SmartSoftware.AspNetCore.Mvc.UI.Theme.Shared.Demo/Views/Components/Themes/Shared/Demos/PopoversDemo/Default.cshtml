@@ -1,0 +1,16 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.PopoversDemo
+
+<ss-component-demo-section title="Example" view-path="@PopoversDemoViewComponent.ViewPath">
+    <ss-button button-type="Outline_Secondary" ss-popover="Hi, i'm popover content!">
+        Popover Default
+    </ss-button>
+    <ss-button button-type="Outline_Secondary" ss-popover-top="Hi, i'm popover content!" title="Popover Title">
+        Popover With Title
+    </ss-button>
+    <ss-button button-type="Outline_Secondary" ss-popover-right="Hi, i'm popover content!" title="Popover Title" dismissible="true">
+        Dismissible Popover
+    </ss-button>
+    <ss-button button-type="Outline_Danger" ss-popover-left="Hi, i'm popover content!" title="Popover Title" disabled="true">
+        Disabled Popover
+    </ss-button>
+</ss-component-demo-section>

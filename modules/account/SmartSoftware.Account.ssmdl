@@ -1,0 +1,46 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.Account.Web.OpenIddict": {
+      "path": "src/SmartSoftware.Account.Web.OpenIddict/SmartSoftware.Account.Web.OpenIddict.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.Web.IdentityServer": {
+      "path": "src/SmartSoftware.Account.Web.IdentityServer/SmartSoftware.Account.Web.IdentityServer.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.Web": {
+      "path": "src/SmartSoftware.Account.Web/SmartSoftware.Account.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.HttpApi.Client": {
+      "path": "src/SmartSoftware.Account.HttpApi.Client/SmartSoftware.Account.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.HttpApi": {
+      "path": "src/SmartSoftware.Account.HttpApi/SmartSoftware.Account.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.Application": {
+      "path": "src/SmartSoftware.Account.Application/SmartSoftware.Account.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.Application.Contracts": {
+      "path": "src/SmartSoftware.Account.Application.Contracts/SmartSoftware.Account.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Account.Application.Tests": {
+      "path": "test/SmartSoftware.Account.Application.Tests/SmartSoftware.Account.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Account.Blazor": {
+      "path": "src/SmartSoftware.Account.Blazor/SmartSoftware.Account.Blazor.sspkg",
+      "folder": "src"
+    }
+  }
+}

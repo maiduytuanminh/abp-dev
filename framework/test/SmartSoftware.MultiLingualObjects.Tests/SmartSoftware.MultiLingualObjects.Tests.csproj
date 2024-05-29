@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\common.test.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace />
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+		<ProjectReference Include="..\..\src\SmartSoftware.MultiLingualObjects\SmartSoftware.MultiLingualObjects.csproj" />
+		<ProjectReference Include="..\..\src\SmartSoftware.ObjectMapping\SmartSoftware.ObjectMapping.csproj" />
+		<ProjectReference Include="..\..\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+
+		<ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+	</ItemGroup>
+
+</Project>

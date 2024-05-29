@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SmartSoftware.AspNetCore</AssemblyName>
+    <PackageId>SmartSoftware.AspNetCore</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+    <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Abstractions\SmartSoftware.AspNetCore.Abstractions.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Auditing\SmartSoftware.Auditing.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Authorization\SmartSoftware.Authorization.csproj" />
+    <ProjectReference Include="..\SmartSoftware.ExceptionHandling\SmartSoftware.ExceptionHandling.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Http\SmartSoftware.Http.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Security\SmartSoftware.Security.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Uow\SmartSoftware.Uow.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Validation\SmartSoftware.Validation.csproj" />
+    <ProjectReference Include="..\SmartSoftware.VirtualFileSystem\SmartSoftware.VirtualFileSystem.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+    <PackageReference Include="IdentityModel" />
+    <PackageReference Include="DeviceDetector.NET" />
+  </ItemGroup>
+
+</Project>

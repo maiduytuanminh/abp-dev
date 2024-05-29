@@ -1,0 +1,90 @@
+{
+  "name": "SmartSoftware.Identity.Blazor",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Identity.Blazor",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Blazor",
+          "namespace": "SmartSoftware.PermissionManagement.Blazor",
+          "name": "SmartSoftwarePermissionManagementBlazorModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlazoriseUI",
+          "namespace": "SmartSoftware.BlazoriseUI",
+          "name": "SmartSoftwareBlazoriseUIModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityBlazorModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Blazor.Pages.Identity",
+      "contentType": "webPage",
+      "name": "RoleManagement",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Blazor.Pages.Identity",
+      "contentType": "webPage",
+      "name": "UserManagement",
+      "summary": null
+    }
+  ]
+}

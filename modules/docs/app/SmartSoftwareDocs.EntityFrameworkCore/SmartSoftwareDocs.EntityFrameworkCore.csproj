@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.EntityFrameworkCore\SmartSoftware.Docs.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.EntityFrameworkCore\SmartSoftware.Identity.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+  </ItemGroup>
+
+</Project>

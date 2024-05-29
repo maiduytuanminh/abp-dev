@@ -1,0 +1,284 @@
+{
+  "name": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+  "hash": "17dbfc67f1fd967841f05d2c9df3cbbf",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "namespace": "SmartSoftware.IdentityServer",
+          "name": "SmartSoftwareIdentityServerDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityServerEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+      "connectionStringName": "SmartSoftwareIdentityServer",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResource",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiResources",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceClaim",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiResourceClaims",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceProperty",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiResourceProperties",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceScope",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiResourceScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResourceSecret",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiResourceSecrets",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScope",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScopeClaim",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiScopeClaims",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScopeProperty",
+          "contentType": "databaseTable",
+          "name": "IdentityServerApiScopeProperties",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.Client",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClients",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientClaim",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientClaims",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientCorsOrigin",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientCorsOrigins",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientGrantType",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientGrantTypes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientIdPRestriction",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientIdPRestrictions",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientPostLogoutRedirectUri",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientPostLogoutRedirectUris",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientProperty",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientProperties",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientRedirectUri",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientRedirectUris",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientScope",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.ClientSecret",
+          "contentType": "databaseTable",
+          "name": "IdentityServerClientSecrets",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Devices.DeviceFlowCodes",
+          "contentType": "databaseTable",
+          "name": "IdentityServerDeviceFlowCodes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Grants.PersistedGrant",
+          "contentType": "databaseTable",
+          "name": "IdentityServerPersistedGrants",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResource",
+          "contentType": "databaseTable",
+          "name": "IdentityServerIdentityResources",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResourceClaim",
+          "contentType": "databaseTable",
+          "name": "IdentityServerIdentityResourceClaims",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResourceProperty",
+          "contentType": "databaseTable",
+          "name": "IdentityServerIdentityResourceProperties",
+          "summary": null
+        }
+      ],
+      "replacedDbContexts": [],
+      "implementingInterfaces": [
+        {
+          "name": "IInfrastructure<IServiceProvider>",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IServiceProvider>"
+        },
+        {
+          "name": "IDbContextDependencies",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies"
+        },
+        {
+          "name": "IDbSetCache",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbSetCache"
+        },
+        {
+          "name": "IDbContextPoolable",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable"
+        },
+        {
+          "name": "IResettableService",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IResettableService"
+        },
+        {
+          "name": "IDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IDisposable"
+        },
+        {
+          "name": "IAsyncDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IAsyncDisposable"
+        },
+        {
+          "name": "ISmartSoftwareEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.ISmartSoftwareEfCoreDbContext"
+        },
+        {
+          "name": "IEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.IEfCoreDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IIdentityServerDbContext",
+          "namespace": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.EntityFrameworkCore",
+          "fullName": "SmartSoftware.IdentityServer.EntityFrameworkCore.IIdentityServerDbContext"
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "IdentityServerDbContext",
+      "summary": null
+    }
+  ]
+}

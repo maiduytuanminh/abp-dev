@@ -1,0 +1,7 @@
+{
+  "culture": "en",
+  "texts": {
+    "DisplayName:SmartSoftware.Timing.Timezone": "Timezone",
+    "Description:SmartSoftware.Timing.Timezone": "Application time zone"
+  }
+}

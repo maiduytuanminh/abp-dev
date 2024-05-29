@@ -1,0 +1,30 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Prismjs
+@using SmartSoftware.VirtualFileExplorer.Web.Localization
+@model SmartSoftware.VirtualFileExplorer.Web.Pages.VirtualFileExplorer.FileContentModal
+@inject IHtmlLocalizer<VirtualFileExplorerResource> L
+@{
+    Layout = null;
+}
+
+<ss-style-bundle name="@typeof(VirtualFileExplorerResource).FullName">
+    <ss-script type="@typeof(PrismjsStyleBundleContributor)" />
+</ss-style-bundle>
+
+<ss-script-bundle name="@typeof(VirtualFileExplorerResource).FullName">
+    <ss-script type="@typeof(PrismjsScriptBundleContributor)" />
+</ss-script-bundle>
+
+<ss-modal size="ExtraLarge">
+    <ss-modal-header title="@L["FileContent"].Value"></ss-modal-header>
+    <ss-modal-body>
+        <pre class="language-markup">
+            <code class="language-markup">
+@Model.Content.Trim()
+		   </code>
+    </pre>
+    </ss-modal-body>
+    <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Close)"></ss-modal-footer>
+</ss-modal>

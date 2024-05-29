@@ -1,0 +1,10 @@
+{
+  "culture": "fa",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "اعتبار سنجی انجام نشد! دسترسی داده نشده است.",
+    "SmartSoftware.Authorization:010002": "اعتبار سنجی انجام نشد! دسترسی : {PolicyName} داده نشده است",
+    "SmartSoftware.Authorization:010003": "اعتبار سنجی انجام نشد! دسترسی به منابع مورد نظر داده نشده است: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "اعتبار سنجی انجام نشد! به منبع : {ResourceName} دسترسی داده نشده است",
+    "SmartSoftware.Authorization:010005": "اعتبار سنجی انجام نشد! به منابع : {ResourceName} دسترسی داده نشده است"
+  }
+}

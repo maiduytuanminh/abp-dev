@@ -1,0 +1,7 @@
+{
+  "culture": "en",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Password length must be greater than {0} characters.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Password must contain at least one non-alphanumeric character."
+  }
+}

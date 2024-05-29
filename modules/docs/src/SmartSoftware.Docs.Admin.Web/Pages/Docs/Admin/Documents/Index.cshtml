@@ -1,0 +1,209 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.Docs.Admin
+@using SmartSoftware.Docs.Admin.Navigation
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.Docs.Localization
+@model SmartSoftware.Docs.Admin.Pages.Docs.Admin.Documents.IndexModel
+@inject IHtmlLocalizer<DocsResource> L
+@inject IAuthorizationService Authorization
+@{
+    ViewBag.PageTitle = L["Menu:Documents"];
+}
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Documents"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:DocumentManagement"].Value);
+    PageLayout.Content.MenuItemName = DocsMenuNames.Documents;
+}
+
+@section scripts {
+    <ss-script src="/client-proxies/docs-admin-proxy.js" />
+    <ss-script src="/Pages/Docs/Admin/Documents/index.js" />
+}
+
+@section styles {
+    <ss-style src="/Pages/Docs/Admin/Documents/index.min.css" />
+}
+
+<div id="DocumentsContainer">
+    <ss-card>
+        <ss-card-header>
+            <form autocomplete="off" id="FilterForm">
+
+                <ss-row>
+
+                    <ss-column size="Auto">
+                        <div class="input-group mb-2">
+                            <div class="input-group-text">@L["Project"].Value</div>
+
+                            <select
+                                id="ProjectId"
+                                name="ProjectId"
+                                class="form-select">
+                                <option></option>
+                                @foreach (var project in Model.Projects)
+                                {
+                                    <option value="@project.Id">@project.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </ss-column>
+
+                    <ss-column size="Auto">
+                        <div class="input-group mb-2">
+                            <div class="input-group-text">@L["Version"].Value</div>
+
+                            <select
+                                id="Version"
+                                name="Version"
+                                class="form-select">
+                            </select>
+                        </div>
+                    </ss-column>
+                    
+                    <ss-column size="Auto">
+                        <div class="input-group mb-2">
+                            <div class="input-group-text">@L["Name"].Value</div>
+
+                            <input type="text"
+                               id="Name"
+                               name="Name"
+                               class="form-control">
+                        </div>
+                    </ss-column>
+
+                    <ss-column size="Auto">
+                        <div class="input-group mb-2">
+                            <div class="input-group-text">@L["LanguageCode"].Value</div>
+
+                            <select
+                                id="LanguageCode"
+                                name="LanguageCode"
+                                class="form-select">
+                            </select>
+                        </div>
+                    </ss-column>
+                    <ss-column size="Auto">
+                        <ss-button button-type="Primary" icon="search" id="SearchButton" style="line-height: 25px;" text="@L["Search"].Value"></ss-button>
+                    </ss-column>
+                    <ss-row class="mt-3 mb-3">
+                        <ss-column size-md="_12">
+                            <a href="javascript:;" id="AdvancedFilterSectionToggler" class="text-decoration-none">@L["AdvancedFilters"]</a>
+                        </ss-column>
+                    </ss-row>
+                    <ss-row id="AdvancedFilterSection" style="display: none;">
+
+                        <ss-column size="_4">
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">@L["CreationTime"].Value</div>
+
+                                    <input type="text"
+                                       id="CreationTimeMin"
+                                       name="CreationTimeMin"
+                                       class="form-control singledatepicker"
+                                       placeholder="@L["StartDate"].Value">
+                                    
+                                    <input type="text"
+                                       id="CreationTimeMax"
+                                       name="CreationTimeMax"
+                                       placeholder="@L["EndDate"].Value"
+                                       class="form-control singledatepicker">
+                            </div>
+                        </ss-column>
+
+                        <ss-column size="_4">
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">@L["LastUpdateTime"].Value</div>
+                                    <input type="text"
+                                       id="LastUpdatedTimeMin"
+                                       name="LastUpdatedTimeMin"
+                                       class="form-control singledatepicker"
+                                       placeholder="@L["StartDate"].Value">
+
+                                    <input type="text"
+
+                                       id="LastUpdatedTimeMax"
+                                       name="LastUpdatedTimeMax"
+                                       placeholder="@L["EndDate"].Value"
+                                       class="form-control singledatepicker">
+                            </div>
+                        </ss-column>
+
+                        <ss-column size="_4">
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">@L["LastCachedTime"].Value</div>
+
+                                    <input type="text"
+                                       id="LastCachedTimeMin"
+                                       name="LastCachedTimeMin"
+                                       class="form-control singledatepicker"
+                                       placeholder="@L["StartDate"].Value">
+                                       
+                                    <input type="text"
+                                       id="LastCachedTimeMax"
+                                       name="LastCachedTimeMax"
+                                       placeholder="@L["EndDate"].Value"
+                                       class="form-control singledatepicker">
+                            </div>
+                        </ss-column>
+                        
+                        <ss-column size="_2">
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">@L["Format"].Value</div>
+
+                                <select
+                                    id="Format"
+                                    name="Format"
+                                    class="form-select">
+                                </select>
+                            </div>
+                        </ss-column>
+
+                        <ss-column size="_2">
+                        </ss-column>
+                        
+                          <ss-column size="Auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">@L["LastSignificantUpdateTime"].Value</div>
+
+                                    <input type="text"
+                                       id="LastSignificantUpdateTimeMin"
+                                       name="LastSignificantUpdateTimeMin"
+                                       class="form-control singledatepicker"
+                                       placeholder="@L["StartDate"].Value">
+                                       
+                                    <input type="text"
+                                       id="LastSignificantUpdateTimeMax"
+                                       name="LastSignificantUpdateTimeMax"
+                                       placeholder="@L["EndDate"].Value"
+                                       class="form-control singledatepicker">
+                            </div>
+                        </ss-column>
+                        
+                    </ss-row>
+                </ss-row>
+            </form>
+        </ss-card-header>
+        <ss-card-body>
+            <ss-table  id="DocumentsTable" class="nowrap">
+                <thead>
+                    <tr>
+                        <th>@L["Actions"]</th>
+                        <th>@L["ProjectName"]</th>
+                        <th>@L["Name"]</th>
+                        <th>@L["Version"]</th>
+                        <th>@L["LanguageCode"]</th>
+                        <th>@L["FileName"]</th>
+                        <th>@L["Format"]</th>
+                        <th>@L["CreationTime"]</th>
+                        <th>@L["LastUpdateTime"]</th>
+                        <th>@L["LastSignificantUpdateTime"]</th>
+                        <th>@L["LastCachedTime"]</th>
+                    </tr>
+                </thead>
+            </ss-table>
+        </ss-card-body>
+    </ss-card>
+</div>

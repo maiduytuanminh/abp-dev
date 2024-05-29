@@ -1,0 +1,7 @@
+{
+ "culture": "fr",
+ "texts": {
+  "DisplayName:SmartSoftware.Localization.DefaultLanguage": "Langage par défaut",
+  "Description:SmartSoftware.Localization.DefaultLanguage": "La langue par défaut de l'application."
+ }
+}

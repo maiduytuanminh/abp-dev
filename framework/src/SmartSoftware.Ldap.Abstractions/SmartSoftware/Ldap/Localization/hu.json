@@ -1,0 +1,19 @@
+{
+  "culture": "hu",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP SSL-n keresztül",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP SSL-n keresztül",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Szerver host",
+    "Description:SmartSoftware.Ldap.ServerHost": "Az LDAP ksizolgáló szerver hostneve vagy IP címe",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Szerver port",
+    "Description:SmartSoftware.Ldap.ServerPort": "LDAP kommunikáció portja",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Bázis tartomány-komponens",
+    "Description:SmartSoftware.Ldap.BaseDc": "Bázis tartomány-komponens",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Tartomány",
+    "Description:SmartSoftware.Ldap.Domain": "Tartomány",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Felhasználónév",
+    "Description:SmartSoftware.Ldap.UserName": "Felhasználónév",
+    "DisplayName:SmartSoftware.Ldap.Password": "Jelszó",
+    "Description:SmartSoftware.Ldap.Password": "Jelszó"
+  }
+}

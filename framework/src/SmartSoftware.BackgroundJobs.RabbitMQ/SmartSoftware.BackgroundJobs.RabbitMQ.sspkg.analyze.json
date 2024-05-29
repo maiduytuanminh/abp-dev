@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.BackgroundJobs.RabbitMQ",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BackgroundJobs.RabbitMQ",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.Abstractions",
+          "namespace": "SmartSoftware.BackgroundJobs",
+          "name": "SmartSoftwareBackgroundJobsAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.RabbitMQ",
+          "namespace": "SmartSoftware.RabbitMQ",
+          "name": "SmartSoftwareRabbitMqModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Threading",
+          "namespace": "SmartSoftware.Threading",
+          "name": "SmartSoftwareThreadingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareBackgroundJobsRabbitMqModule",
+      "summary": null
+    }
+  ]
+}

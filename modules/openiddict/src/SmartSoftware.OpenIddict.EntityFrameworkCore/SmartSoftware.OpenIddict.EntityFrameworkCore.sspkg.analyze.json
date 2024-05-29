@@ -1,0 +1,170 @@
+{
+  "name": "SmartSoftware.OpenIddict.EntityFrameworkCore",
+  "hash": "15ae177e740932706726e9ba9e5e8b3e",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.OpenIddict.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.OpenIddict.Domain",
+          "namespace": "SmartSoftware.OpenIddict",
+          "name": "SmartSoftwareOpenIddictDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareOpenIddictEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.OpenIddict.EntityFrameworkCore",
+      "connectionStringName": "SmartSoftwareOpenIddict",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Applications.OpenIddictApplication",
+          "contentType": "databaseTable",
+          "name": "OpenIddictApplications",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Authorizations.OpenIddictAuthorization",
+          "contentType": "databaseTable",
+          "name": "OpenIddictAuthorizations",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Scopes.OpenIddictScope",
+          "contentType": "databaseTable",
+          "name": "OpenIddictScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.OpenIddict.Tokens.OpenIddictToken",
+          "contentType": "databaseTable",
+          "name": "OpenIddictTokens",
+          "summary": null
+        }
+      ],
+      "replacedDbContexts": [],
+      "implementingInterfaces": [
+        {
+          "name": "IInfrastructure<IServiceProvider>",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IServiceProvider>"
+        },
+        {
+          "name": "IDbContextDependencies",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies"
+        },
+        {
+          "name": "IDbSetCache",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbSetCache"
+        },
+        {
+          "name": "IDbContextPoolable",
+          "namespace": "Microsoft.EntityFrameworkCore.Internal",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable"
+        },
+        {
+          "name": "IResettableService",
+          "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "declaringAssemblyName": "Microsoft.EntityFrameworkCore",
+          "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.IResettableService"
+        },
+        {
+          "name": "IDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IDisposable"
+        },
+        {
+          "name": "IAsyncDisposable",
+          "namespace": "System",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "fullName": "System.IAsyncDisposable"
+        },
+        {
+          "name": "ISmartSoftwareEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.ISmartSoftwareEfCoreDbContext"
+        },
+        {
+          "name": "IEfCoreDbContext",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "fullName": "SmartSoftware.EntityFrameworkCore.IEfCoreDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IOpenIddictDbContext",
+          "namespace": "SmartSoftware.OpenIddict.EntityFrameworkCore",
+          "declaringAssemblyName": "SmartSoftware.OpenIddict.EntityFrameworkCore",
+          "fullName": "SmartSoftware.OpenIddict.EntityFrameworkCore.IOpenIddictDbContext"
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "OpenIddictDbContext",
+      "summary": null
+    }
+  ]
+}

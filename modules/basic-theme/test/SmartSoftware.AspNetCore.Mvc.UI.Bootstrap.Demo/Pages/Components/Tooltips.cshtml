@@ -1,0 +1,86 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.TooltipsModel
+@{
+    ViewData["Title"] = "Tooltips";
+}
+
+
+<h2>Tooltips</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/tooltips")" target="_blank"> Bootstrap Tooltips</a>.</p>
+
+<h4>Example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-button ss-tooltip="Tooltip">
+            Tooltip Default
+        </ss-button>
+        <ss-button ss-tooltip-top="Tooltip">
+            Tooltip on top
+        </ss-button>
+        <ss-button ss-tooltip-right="Tooltip">
+            Tooltip on right
+        </ss-button>
+        <ss-button ss-tooltip-bottom="Tooltip">
+            Tooltip on bottom
+        </ss-button>
+        <ss-button disabled="true" ss-tooltip="Tooltip">
+            Disabled button Tooltip
+        </ss-button>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper" active="true">
+                <pre><code>
+&lt;ss-button ss-tooltip=&quot;Tooltip&quot;&gt;
+      Tooltip Default
+&lt;/ss-button&gt;
+
+&lt;ss-button ss-tooltip-top=&quot;Tooltip&quot;&gt;
+      Tooltip on top
+&lt;/ss-button&gt;
+
+&lt;ss-button ss-tooltip-right=&quot;Tooltip&quot;&gt;
+      Tooltip on right
+&lt;/ss-button&gt;
+
+&lt;ss-button ss-tooltip-bottom=&quot;Tooltip&quot;&gt;
+      Tooltip on bottom
+&lt;/ss-button&gt;
+
+&lt;ss-button disabled=&quot;true&quot; ss-tooltip=&quot;Tooltip&quot;&gt;
+      Disabled button Tooltip
+&lt;/ss-button&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;button class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;&quot; data-bs-original-title=&quot;Tooltip&quot;&gt;
+    Tooltip Default
+&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;&quot; data-bs-original-title=&quot;Tooltip&quot;&gt;
+    Tooltip on top
+&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;right&quot; title=&quot;&quot; data-bs-original-title=&quot;Tooltip&quot;&gt;
+     Tooltip on right
+&lt;/button&gt;
+
+&lt;button class=&quot;btn&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;bottom&quot; title=&quot;&quot; data-bs-original-title=&quot;Tooltip&quot;&gt;
+    Tooltip on bottom
+&lt;/button&gt;
+
+&lt;span class=&quot;d-inline-block&quot; tabindex=&quot;0&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; title=&quot;&quot; data-bs-original-title=&quot;Tooltip&quot;&gt;
+    &lt;button class=&quot;btn&quot; disabled=&quot;disabled&quot; type=&quot;button&quot; data-busy-text=&quot;Processing...&quot; data-bs-placement=&quot;top&quot; style=&quot;pointer-events: none;&quot;&gt;
+        Disabled button Tooltip
+    &lt;/button&gt;
+&lt;/span&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

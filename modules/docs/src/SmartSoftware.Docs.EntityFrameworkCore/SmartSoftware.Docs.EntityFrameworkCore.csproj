@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Docs.EntityFrameworkCore</AssemblyName>
+    <PackageId>SmartSoftware.Docs.EntityFrameworkCore</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SmartSoftware\Docs\NewFolder\**" />
+    <EmbeddedResource Remove="SmartSoftware\Docs\NewFolder\**" />
+    <None Remove="SmartSoftware\Docs\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Docs.Domain\SmartSoftware.Docs.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore\SmartSoftware.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

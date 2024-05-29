@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.SettingManagement.Localization
+@inject IHtmlLocalizer<SmartSoftwareSettingManagementResource> L
+@model SmartSoftware.SettingManagement.Web.Pages.SettingManagement.Components.TimeZoneSettingGroup.TimeZoneSettingGroupViewComponent.UpdateTimezoneSettingsViewModel
+
+<ss-script src="/Pages/SettingManagement/Components/TimeZoneSettingGroup/Default.js" />
+
+<form id="TimeZoneSettingsForm" method="post">
+    <ss-row>
+        <ss-column size-md="_12">
+            <div>
+                <ss-select asp-for="Timezone" asp-items="@Model.TimeZoneItems" info="@L["TimezoneHelpText"].Value" />
+            </div>
+            <div>
+                <ss-button button-type="Primary" type="submit">
+                    <i class="fa fa-save"></i> @L["Save"]
+                </ss-button>
+            </div>
+        </ss-column>
+    </ss-row>
+</form>

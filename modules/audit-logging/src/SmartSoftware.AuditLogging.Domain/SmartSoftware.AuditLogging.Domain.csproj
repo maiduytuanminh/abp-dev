@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.AuditLogging.Domain.Shared\SmartSoftware.AuditLogging.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Auditing\SmartSoftware.Auditing.csproj" />
+  </ItemGroup>
+
+</Project>

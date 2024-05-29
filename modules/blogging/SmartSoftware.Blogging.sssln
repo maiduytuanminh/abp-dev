@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.Blogging": {
+      "path": "SmartSoftware.Blogging.ssmdl"
+    }
+  }
+}

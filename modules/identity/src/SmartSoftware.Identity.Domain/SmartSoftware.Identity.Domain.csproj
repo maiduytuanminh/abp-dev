@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Identity.Domain</AssemblyName>
+    <PackageId>SmartSoftware.Identity.Domain</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SmartSoftware\Permissions\**" />
+    <EmbeddedResource Remove="SmartSoftware\Permissions\**" />
+    <None Remove="SmartSoftware\Permissions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Identity.Domain.Shared\SmartSoftware.Identity.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\users\src\SmartSoftware.Users.Domain\SmartSoftware.Users.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" />
+  </ItemGroup>
+
+</Project>

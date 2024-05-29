@@ -1,0 +1,60 @@
+﻿@page
+
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageSearchBox
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.BlogPosts
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageToolbar
+@using SmartSoftware.CmsKit.Blogs
+
+@inherits CmsKitAdminPageBase
+
+@model IndexModel
+
+@{
+    PageLayout.Content.Title = L["BlogPosts"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.BlogPosts.BlogPostsMenu;
+}
+
+@section scripts {
+    <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+    <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+    <ss-script src="/Pages/CmsKit/BlogPosts/index.js"/>
+}
+
+
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(SmartSoftwarePageToolbarViewComponent), new {pageName = typeof(IndexModel).FullName})
+}
+
+<div class="alert alert-warning" style="display: none" role="alert" id="alertHasBlogPostWaitingForReview">
+    <ss-button button-type="Link" type="button" text="@L["HasBlogPostWaitingForReviewMessage"].Value" id="button-show-waiting-for-review"/>
+</div>
+
+<ss-card class="mb-4">
+    <ss-card-body>
+        <div id="CmsKitBlogPostsWrapper">
+            <ss-row>
+                <ss-column size="_2">
+                    <select id="StatusSelect" class="form-select">
+                        <option value="">@L["SelectAStatus"]</option>
+                        @foreach (var status in (BlogPostStatus[]) Enum.GetValues(typeof(BlogPostStatus)))
+                        {
+                            <option value="@((int)status)">@L["CmsKit.BlogPost.Status." + (int)status]</option>
+                        }
+                    </select>
+                </ss-column>
+                <ss-column size="_10">
+                    @await Component.InvokeAsync(typeof(SmartSoftwarePageSearchBoxViewComponent))
+                </ss-column>
+            </ss-row>
+        </div>
+    </ss-card-body>
+</ss-card>
+
+<ss-card>
+    <ss-card-body>
+        <ss-table  id="BlogPostsTable" class="nowrap"></ss-table>
+    </ss-card-body>
+</ss-card>

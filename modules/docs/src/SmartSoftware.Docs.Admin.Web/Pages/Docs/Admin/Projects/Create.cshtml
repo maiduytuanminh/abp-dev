@@ -1,0 +1,24 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.Docs.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.Docs.Admin.Pages.Docs.Admin.Projects
+@model SmartSoftware.Docs.Admin.Pages.Docs.Admin.Projects.CreateModel
+@inject IHtmlLocalizer<DocsResource> L
+@{
+    Layout = null;
+}
+
+@if (Model.GithubProject != null)
+{
+    <ss-dynamic-form submit-button="false" ss-model="@Model.GithubProject" asp-page="/Docs/Admin/Projects/Create">
+        <ss-modal size="@(SmartSoftwareModalSize.Default)">
+            <ss-modal-header title="@L["Create"].Value"></ss-modal-header>
+            <ss-modal-body>
+                <ss-form-content />
+            </ss-modal-body>
+            <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)">
+            </ss-modal-footer>
+        </ss-modal>
+    </ss-dynamic-form>
+}

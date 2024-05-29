@@ -1,0 +1,216 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.CollapseModel
+@{
+    ViewData["Title"] = "Collapse";
+}
+
+
+<h2>Collapse</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/collapse")" target="_blank"> Bootstrap Collapse</a>.</p>
+
+
+<h4>Example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <a ss-button="Primary" ss-collapse-id="collapseExample"> Link with href </a>
+        <ss-button button-type="Primary" ss-collapse-id="collapseExample" text="Button with data-target" />
+
+        <ss-collapse-body id="collapseExample">
+            Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </ss-collapse-body>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-button button-type=&quot;Primary&quot; ss-collapse-id=&quot;collapseExample&quot; text=&quot;Button with data-target&quot; /&gt;
+&lt;a ss-button=&quot;Primary&quot; ss-collapse-id=&quot;collapseExample&quot;&gt; Link with href &lt;/a&gt;
+
+&lt;ss-collapse-body id=&quot;collapseExample&quot;&gt;
+       
+                    Anim pariatur wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+&lt;/ss-collapse-body&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;p&gt;
+  &lt;a class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;collapse&quot; href=&quot;#collapseExample&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+    Link with href
+  &lt;/a&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseExample&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+    Button with data-target
+  &lt;/button&gt;
+&lt;/p&gt;
+&lt;div class=&quot;collapse&quot; id=&quot;collapseExample&quot;&gt;
+  &lt;div class=&quot;card card-body&quot;&gt;
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Multiple targets</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <a ss-button="Primary" ss-collapse-id="FirstCollapseExample"> Toggle first element </a>
+        <ss-button button-type="Primary" ss-collapse-id="SecondCollapseExample" text="Toggle second element" />
+        <ss-button button-type="Primary" ss-collapse-id="FirstCollapseExample SecondCollapseExample" text="Toggle both elements" />
+
+        <ss-row class="mt-3">
+            <ss-column size-sm="_6">
+                <ss-collapse-body id="FirstCollapseExample" multi="true">
+                    Curabitur porta porttitor libero eu luctus. Praesent ultrices mattis commodo. Integer sodales massa risus, in molestie enim sagittis blandit
+                </ss-collapse-body>
+            </ss-column>
+            <ss-column size-sm="_6">
+                <ss-collapse-body id="SecondCollapseExample" multi="true">
+                    Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                </ss-collapse-body>
+            </ss-column>
+        </ss-row>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+
+&lt;a ss-button=&quot;Primary&quot; ss-collapse-id=&quot;FirstCollapseExample&quot;&gt; Toggle first element &lt;/a&gt;
+&lt;ss-button button-type=&quot;Primary&quot; ss-collapse-id=&quot;SecondCollapseExample&quot; text=&quot;Toggle second element&quot; /&gt;
+&lt;ss-button button-type=&quot;Primary&quot; ss-collapse-id=&quot;FirstCollapseExample SecondCollapseExample&quot; text=&quot;Toggle both elements&quot; /&gt;
+        
+&lt;ss-row class=&quot;mt-3&quot;&gt;
+    &lt;ss-column size-sm=&quot;_6&quot;&gt;
+        &lt;ss-collapse-body id=&quot;FirstCollapseExample&quot; multi=&quot;true&quot;&gt;
+               Curabitur porta porttitor libero eu luctus. Praesent ultrices mattis commodo. Integer sodales massa risus, in molestie enim sagittis blandit
+        &lt;/ss-collapse-body&gt;
+    &lt;/ss-column&gt;
+    &lt;ss-column size-sm=&quot;_6&quot;&gt;
+        &lt;ss-collapse-body id=&quot;SecondCollapseExample&quot; multi=&quot;true&quot;&gt;
+                Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+        &lt;/ss-collapse-body&gt;
+    &lt;/ss-column&gt;
+&lt;/ss-row&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;p&gt;
+  &lt;a class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;collapse&quot; href=&quot;#multiCollapseExample1&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1&quot;&gt;Toggle first element&lt;/a&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#multiCollapseExample2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample2&quot;&gt;Toggle second element&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;.multi-collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1 multiCollapseExample2&quot;&gt;Toggle both elements&lt;/button&gt;
+&lt;/p&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample1&quot;&gt;
+        Curabitur porta porttitor libero eu luctus. Praesent ultrices mattis commodo. Integer sodales massa risus, in molestie enim sagittis blandit
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample2&quot;&gt;
+        Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Accordion example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-accordion>
+            <ss-accordion-item title="Collapsible Group Item #1">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry rtat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </ss-accordion-item>
+            <ss-accordion-item title="Collapsible Group Item #2">
+                Anim pariatur cliche reprehenderit,, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </ss-accordion-item>
+            <ss-accordion-item title="Collapsible Group Item #3">
+                Anim pariatur  wolf moon tempor,,, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </ss-accordion-item>
+        </ss-accordion>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+
+&lt;ss-accordion&gt;
+    &lt;ss-accordion-item title=&quot;Collapsible Group Item #1&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry rtat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+    &lt;/ss-accordion-item&gt;
+    &lt;ss-accordion-item title=&quot;Collapsible Group Item #2&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+    &lt;/ss-accordion-item&gt;
+    &lt;ss-accordion-item title=&quot;Collapsible Group Item #3&quot;&gt;
+                Anim pariatur  wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+    &lt;/ss-accordion-item&gt;
+&lt;/ss-accordion&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;accordion&quot; id=&quot;accordionExample&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingOne&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;
+        &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseOne&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseOne&quot;&gt;
+          Collapsible Group Item #1
+        &lt;/button&gt;
+      &lt;/h5&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;collapseOne&quot; class=&quot;collapse show&quot; aria-labelledby=&quot;headingOne&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingTwo&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;
+        &lt;button class=&quot;btn btn-link collapsed&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseTwo&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseTwo&quot;&gt;
+          Collapsible Group Item #2
+        &lt;/button&gt;
+      &lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;collapseTwo&quot; class=&quot;collapse&quot; aria-labelledby=&quot;headingTwo&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingThree&quot;&gt;
+      &lt;h5 class=&quot;mb-0&quot;&gt;
+        &lt;button class=&quot;btn btn-link collapsed&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseThree&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseThree&quot;&gt;
+          Collapsible Group Item #3
+        &lt;/button&gt;
+      &lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;collapseThree&quot; class=&quot;collapse&quot; aria-labelledby=&quot;headingThree&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

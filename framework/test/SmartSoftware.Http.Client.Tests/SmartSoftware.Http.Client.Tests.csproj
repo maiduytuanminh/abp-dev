@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Http.Client\SmartSoftware.Http.Client.csproj" />
+    <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.Tests\SmartSoftware.AspNetCore.Mvc.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\Http\Localization\en.json" />
+  </ItemGroup>
+
+</Project>

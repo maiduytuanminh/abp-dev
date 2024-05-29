@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Account.HttpApi</AssemblyName>
+    <PackageId>SmartSoftware.Account.HttpApi</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Account.Application.Contracts\SmartSoftware.Account.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+  </ItemGroup>
+
+</Project>

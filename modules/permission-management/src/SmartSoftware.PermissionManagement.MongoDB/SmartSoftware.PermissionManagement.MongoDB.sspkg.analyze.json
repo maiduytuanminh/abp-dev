@@ -1,0 +1,115 @@
+{
+  "name": "SmartSoftware.PermissionManagement.MongoDB",
+  "hash": "33af874bb56ed9db03c5e7b77e15f321",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.PermissionManagement.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwarePermissionManagementMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.PermissionManagement.MongoDB",
+      "connectionStringName": "SmartSoftwarePermissionManagement",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionGroupDefinitionRecord",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwarePermissionGroups",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionDefinitionRecord",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwarePermissions",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.PermissionManagement.PermissionGrant",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwarePermissionGrants",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IPermissionManagementMongoDbContext",
+          "namespace": "SmartSoftware.PermissionManagement.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.MongoDB",
+          "fullName": "SmartSoftware.PermissionManagement.MongoDB.IPermissionManagementMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "PermissionManagementMongoDbContext",
+      "summary": null
+    }
+  ]
+}

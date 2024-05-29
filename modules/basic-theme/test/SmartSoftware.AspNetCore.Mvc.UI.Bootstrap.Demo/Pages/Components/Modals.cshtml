@@ -1,0 +1,75 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.ModalsModel
+@{
+    ViewData["Title"] = "Modals";
+}
+
+
+
+<h2>Modals</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/modal")" target="_blank"> Bootstrap Modal</a>.</p>
+
+<h4>Example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-button button-type="Primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</ss-button>
+
+        <ss-modal centered="true" scrollable="true" size="Large" id="myModal">
+            <ss-modal-header title="Modal title"></ss-modal-header>
+            <ss-modal-body>
+                Woohoo, you're reading this text in a modal!
+            </ss-modal-body>
+            <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Save|SmartSoftwareModalButtons.Close)"></ss-modal-footer>
+        </ss-modal>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+    &lt;ss-button button-type=&quot;Primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#myModal&quot;&gt;Launch modal&lt;/ss-button&gt;
+
+    &lt;ss-modal centered=&quot;true&quot; scrollable=&quot;true&quot; size=&quot;Large&quot; id=&quot;myModal&quot;&gt;
+    &lt;ss-modal-header title=&quot;Modal title&quot;&gt;&lt;/ss-modal-header&gt;
+    &lt;ss-modal-body&gt;
+    Woohoo, you're reading this text in a modal!
+    &lt;/ss-modal-body&gt;
+    &lt;ss-modal-footer buttons=&quot;&commat;(SmartSoftwareModalButtons.Save|SmartSoftwareModalButtons.Close)&quot;&gt;&lt;/ss-modal-footer&gt;
+    &lt;/ss-modal&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;!-- Button trigger modal --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#exampleModal&quot;&gt;
+  Launch demo modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;exampleModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg&quot; role=&quot;document&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;h5 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;Modal title&lt;/h5&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        ...
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

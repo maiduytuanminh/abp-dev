@@ -1,0 +1,19 @@
+{
+  "culture": "nl",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP via SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP via SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Serverhost",
+    "Description:SmartSoftware.Ldap.ServerHost": "Serverhost",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Server poort",
+    "Description:SmartSoftware.Ldap.ServerPort": "Server poort",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Basisdomein component",
+    "Description:SmartSoftware.Ldap.BaseDc": "Basisdomein component",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Domain",
+    "Description:SmartSoftware.Ldap.Domain": "Domain",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Gebruikersnaam",
+    "Description:SmartSoftware.Ldap.UserName": "Gebruikersnaam",
+    "DisplayName:SmartSoftware.Ldap.Password": "Wachtwoord",
+    "Description:SmartSoftware.Ldap.Password": "Wachtwoord"
+  }
+}

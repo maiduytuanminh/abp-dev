@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.Domain.Shared\MyCompanyName.MyProjectName.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.ObjectExtending\SmartSoftware.ObjectExtending.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.Application.Contracts\SmartSoftware.Account.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application.Contracts\SmartSoftware.Identity.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application.Contracts\SmartSoftware.PermissionManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Application.Contracts\SmartSoftware.TenantManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Application.Contracts\SmartSoftware.FeatureManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Application.Contracts\SmartSoftware.SettingManagement.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,94 @@
+﻿@using SmartSoftware.Account.Localization
+@using SmartSoftware.Users
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.Account.Web.Pages.Account.Components.ProfileManagementGroup.PersonalInfo
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Alert
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Button
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Grid
+@using SmartSoftware.AspNetCore.Mvc.UI.Theming
+@using SmartSoftware.Data
+@using SmartSoftware.Identity.Settings
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@using SmartSoftware.Settings
+@inject IHtmlLocalizer<AccountResource> L
+@inject ICurrentUser CurrentUser
+@inject ISettingProvider SettingManager
+@inject IThemeManager ThemeManager
+@inject IStringLocalizerFactory StringLocalizerFactory
+@model SmartSoftware.Account.Web.Pages.Account.Components.ProfileManagementGroup.PersonalInfo.AccountProfilePersonalInfoManagementGroupViewComponent.PersonalInfoModel
+@{
+    var isUserNameUpdateEnabled = string.Equals(await SettingManager.GetOrNullAsync(IdentitySettingNames.User.IsUserNameUpdateEnabled), "true",
+        StringComparison.OrdinalIgnoreCase);
+
+    var isEmailUpdateEnabled = string.Equals(await SettingManager.GetOrNullAsync(IdentitySettingNames.User.IsEmailUpdateEnabled), "true",
+        StringComparison.OrdinalIgnoreCase);
+}
+
+<h4>@L["PersonalSettings"]</h4>
+<hr />
+<form method="post" id="PersonalSettingsForm">
+
+    <input asp-for="ConcurrencyStamp" />
+
+    <ss-input asp-for="UserName" readonly="!isUserNameUpdateEnabled" />
+
+    <ss-row>
+        <ss-column size-md="_6">
+            <ss-input asp-for="Name" />
+        </ss-column>
+        <ss-column size-md="_6">
+            <ss-input asp-for="Surname" />
+        </ss-column>
+    </ss-row>
+
+    <ss-input asp-for="Email" readonly="!isEmailUpdateEnabled" />
+
+    <ss-input asp-for="PhoneNumber" />
+
+    @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<AccountProfilePersonalInfoManagementGroupViewComponent.PersonalInfoModel>())
+    {
+        var isAllowed = propertyInfo.Configuration.GetOrDefault(IdentityModuleExtensionConsts.ConfigurationNames.AllowUserToEdit);
+
+        if (isAllowed == null || !isAllowed.Equals(true))
+        {
+            continue;
+        }
+
+        if (!propertyInfo.Name.EndsWith("_Text"))
+        {
+            if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+            {
+                if (propertyInfo.Type.IsEnum)
+                {
+                    Model.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                }
+                <ss-select asp-for="ExtraProperties[propertyInfo.Name]"
+                    name="ExtraProperties.@propertyInfo.Name"
+                    label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                    autocomplete-api-url="@propertyInfo.Lookup.Url"
+                    autocomplete-selected-item-name="@Model.GetProperty(propertyInfo.Name + "_Text")"
+                    autocomplete-selected-item-value="@Model.GetProperty(propertyInfo.Name)"
+                    autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                    autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                    autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                    autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName">
+                </ss-select>
+            }
+            else
+            {
+                <ss-input type="@propertyInfo.GetInputType()"
+                   asp-for="ExtraProperties[propertyInfo.Name]"
+                   name="ExtraProperties.@propertyInfo.Name"
+                   label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                   asp-format="@propertyInfo.GetInputFormatOrNull()"
+                   value="@propertyInfo.GetInputValueOrNull(Model.GetProperty(propertyInfo.Name))" />
+            }
+        }
+    }
+
+    <ss-button type="submit" button-type="Primary" text="@L["Submit"].Value" />
+</form>

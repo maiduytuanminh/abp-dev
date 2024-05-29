@@ -1,0 +1,6 @@
+﻿namespace SmartSoftware.FeatureManagement.EntityFrameworkCore;
+
+public class FeatureValueRepositoryTests : FeatureValueRepository_Tests<SmartSoftwareFeatureManagementEntityFrameworkCoreTestModule>
+{
+
+}

@@ -1,0 +1,151 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.CmsKit.Web.Unified": {
+      "path": "host/SmartSoftware.CmsKit.Web.Unified/SmartSoftware.CmsKit.Web.Unified.sspkg",
+      "folder": "host"
+    },
+    "SmartSoftware.CmsKit.Web.Host": {
+      "path": "host/SmartSoftware.CmsKit.Web.Host/SmartSoftware.CmsKit.Web.Host.sspkg",
+      "folder": "host"
+    },
+    "SmartSoftware.CmsKit.HttpApi.Host": {
+      "path": "host/SmartSoftware.CmsKit.HttpApi.Host/SmartSoftware.CmsKit.HttpApi.Host.sspkg",
+      "folder": "host"
+    },
+    "SmartSoftware.CmsKit.IdentityServer": {
+      "path": "host/SmartSoftware.CmsKit.IdentityServer/SmartSoftware.CmsKit.IdentityServer.sspkg",
+      "folder": "host"
+    },
+    "SmartSoftware.CmsKit.Host.Shared": {
+      "path": "host/SmartSoftware.CmsKit.Host.Shared/SmartSoftware.CmsKit.Host.Shared.sspkg",
+      "folder": "host"
+    },
+    "SmartSoftware.CmsKit.Domain.Shared": {
+      "path": "src/SmartSoftware.CmsKit.Domain.Shared/SmartSoftware.CmsKit.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Domain": {
+      "path": "src/SmartSoftware.CmsKit.Domain/SmartSoftware.CmsKit.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Application.Contracts": {
+      "path": "src/SmartSoftware.CmsKit.Application.Contracts/SmartSoftware.CmsKit.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Application": {
+      "path": "src/SmartSoftware.CmsKit.Application/SmartSoftware.CmsKit.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.CmsKit.EntityFrameworkCore/SmartSoftware.CmsKit.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.MongoDB": {
+      "path": "src/SmartSoftware.CmsKit.MongoDB/SmartSoftware.CmsKit.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.HttpApi": {
+      "path": "src/SmartSoftware.CmsKit.HttpApi/SmartSoftware.CmsKit.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.HttpApi.Client": {
+      "path": "src/SmartSoftware.CmsKit.HttpApi.Client/SmartSoftware.CmsKit.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.TestBase": {
+      "path": "test/SmartSoftware.CmsKit.TestBase/SmartSoftware.CmsKit.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.CmsKit.EntityFrameworkCore.Tests/SmartSoftware.CmsKit.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.MongoDB.Tests": {
+      "path": "test/SmartSoftware.CmsKit.MongoDB.Tests/SmartSoftware.CmsKit.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.Domain.Tests": {
+      "path": "test/SmartSoftware.CmsKit.Domain.Tests/SmartSoftware.CmsKit.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.Application.Tests": {
+      "path": "test/SmartSoftware.CmsKit.Application.Tests/SmartSoftware.CmsKit.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.Web": {
+      "path": "src/SmartSoftware.CmsKit.Web/SmartSoftware.CmsKit.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/SmartSoftware.CmsKit.HttpApi.Client.ConsoleTestApp/SmartSoftware.CmsKit.HttpApi.Client.ConsoleTestApp.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.CmsKit.Admin.Application": {
+      "path": "src/SmartSoftware.CmsKit.Admin.Application/SmartSoftware.CmsKit.Admin.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Admin.Application.Contracts": {
+      "path": "src/SmartSoftware.CmsKit.Admin.Application.Contracts/SmartSoftware.CmsKit.Admin.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Admin.HttpApi": {
+      "path": "src/SmartSoftware.CmsKit.Admin.HttpApi/SmartSoftware.CmsKit.Admin.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Admin.HttpApi.Client": {
+      "path": "src/SmartSoftware.CmsKit.Admin.HttpApi.Client/SmartSoftware.CmsKit.Admin.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Admin.Web": {
+      "path": "src/SmartSoftware.CmsKit.Admin.Web/SmartSoftware.CmsKit.Admin.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Public.Application": {
+      "path": "src/SmartSoftware.CmsKit.Public.Application/SmartSoftware.CmsKit.Public.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Public.Application.Contracts": {
+      "path": "src/SmartSoftware.CmsKit.Public.Application.Contracts/SmartSoftware.CmsKit.Public.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Public.HttpApi": {
+      "path": "src/SmartSoftware.CmsKit.Public.HttpApi/SmartSoftware.CmsKit.Public.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Public.HttpApi.Client": {
+      "path": "src/SmartSoftware.CmsKit.Public.HttpApi.Client/SmartSoftware.CmsKit.Public.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Public.Web": {
+      "path": "src/SmartSoftware.CmsKit.Public.Web/SmartSoftware.CmsKit.Public.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Common.Web": {
+      "path": "src/SmartSoftware.CmsKit.Common.Web/SmartSoftware.CmsKit.Common.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Common.Application.Contracts": {
+      "path": "src/SmartSoftware.CmsKit.Common.Application.Contracts/SmartSoftware.CmsKit.Common.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Common.Application": {
+      "path": "src/SmartSoftware.CmsKit.Common.Application/SmartSoftware.CmsKit.Common.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Common.HttpApi": {
+      "path": "src/SmartSoftware.CmsKit.Common.HttpApi/SmartSoftware.CmsKit.Common.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.CmsKit.Common.HttpApi.Client": {
+      "path": "src/SmartSoftware.CmsKit.Common.HttpApi.Client/SmartSoftware.CmsKit.Common.HttpApi.Client.sspkg",
+      "folder": "src"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+  "hash": "0c136e999f8d28fc3b27414e0ff5aef7",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.Domain",
+          "namespace": "SmartSoftware.BlobStoring.Database",
+          "name": "BlobStoringDatabaseDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore",
+          "namespace": "SmartSoftware.EntityFrameworkCore",
+          "name": "SmartSoftwareEntityFrameworkCoreModule"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BlobStoringDatabaseEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+      "connectionStringName": "SmartSoftwareBlobStoring",
+      "databaseTables": [
+        {
+          "entityFullName": "SmartSoftware.BlobStoring.Database.DatabaseBlob",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwareBlobs",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.BlobStoring.Database.DatabaseBlobContainer",
+          "contentType": "databaseTable",
+          "name": "SmartSoftwareBlobContainers",
+          "summary": null
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "BlobStoringDbContext",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\configureawait.props" />
+    <Import Project="..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Dapr\SmartSoftware.Dapr.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapr.AspNetCore" />
+    </ItemGroup>
+
+</Project>

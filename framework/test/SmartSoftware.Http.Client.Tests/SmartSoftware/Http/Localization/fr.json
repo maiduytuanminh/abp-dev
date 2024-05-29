@@ -1,0 +1,6 @@
+{
+  "culture": "fr",
+  "texts": {
+    "SmartSoftware.Http.DynamicProxying:10001": "Exception métier avec données: {0}"
+  }
+}

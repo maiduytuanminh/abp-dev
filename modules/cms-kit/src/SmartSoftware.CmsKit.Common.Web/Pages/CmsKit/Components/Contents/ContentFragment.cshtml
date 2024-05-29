@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Mvc.ViewComponents
+@using Microsoft.Extensions.Localization
+@using Microsoft.Extensions.Logging
+@using SmartSoftware.Data
+@using SmartSoftware.Reflection
+@using SmartSoftware.CmsKit.Contents
+@using SmartSoftware.CmsKit.Localization
+@using SmartSoftware.CmsKit.Web.Renderers;
+@using SmartSoftware.CmsKit.Web.Pages.CmsKit.Components.Contents;
+
+@model ContentFragmentViewComponent
+
+@inject IMarkdownToHtmlRenderer MarkdownRenderer
+@inject IViewComponentSelector ViewComponentSelector
+@inject ILogger<ContentFragmentViewComponent> Logger
+@inject IStringLocalizer<CmsKitResource> L
+
+@foreach (var contentFragment in Model.ContentDto.ContentFragments)
+{
+    if (contentFragment.Type == ContentConsts.Markdown)
+    {
+        @Html.Raw(await MarkdownRenderer.RenderAsync(contentFragment.GetProperty<string>("Content"), Model.ContentDto.AllowHtmlTags, Model.ContentDto.PreventXSS, Model.ContentDto.ReferralLink))
+    }
+    else if (contentFragment.Type == ContentConsts.Widget)
+    {
+        var componentName = contentFragment.GetProperty<string>("Type");
+        var descriptor = ViewComponentSelector.SelectComponent(componentName);
+        var componentParameters = descriptor.Parameters;
+        var parameters = new Dictionary<string, object>(contentFragment.ExtraProperties);
+
+        foreach (var componentParameter in componentParameters)
+        {
+            if (string.IsNullOrWhiteSpace(componentParameter.Name))
+            {
+                continue;
+            }
+            if(parameters.TryGetValue(componentParameter.Name, out var value))
+            {
+                parameters[componentParameter.Name] = TypeHelper.ConvertFrom(componentParameter.ParameterType, value);
+            }
+        }
+
+        @try
+        {
+            @await Component.InvokeAsync(componentName, parameters)
+        }
+        catch (Exception ex)
+        {
+            <div class="alert alert-danger" role="alert">
+                @L["ThisPartOfContentCouldntBeLoaded"]
+            </div>
+
+            Logger.LogError(ex, $"Couldn't load the widget: {componentName}");
+        }
+    }
+}

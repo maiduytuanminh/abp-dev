@@ -1,0 +1,29 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.Users.Domain": {
+      "path": "src/SmartSoftware.Users.Domain/SmartSoftware.Users.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Users.Domain.Shared": {
+      "path": "src/SmartSoftware.Users.Domain.Shared/SmartSoftware.Users.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Users.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.Users.EntityFrameworkCore/SmartSoftware.Users.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Users.Abstractions": {
+      "path": "src/SmartSoftware.Users.Abstractions/SmartSoftware.Users.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Users.MongoDB": {
+      "path": "src/SmartSoftware.Users.MongoDB/SmartSoftware.Users.MongoDB.sspkg",
+      "folder": "src"
+    }
+  }
+}

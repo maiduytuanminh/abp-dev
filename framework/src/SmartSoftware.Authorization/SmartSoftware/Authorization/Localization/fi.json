@@ -1,0 +1,10 @@
+{
+  "culture": "fi",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Käyttöoikeuden varmistus epäonnistui! Annettua käytäntöä ei ole myönnetty.",
+    "SmartSoftware.Authorization:010002": "Käyttöoikeuden varmistus epäonnistui! Annettua käytäntöä ei ole myönnetty: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Käyttöoikeuden varmistus epäonnistui! Annettua käytäntöä ei ole myönnetty resurssille: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Käyttöoikeuden varmistus epäonnistui! Annettua vaatimusta ei ole annettu resurssille: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Käyttöoikeuden varmistus epäonnistui! Annettuja vaatimuksia ei ole annettu resurssille: {ResourceName}"
+  }
+}

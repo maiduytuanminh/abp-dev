@@ -1,0 +1,25 @@
+{
+  "culture": "nl",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Standaard vanaf adres",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Standaard vanaf weergavenaam",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Host",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Poort",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Gebruikersnaam",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Wachtwoord",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domein",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "SSL toestaan",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Gebruik standaard inloggegevens",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Standaard vanaf adres",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Standaard vanaf weergavenaam",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "De naam of het IP-adres van de host die wordt gebruikt voor SMTP-transacties.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "De poort die wordt gebruikt voor SMTP-transacties.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Gebruikersnaam gekoppeld aan de inloggegevens.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Het wachtwoord voor de gebruikersnaam die bij de inloggegevens hoort.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Het domein of de computernaam die de inloggegevens verifieert.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Of de SmtpClient Secure Sockets Layer (SSL) gebruikt om de verbinding te versleutelen.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Of de standaard inloggegevens worden verzonden met verzoeken.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Standaard sjabloon voor e-mail lay-out",
+    "TextTemplate:StandardEmailTemplates.Message": "Eenvoudig berichtsjabloon voor e-mails"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "SmartSoftware.Http.DynamicProxying:10001": "业务异常: {0}"
+  }
+}

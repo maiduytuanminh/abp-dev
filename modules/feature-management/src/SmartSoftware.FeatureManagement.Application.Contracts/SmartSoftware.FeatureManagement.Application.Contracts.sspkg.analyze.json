@@ -1,0 +1,85 @@
+{
+  "name": "SmartSoftware.FeatureManagement.Application.Contracts",
+  "hash": "a098bfbfeedbc75302632b819fbdd62c",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Domain.Shared",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization.Abstractions",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Json",
+          "namespace": "SmartSoftware.Json",
+          "name": "SmartSoftwareJsonModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareFeatureManagementApplicationContractsModule",
+      "summary": null
+    },
+    {
+      "displayName": "Manage Host features",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "FeatureManagement.ManageHostFeatures",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "culture": "ro-RO",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Lungimea parolei trebuie să fie mai mare de {0} caractere.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Parola trebuie să conţină cel puţin un caracter non-alfanumeric."
+  }
+}

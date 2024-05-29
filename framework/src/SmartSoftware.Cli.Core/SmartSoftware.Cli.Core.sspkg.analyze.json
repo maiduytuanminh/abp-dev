@@ -1,0 +1,83 @@
+{
+  "name": "SmartSoftware.Cli.Core",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Cli",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "namespace": "SmartSoftware.Domain",
+          "name": "SmartSoftwareDddDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Json",
+          "namespace": "SmartSoftware.Json",
+          "name": "SmartSoftwareJsonModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.IdentityModel",
+          "namespace": "SmartSoftware.IdentityModel",
+          "name": "SmartSoftwareIdentityModelModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Minify",
+          "namespace": "SmartSoftware.Minify",
+          "name": "SmartSoftwareMinifyModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Http",
+          "namespace": "SmartSoftware.Http",
+          "name": "SmartSoftwareHttpModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareCliCoreModule",
+      "summary": null
+    }
+  ]
+}

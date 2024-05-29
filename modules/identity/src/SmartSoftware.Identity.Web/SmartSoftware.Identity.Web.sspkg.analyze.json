@@ -1,0 +1,120 @@
+{
+  "name": "SmartSoftware.Identity.Web",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Identity.Web",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application.Contracts",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AutoMapper",
+          "namespace": "SmartSoftware.AutoMapper",
+          "name": "SmartSoftwareAutoMapperModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Web",
+          "namespace": "SmartSoftware.PermissionManagement.Web",
+          "name": "SmartSoftwarePermissionManagementWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared",
+          "name": "SmartSoftwareAspNetCoreMvcUiThemeSharedModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityWebModule",
+      "summary": null
+    },
+    {
+      "apis": [],
+      "contentType": "httpApi",
+      "name": "Defined Http Apis",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Users",
+      "contentType": "webPage",
+      "name": "CreateModalModel",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Users",
+      "contentType": "webPage",
+      "name": "EditModalModel",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Users",
+      "contentType": "webPage",
+      "name": "IndexModel",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Roles",
+      "contentType": "webPage",
+      "name": "CreateModalModel",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Roles",
+      "contentType": "webPage",
+      "name": "EditModalModel",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.Identity.Web.Pages.Identity.Roles",
+      "contentType": "webPage",
+      "name": "IndexModel",
+      "summary": null
+    }
+  ]
+}

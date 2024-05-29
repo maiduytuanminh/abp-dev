@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.MemoryDb\SmartSoftware.MemoryDb.csproj" />
+    <ProjectReference Include="..\SmartSoftwareTestBase\SmartSoftwareTestBase.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+</Project>

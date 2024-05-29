@@ -1,0 +1,103 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "app": {}
+    }
+  },
+  "packages": {
+    "SmartSoftwareDocs.Web": {
+      "path": "app/SmartSoftwareDocs.Web/SmartSoftwareDocs.Web.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftwareDocs.EntityFrameworkCore": {
+      "path": "app/SmartSoftwareDocs.EntityFrameworkCore/SmartSoftwareDocs.EntityFrameworkCore.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftwareDocs.Migrator": {
+      "path": "app/SmartSoftwareDocs.Migrator/SmartSoftwareDocs.Migrator.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.Docs.Web": {
+      "path": "src/SmartSoftware.Docs.Web/SmartSoftware.Docs.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Application": {
+      "path": "src/SmartSoftware.Docs.Application/SmartSoftware.Docs.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Domain": {
+      "path": "src/SmartSoftware.Docs.Domain/SmartSoftware.Docs.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Domain.Shared": {
+      "path": "src/SmartSoftware.Docs.Domain.Shared/SmartSoftware.Docs.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Application.Contracts": {
+      "path": "src/SmartSoftware.Docs.Application.Contracts/SmartSoftware.Docs.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.Docs.EntityFrameworkCore/SmartSoftware.Docs.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.HttpApi": {
+      "path": "src/SmartSoftware.Docs.HttpApi/SmartSoftware.Docs.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.HttpApi.Client": {
+      "path": "src/SmartSoftware.Docs.HttpApi.Client/SmartSoftware.Docs.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Admin.Application.Contracts": {
+      "path": "src/SmartSoftware.Docs.Admin.Application.Contracts/SmartSoftware.Docs.Admin.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Admin.Application": {
+      "path": "src/SmartSoftware.Docs.Admin.Application/SmartSoftware.Docs.Admin.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Admin.HttpApi": {
+      "path": "src/SmartSoftware.Docs.Admin.HttpApi/SmartSoftware.Docs.Admin.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Admin.HttpApi.Client": {
+      "path": "src/SmartSoftware.Docs.Admin.HttpApi.Client/SmartSoftware.Docs.Admin.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Admin.Web": {
+      "path": "src/SmartSoftware.Docs.Admin.Web/SmartSoftware.Docs.Admin.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.Application.Tests": {
+      "path": "test/SmartSoftware.Docs.Application.Tests/SmartSoftware.Docs.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Docs.Domain.Tests": {
+      "path": "test/SmartSoftware.Docs.Domain.Tests/SmartSoftware.Docs.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Docs.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.Docs.EntityFrameworkCore.Tests/SmartSoftware.Docs.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Docs.TestBase": {
+      "path": "test/SmartSoftware.Docs.TestBase/SmartSoftware.Docs.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Docs.Admin.Application.Tests": {
+      "path": "test/SmartSoftware.Docs.Admin.Application.Tests/SmartSoftware.Docs.Admin.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Docs.MongoDB": {
+      "path": "src/SmartSoftware.Docs.MongoDB/SmartSoftware.Docs.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Docs.MongoDB.Tests": {
+      "path": "test/SmartSoftware.Docs.MongoDB.Tests/SmartSoftware.Docs.MongoDB.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

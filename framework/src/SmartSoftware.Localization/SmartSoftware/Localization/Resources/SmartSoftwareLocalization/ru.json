@@ -1,0 +1,7 @@
+{
+  "culture": "ru",
+  "texts": {
+    "DisplayName:SmartSoftware.Localization.DefaultLanguage": "Язык по умолчанию",
+    "Description:SmartSoftware.Localization.DefaultLanguage": "Язык приложения по умолчанию."
+  }
+}

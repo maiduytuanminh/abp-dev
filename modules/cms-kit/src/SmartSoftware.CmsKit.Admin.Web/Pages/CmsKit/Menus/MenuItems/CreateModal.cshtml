@@ -1,0 +1,103 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Menus.MenuItems
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Tab
+@using SmartSoftware.Data
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@inject IStringLocalizerFactory StringLocalizerFactory
+@inherits CmsKitAdminPageBase
+
+@model CreateModalModel
+
+@{
+    Layout = null;
+}
+
+<form id="menu-item-form" asp-page="/CmsKit/Menus/MenuItems/CreateModal">
+    <ss-modal id="menu-create-modal">
+        <ss-modal-header title="@L["New"].Value"></ss-modal-header>
+        <ss-modal-body>
+
+            @if (Model.IsPageFeatureEnabled)
+            {
+                <ss-tabs tab-style="Tab">
+                    <ss-tab name="url" title="@L["Url"]">
+
+                        <ss-input asp-for="ViewModel.Url" />
+
+                    </ss-tab>
+                    <ss-tab title="@L["Page"]">
+
+                        <label class="form-label" asp-for="ViewModel.PageId"></label>
+
+                        <select asp-for="ViewModel.PageId"
+                                class="auto-complete-select"
+                                data-autocomplete-api-url="/api/cms-kit-admin/menu-items/lookup/pages"
+                                data-autocomplete-display-property="title"
+                                data-autocomplete-value-property="id"
+                                data-autocomplete-items-property="items"
+                                data-autocomplete-filter-param-name="filter"
+                                data-autocomplete-allow-clear="true"
+                                data-autocomplete-parent-selector="#menu-create-modal">
+                        </select>
+
+                        <span asp-validation-for="ViewModel.PageId"></span>
+                    </ss-tab>
+
+                </ss-tabs>
+                <hr />
+            }
+            else
+            {
+                <ss-input asp-for="ViewModel.Url" />
+            }
+
+            <ss-input asp-for="ViewModel.ParentId"/>
+            <ss-input asp-for="ViewModel.DisplayName"/>
+            <ss-input asp-for="ViewModel.IsActive"/>
+            <ss-input asp-for="ViewModel.Icon"/>
+            <ss-input asp-for="ViewModel.Order"/>
+            <ss-input asp-for="ViewModel.Target"/>
+            <ss-input asp-for="ViewModel.ElementId"/>
+            <ss-input asp-for="ViewModel.CssClass"/>
+            
+            @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<CreateModalModel.MenuItemCreateViewModel>())
+            {
+                if (!propertyInfo.Name.EndsWith("_Text"))
+                {
+                    if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+                    {
+                        if (propertyInfo.Type.IsEnum)
+                        {
+                            Model.ViewModel.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                        }
+                        <ss-select asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                    label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                    autocomplete-api-url="@propertyInfo.Lookup.Url"
+                                    autocomplete-selected-item-name="@Model.ViewModel.GetProperty(propertyInfo.Name+"_Text")"
+                                    autocomplete-selected-item-value="@Model.ViewModel.GetProperty(propertyInfo.Name)"
+                                    autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                                    autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                                    autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                                    autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName"></ss-select>
+                    }
+                    else
+                    {
+                        <ss-input type="@propertyInfo.GetInputType()"
+                                   asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                   label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                   asp-format="@propertyInfo.GetInputFormatOrNull()"
+                                   value="@propertyInfo.GetInputValueOrNull(Model.ViewModel.GetProperty(propertyInfo.Name))" />
+                    }
+                }
+            }
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel | SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

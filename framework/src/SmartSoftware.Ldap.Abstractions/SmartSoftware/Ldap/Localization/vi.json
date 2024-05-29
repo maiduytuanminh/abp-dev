@@ -1,0 +1,19 @@
+{
+  "culture": "vi",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP qua SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP qua SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Máy chủ lưu trữ",
+    "Description:SmartSoftware.Ldap.ServerHost": "Máy chủ lưu trữ",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Cổng máy chủ",
+    "Description:SmartSoftware.Ldap.ServerPort": "Cổng máy chủ",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Thành phần miền cơ sở",
+    "Description:SmartSoftware.Ldap.BaseDc": "Thành phần miền cơ sở",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Lãnh địa",
+    "Description:SmartSoftware.Ldap.Domain": "Lãnh địa",
+    "DisplayName:SmartSoftware.Ldap.UserName": "tên tài khoản",
+    "Description:SmartSoftware.Ldap.UserName": "tên tài khoản",
+    "DisplayName:SmartSoftware.Ldap.Password": "Mật khẩu",
+    "Description:SmartSoftware.Ldap.Password": "Mật khẩu"
+  }
+}

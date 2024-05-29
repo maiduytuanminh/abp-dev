@@ -1,0 +1,120 @@
+﻿@page
+@using Localization.Resources.SmartSoftwareUi
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.TuiEditor
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Uppy
+@using SmartSoftware.GlobalFeatures
+@using SmartSoftware.Users
+@using SmartSoftware.CmsKit.GlobalFeatures
+@using SmartSoftware.CmsKit.Pages
+@using SmartSoftware.CmsKit.Public.Web.Pages.CmsKit.Shared.Components.Commenting
+@using SmartSoftware.CmsKit.Public.Web.Pages.CmsKit.Shared.Components.Rating
+@using SmartSoftware.CmsKit.Public.Web.Pages.CmsKit.Shared.Components.ReactionSelection
+@using SmartSoftware.CmsKit.Public.Web.Pages.CmsKit.Shared.Components.Tags
+@model IndexModel
+@inject IStringLocalizer<SmartSoftwareUiResource> Localizer
+@inject ICurrentUser CurrentUser
+
+@section styles{
+    <ss-style type="typeof(TuiEditorStyleContributor)"/>
+}
+
+@section scripts{
+    <ss-script type="typeof(UppyScriptContributor)"/>
+    <ss-script type="typeof(TuiEditorScriptContributor)"/>
+    <ss-script src="/Pages/index.js"/>
+}
+
+<h1 class="text-center">CMS Kit DEMO</h1>
+
+<ss-card>
+    <ss-card-body class="p-5">
+        <ss-blockquote class="text-center">
+            @if (GlobalFeatureManager.Instance.IsEnabled<TagsFeature>())
+            {
+                @await Component.InvokeAsync(typeof(TagViewComponent), new
+                {
+                    entityType = "quote",
+                    entityId = "1"
+                })
+            }
+        </ss-blockquote>
+    </ss-card-body>
+</ss-card>
+
+<hr />
+
+<ss-row>
+    <ss-column size-md="_6">
+        @if (GlobalFeatureManager.Instance.IsEnabled<RatingsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(RatingViewComponent), new 
+            { 
+                entityType = "quote",
+                entityId = "1",
+                isReadOnly = false
+            })
+        }
+    </ss-column>
+    <ss-column size-md="_6">
+        @if (GlobalFeatureManager.Instance.IsEnabled<ReactionsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(ReactionSelectionViewComponent), new {entityType = "quote", entityId = "1"})
+        }
+    </ss-column>
+    <ss-column size-md="_12">
+        @if (GlobalFeatureManager.Instance.IsEnabled<CommentsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(CommentingViewComponent), new 
+            {
+                entityType = "quote",
+                entityId = "1",
+                isReadOnly = false,
+                referralLinks  = new [] {"nofollow"}
+            })
+        }
+    </ss-column>
+</ss-row>
+<ss-card class="mb-2">
+    <ss-card-body class="p-5">
+        <ss-blockquote class="text-center">
+            <p class="h2 mb-4">
+                "Writing code is very simple, but writing simple code is the hardest thing there is!"
+            </p>
+            <p class="m-0"> - Halil ibrahim Kalkan <small class="d-block text-muted">Inspired from Johan Cruyff</small></p>
+        </ss-blockquote>
+    </ss-card-body>
+</ss-card>
+<ss-row>
+    <ss-column size-md="_6">
+        @if (GlobalFeatureManager.Instance.IsEnabled<RatingsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(RatingViewComponent), new {entityType = "quote", entityId = "2"})
+        }
+    </ss-column>
+    <ss-column size-md="_6">
+        @if (GlobalFeatureManager.Instance.IsEnabled<ReactionsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(ReactionSelectionViewComponent), new {entityType = "quote", entityId = "2"})
+        }
+    </ss-column>
+    <ss-column size-md="_12">
+        @if (GlobalFeatureManager.Instance.IsEnabled<CommentsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(CommentingViewComponent), new {entityType = "quote", entityId = "2"})
+        }
+    </ss-column>
+</ss-row>
+
+<ss-row>
+    <ss-column size="_12">
+        @if (GlobalFeatureManager.Instance.IsEnabled<TagsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(TagViewComponent), new
+            {
+                entityType = "IndexPage",
+                entityId = Guid.Empty.ToString()
+            })
+        }
+    </ss-column>
+</ss-row>

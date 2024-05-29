@@ -1,0 +1,75 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.ButtonGroupsDemo
+
+<ss-component-demo-section title="Basic example" view-path="@ButtonGroupsDemoViewComponent.ViewPath">
+    <ss-button-group>
+        <ss-button button-type="Secondary">Left</ss-button>
+        <ss-button button-type="Secondary">Middle</ss-button>
+        <ss-button button-type="Secondary">Right</ss-button>
+    </ss-button-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Button Toolbar" view-path="@ButtonGroupsDemoViewComponent.ViewPath">
+    <ss-button-toolbar>
+        <ss-button-group class="me-2">
+            <ss-button button-type="Secondary">1</ss-button>
+            <ss-button button-type="Secondary">2</ss-button>
+            <ss-button button-type="Secondary">3</ss-button>
+            <ss-button button-type="Secondary">4</ss-button>
+        </ss-button-group>
+        <ss-button-group class="me-2">
+            <ss-button button-type="Secondary">5</ss-button>
+            <ss-button button-type="Secondary">6</ss-button>
+            <ss-button button-type="Secondary">7</ss-button>
+        </ss-button-group>
+        <ss-button-group>
+            <ss-button button-type="Secondary">8</ss-button>
+        </ss-button-group>
+    </ss-button-toolbar>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Sizing" view-path="@ButtonGroupsDemoViewComponent.ViewPath">
+    <ss-button-group size="Large">
+        <ss-button button-type="Secondary">Left</ss-button>
+        <ss-button button-type="Secondary">Middle</ss-button>
+        <ss-button button-type="Secondary">Right</ss-button>
+    </ss-button-group>
+    <ss-button-group>
+        <ss-button button-type="Secondary">Left</ss-button>
+        <ss-button button-type="Secondary">Middle</ss-button>
+        <ss-button button-type="Secondary">Right</ss-button>
+    </ss-button-group>
+    <ss-button-group size="Small">
+        <ss-button button-type="Secondary">Left</ss-button>
+        <ss-button button-type="Secondary">Middle</ss-button>
+        <ss-button button-type="Secondary">Right</ss-button>
+    </ss-button-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Nesting" view-path="@ButtonGroupsDemoViewComponent.ViewPath">
+    <ss-button-group>
+        <ss-button button-type="Secondary">1</ss-button>
+        <ss-button button-type="Secondary">2</ss-button>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </ss-button-group>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Vertical variation" view-path="@ButtonGroupsDemoViewComponent.ViewPath">
+    <ss-button-group direction="Vertical">
+        <ss-button button-type="Secondary">Button</ss-button>
+        <ss-button button-type="Secondary">Button</ss-button>
+        <ss-button button-type="Secondary">Button</ss-button>
+        <ss-dropdown>
+            <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+            <ss-dropdown-menu>
+                <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+            </ss-dropdown-menu>
+        </ss-dropdown>
+    </ss-button-group>
+</ss-component-demo-section>

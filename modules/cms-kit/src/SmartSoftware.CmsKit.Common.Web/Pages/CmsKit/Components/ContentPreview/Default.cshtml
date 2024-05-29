@@ -1,0 +1,12 @@
+﻿@using SmartSoftware.CmsKit.Web.Pages.CmsKit.Components.Contents
+@using SmartSoftware.AspNetCore.Mvc.UI.Theming
+
+@model SmartSoftware.CmsKit.Contents.DefaultContentDto
+
+@inject IThemeManager ThemeManager
+@{
+    Layout = ThemeManager.CurrentTheme.GetEmptyLayout();
+}
+
+<div class="mt-3">@await Component.InvokeAsync(typeof(ContentFragmentViewComponent), Model)</div>
+         

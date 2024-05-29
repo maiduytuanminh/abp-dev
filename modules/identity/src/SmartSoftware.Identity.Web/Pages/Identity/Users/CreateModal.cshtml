@@ -1,0 +1,88 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.Identity.Localization
+@using SmartSoftware.Identity.Web.Pages.Identity.Users
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@using SmartSoftware.Data
+@using SmartSoftware.Identity
+@model CreateModalModel
+@inject IHtmlLocalizer<IdentityResource> L
+@inject IStringLocalizerFactory StringLocalizerFactory
+
+@{
+    Layout = null;
+}
+<form method="post" asp-page="/Identity/Users/CreateModal">
+    <ss-modal>
+        <ss-modal-header title="@L["NewUser"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-tabs name="create-user-modal-tabs">
+                <ss-tab title="@L["UserInformations"].Value">
+                    <div >
+                        @* TODO: Can we use dynamic form? *@
+                        <ss-input asp-for="UserInfo.UserName" />
+                        <ss-input asp-for="UserInfo.Name" />
+                        <ss-input asp-for="UserInfo.Surname" />
+                        <div class="mb-3">
+                            <label asp-for="UserInfo.Password" class="form-label">@L["Password"] *</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" autocomplete="new-password" maxlength="@IdentityUserConsts.MaxPasswordLength" asp-for="UserInfo.Password" />
+                                <button class="btn btn-secondary" type="button" id="PasswordVisibilityButton"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                            </div>
+                            <span asp-validation-for="UserInfo.Password"></span>
+                        </div>
+                        <ss-input asp-for="UserInfo.Email" />
+                        <ss-input asp-for="UserInfo.PhoneNumber" />
+                        <ss-input asp-for="UserInfo.IsActive" />
+                        <ss-input asp-for="UserInfo.LockoutEnabled" />
+
+                        @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<CreateModalModel.UserInfoViewModel>())
+                        {
+                            if (!propertyInfo.Name.EndsWith("_Text"))
+                            {
+                                if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+                                {
+                                    if (propertyInfo.Type.IsEnum)
+                                    {
+                                        Model.UserInfo.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                                    }
+                                    <ss-select asp-for="UserInfo.ExtraProperties[propertyInfo.Name]"
+                                                label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                                autocomplete-api-url="@propertyInfo.Lookup.Url"
+                                                autocomplete-selected-item-name="@Model.UserInfo.GetProperty(propertyInfo.Name+"_Text")"
+                                                autocomplete-selected-item-value="@Model.UserInfo.GetProperty(propertyInfo.Name)"
+                                                autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                                                autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                                                autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                                                autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName"></ss-select>
+                                }
+                                else
+                                {
+                                    <ss-input type="@propertyInfo.GetInputType()"
+                                            asp-for="UserInfo.ExtraProperties[propertyInfo.Name]"
+                                            label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                            asp-format="@propertyInfo.GetInputFormatOrNull()"
+                                            value="@propertyInfo.GetInputValueOrNull(Model.UserInfo.GetProperty(propertyInfo.Name))" />
+                                }
+                            }
+                        }
+                    </div>
+                </ss-tab>
+                <ss-tab title="@L["Roles"].Value">
+                    <div>
+                        @for (var i = 0; i < Model.Roles.Length; i++)
+                        {
+                            var role = Model.Roles[i];
+                            <ss-input ss-id-name="@Model.Roles[i].IsAssigned" asp-for="@role.IsAssigned" label="@role.Name" />
+                            <input ss-id-name="@Model.Roles[i].Name" asp-for="@role.Name" />
+                        }
+                    </div>
+                </ss-tab>
+            </ss-tabs>
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

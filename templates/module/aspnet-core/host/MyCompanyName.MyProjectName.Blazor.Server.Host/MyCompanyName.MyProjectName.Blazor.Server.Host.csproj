@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+        <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+        <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\MyCompanyName.MyProjectName.Application\MyCompanyName.MyProjectName.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic\SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.csproj" />
+        <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+        <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Swashbuckle\SmartSoftware.Swashbuckle.csproj" />
+        <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\basic-theme\src\SmartSoftware.AspNetCore.Components.Server.BasicTheme\SmartSoftware.AspNetCore.Components.Server.BasicTheme.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.EntityFrameworkCore\SmartSoftware.AuditLogging.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.Web.OpenIddict\SmartSoftware.Account.Web.OpenIddict.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.Application\SmartSoftware.Account.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.EntityFrameworkCore\SmartSoftware.FeatureManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Application\SmartSoftware.FeatureManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Blazor.Server\SmartSoftware.Identity.Blazor.Server.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.EntityFrameworkCore\SmartSoftware.Identity.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Blazor.Server\SmartSoftware.TenantManagement.Blazor.Server.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.EntityFrameworkCore\SmartSoftware.TenantManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Application\SmartSoftware.TenantManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Blazor.Server\SmartSoftware.SettingManagement.Blazor.Server.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Application\SmartSoftware.SettingManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application\SmartSoftware.PermissionManagement.Application.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\..\..\..\modules\\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+        <ProjectReference Include="..\..\src\MyCompanyName.MyProjectName.Blazor.Server\MyCompanyName.MyProjectName.Blazor.Server.csproj" />
+        <ProjectReference Include="..\..\src\MyCompanyName.MyProjectName.EntityFrameworkCore\MyCompanyName.MyProjectName.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\src\MyCompanyName.MyProjectName.HttpApi\MyCompanyName.MyProjectName.HttpApi.csproj" />
+        <ProjectReference Include="..\MyCompanyName.MyProjectName.Host.Shared\MyCompanyName.MyProjectName.Host.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Pages\**\*.js">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Pages\**\*.css">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

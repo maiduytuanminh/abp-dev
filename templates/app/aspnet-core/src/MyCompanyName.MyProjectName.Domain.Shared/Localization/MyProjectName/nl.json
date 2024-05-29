@@ -1,0 +1,9 @@
+{
+  "culture": "nl",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Menu:Home": "Home",
+    "Welcome": "Welkom",
+    "LongWelcomeMessage": "Welkom bij de applicatie. Dit is een startup-project gebaseerd op het SS-framework. Bezoek smartsoftware.io voor meer informatie."
+  }
+}

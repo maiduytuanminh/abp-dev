@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <AssemblyName>SmartSoftware.AspNetCore.Mvc.UI.Bundling</AssemblyName>
+    <PackageId>SmartSoftware.AspNetCore.Mvc.UI.Bundling</PackageId>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.UI.Bootstrap\SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.csproj" />
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.UI.Bundling.Abstractions\SmartSoftware.AspNetCore.Mvc.UI.Bundling.Abstractions.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Minify\SmartSoftware.Minify.csproj" />
+  </ItemGroup>
+
+</Project>

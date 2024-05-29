@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <PackageId>SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Components.Web.BasicTheme\SmartSoftware.AspNetCore.Components.Web.BasicTheme.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.WebAssembly.Theming\SmartSoftware.AspNetCore.Components.WebAssembly.Theming.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.WebAssembly\SmartSoftware.Http.Client.IdentityModel.WebAssembly.csproj" />
+    </ItemGroup>
+
+</Project>

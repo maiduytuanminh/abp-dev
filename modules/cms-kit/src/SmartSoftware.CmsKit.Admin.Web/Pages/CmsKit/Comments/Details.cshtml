@@ -1,0 +1,113 @@
+﻿@page "{id}"
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Comments
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.CmsKit.Localization
+
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@model DetailsModel
+
+@{
+    PageLayout.Content.Title = L["Comments"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.Comments.CommentsMenu;
+}
+
+@section styles{
+    <ss-style-bundle>
+        <ss-style src="/Pages/CmsKit/Comments/details.css" />
+    </ss-style-bundle>
+}
+
+@section scripts {
+    <ss-script-bundle>
+        <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+        <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+        <ss-script src="/Pages/CmsKit/Comments/details.js"/>
+    </ss-script-bundle>
+}
+
+<div id="CmsKitCommentsWrapper">
+
+    <ss-card>
+        <ss-card-body>
+            <ss-row>
+                <ss-column>
+                    <ss-table>
+                        <tr>
+                            <td width="10%"><b>@L["EntityType"]</b>:</td>
+                            <td>@Model.CommentWithAuthorDto.EntityType</td>
+                        </tr>
+                        <tr>
+                            <td><b>@L["EntityId"]</b>:</td>
+                            <td>@Model.CommentWithAuthorDto.EntityId</td>
+                        </tr>
+                        <tr>
+                            <td><b>@L["CreationTime"]</b>:</td>
+                            <td>@Model.CommentWithAuthorDto.CreationTime.ToString(CultureInfo.CurrentUICulture)</td>
+                        </tr>
+                        <tr>
+                            <td><b>@L["Username"]</b>:</td>
+                            <td>@Model.CommentWithAuthorDto.Author.Name</td>
+                        </tr>
+                        @if (Model.CommentWithAuthorDto.RepliedCommentId.HasValue)
+                        {
+                            <tr>
+                                <td><b>@L["ReplyTo"]</b>:</td>
+                                <td><a href="/CmsKit/Comments/Details/@Model.CommentWithAuthorDto.RepliedCommentId">@Model.CommentWithAuthorDto.RepliedCommentId</a></td>
+                            </tr>
+                        }
+                        <tr>
+                            <td class="align-text-top"><b>@L["Text"]</b>:</td>
+                            <td>@Model.CommentWithAuthorDto.Text</td>
+                        </tr>
+                    </ss-table>
+                </ss-column>
+            </ss-row>
+        </ss-card-body>
+    </ss-card>
+
+    <ss-card>
+        <ss-card-body>
+            <ss-row>
+                <ss-column>
+                    <form id="CmsKitCommentsFilterForm" method="post">
+                        <ss-row>
+                            <input type="hidden" name="@nameof(Model.CommentWithAuthorDto.RepliedCommentId)" value="@Model.CommentWithAuthorDto.Id"/>
+
+                            <ss-column size-lg="_4" size-md="_12">
+                                <ss-row>
+                                    <ss-column size-lg="_6" size-md="_6">
+                                        <ss-input asp-for="@Model.CreationStartDate" class="singledatepicker" label="@L["StartDate"].Value" type="text" />
+                                    </ss-column>
+                                    <ss-column size-lg="_6" size-md="_6">
+                                        <ss-input asp-for="@Model.CreationEndDate" class="singledatepicker" label="@L["EndDate"].Value" type="text" />
+                                    </ss-column>
+                                </ss-row>
+                            </ss-column>
+                            <ss-column size-lg="_4" size-md="_12">
+                                <ss-input asp-for="@Model.Author" label="@L["Username"].Value" type="text"/>
+                            </ss-column>
+                            <ss-column size-lg="_2" size-md="_12">
+                                <div class="d-grid gap-2">
+                                    <ss-button class="mt-md-4" button-type="Primary" type="submit">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </ss-button>
+                                </div>
+                            </ss-column>
+                        </ss-row>
+                    </form>
+                </ss-column>
+            </ss-row>
+        </ss-card-body>
+    </ss-card>
+
+    <h3>@L["RepliesToThisComment"]</h3>
+
+    <ss-table  id="CommentsTable" class="nowrap"></ss-table>
+</div>

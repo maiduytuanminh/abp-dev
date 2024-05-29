@@ -1,0 +1,103 @@
+{
+  "name": "SmartSoftware.BackgroundJobs.MongoDB",
+  "hash": "43dcde5f0f68f0b06ce3158a154b58e1",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BackgroundJobs.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.Domain",
+          "namespace": "SmartSoftware.BackgroundJobs",
+          "name": "SmartSoftwareBackgroundJobsDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareBackgroundJobsMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.BackgroundJobs.MongoDB",
+      "connectionStringName": "SmartSoftwareBackgroundJobs",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.BackgroundJobs.BackgroundJobRecord",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareBackgroundJobs",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IBackgroundJobsMongoDbContext",
+          "namespace": "SmartSoftware.BackgroundJobs.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.MongoDB",
+          "fullName": "SmartSoftware.BackgroundJobs.MongoDB.IBackgroundJobsMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "BackgroundJobsMongoDbContext",
+      "summary": null
+    }
+  ]
+}

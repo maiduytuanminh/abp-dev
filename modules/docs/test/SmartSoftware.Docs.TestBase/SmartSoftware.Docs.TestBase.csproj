@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.extensibility.execution" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Authorization\SmartSoftware.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.TestBase\SmartSoftware.TestBase.csproj" />
+
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Domain\SmartSoftware.Docs.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

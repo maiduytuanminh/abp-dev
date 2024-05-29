@@ -1,0 +1,16 @@
+﻿@model SmartSoftware.AspNetCore.Mvc.UI.Alerts.AlertList
+@if (Model.Any())
+{
+    <div id="SmartSoftwarePageAlerts">
+        @foreach (var alertMessage in Model)
+        {
+            <ss-alert alert-type="@(alertMessage.Type)" dismissible="@alertMessage.Dismissible">
+                @if (alertMessage.Title != null)
+                {
+                    <h4>@alertMessage.Title</h4>
+                }
+                @alertMessage.Text
+            </ss-alert>
+        }
+    </div>
+}

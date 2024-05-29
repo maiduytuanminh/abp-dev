@@ -1,0 +1,83 @@
+{
+  "name": "SmartSoftware.BackgroundJobs",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BackgroundJobs",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundJobs.Abstractions",
+          "namespace": "SmartSoftware.BackgroundJobs",
+          "name": "SmartSoftwareBackgroundJobsAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BackgroundWorkers",
+          "namespace": "SmartSoftware.BackgroundWorkers",
+          "name": "SmartSoftwareBackgroundWorkersModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Timing",
+          "namespace": "SmartSoftware.Timing",
+          "name": "SmartSoftwareTimingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Guids",
+          "namespace": "SmartSoftware.Guids",
+          "name": "SmartSoftwareGuidsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.DistributedLocking.Abstractions",
+          "namespace": "SmartSoftware.DistributedLocking",
+          "name": "SmartSoftwareDistributedLockingAbstractionsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareBackgroundJobsModule",
+      "summary": null
+    }
+  ]
+}

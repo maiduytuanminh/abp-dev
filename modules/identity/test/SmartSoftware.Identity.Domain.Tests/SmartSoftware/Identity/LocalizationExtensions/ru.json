@@ -1,0 +1,7 @@
+{
+  "culture": "ru",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Длина пароля должна быть больше {0} символов.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Пароль должен содержать хотя бы один не буквенно-цифровой символ."
+  }
+}

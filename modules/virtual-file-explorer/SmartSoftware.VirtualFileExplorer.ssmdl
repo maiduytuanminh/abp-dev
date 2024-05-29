@@ -1,0 +1,18 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "app": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.VirtualFileExplorer.DemoApp": {
+      "path": "app/SmartSoftware.VirtualFileExplorer.DemoApp/SmartSoftware.VirtualFileExplorer.DemoApp.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.VirtualFileExplorer.Web": {
+      "path": "src/SmartSoftware.VirtualFileExplorer.Web/SmartSoftware.VirtualFileExplorer.Web.sspkg",
+      "folder": "src"
+    }
+  }
+}

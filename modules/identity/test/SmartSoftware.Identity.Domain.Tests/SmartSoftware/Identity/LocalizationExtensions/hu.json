@@ -1,0 +1,7 @@
+{
+  "culture": "hu",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "A jelszó hosszának nagyobbnak kell lennie, mint {0} karakter.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "A jelszónak legalább egy nem alfanumerikus karaktert kell tartalmaznia."
+  }
+}

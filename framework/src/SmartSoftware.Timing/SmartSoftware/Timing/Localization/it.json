@@ -1,0 +1,7 @@
+{
+  "culture": "it",
+  "texts": {
+    "DisplayName:SmartSoftware.Timing.Timezone": "Fuso orario",
+    "Description:SmartSoftware.Timing.Timezone": "Fuso orario dell'applicazione"
+  }
+}

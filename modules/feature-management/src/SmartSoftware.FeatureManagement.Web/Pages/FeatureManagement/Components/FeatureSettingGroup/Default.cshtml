@@ -1,0 +1,14 @@
+﻿@inject IHtmlLocalizer<SmartSoftwareFeatureManagementResource> L
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.FeatureManagement.Localization
+@model SmartSoftware.FeatureManagement.Pages.FeatureManagement.Components.FeatureSettingGroup.FeatureSettingGroupViewComponent.FeatureSettingViewModel
+
+<ss-script src="/Pages/FeatureManagement/Components/FeatureSettingGroup/Default.js" />
+
+<form id="FeatureSettingsForm">
+    @if (Model.HasManageHostFeaturesPermission)
+    {
+        <p>@L["ManageHostFeaturesText"]</p>
+        <ss-button size="Small" button-type="Primary" id="ManageHostFeatures" icon="cog" text="@L["ManageHostFeatures"].Value"/>
+    }
+</form>

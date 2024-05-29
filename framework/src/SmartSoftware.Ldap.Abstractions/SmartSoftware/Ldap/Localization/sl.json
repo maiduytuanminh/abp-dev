@@ -1,0 +1,19 @@
+{
+  "culture": "sl",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP preko SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP preko SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Gostitelj strežnika",
+    "Description:SmartSoftware.Ldap.ServerHost": "Gostitelj strežnika",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Vrata strežnika",
+    "Description:SmartSoftware.Ldap.ServerPort": "Vrata strežnika",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Komponenta osnovne domene",
+    "Description:SmartSoftware.Ldap.BaseDc": "Komponenta osnovne domene",
+    "DisplayName:SmartSoftware.Ldap.Domain": "domena",
+    "Description:SmartSoftware.Ldap.Domain": "domena",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Uporabniško ime",
+    "Description:SmartSoftware.Ldap.UserName": "Uporabniško ime",
+    "DisplayName:SmartSoftware.Ldap.Password": "Geslo",
+    "Description:SmartSoftware.Ldap.Password": "Geslo"
+  }
+}

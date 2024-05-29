@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+      <ProjectReference Include="..\..\..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+      <ProjectReference Include="..\..\..\..\src\SmartSoftware.BlobStoring.Database.EntityFrameworkCore\SmartSoftware.BlobStoring.Database.EntityFrameworkCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Hosting" />
+      <PackageReference Include="Serilog.Extensions.Logging" />
+      <PackageReference Include="Serilog.Sinks.Async" />
+      <PackageReference Include="Serilog.Sinks.Console" />
+      <PackageReference Include="Serilog.Sinks.File" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+    </ItemGroup>
+
+</Project>

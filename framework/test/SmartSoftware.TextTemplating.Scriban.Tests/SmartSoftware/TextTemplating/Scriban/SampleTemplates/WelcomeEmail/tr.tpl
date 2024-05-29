@@ -1,0 +1,1 @@
+Merhaba {{model.name}}, smartsoftware.io'ya hoşgeldiniz!

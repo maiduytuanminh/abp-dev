@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Issue with SS Commercial
+    url:  https://support.smartsoftware.io/QA/Questions
+    about: Please open SS Commercial related issues at https://support.smartsoftware.io.
+  - name: Ask a question (community support)
+    url:  https://stackoverflow.com/questions/tagged/ss
+    about: Ask a question that will be answered by the SS community

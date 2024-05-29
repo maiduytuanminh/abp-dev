@@ -1,0 +1,9 @@
+{
+  "culture": "hu",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Welcome_Title": "Üdvözlöm",
+    "Welcome_Text": "Ez egy minimalista, egyrétegű alkalmazásindítási sablon az SS-keretrendszerhez.",
+    "Menu:Home": "Kezdőlap"
+  }
+}

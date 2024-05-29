@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.AutoMapper.Tests</AssemblyName>
+    <PackageId>SmartSoftware.AutoMapper.Tests</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\test\SmartSoftware.ObjectExtending.Tests\SmartSoftware.ObjectExtending.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <ProjectReference Include="..\SmartSoftware.MultiLingualObjects.Tests\SmartSoftware.MultiLingualObjects.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

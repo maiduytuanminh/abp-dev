@@ -1,0 +1,19 @@
+{
+  "culture": "ru",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP через SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP через SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Хост сервера",
+    "Description:SmartSoftware.Ldap.ServerHost": "Хост сервера",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Порт сервера",
+    "Description:SmartSoftware.Ldap.ServerPort": "Порт сервера",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Компонент базового домена",
+    "Description:SmartSoftware.Ldap.BaseDc": "Компонент базового домена",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Домен",
+    "Description:SmartSoftware.Ldap.Domain": "Домен",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Имя пользователя",
+    "Description:SmartSoftware.Ldap.UserName": "Имя пользователя",
+    "DisplayName:SmartSoftware.Ldap.Password": "Пароль",
+    "Description:SmartSoftware.Ldap.Password": "Пароль"
+  }
+}

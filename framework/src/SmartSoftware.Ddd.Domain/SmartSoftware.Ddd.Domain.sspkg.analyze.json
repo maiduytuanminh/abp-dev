@@ -1,0 +1,103 @@
+{
+  "name": "SmartSoftware.Ddd.Domain",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Domain",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Auditing",
+          "namespace": "SmartSoftware.Auditing",
+          "name": "SmartSoftwareAuditingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Data",
+          "namespace": "SmartSoftware.Data",
+          "name": "SmartSoftwareDataModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EventBus",
+          "namespace": "SmartSoftware.EventBus",
+          "name": "SmartSoftwareEventBusModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Guids",
+          "namespace": "SmartSoftware.Guids",
+          "name": "SmartSoftwareGuidsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Timing",
+          "namespace": "SmartSoftware.Timing",
+          "name": "SmartSoftwareTimingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ObjectMapping",
+          "namespace": "SmartSoftware.ObjectMapping",
+          "name": "SmartSoftwareObjectMappingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ExceptionHandling",
+          "namespace": "SmartSoftware.ExceptionHandling",
+          "name": "SmartSoftwareExceptionHandlingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Specifications",
+          "namespace": "SmartSoftware.Specifications",
+          "name": "SmartSoftwareSpecificationsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching",
+          "namespace": "SmartSoftware.Caching",
+          "name": "SmartSoftwareCachingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareDddDomainModule",
+      "summary": null
+    }
+  ]
+}

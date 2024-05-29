@@ -1,0 +1,6 @@
+{
+  "culture": "fr",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "Le service \"{ServiceName}\" doit activer la fonction \"{GlobalFeatureName}\"."
+  }
+}

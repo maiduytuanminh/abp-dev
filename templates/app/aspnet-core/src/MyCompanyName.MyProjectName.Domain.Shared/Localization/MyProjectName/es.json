@@ -1,0 +1,9 @@
+{
+  "culture": "es",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Menu:Home": "Inicio",
+    "Welcome": "Bienvenido",
+    "LongWelcomeMessage": "Bienvenido a la aplicación, este es un proyecto base basado en el framework SS. Para más información, visita smartsoftware.io."
+  }
+}

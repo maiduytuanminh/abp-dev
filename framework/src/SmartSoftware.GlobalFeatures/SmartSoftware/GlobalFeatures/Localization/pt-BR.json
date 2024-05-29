@@ -1,0 +1,6 @@
+{
+  "culture": "pt-BR",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "O serviço '{ServiceName}' precisa habilitar o recurso '{GlobalFeatureName}'."
+  }
+}

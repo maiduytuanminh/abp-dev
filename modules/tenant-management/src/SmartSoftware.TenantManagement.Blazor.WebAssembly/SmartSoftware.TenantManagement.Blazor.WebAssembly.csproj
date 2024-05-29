@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Blazor.WebAssembly\SmartSoftware.FeatureManagement.Blazor.WebAssembly.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SmartSoftware.TenantManagement.Blazor\SmartSoftware.TenantManagement.Blazor.csproj" />
+      <ProjectReference Include="..\SmartSoftware.TenantManagement.HttpApi.Client\SmartSoftware.TenantManagement.HttpApi.Client.csproj" />
+    </ItemGroup>
+
+</Project>

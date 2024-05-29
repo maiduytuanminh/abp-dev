@@ -1,0 +1,73 @@
+{
+  "name": "SmartSoftware.CmsKit.Web",
+  "hash": "5baa473fb5239f09781f6d7baf769b0c",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit.Web",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Web",
+          "namespace": "SmartSoftware.CmsKit.Public.Web",
+          "name": "CmsKitPublicWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Admin.Web",
+          "namespace": "SmartSoftware.CmsKit.Admin.Web",
+          "name": "CmsKitAdminWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Application.Contracts",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitApplicationContractsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitWebModule",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "culture": "hu",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Alapértlemezett feladó címe",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Feladó alapértelmezett megjelenő neve",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Kiszolgáló",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Felhasználónév",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Jelszó",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domain",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "SSL engedélyezése",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Használja az alapértelmezett hitelesítő adatokat",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Az alapértlemezett feladó címe",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "A feladó alapértelmezett megjelenő neve",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Az SMTP kiszolgáló neve vagy IP címe.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Az SMTP forgalomhoz használt port.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "A hitelesítő adatokhoz társított felhasználói név..",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "A hitelesítő adatokhoz társított felhasználói név jelszava.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "A hitelesítő adatokat igazoló tartomány vagy számítógép neve.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Engedélyezze, ha a levelező programja Secure Sockets Layer (SSL) protokollt használ a kapcsolat titkosításához.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Alkalmazza, hogy a kérésekhez az alapértelmezett hitelesítést használja.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Alapértelmezett e-mail elrendezési sablon",
+    "TextTemplate:StandardEmailTemplates.Message": "Egyszerű üzenet sablon az e-mailekhez"
+  }
+}

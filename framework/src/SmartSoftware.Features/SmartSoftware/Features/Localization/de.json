@@ -1,0 +1,8 @@
+{
+  "culture": "de",
+  "texts": {
+    "SmartSoftware.Feature:010001": "Funktion ist nicht aktiviert: {FeatureName}",
+    "SmartSoftware.Feature:010002": "Erforderliche Funktionen sind nicht aktiviert. Alle diese Funktionen müssen aktiviert sein: {FeatureNames}",
+    "SmartSoftware.Feature:010003": "Erforderliche Funktionen sind nicht aktiviert. Mindestens eine dieser Funktionen muss aktiviert sein: {FeatureNames}"
+  }
+}

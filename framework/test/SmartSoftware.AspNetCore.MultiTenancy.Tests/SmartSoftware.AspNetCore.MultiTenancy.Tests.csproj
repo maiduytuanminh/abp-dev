@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.test.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.AspNetCore.MultiTenancy.Tests</AssemblyName>
+    <PackageId>SmartSoftware.AspNetCore.MultiTenancy.Tests</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.AspNetCore.MultiTenancy\SmartSoftware.AspNetCore.MultiTenancy.csproj" />
+    <ProjectReference Include="..\SmartSoftware.AspNetCore.Tests\SmartSoftware.AspNetCore.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+</Project>

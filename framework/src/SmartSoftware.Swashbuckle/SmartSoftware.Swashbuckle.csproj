@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\configureawait.props" />
+    <Import Project="..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <AssemblyName>SmartSoftware.Swashbuckle</AssemblyName>
+        <PackageId>SmartSoftware.Swashbuckle</PackageId>
+        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+      <ProjectReference Include="..\SmartSoftware.VirtualFileSystem\SmartSoftware.VirtualFileSystem.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="wwwroot\swagger\ui\ss.swagger.js" />
+      <EmbeddedResource Include="wwwroot\swagger\ui\ss.swagger.js" />
+      <None Remove="wwwroot\swagger\ui\ss.js" />
+      <EmbeddedResource Include="wwwroot\swagger\ui\ss.js" />
+    </ItemGroup>
+
+</Project>

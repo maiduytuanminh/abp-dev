@@ -1,0 +1,133 @@
+{
+  "name": "SmartSoftware.IdentityServer.MongoDB",
+  "hash": "78375f5eb62811a80c4e7897e2f327df",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.IdentityServer.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.Domain",
+          "namespace": "SmartSoftware.IdentityServer",
+          "name": "SmartSoftwareIdentityServerDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityServerMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.IdentityServer.MongoDB",
+      "connectionStringName": "SmartSoftwareIdentityServer",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiResources.ApiResource",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerApiResources",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Clients.Client",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerClients",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.ApiScopes.ApiScope",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerApiScopes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.IdentityResources.IdentityResource",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerIdentityResources",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Devices.DeviceFlowCodes",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerDeviceFlowCodes",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.IdentityServer.Grants.PersistedGrant",
+          "contentType": "databaseCollection",
+          "name": "IdentityServerPersistedGrants",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ISmartSoftwareIdentityServerMongoDbContext",
+          "namespace": "SmartSoftware.IdentityServer.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.IdentityServer.MongoDB",
+          "fullName": "SmartSoftware.IdentityServer.MongoDB.ISmartSoftwareIdentityServerMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "SmartSoftwareIdentityServerMongoDbContext",
+      "summary": null
+    }
+  ]
+}

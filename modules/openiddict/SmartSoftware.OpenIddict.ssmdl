@@ -1,0 +1,71 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "app": {}
+    }
+  },
+  "packages": {
+    "OpenIddict.Demo.Server": {
+      "path": "app/OpenIddict.Demo.Server/OpenIddict.Demo.Server.sspkg",
+      "folder": "app"
+    },
+    "OpenIddict.Demo.Client.Mvc": {
+      "path": "app/OpenIddict.Demo.Client.Mvc/OpenIddict.Demo.Client.Mvc.sspkg",
+      "folder": "app"
+    },
+    "OpenIddict.Demo.Client.Console": {
+      "path": "app/OpenIddict.Demo.Client.Console/OpenIddict.Demo.Client.Console.sspkg",
+      "folder": "app"
+    },
+    "OpenIddict.Demo.API": {
+      "path": "app/OpenIddict.Demo.API/OpenIddict.Demo.API.sspkg",
+      "folder": "app"
+    },
+    "OpenIddict.Demo.Client.BlazorWASM": {
+      "path": "app/OpenIddict.Demo.Client.BlazorWASM/OpenIddict.Demo.Client.BlazorWASM.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.OpenIddict.Domain": {
+      "path": "src/SmartSoftware.OpenIddict.Domain/SmartSoftware.OpenIddict.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.OpenIddict.Domain.Shared": {
+      "path": "src/SmartSoftware.OpenIddict.Domain.Shared/SmartSoftware.OpenIddict.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.OpenIddict.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.OpenIddict.EntityFrameworkCore/SmartSoftware.OpenIddict.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.OpenIddict.MongoDB": {
+      "path": "src/SmartSoftware.OpenIddict.MongoDB/SmartSoftware.OpenIddict.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.OpenIddict.TestBase": {
+      "path": "test/SmartSoftware.OpenIddict.TestBase/SmartSoftware.OpenIddict.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.OpenIddict.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.OpenIddict.EntityFrameworkCore.Tests/SmartSoftware.OpenIddict.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.OpenIddict.MongoDB.Tests": {
+      "path": "test/SmartSoftware.OpenIddict.MongoDB.Tests/SmartSoftware.OpenIddict.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.OpenIddict.Domain.Tests": {
+      "path": "test/SmartSoftware.OpenIddict.Domain.Tests/SmartSoftware.OpenIddict.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.OpenIddict.AspNetCore": {
+      "path": "src/SmartSoftware.OpenIddict.AspNetCore/SmartSoftware.OpenIddict.AspNetCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.PermissionManagement.Domain.OpenIddict": {
+      "path": "src/SmartSoftware.PermissionManagement.Domain.OpenIddict/SmartSoftware.PermissionManagement.Domain.OpenIddict.sspkg",
+      "folder": "src"
+    }
+  }
+}

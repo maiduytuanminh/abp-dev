@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Domain.Shared\SmartSoftware.Identity.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\background-jobs\src\SmartSoftware.BackgroundJobs.Domain.Shared\SmartSoftware.BackgroundJobs.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.Domain.Shared\SmartSoftware.AuditLogging.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Domain.Shared\SmartSoftware.TenantManagement.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Domain.Shared\SmartSoftware.FeatureManagement.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Domain.Shared\SmartSoftware.PermissionManagement.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Domain.Shared\SmartSoftware.SettingManagement.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\openiddict\src\SmartSoftware.OpenIddict.Domain.Shared\SmartSoftware.OpenIddict.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\MyProjectName\*.json" />
+    <Content Remove="Localization\MyProjectName\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.4" />
+  </ItemGroup>
+
+</Project>

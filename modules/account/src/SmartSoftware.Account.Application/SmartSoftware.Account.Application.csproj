@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Account.Application</AssemblyName>
+    <PackageId>SmartSoftware.Account.Application</PackageId>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\Account\Emailing\Templates\*.tpl" />
+    <None Remove="SmartSoftware\Account\Emailing\Templates\*.tpl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encodings.Web" />
+    <ProjectReference Include="..\SmartSoftware.Account.Application.Contracts\SmartSoftware.Account.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.UI.Navigation\SmartSoftware.UI.Navigation.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Emailing\SmartSoftware.Emailing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" />
+  </ItemGroup>
+
+</Project>

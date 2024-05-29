@@ -1,0 +1,10 @@
+{
+  "culture": "ru",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Добро пожаловать в SmartSoftwareDocs!",
+    "NoProjectWarning": "Отсутствует определение проекта!",
+    "CreateYourFirstProject": "Нажмите здесь, чтобы добавить свой первый проект",
+    "NoProject": "Нет проекта!"
+  }
+}

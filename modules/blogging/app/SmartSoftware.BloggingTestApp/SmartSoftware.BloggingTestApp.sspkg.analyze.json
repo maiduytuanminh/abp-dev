@@ -1,0 +1,153 @@
+{
+  "name": "SmartSoftware.BloggingTestApp",
+  "hash": "faf8c09c571a52e961d15c9dd9c7d7ac",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BloggingTestApp",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Web",
+          "namespace": "SmartSoftware.Blogging",
+          "name": "BloggingWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Application",
+          "namespace": "SmartSoftware.Blogging",
+          "name": "BloggingApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.HttpApi",
+          "namespace": "SmartSoftware.Blogging",
+          "name": "BloggingHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Admin.Web",
+          "namespace": "SmartSoftware.Blogging.Admin",
+          "name": "BloggingAdminWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Admin.HttpApi",
+          "namespace": "SmartSoftware.Blogging.Admin",
+          "name": "BloggingAdminHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.Admin.Application",
+          "namespace": "SmartSoftware.Blogging.Admin",
+          "name": "BloggingAdminApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BloggingTestApp.EntityFrameworkCore",
+          "namespace": "SmartSoftware.BloggingTestApp.EntityFrameworkCore",
+          "name": "BloggingTestAppEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Web",
+          "namespace": "SmartSoftware.Account.Web",
+          "name": "SmartSoftwareAccountWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.HttpApi",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Account.Application",
+          "namespace": "SmartSoftware.Account",
+          "name": "SmartSoftwareAccountApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Web",
+          "namespace": "SmartSoftware.Identity.Web",
+          "name": "SmartSoftwareIdentityWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.HttpApi",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Application",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Domain.Identity",
+          "namespace": "SmartSoftware.PermissionManagement.Identity",
+          "name": "SmartSoftwarePermissionManagementDomainIdentityModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Application",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.HttpApi",
+          "namespace": "SmartSoftware.PermissionManagement.HttpApi",
+          "name": "SmartSoftwarePermissionManagementHttpApiModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.Domain",
+          "namespace": "SmartSoftware.BlobStoring.Database",
+          "name": "BlobStoringDatabaseDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "name": "SmartSoftwareAspNetCoreMvcUiBasicThemeModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BloggingTestAppModule",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.ClientSimulation": {
+      "path": "SmartSoftware.ClientSimulation.ssmdl"
+    }
+  }
+}

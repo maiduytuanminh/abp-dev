@@ -1,0 +1,25 @@
+{
+  "culture": "fa",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "آدرس ارسال کننده پیش فرض",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "نام نمایشی ارسال کننده پیش فرض",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "هاست",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "پورت",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "نام کاربری",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "گذرواژه",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "دامنه",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "فعال سازی SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "از اعتبارنامه های پیش فرض استفاده کنید",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "آدرس ارسال کننده پیش فرض",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "نام نمایشی ارسال کننده پیش فرض",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "نام یا آدرس IP میزبان مورد استفاده برای تراکنش های SMTP.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "پورتی که برای تراکنش های SMTP استفاده می شود.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "نام کاربری مرتبط با اعتبارنامه",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "گذرواژه مرتبط با اعتبارنامه.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "نام دامنه یا رایانه ای که اعتبار را تأیید می کند.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "آیا SmtpClient از لایه سوکت های امن (SSL) برای رمزگذاری هنگام ارتباط استفاده می کند.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "اینکه آیا DefaultCredentials همراه با درخواست ها ارسال می شوند.",
+    "TextTemplate:StandardEmailTemplates.Layout": "قالب پیش فرض ایمیل",
+    "TextTemplate:StandardEmailTemplates.Message": "قالب ایمیل برای پیامهای ساده"
+  }
+}

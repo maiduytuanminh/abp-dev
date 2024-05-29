@@ -1,0 +1,128 @@
+﻿@page "{Id}"
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Button
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Card
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Tab
+@using SmartSoftware.AspNetCore.Mvc.UI.Bundling.TagHelpers
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Codemirror
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.TuiEditor
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Uppy
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Slugify
+@using SmartSoftware.Data
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Pages
+@inject IStringLocalizerFactory StringLocalizerFactory
+
+@inherits CmsKitAdminPageBase
+
+@model SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Pages.UpdateModel
+
+@{
+    PageLayout.Content.Title = L["Pages"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.Pages.PagesMenu;
+}
+
+
+@section scripts {
+<ss-script-bundle>
+    <ss-script type="typeof(TuiEditorScriptContributor)" />
+    <ss-script type="typeof(UppyScriptContributor)" />
+    <ss-script type="typeof(SlugifyScriptContributor)" />
+    <ss-script type="typeof(CodemirrorScriptContributor)"/>
+    <ss-script src="/libs/codemirror/mode/css/css.js"/>
+    <ss-script src="/libs/codemirror/mode/javascript/javascript.js"/>
+    <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+    <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+    <ss-script src="/Pages/CmsKit/Pages/update.js" />
+    <ss-script src="/Pages/CmsKit/Contents/addWidgetModal.js" />
+</ss-script-bundle>
+}
+
+@section styles {
+<ss-style-bundle>
+    <ss-style type="typeof(TuiEditorStyleContributor)" />
+    <ss-style type="typeof(CodemirrorStyleContributor)" />
+    <ss-style src="/Pages/CmsKit/Pages/update.css" />
+</ss-style-bundle>
+}
+
+<ss-card>
+    <ss-card-header title="@L["Update"].Value"></ss-card-header>
+    <ss-card-body>
+        <form asp-page="/CmsKit/Pages/Update" id="form-page-update">
+            <ss-input asp-for="@Model.Id" />
+
+            <ss-input asp-for="@Model.ViewModel.ConcurrencyStamp" />
+
+            <ss-input asp-for="@Model.ViewModel.Title" />
+
+            <ss-input asp-for="ViewModel.Slug" label-tooltip-icon="fa fa-info-circle" label-tooltip="@L["PageSlugInformation"]" />
+
+            <ss-input asp-for="@Model.ViewModel.Content" />
+
+            <ss-tabs tab-style="Tab">
+
+                <ss-tab title="@L["Content"]">
+                    <div class="content-editor cms-kit-editor"
+                         id="ContentEditor"
+                         data-input-id="@Html.IdFor(x => x.ViewModel.Content)"
+                         data-language="@(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">
+                    </div>
+                </ss-tab>
+
+                <ss-tab title="@L["Script"]">
+                    <ss-input asp-for="ViewModel.Script" suppress-label="true" class="cms-kit-editor" />
+                </ss-tab>
+
+                <ss-tab title="@L["Style"]">
+                    <ss-input asp-for="ViewModel.Style" suppress-label="true" class="cms-kit-editor"/>
+                </ss-tab>
+
+            </ss-tabs>
+            
+            @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<UpdateModel.UpdatePageViewModel>())
+            {
+                if (!propertyInfo.Name.EndsWith("_Text"))
+                {
+                    if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+                    {
+                        if (propertyInfo.Type.IsEnum)
+                        {
+                            Model.ViewModel.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                        }
+                        <ss-select asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                    label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                    autocomplete-api-url="@propertyInfo.Lookup.Url"
+                                    autocomplete-selected-item-name="@Model.ViewModel.GetProperty(propertyInfo.Name+"_Text")"
+                                    autocomplete-selected-item-value="@Model.ViewModel.GetProperty(propertyInfo.Name)"
+                                    autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                                    autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                                    autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                                    autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName"></ss-select>
+                    }
+                    else
+                    {
+                        <ss-input type="@propertyInfo.GetInputType()"
+                                   asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                   label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                   asp-format="@propertyInfo.GetInputFormatOrNull()"
+                                   value="@propertyInfo.GetInputValueOrNull(Model.ViewModel.GetProperty(propertyInfo.Name))" />
+                    }
+                }
+            }
+
+        </form>
+    </ss-card-body>
+    <ss-card-footer>
+        <ss-button button-type="Primary" type="submit" text="@L["Submit"].Value" id="button-page-update" />
+    </ss-card-footer>
+</ss-card>
+<input hidden id="GeneratedWidgetText" />

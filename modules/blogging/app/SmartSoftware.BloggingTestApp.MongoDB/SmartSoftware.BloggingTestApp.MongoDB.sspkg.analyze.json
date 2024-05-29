@@ -1,0 +1,83 @@
+{
+  "name": "SmartSoftware.BloggingTestApp.MongoDB",
+  "hash": "f3aae951c5c4cd55de2a949848c2a755",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BloggingTestApp.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.MongoDB",
+          "namespace": "SmartSoftware.Identity.MongoDB",
+          "name": "SmartSoftwareIdentityMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Blogging.MongoDB",
+          "namespace": "SmartSoftware.Blogging.MongoDB",
+          "name": "BloggingMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.MongoDB",
+          "namespace": "SmartSoftware.SettingManagement.MongoDB",
+          "name": "SmartSoftwareSettingManagementMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.MongoDB",
+          "namespace": "SmartSoftware.PermissionManagement.MongoDB",
+          "name": "SmartSoftwarePermissionManagementMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.MongoDB",
+          "namespace": "SmartSoftware.BlobStoring.Database.MongoDB",
+          "name": "BlobStoringDatabaseMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BloggingTestAppMongoDbModule",
+      "summary": null
+    }
+  ]
+}

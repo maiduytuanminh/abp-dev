@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.Account": {
+      "path": "SmartSoftware.Account.ssmdl"
+    }
+  }
+}

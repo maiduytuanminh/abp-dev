@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.VirtualFileExplorer": {
+      "path": "SmartSoftware.VirtualFileExplorer.ssmdl"
+    }
+  }
+}

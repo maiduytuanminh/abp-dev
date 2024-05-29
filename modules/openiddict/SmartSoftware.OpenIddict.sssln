@@ -1,0 +1,8 @@
+{
+  "template": "empty",
+  "modules": {
+    "SmartSoftware.OpenIddict": {
+      "path": "SmartSoftware.OpenIddict.ssmdl"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "culture": "hu",
+  "texts": {
+    "AppName": "MyProjectName",
+    "Menu:Home": "Kezdőlap",
+    "Welcome": "Üdvözlöm",
+    "LongWelcomeMessage": "Üdvözöljük az alkalmazásban. Ez egy SS keretrendszeren alapuló startup projekt. További információkért látogasson el az smartsoftware.io oldalra."
+  }
+}

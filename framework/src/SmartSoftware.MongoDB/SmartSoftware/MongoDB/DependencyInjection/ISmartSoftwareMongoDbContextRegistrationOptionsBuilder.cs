@@ -1,0 +1,8 @@
+using SmartSoftware.DependencyInjection;
+
+namespace SmartSoftware.MongoDB.DependencyInjection;
+
+public interface ISmartSoftwareMongoDbContextRegistrationOptionsBuilder : ISmartSoftwareCommonDbContextRegistrationOptionsBuilder
+{
+
+}

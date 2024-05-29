@@ -1,0 +1,155 @@
+{
+  "name": "SmartSoftware.Identity.Application.Contracts",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Identity",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Domain.Shared",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Users.Abstractions",
+          "namespace": "SmartSoftware.Users",
+          "name": "SmartSoftwareUsersAbstractionModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Authorization",
+          "namespace": "SmartSoftware.Authorization",
+          "name": "SmartSoftwareAuthorizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.Application.Contracts",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementApplicationContractsModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareIdentityApplicationContractsModule",
+      "summary": null
+    },
+    {
+      "displayName": "Role management",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Roles",
+      "summary": null
+    },
+    {
+      "displayName": "Create",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Roles.Create",
+      "summary": null
+    },
+    {
+      "displayName": "Edit",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Roles.Update",
+      "summary": null
+    },
+    {
+      "displayName": "Delete",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Roles.Delete",
+      "summary": null
+    },
+    {
+      "displayName": "Change permissions",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Roles.ManagePermissions",
+      "summary": null
+    },
+    {
+      "displayName": "User management",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Users",
+      "summary": null
+    },
+    {
+      "displayName": "Create",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Users.Create",
+      "summary": null
+    },
+    {
+      "displayName": "Edit",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Users.Update",
+      "summary": null
+    },
+    {
+      "displayName": "Delete",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Users.Delete",
+      "summary": null
+    },
+    {
+      "displayName": "Change permissions",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.Users.ManagePermissions",
+      "summary": null
+    },
+    {
+      "displayName": "User lookup",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "SmartSoftwareIdentity.UserLookup",
+      "summary": null
+    }
+  ]
+}

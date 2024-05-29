@@ -1,0 +1,62 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Tags
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.Data
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@using SmartSoftware.CmsKit.Localization
+
+@inject IHtmlLocalizer<CmsKitResource> L
+@inject IStringLocalizerFactory StringLocalizerFactory
+@model EditModalModel
+
+@{
+    Layout = null;
+}
+
+<form asp-page="/CmsKit/Tags/EditModal">
+    <ss-modal>
+        <ss-modal-header title="@L["Edit"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-input asp-for="Id"/>
+
+            <ss-input asp-for="ViewModel.Name" />
+
+            @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<EditModalModel.TagEditViewModel>())
+            {
+                if (!propertyInfo.Name.EndsWith("_Text"))
+                {
+                    if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+                    {
+                        if (propertyInfo.Type.IsEnum)
+                        {
+                            Model.ViewModel.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                        }
+                        <ss-select asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                    label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                    autocomplete-api-url="@propertyInfo.Lookup.Url"
+                                    autocomplete-selected-item-name="@Model.ViewModel.GetProperty(propertyInfo.Name+"_Text")"
+                                    autocomplete-selected-item-value="@Model.ViewModel.GetProperty(propertyInfo.Name)"
+                                    autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                                    autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                                    autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                                    autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName"></ss-select>
+                    }
+                    else
+                    {
+                        <ss-input type="@propertyInfo.GetInputType()"
+                                   asp-for="ViewModel.ExtraProperties[propertyInfo.Name]"
+                                   label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                   asp-format="@propertyInfo.GetInputFormatOrNull()"
+                                   value="@propertyInfo.GetInputValueOrNull(Model.ViewModel.GetProperty(propertyInfo.Name))" />
+                    }
+                }
+            }
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

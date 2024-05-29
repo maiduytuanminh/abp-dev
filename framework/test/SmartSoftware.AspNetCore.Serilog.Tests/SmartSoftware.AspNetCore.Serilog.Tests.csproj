@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\common.test.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>SmartSoftware.AspNetCore.Serilog.Tests</AssemblyName>
+        <PackageId>SmartSoftware.AspNetCore.Serilog.Tests</PackageId>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.AspNetCore" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\SmartSoftware.AspNetCore.MultiTenancy\SmartSoftware.AspNetCore.MultiTenancy.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+        <ProjectReference Include="..\..\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Tests\SmartSoftware.AspNetCore.Tests.csproj" />
+    </ItemGroup>
+
+</Project>

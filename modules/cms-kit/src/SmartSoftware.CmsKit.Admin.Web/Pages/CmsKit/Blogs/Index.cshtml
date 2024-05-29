@@ -1,0 +1,40 @@
+﻿@page
+
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Blogs
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.AspNetCore.Mvc.UI.Packages.Slugify
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageToolbar
+
+@inherits CmsKitAdminPageBase
+
+@model IndexModel
+
+@{
+    PageLayout.Content.Title = L["Blogs"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.Blogs.BlogsMenu;
+}
+
+@section scripts {
+    <ss-script-bundle>
+        <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+        <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+        <ss-script src="/Pages/CmsKit/Blogs/index.js"/>
+        <ss-script src="/Pages/CmsKit/Blogs/createModal.js"/>
+        <ss-script src="/Pages/CmsKit/Blogs/updateModal.js"/>
+        <ss-script type="typeof(SlugifyScriptContributor)"/>
+    </ss-script-bundle>
+}
+
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(SmartSoftwarePageToolbarViewComponent), new { pageName = typeof(IndexModel).FullName })
+}
+
+<div id="CmsKitBlogsWrapper">
+    <ss-card>
+        <ss-card-body>
+            <ss-table  id="BlogsTable" class="nowrap"></ss-table>
+        </ss-card-body>
+    </ss-card>
+</div>

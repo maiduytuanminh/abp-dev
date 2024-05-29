@@ -1,0 +1,133 @@
+{
+  "name": "SmartSoftware.CmsKit.Web.Host",
+  "hash": "4e765df6a6f987aba4c051f2106178ac",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Web",
+          "namespace": "SmartSoftware.CmsKit.Web",
+          "name": "CmsKitWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.HttpApi.Client",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitHttpApiClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Authentication.OAuth",
+          "namespace": "SmartSoftware.AspNetCore.Authentication.OAuth",
+          "name": "SmartSoftwareAspNetCoreAuthenticationOAuthModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.Client",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.Client",
+          "name": "SmartSoftwareAspNetCoreMvcClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "namespace": "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic",
+          "name": "SmartSoftwareAspNetCoreMvcUiBasicThemeModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching.StackExchangeRedis",
+          "namespace": "SmartSoftware.Caching.StackExchangeRedis",
+          "name": "SmartSoftwareCachingStackExchangeRedisModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Http.Client.IdentityModel.Web",
+          "namespace": "SmartSoftware.Http.Client.IdentityModel.Web",
+          "name": "SmartSoftwareHttpClientIdentityModelWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.Web",
+          "namespace": "SmartSoftware.Identity.Web",
+          "name": "SmartSoftwareIdentityWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Identity.HttpApi.Client",
+          "namespace": "SmartSoftware.Identity",
+          "name": "SmartSoftwareIdentityHttpApiClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.Web",
+          "namespace": "SmartSoftware.TenantManagement.Web",
+          "name": "SmartSoftwareTenantManagementWebModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.TenantManagement.HttpApi.Client",
+          "namespace": "SmartSoftware.TenantManagement",
+          "name": "SmartSoftwareTenantManagementHttpApiClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.HttpApi.Client",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementHttpApiClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.PermissionManagement.HttpApi.Client",
+          "namespace": "SmartSoftware.PermissionManagement",
+          "name": "SmartSoftwarePermissionManagementHttpApiClientModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.AspNetCore.Serilog",
+          "namespace": "SmartSoftware.AspNetCore.Serilog",
+          "name": "SmartSoftwareAspNetCoreSerilogModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitWebHostModule",
+      "summary": null
+    }
+  ]
+}

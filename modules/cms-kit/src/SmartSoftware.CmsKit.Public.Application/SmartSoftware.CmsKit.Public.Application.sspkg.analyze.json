@@ -1,0 +1,918 @@
+{
+  "name": "SmartSoftware.CmsKit.Public.Application",
+  "hash": "b56557870806fcc0a1b72ff08f55da55",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit.Public",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Common.Application",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitCommonApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "namespace": "SmartSoftware.CmsKit.Public",
+          "name": "CmsKitPublicApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching",
+          "namespace": "SmartSoftware.Caching",
+          "name": "SmartSoftwareCachingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitPublicApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Reactions",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IReactionPublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Reactions",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Reactions.IReactionPublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "ListResultDto<ReactionWithSelectionDto>",
+          "name": "GetForSelectionAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "CreateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "reaction",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "reaction",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "ReactionPublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Ratings",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IRatingPublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Ratings",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Ratings.IRatingPublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "RatingDto",
+          "name": "CreateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            },
+            {
+              "type": "CreateUpdateRatingInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "List<RatingWithStarCountDto>",
+          "name": "GetGroupedStarCountsAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "RatingPublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Pages",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IPagePublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Pages",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Pages.IPagePublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "PageDto",
+          "name": "FindBySlugAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "slug",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "PageDto",
+          "name": "FindDefaultHomePageAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "PagePublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Menus",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IMenuItemPublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Menus",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Menus.IMenuItemPublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "List<MenuItemDto>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "MenuItemPublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.GlobalResources",
+      "baseClass": {
+        "name": "ApplicationService",
+        "namespace": "SmartSoftware.Application.Services",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Application",
+        "fullName": "SmartSoftware.Application.Services.ApplicationService"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IGlobalResourcePublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.GlobalResources",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.GlobalResources.IGlobalResourcePublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "GlobalResourceDto",
+          "name": "GetGlobalScriptAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "GlobalResourceDto",
+          "name": "GetGlobalStyleAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "GlobalResourcePublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Comments",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ICommentPublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Comments",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Comments.ICommentPublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "ListResultDto<CommentWithDetailsDto>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "CommentDto",
+          "name": "CreateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "entityType",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "entityId",
+              "isOptional": false
+            },
+            {
+              "type": "CreateCommentInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "CommentDto",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            },
+            {
+              "type": "UpdateCommentInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "CommentPublicAppService",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.Public.Blogs",
+      "baseClass": {
+        "name": "CmsKitPublicAppServiceBase",
+        "namespace": "SmartSoftware.CmsKit.Public",
+        "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application",
+        "fullName": "SmartSoftware.CmsKit.Public.CmsKitPublicAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IBlogPostPublicAppService",
+          "namespace": "SmartSoftware.CmsKit.Public.Blogs",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Public.Application.Contracts",
+          "fullName": "SmartSoftware.CmsKit.Public.Blogs.IBlogPostPublicAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "BlogPostCommonDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "blogSlug",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "blogPostSlug",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "PagedResultDto<BlogPostCommonDto>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "blogSlug",
+              "isOptional": false
+            },
+            {
+              "type": "BlogPostGetListInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "PagedResultDto<CmsUserDto>",
+          "name": "GetAuthorsHasBlogPostsAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "BlogPostFilteredPagedAndSortedResultRequestDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "CmsUserDto",
+          "name": "GetAuthorHasBlogPostAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "Guid",
+              "name": "id",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "BlogPostPublicAppService",
+      "summary": null
+    }
+  ]
+}

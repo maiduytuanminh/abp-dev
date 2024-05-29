@@ -1,0 +1,19 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "基于SSL的LDAP",
+    "Description:SmartSoftware.Ldap.Ldaps": "基于SSL的LDAP",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "服务器主机",
+    "Description:SmartSoftware.Ldap.ServerHost": "服务器主机",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "服务器端口",
+    "Description:SmartSoftware.Ldap.ServerPort": "服务器端口",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "基域组件",
+    "Description:SmartSoftware.Ldap.BaseDc": "基域组件",
+    "DisplayName:SmartSoftware.Ldap.Domain": "域",
+    "Description:SmartSoftware.Ldap.Domain": "域",
+    "DisplayName:SmartSoftware.Ldap.UserName": "用户名",
+    "Description:SmartSoftware.Ldap.UserName": "用户名",
+    "DisplayName:SmartSoftware.Ldap.Password": "密码",
+    "Description:SmartSoftware.Ldap.Password": "密码"
+  }
+}

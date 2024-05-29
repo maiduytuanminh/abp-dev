@@ -1,0 +1,8 @@
+{
+  "culture": "ru",
+  "texts": {
+    "SmartSoftware.Feature:010001": "Функция не включена: {FeatureName}",
+    "SmartSoftware.Feature:010002": "Необходимые функции не включены. Все эти функции должны быть включены: {FeatureNames}",
+    "SmartSoftware.Feature:010003": "Необходимые функции не включены. Должна быть включена хотя бы одна из этих функций: {FeatureNames}"
+  }
+}

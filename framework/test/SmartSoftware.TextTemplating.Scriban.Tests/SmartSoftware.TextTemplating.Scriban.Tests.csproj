@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\common.test.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="SmartSoftware\TextTemplating\Scriban\SampleTemplates\**\*.tpl">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="SmartSoftware\TextTemplating\Scriban\SampleTemplates\**\*.tpl" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.TextTemplating.Tests\SmartSoftware.TextTemplating.Tests.csproj" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.ClientSimulation</AssemblyName>
+    <PackageId>SmartSoftware.ClientSimulation</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel\SmartSoftware.Http.Client.IdentityModel.csproj" />
+  </ItemGroup>
+
+</Project>

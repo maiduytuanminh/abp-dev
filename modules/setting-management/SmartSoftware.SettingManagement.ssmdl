@@ -1,0 +1,79 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "app": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.SettingManagement.DemoApp": {
+      "path": "app/SmartSoftware.SettingManagement.DemoApp/SmartSoftware.SettingManagement.DemoApp.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.SettingManagement.Web": {
+      "path": "src/SmartSoftware.SettingManagement.Web/SmartSoftware.SettingManagement.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Blazor": {
+      "path": "src/SmartSoftware.SettingManagement.Blazor/SmartSoftware.SettingManagement.Blazor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Blazor.Server": {
+      "path": "src/SmartSoftware.SettingManagement.Blazor.Server/SmartSoftware.SettingManagement.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Blazor.WebAssembly": {
+      "path": "src/SmartSoftware.SettingManagement.Blazor.WebAssembly/SmartSoftware.SettingManagement.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.HttpApi": {
+      "path": "src/SmartSoftware.SettingManagement.HttpApi/SmartSoftware.SettingManagement.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.HttpApi.Client": {
+      "path": "src/SmartSoftware.SettingManagement.HttpApi.Client/SmartSoftware.SettingManagement.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Application": {
+      "path": "src/SmartSoftware.SettingManagement.Application/SmartSoftware.SettingManagement.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Application.Contracts": {
+      "path": "src/SmartSoftware.SettingManagement.Application.Contracts/SmartSoftware.SettingManagement.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Domain.Shared": {
+      "path": "src/SmartSoftware.SettingManagement.Domain.Shared/SmartSoftware.SettingManagement.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Domain": {
+      "path": "src/SmartSoftware.SettingManagement.Domain/SmartSoftware.SettingManagement.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.SettingManagement.EntityFrameworkCore/SmartSoftware.SettingManagement.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.Tests": {
+      "path": "test/SmartSoftware.SettingManagement.Tests/SmartSoftware.SettingManagement.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.SettingManagement.MongoDB": {
+      "path": "src/SmartSoftware.SettingManagement.MongoDB/SmartSoftware.SettingManagement.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.SettingManagement.TestBase": {
+      "path": "test/SmartSoftware.SettingManagement.TestBase/SmartSoftware.SettingManagement.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.SettingManagement.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.SettingManagement.EntityFrameworkCore.Tests/SmartSoftware.SettingManagement.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.SettingManagement.MongoDB.Tests": {
+      "path": "test/SmartSoftware.SettingManagement.MongoDB.Tests/SmartSoftware.SettingManagement.MongoDB.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

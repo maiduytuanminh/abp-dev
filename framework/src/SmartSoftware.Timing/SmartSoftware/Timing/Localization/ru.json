@@ -1,0 +1,7 @@
+{
+  "culture": "ru",
+  "texts": {
+    "DisplayName:SmartSoftware.Timing.Timezone": "Часовой пояс",
+    "Description:SmartSoftware.Timing.Timezone": "Часовой пояс приложения"
+  }
+}

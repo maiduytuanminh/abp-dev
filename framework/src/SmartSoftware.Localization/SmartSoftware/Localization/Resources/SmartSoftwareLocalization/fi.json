@@ -1,0 +1,7 @@
+{
+  "culture": "fi",
+  "texts": {
+    "DisplayName:SmartSoftware.Localization.DefaultLanguage": "Oletuskieli",
+    "Description:SmartSoftware.Localization.DefaultLanguage": "Sovelluksen oletuskieli."
+  }
+}

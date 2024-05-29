@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Blogging.EntityFrameworkCore.Tests\SmartSoftware.Blogging.EntityFrameworkCore.Tests.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Blogging.TestBase\SmartSoftware.Blogging.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿using SmartSoftware.Bundling;
+
+namespace MyCompanyName.MyProjectName.Blazor.Client;
+
+/* Add your global styles/scripts here.
+ * See https://docs.smartsoftware.io/en/ss/latest/UI/Blazor/Global-Scripts-Styles to learn how to use it
+ */
+public class MyProjectNameBundleContributor : IBundleContributor
+{
+    public void AddScripts(BundleContext context)
+    {
+
+    }
+
+    public void AddStyles(BundleContext context)
+    {
+        context.Add("main.css", true);
+    }
+}

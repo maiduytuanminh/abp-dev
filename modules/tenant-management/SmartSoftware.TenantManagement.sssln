@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.TenantManagement": {
+      "path": "SmartSoftware.TenantManagement.ssmdl"
+    }
+  }
+}

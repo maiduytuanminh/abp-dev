@@ -1,0 +1,15 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.ModalsDemo
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+
+<ss-component-demo-section title="Example" view-path="@ModalsDemoViewComponent.ViewPath">
+
+    <ss-button button-type="Primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</ss-button>
+
+    <ss-modal centered="true" size="Large" id="myModal">
+        <ss-modal-header title="Modal title"></ss-modal-header>
+        <ss-modal-body>
+            Woohoo, you're reading this text in a modal!
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Save|SmartSoftwareModalButtons.Close)"></ss-modal-footer>
+    </ss-modal>
+</ss-component-demo-section>

@@ -1,0 +1,44 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageToolbar
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageSearchBox
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.CmsKit.Admin.Web.Menus
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Pages
+
+@inherits CmsKitAdminPageBase
+
+@model IndexModel
+
+@{
+    PageLayout.Content.Title = L["Pages"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitAdminMenus.Pages.PagesMenu;
+}
+
+@section scripts {
+    <ss-script src="/client-proxies/cms-kit-common-proxy.js"/>
+    <ss-script src="/client-proxies/cms-kit-admin-proxy.js"/>
+    <ss-script src="/Pages/CmsKit/Pages/index.js" />
+}
+
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(SmartSoftwarePageToolbarViewComponent), new { pageName = typeof(IndexModel).FullName })
+}
+
+<ss-card class="mb-4">
+    <ss-card-body>
+        <div id="CmsKitPagesWrapper">
+            <ss-row>
+                <ss-column>
+                    @await Component.InvokeAsync(typeof(SmartSoftwarePageSearchBoxViewComponent))
+                </ss-column>
+            </ss-row>
+        </div>
+    </ss-card-body>
+</ss-card>
+
+<ss-card>
+    <ss-card-body>
+        <ss-table  id="PagesTable" class="nowrap"></ss-table>
+    </ss-card-body>
+</ss-card>

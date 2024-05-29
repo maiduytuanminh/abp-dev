@@ -1,0 +1,88 @@
+﻿@using SmartSoftware.AspNetCore.Mvc.UI.Components.LayoutHook
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Bundling
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.ContentTitle
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.MainNavbar
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.PageAlerts
+@using SmartSoftware.AspNetCore.Mvc.UI.Theming
+@using SmartSoftware.AspNetCore.Mvc.UI.Widgets.Components.WidgetScripts
+@using SmartSoftware.AspNetCore.Mvc.UI.Widgets.Components.WidgetStyles
+@using SmartSoftware.Localization
+@using SmartSoftware.Ui.Branding
+@using SmartSoftware.Ui.LayoutHooks
+@inject IBrandingProvider BrandingProvider
+@inject IPageLayout PageLayout
+@{
+    Layout = null;
+    var containerClass = ViewBag.FluidLayout == true ? "container-fluid" : "container"; //TODO: Better and type-safe options
+
+    var pageTitle = ViewBag.Title == null ? BrandingProvider.AppName : ViewBag.Title; //TODO: Discard to get from Title
+
+    if (PageLayout.Content.Title != null)
+    {
+        if (!string.IsNullOrWhiteSpace(pageTitle))
+        {
+            pageTitle = " | " + pageTitle;
+        }
+
+        pageTitle = PageLayout.Content.Title + pageTitle;
+    }
+
+    var rtl = CultureHelper.IsRtl ? "rtl" : string.Empty;
+}
+
+<!DOCTYPE html>
+
+<html lang="@CultureInfo.CurrentCulture.Name" dir="@rtl">
+<head>
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.First, StandardLayouts.Application)
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>@pageTitle</title>
+
+    <ss-style-bundle name="@BasicThemeBundles.Styles.Global" />
+
+    @await Component.InvokeAsync(typeof(WidgetStylesViewComponent))
+
+    @await RenderSectionAsync("styles", false)
+
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.Last, StandardLayouts.Application)
+</head>
+<body class="ss-application-layout @rtl">
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
+
+    @(await Component.InvokeAsync<MainNavbarViewComponent>())
+
+    <div class="@containerClass">
+        @(await Component.InvokeAsync<PageAlertsViewComponent>())
+        <div id="SmartSoftwareContentToolbar">
+            <div class="row mb-2">
+                @(await Component.InvokeAsync<ContentTitleViewComponent>())
+                <div class="col">
+                    <div class="text-end">
+                        @await RenderSectionAsync("content_toolbar", false)
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Application)
+        @RenderBody()
+        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Application)
+    </div>
+
+    <ss-script-bundle name="@BasicThemeBundles.Scripts.Global" />
+
+    <script src="~/SmartSoftware/ApplicationLocalizationScript?cultureName=@CultureInfo.CurrentUICulture.Name"></script>
+    <script src="~/SmartSoftware/ApplicationConfigurationScript"></script>
+    <script src="~/SmartSoftware/ServiceProxyScript"></script>
+
+    @await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))
+
+    @await RenderSectionAsync("scripts", false)
+
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Application)
+</body>
+</html>

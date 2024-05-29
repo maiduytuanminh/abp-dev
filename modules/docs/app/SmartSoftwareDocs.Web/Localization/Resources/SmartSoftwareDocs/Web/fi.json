@@ -1,0 +1,10 @@
+{
+  "culture": "fi",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "Tervetuloa SmartSoftwareDocsiin!",
+    "NoProjectWarning": "Ei vielä määritelty projektia!",
+    "CreateYourFirstProject": "Aloita ensimmäinen projekti napsauttamalla tätä",
+    "NoProject": "Ei projektia!"
+  }
+}

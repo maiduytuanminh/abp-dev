@@ -1,0 +1,139 @@
+{
+  "name": "SmartSoftware.Ldap",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Ldap",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Settings",
+          "namespace": "SmartSoftware.Settings",
+          "name": "SmartSoftwareSettingsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.VirtualFileSystem",
+          "namespace": "SmartSoftware.VirtualFileSystem",
+          "name": "SmartSoftwareVirtualFileSystemModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Localization",
+          "namespace": "SmartSoftware.Localization",
+          "name": "SmartSoftwareLocalizationModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareLdapModule",
+      "summary": null
+    },
+    {
+      "defaultValue": "",
+      "displayName": "Sunucu Ana Bilgisayarı",
+      "description": "Sunucu Ana Bilgisayarı",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.ServerHost",
+      "summary": null
+    },
+    {
+      "defaultValue": "389",
+      "displayName": "Sunucu portu",
+      "description": "Sunucu portu",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.ServerPort",
+      "summary": null
+    },
+    {
+      "defaultValue": "",
+      "displayName": "Temel alan bileşeni",
+      "description": "Temel alan bileşeni",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.BaseDc",
+      "summary": null
+    },
+    {
+      "defaultValue": "",
+      "displayName": "Alan adı",
+      "description": "Alan adı",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.Domain",
+      "summary": null
+    },
+    {
+      "defaultValue": "",
+      "displayName": "Kullanıcı adı",
+      "description": "Kullanıcı adı",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.UserName",
+      "summary": null
+    },
+    {
+      "defaultValue": "",
+      "displayName": "Parola",
+      "description": "Parola",
+      "isVisibleToClient": false,
+      "isInherited": true,
+      "isEncrypted": true,
+      "contentType": "setting",
+      "name": "SmartSoftware.Ldap.Password",
+      "summary": null
+    }
+  ]
+}

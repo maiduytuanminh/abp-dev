@@ -1,0 +1,119 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <TEMPLATE-REMOVE> -->
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared\SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Server.Theming\SmartSoftware.AspNetCore.Components.Server.Theming.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
+    <!-- </TEMPLATE-REMOVE> -->
+    <PackageReference Include="SmartSoftware.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.2.*-*" />
+    <PackageReference Include="SmartSoftware.AspNetCore.Components.Server.LeptonXLiteTheme" Version="3.2.*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc\SmartSoftware.AspNetCore.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Swashbuckle\SmartSoftware.Swashbuckle.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Application\SmartSoftware.Account.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi\SmartSoftware.Account.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\account\src\SmartSoftware.Account.Web.OpenIddict\SmartSoftware.Account.Web.OpenIddict.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Application\SmartSoftware.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi\SmartSoftware.Identity.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.EntityFrameworkCore\SmartSoftware.Identity.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\openiddict\src\SmartSoftware.OpenIddict.EntityFrameworkCore\SmartSoftware.OpenIddict.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.Blazor.Server\SmartSoftware.Identity.Blazor.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\openiddict\src\SmartSoftware.PermissionManagement.Domain.OpenIddict\SmartSoftware.PermissionManagement.Domain.OpenIddict.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.Application\SmartSoftware.PermissionManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi\SmartSoftware.PermissionManagement.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Application\SmartSoftware.TenantManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.EntityFrameworkCore\SmartSoftware.TenantManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.HttpApi\SmartSoftware.TenantManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Blazor.Server\SmartSoftware.TenantManagement.Blazor.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Application\SmartSoftware.FeatureManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.EntityFrameworkCore\SmartSoftware.FeatureManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.HttpApi\SmartSoftware.FeatureManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.Blazor.Server\SmartSoftware.FeatureManagement.Blazor.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Application\SmartSoftware.SettingManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.HttpApi\SmartSoftware.SettingManagement.HttpApi.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Blazor.Server\SmartSoftware.SettingManagement.Blazor.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.EntityFrameworkCore\SmartSoftware.AuditLogging.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Localization\MyProjectName\*.json" />
+    <EmbeddedResource Include="Localization\MyProjectName\*.json" />
+  </ItemGroup>
+
+  <ItemGroup Condition="Exists('./openiddict.pfx')">
+    <None Remove="openiddict.pfx" />
+    <EmbeddedResource Include="openiddict.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="$(UserProfile)\.nuget\packages\*\*\contentFiles\any\*\*.sspkg*" />
+  </ItemGroup>
+
+</Project>

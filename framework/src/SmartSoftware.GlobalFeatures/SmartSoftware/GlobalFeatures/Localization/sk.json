@@ -1,0 +1,6 @@
+{
+  "culture": "sk",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "Služba '{ServiceName}' musí povoliť funkciu '{GlobalFeatureName}'."
+  }
+}

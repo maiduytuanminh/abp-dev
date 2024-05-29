@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartSoftware.CmsKit</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.extensibility.execution" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.TestBase\SmartSoftware.TestBase.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Authorization\SmartSoftware.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.BlobStoring\SmartSoftware.BlobStoring.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Domain\SmartSoftware.CmsKit.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

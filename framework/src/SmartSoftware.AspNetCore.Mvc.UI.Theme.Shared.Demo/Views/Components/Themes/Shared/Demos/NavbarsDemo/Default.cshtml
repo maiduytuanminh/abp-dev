@@ -1,0 +1,71 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.NavbarsDemo
+
+<ss-component-demo-section title="Example" view-path="@NavbarsDemoViewComponent.ViewPath">
+    <ss-nav-bar size="Lg" navbar-style="Dark_Dark">
+        <a ss-navbar-brand href="#">Navbar</a>
+        <ss-navbar-toggle>
+            <ss-navbar-nav>
+                <ss-nav-item active="true">
+                    <a ss-nav-link href="#">Home <span class="visually-hidden">(current)</span></a>
+                </ss-nav-item>
+                <ss-nav-item>
+                    <a ss-nav-link href="#">Link</a>
+                </ss-nav-item>
+                <ss-nav-item dropdown="true">
+                    <ss-dropdown>
+                        <ss-dropdown-button nav-link="true" text="Dropdown" />
+                        <ss-dropdown-menu>
+                            <ss-dropdown-header>Dropdown header</ss-dropdown-header>
+                            <ss-dropdown-item href="#" active="true">Action</ss-dropdown-item>
+                            <ss-dropdown-item href="#" disabled="true">Another disabled action</ss-dropdown-item>
+                            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                            <ss-dropdown-divider />
+                            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+                        </ss-dropdown-menu>
+                    </ss-dropdown>
+                </ss-nav-item>
+                <ss-nav-item>
+                    <a ss-nav-link disabled="true" href="#">Disabled</a>
+                </ss-nav-item>
+            </ss-navbar-nav>
+            <span ss-navbar-text>
+                Sample Text
+            </span>
+        </ss-navbar-toggle>
+    </ss-nav-bar>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Example" view-path="@NavbarsDemoViewComponent.ViewPath">
+    <ss-nav-bar size="Lg" navbar-style="Dark_Primary">
+        <a ss-navbar-brand href="#">Navbar</a>
+        <ss-navbar-toggle>
+            <ss-navbar-nav>
+                <ss-nav-item active="true">
+                    <a ss-nav-link href="#">Home <span class="visually-hidden">(current)</span></a>
+                </ss-nav-item>
+                <ss-nav-item>
+                    <a ss-nav-link href="#">Link</a>
+                </ss-nav-item>
+                <ss-nav-item dropdown="true">
+                    <ss-dropdown>
+                        <ss-dropdown-button nav-link="true" text="Dropdown" />
+                        <ss-dropdown-menu>
+                            <ss-dropdown-header>Dropdown header</ss-dropdown-header>
+                            <ss-dropdown-item href="#" active="true">Action</ss-dropdown-item>
+                            <ss-dropdown-item href="#" disabled="true">Another disabled action</ss-dropdown-item>
+                            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+                            <ss-dropdown-divider />
+                            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+                        </ss-dropdown-menu>
+                    </ss-dropdown>
+                </ss-nav-item>
+                <ss-nav-item>
+                    <a ss-nav-link disabled="true" href="#">Disabled</a>
+                </ss-nav-item>
+            </ss-navbar-nav>
+            <span ss-navbar-text>
+                Sample Text
+            </span>
+        </ss-navbar-toggle>
+    </ss-nav-bar>
+</ss-component-demo-section>

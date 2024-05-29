@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "SmartSoftware.BlobStoring.Database": {
+      "path": "SmartSoftware.BlobStoring.Database.ssmdl"
+    },
+    "BlobStoring.Database.Host.ConsoleApp": {
+      "path": "host/BlobStoring.Database.Host.ConsoleApp/BlobStoring.Database.Host.ConsoleApp.ssmdl"
+    }
+  }
+}

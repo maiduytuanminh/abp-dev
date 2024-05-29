@@ -1,0 +1,10 @@
+{
+  "culture": "de-DE",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "Autorisation fehlgeschlagen! Die entsprechende Richtlinie wurde nicht erfüllt.",
+    "SmartSoftware.Authorization:010002": "Autorisation fehlgeschlagen! Die angegebene Richtlinie wurde nicht gewährt: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "Autorisation fehlgeschlagen! Die angegebene Richtlinie wurde für die angegebene Ressource nicht gewährt: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "Autorisation fehlgeschlagen! Die angegebene Anforderung wurde für die angegebene Ressource nicht gewährt: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "Autorisation fehlgeschlagen! Die angegebenen Anforderungen wurden für die angegebene Ressource nicht gewährt: {ResourceName}"
+  }
+}

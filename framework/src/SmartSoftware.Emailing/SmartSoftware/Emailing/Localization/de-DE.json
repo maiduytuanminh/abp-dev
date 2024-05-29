@@ -1,0 +1,25 @@
+{
+  "culture": "de-DE",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Standard-Absenderadresse",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Standard-Absendername",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Host",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Benutzername",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Passwort",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domain",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "SSL aktivieren",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Standard-Anmeldeinformationen verwenden",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Die Standard-Absenderadresse",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Der Standard-Absendername",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Der Name oder die IP-Adresse des Hosts, der für SMTP-Transaktionen verwendet wird.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Der Port, der für SMTP-Transaktionen verwendete wird.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Der Benutzername, der den Anmeldeinformationen zugeordnet ist.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Das Kennwort für den Benutzernamen, der den Anmeldeinformationen zugeordnet ist.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Der Domänen- oder Computername, der die Anmeldeinformationen überprüft.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Gibt an, ob der SmtpClient SSL (Secure Sockets Layer) zum Verschlüsseln der Verbindung verwendet.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Gibt an, ob die DefaultCredentials mit Anforderungen mitgesendet werden.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Standard-E-Mail-Layoutvorlage",
+    "TextTemplate:StandardEmailTemplates.Message": "Einfache Nachrichtenvorlage für E-Mails"
+  }
+}

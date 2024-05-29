@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.Users": {
+      "path": "SmartSoftware.Users.ssmdl"
+    }
+  }
+}

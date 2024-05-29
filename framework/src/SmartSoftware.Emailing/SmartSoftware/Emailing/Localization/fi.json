@@ -1,0 +1,25 @@
+{
+  "culture": "fi",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Oletus osoitteesta",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Oletus näyttönimestä",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Isäntä",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Portti",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Käyttäjänimi",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Salasana",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Verkkotunnus",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Ota SSL käyttöön",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Käytä oletusarvoisia tunnistetietoja",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Oletus osoitteesta",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Oletusnimi näyttönimestä",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "SMTP-tapahtumiin käytetyn isännän nimi tai IP-osoite.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "SMTP-tapahtumiin käytetty portti.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Käyttäjätunnuksiin liittyvä käyttäjänimi.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Tunnistetietoihin liittyvän käyttäjänimen salasana.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Verkkotunnus tai tietokoneen nimi, joka tarkistaa tunnistetiedot.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Käyttääkö SmtpClient Secure Sockets Layer (SSL) -yhteyttä yhteyden salaamiseen.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Lähetetäänkö DefaultCredentials pyyntöjen kanssa.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Oletussähköpostiasettelumalli",
+    "TextTemplate:StandardEmailTemplates.Message": "Yksinkertainen viestimalli sähköpostiviesteille"
+  }
+}

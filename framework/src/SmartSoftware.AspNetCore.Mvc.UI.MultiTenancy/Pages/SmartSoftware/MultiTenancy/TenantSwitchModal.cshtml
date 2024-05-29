@@ -1,0 +1,20 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Pages.SmartSoftware.MultiTenancy
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy.Localization
+@model TenantSwitchModalModel
+@inject IHtmlLocalizer<SmartSoftwareUiMultiTenancyResource> L
+@{
+    Layout = null;
+}
+<ss-dynamic-form ss-model="@Model.Input" asp-page="/SmartSoftware/MultiTenancy/TenantSwitchModal">
+    <ss-modal>
+        <ss-modal-header title="@L["SwitchTenant"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-form-content />
+        </ss-modal-body>
+        @* TODO: A "Submit" would be better than "Save"! *@
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</ss-dynamic-form>

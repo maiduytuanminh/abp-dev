@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SmartSoftware.Ddd.Domain</AssemblyName>
+    <PackageId>SmartSoftware.Ddd.Domain</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Ddd.Domain.Shared\SmartSoftware.Ddd.Domain.Shared.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Auditing\SmartSoftware.Auditing.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Caching\SmartSoftware.Caching.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Data\SmartSoftware.Data.csproj" />
+    <ProjectReference Include="..\SmartSoftware.EventBus\SmartSoftware.EventBus.csproj" />
+    <ProjectReference Include="..\SmartSoftware.ExceptionHandling\SmartSoftware.ExceptionHandling.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Guids\SmartSoftware.Guids.csproj" />
+    <ProjectReference Include="..\SmartSoftware.ObjectMapping\SmartSoftware.ObjectMapping.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Specifications\SmartSoftware.Specifications.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Timing\SmartSoftware.Timing.csproj" />
+  </ItemGroup>
+
+</Project>

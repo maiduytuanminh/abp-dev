@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\configureawait.props" />
+    <Import Project="..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.Http.Client\SmartSoftware.Http.Client.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Json\SmartSoftware.Json.csproj" />
+        <ProjectReference Include="..\SmartSoftware.MultiTenancy.Abstractions\SmartSoftware.MultiTenancy.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Dapr.Client" />
+        <PackageReference Include="IdentityModel" />
+    </ItemGroup>
+
+</Project>

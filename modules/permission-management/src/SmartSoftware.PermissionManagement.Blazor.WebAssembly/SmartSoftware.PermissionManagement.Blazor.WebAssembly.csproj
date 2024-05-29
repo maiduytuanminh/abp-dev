@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.WebAssembly.Theming\SmartSoftware.AspNetCore.Components.WebAssembly.Theming.csproj" />
+        <ProjectReference Include="..\SmartSoftware.PermissionManagement.HttpApi.Client\SmartSoftware.PermissionManagement.HttpApi.Client.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.PermissionManagement.Blazor\SmartSoftware.PermissionManagement.Blazor.csproj" />
+    </ItemGroup>
+
+</Project>

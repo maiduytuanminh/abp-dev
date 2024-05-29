@@ -1,0 +1,93 @@
+{
+  "name": "SmartSoftware.Http.Client",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Http.Client",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Http",
+          "namespace": "SmartSoftware.Http",
+          "name": "SmartSoftwareHttpModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Castle.Core",
+          "namespace": "SmartSoftware.Castle",
+          "name": "SmartSoftwareCastleCoreModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Threading",
+          "namespace": "SmartSoftware.Threading",
+          "name": "SmartSoftwareThreadingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MultiTenancy",
+          "namespace": "SmartSoftware.MultiTenancy",
+          "name": "SmartSoftwareMultiTenancyModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.ExceptionHandling",
+          "namespace": "SmartSoftware.ExceptionHandling",
+          "name": "SmartSoftwareExceptionHandlingModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.RemoteServices",
+          "namespace": "SmartSoftware.RemoteServices",
+          "name": "SmartSoftwareRemoteServicesModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareHttpClientModule",
+      "summary": null
+    }
+  ]
+}

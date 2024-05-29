@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Identity.Domain.Tests</AssemblyName>
+    <PackageId>SmartSoftware.Identity.Domain.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.PermissionManagement.Domain.Identity\SmartSoftware.PermissionManagement.Domain.Identity.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Identity.EntityFrameworkCore.Tests\SmartSoftware.Identity.EntityFrameworkCore.Tests.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Identity.TestBase\SmartSoftware.Identity.TestBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\Identity\LocalizationExtensions\*.json" />
+    <Content Remove="SmartSoftware\Identity\LocalizationExtensions\*.json" />
+  </ItemGroup>
+
+</Project>

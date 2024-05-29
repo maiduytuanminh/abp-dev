@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Validation\SmartSoftware.Validation.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.GlobalFeatures\SmartSoftware.GlobalFeatures.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Features\SmartSoftware.Features.csproj" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartSoftware\CmsKit\Localization\Resources\*.json" />
+    <Content Remove="SmartSoftware\CmsKit\Localization\Resources\*.json" />
+  </ItemGroup>
+
+</Project>

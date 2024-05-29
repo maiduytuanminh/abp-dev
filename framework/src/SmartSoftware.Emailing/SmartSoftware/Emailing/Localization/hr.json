@@ -1,0 +1,25 @@
+{
+  "culture": "hr",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Zadana adresa",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Zadano iz imena za prikaz",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Domaćin",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Luka",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Korisničko ime",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Lozinka",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domena",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Omogući SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Koristite zadane vjerodajnice",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Zadana adresa pošiljatelja",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Zadani naziv za prikaz",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Naziv ili IP adresa glavnog računala koji se koristi za SMTP transakcije.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Port koji se koristi za SMTP transakcije.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Korisničko ime povezano s vjerodajnicama.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Lozinka za korisničko ime povezano s vjerodajnicama.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Naziv domene ili računala koji provjerava vjerodajnice.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Koristi li SmtpClient Secure Sockets Layer (SSL) za šifriranje veze.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Jesu li DefaultCredentials poslani sa zahtjevima.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Zadani predložak izgleda e-pošte",
+    "TextTemplate:StandardEmailTemplates.Message": "Jednostavan predložak poruke za e-poštu"
+  }
+}

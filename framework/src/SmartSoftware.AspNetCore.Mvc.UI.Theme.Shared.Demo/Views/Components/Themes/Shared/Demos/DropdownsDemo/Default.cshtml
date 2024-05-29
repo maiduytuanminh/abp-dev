@@ -1,0 +1,190 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.DropdownsDemo
+@model DropDownDemoDemoModel
+
+<ss-component-demo-section title="Single button" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button text="Dropdown button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Secondary" link="true" text="Dropdown button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Danger" text="Dropdown button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Split button" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Danger" dropdown-style="Split" text="Dropdown button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button size="Large" button-type="Secondary" text="Large button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button size="Large" button-type="Secondary" dropdown-style="Split" text="Large split button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button size="Small" button-type="Secondary" text="Small button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown>
+        <ss-dropdown-button size="Small" button-type="Secondary" dropdown-style="Split" text="Small split button" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item href="#">Separated link</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+
+<ss-component-demo-section title="Directions" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown direction="Up">
+        <ss-dropdown-button button-type="Secondary" text="Dropup" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown direction="Right">
+        <ss-dropdown-button button-type="Secondary" text="dropright" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+    <ss-dropdown direction="Right">
+        <ss-dropdown-button button-type="Secondary" dropdown-style="Split" text="Split right" />
+        <ss-dropdown-menu>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Another action</ss-dropdown-item>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Menu Items" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+        <ss-dropdown-menu>
+            <ss-dropdown-header>Dropdown Header</ss-dropdown-header>
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item active="true" href="#">Active action</ss-dropdown-item>
+            <ss-dropdown-item disabled="true" href="#">Disabled action</ss-dropdown-item>
+            <ss-dropdown-divider />
+            <ss-dropdown-item-text>Dropdown Item Text</ss-dropdown-item-text>
+            <ss-dropdown-item href="#">Something else here</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Menu alignment" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Secondary" text="Right-aligned" />
+        <ss-dropdown-menu align="End">
+            <ss-dropdown-item href="#">Action</ss-dropdown-item>
+            <ss-dropdown-item active="true" href="#">Active action</ss-dropdown-item>
+            <ss-dropdown-item disabled="true" href="#">Disabled action</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Custom Content" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Secondary" text="Dropdown With Only Text" />
+        <ss-dropdown-menu class="p-4" style="max-width: 200px;">
+            <p>
+                Some example text that's free-flowing within the dropdown menu.
+            </p>
+            <p class="mb-0">
+                And this is more example text.
+            </p>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>The form model is:</h3>
+        <hr />
+        <textarea style="width:100%;height: 320px" disabled>
+    public class LoginDto
+    {
+        [Required]
+        [EmailAddress]
+        public string EmailAddress { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        public bool RememberMe { get; set; }
+    }
+        </textarea>
+    </div>
+</div>
+
+<ss-component-demo-section title="With Form" view-path="@DropdownsDemoViewComponent.ViewPath">
+    <ss-dropdown>
+        <ss-dropdown-button button-type="Secondary" text="Dropdown With Form" />
+        <ss-dropdown-menu>
+            <form class="px-4 py-3">
+                <ss-input asp-for="EmailAddress"></ss-input>
+                <ss-input asp-for="Password"></ss-input>
+                <ss-input asp-for="RememberMe"></ss-input>
+                <ss-button button-type="Primary" text="Sign In" type="submit" />
+            </form>
+            <ss-dropdown-divider></ss-dropdown-divider>
+            <ss-dropdown-item href="#">New around here? Sign up</ss-dropdown-item>
+            <ss-dropdown-item href="#">Forgot password?</ss-dropdown-item>
+        </ss-dropdown-menu>
+    </ss-dropdown>
+</ss-component-demo-section>

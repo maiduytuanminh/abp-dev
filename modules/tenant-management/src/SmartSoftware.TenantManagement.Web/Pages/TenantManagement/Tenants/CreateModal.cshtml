@@ -1,0 +1,70 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.Localization
+@using SmartSoftware.ObjectExtending
+@using SmartSoftware.TenantManagement.Localization
+@using SmartSoftware.TenantManagement.Web.Pages.TenantManagement.Tenants
+@using SmartSoftware.Data
+@using SmartSoftware.TenantManagement;
+@model CreateModalModel
+@inject IHtmlLocalizer<SmartSoftwareTenantManagementResource> L
+@inject IStringLocalizerFactory StringLocalizerFactory
+@{
+    Layout = null;
+}
+<form method="post" asp-page="/TenantManagement/Tenants/CreateModal">
+    <ss-modal>
+        <ss-modal-header title="@L["NewTenant"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-input asp-for="Tenant.Name" />
+
+            <ss-input asp-for="Tenant.AdminEmailAddress" />
+
+            <div class="mb-3">
+                <label class="form-label">@L["DisplayName:AdminPassword"].Value</label>
+                <span> * </span>
+                <div class="input-group">
+                    <input type="password" class="form-control" maxlength="@TenantConsts.MaxPasswordLength" asp-for="Tenant.AdminPassword" />
+                    <button class="btn btn-secondary" type="button" id="PasswordVisibilityButton">
+                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="Tenant.AdminPassword"></span>
+            </div>
+
+            @foreach (var propertyInfo in ObjectExtensionManager.Instance.GetProperties<CreateModalModel.TenantInfoModel>())
+            {
+                if (!propertyInfo.Name.EndsWith("_Text"))
+                {
+                    if (propertyInfo.Type.IsEnum || !propertyInfo.Lookup.Url.IsNullOrEmpty())
+                    {
+                        if (propertyInfo.Type.IsEnum)
+                        {
+                            Model.Tenant.ExtraProperties.ToEnum(propertyInfo.Name, propertyInfo.Type);
+                        }
+                        <ss-select asp-for="Tenant.ExtraProperties[propertyInfo.Name]"
+                                    label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                    autocomplete-api-url="@propertyInfo.Lookup.Url"
+                                    autocomplete-selected-item-name="@Model.Tenant.GetProperty(propertyInfo.Name+"_Text")"
+                                    autocomplete-selected-item-value="@Model.Tenant.GetProperty(propertyInfo.Name)"
+                                    autocomplete-filter-param-name="@propertyInfo.Lookup.FilterParamName"
+                                    autocomplete-items-property-name="@propertyInfo.Lookup.ResultListPropertyName"
+                                    autocomplete-display-property-name="@propertyInfo.Lookup.DisplayPropertyName"
+                                    autocomplete-value-property-name="@propertyInfo.Lookup.ValuePropertyName"></ss-select>
+                    }
+                    else
+                    {
+                        <ss-input type="@propertyInfo.GetInputType()"
+                                   asp-for="Tenant.ExtraProperties[propertyInfo.Name]"
+                                   label="@propertyInfo.GetLocalizedDisplayName(StringLocalizerFactory)"
+                                   asp-format="@propertyInfo.GetInputFormatOrNull()"
+                                   value="@propertyInfo.GetInputValueOrNull(Model.Tenant.GetProperty(propertyInfo.Name))" />
+                    }
+                }
+            }
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

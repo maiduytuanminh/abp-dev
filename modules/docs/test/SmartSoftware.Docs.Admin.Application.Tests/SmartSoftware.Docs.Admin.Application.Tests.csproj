@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Docs.Admin.Application\SmartSoftware.Docs.Admin.Application.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Docs.Domain.Tests\SmartSoftware.Docs.Domain.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

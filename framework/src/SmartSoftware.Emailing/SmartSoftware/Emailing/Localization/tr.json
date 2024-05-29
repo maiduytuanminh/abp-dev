@@ -1,0 +1,25 @@
+{
+  "culture": "tr",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Varsayılan gönderici adresi",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Varsayılan gönderici adı",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Sunucu",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Kullanıcı adı",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Şifre",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Domain",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "SSL aktif",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Varsayılan kimlik kullan",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Varsayılan gönderici adresi",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Varsayılan gönderici adı",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "SMTP üzerinden e-posta göndermek için kullanılacak sunucunun IP adresi ya da adı.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Sunucunun SMTP portu.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Varsayılan kimlik kullanılmaması durumunda kullanılacak kullanıcı adı.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Varsayılan kimlik kullanılmaması durumunda kullanılacak şifre.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Kimlik bilgilerinin doğrulanacağı sunucu/domain.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Email gönderiminde SSL kullanılıp kullanılmayacağı.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Varsayılan kimlik bilgilerinin kullanılıp kullanılmayacağı.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Varsayılan e-posta layout şablonu",
+    "TextTemplate:StandardEmailTemplates.Message": "Basit bir mesaj göndermek için e-posta şablonu"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "culture": "tr",
+  "texts": {
+    "DocsTitle": "SmartSoftwareDocs",
+    "WelcomeSmartSoftwareDocs": "SmartSoftwareDocs Hoşgeldiniz!",
+    "NoProjectWarning": "Henüz bir proje yok!",
+    "CreateYourFirstProject": "İlk projenizi oluşturmak için tıklayın",
+    "NoProject": "Proje yok!"
+  }
+}

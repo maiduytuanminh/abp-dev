@@ -1,0 +1,10 @@
+{
+  "culture": "hu",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "A hitelesítés sikertelen! Mivel a politika nem adott.",
+    "SmartSoftware.Authorization:010002": "A hitelesítés sikertelen! Az adott irányelv nem engedélyezte: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "A hitelesítés sikertelen! Az adott házirend nincs engedélyezve az adott erőforráshoz: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "A hitelesítés sikertelen! Az adott követelmény nincs megadva az adott erőforráshoz: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "A hitelesítés sikertelen! Az adott követelmények nem lettek megadva az adott erőforráshoz: {ResourceName}"
+  }
+}

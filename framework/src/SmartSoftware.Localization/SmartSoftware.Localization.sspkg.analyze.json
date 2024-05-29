@@ -1,0 +1,89 @@
+{
+  "name": "SmartSoftware.Localization",
+  "hash": "",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.Localization",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.VirtualFileSystem",
+          "namespace": "SmartSoftware.VirtualFileSystem",
+          "name": "SmartSoftwareVirtualFileSystemModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Settings",
+          "namespace": "SmartSoftware.Settings",
+          "name": "SmartSoftwareSettingsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Localization.Abstractions",
+          "namespace": "SmartSoftware.Localization",
+          "name": "SmartSoftwareLocalizationAbstractionsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Threading",
+          "namespace": "SmartSoftware.Threading",
+          "name": "SmartSoftwareThreadingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareLocalizationModule",
+      "summary": null
+    },
+    {
+      "defaultValue": "en",
+      "displayName": "Varsayılan dil",
+      "description": "Varsayılan uygulama dili.",
+      "isVisibleToClient": true,
+      "isInherited": true,
+      "isEncrypted": false,
+      "contentType": "setting",
+      "name": "SmartSoftware.Localization.DefaultLanguage",
+      "summary": null
+    }
+  ]
+}

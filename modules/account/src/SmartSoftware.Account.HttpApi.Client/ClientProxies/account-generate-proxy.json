@@ -1,0 +1,535 @@
+{
+  "modules": {
+    "account": {
+      "rootPath": "account",
+      "remoteServiceName": "SmartSoftwareAccount",
+      "controllers": {
+        "SmartSoftware.Account.AccountController": {
+          "controllerName": "Account",
+          "controllerGroupName": "Account",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Account.AccountController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Account.IAccountAppService",
+              "name": "IAccountAppService",
+              "methods": [
+                {
+                  "name": "RegisterAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.RegisterDto, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.RegisterDto",
+                      "typeSimple": "SmartSoftware.Account.RegisterDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Identity.IdentityUserDto",
+                    "typeSimple": "SmartSoftware.Identity.IdentityUserDto"
+                  }
+                },
+                {
+                  "name": "SendPasswordResetCodeAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.SendPasswordResetCodeDto, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                      "typeSimple": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "VerifyPasswordResetTokenAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.VerifyPasswordResetTokenInput, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                      "typeSimple": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Boolean",
+                    "typeSimple": "boolean"
+                  }
+                },
+                {
+                  "name": "ResetPasswordAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.ResetPasswordDto, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.ResetPasswordDto",
+                      "typeSimple": "SmartSoftware.Account.ResetPasswordDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "RegisterAsyncByInput": {
+              "uniqueName": "RegisterAsyncByInput",
+              "name": "RegisterAsync",
+              "httpMethod": "POST",
+              "url": "api/account/register",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.RegisterDto, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.RegisterDto",
+                  "typeSimple": "SmartSoftware.Account.RegisterDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.RegisterDto",
+                  "typeSimple": "SmartSoftware.Account.RegisterDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Identity.IdentityUserDto",
+                "typeSimple": "SmartSoftware.Identity.IdentityUserDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IAccountAppService"
+            },
+            "SendPasswordResetCodeAsyncByInput": {
+              "uniqueName": "SendPasswordResetCodeAsyncByInput",
+              "name": "SendPasswordResetCodeAsync",
+              "httpMethod": "POST",
+              "url": "api/account/send-password-reset-code",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.SendPasswordResetCodeDto, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                  "typeSimple": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                  "typeSimple": "SmartSoftware.Account.SendPasswordResetCodeDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IAccountAppService"
+            },
+            "VerifyPasswordResetTokenAsyncByInput": {
+              "uniqueName": "VerifyPasswordResetTokenAsyncByInput",
+              "name": "VerifyPasswordResetTokenAsync",
+              "httpMethod": "POST",
+              "url": "api/account/verify-password-reset-token",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.VerifyPasswordResetTokenInput, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                  "typeSimple": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                  "typeSimple": "SmartSoftware.Account.VerifyPasswordResetTokenInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IAccountAppService"
+            },
+            "ResetPasswordAsyncByInput": {
+              "uniqueName": "ResetPasswordAsyncByInput",
+              "name": "ResetPasswordAsync",
+              "httpMethod": "POST",
+              "url": "api/account/reset-password",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.ResetPasswordDto, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.ResetPasswordDto",
+                  "typeSimple": "SmartSoftware.Account.ResetPasswordDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.ResetPasswordDto",
+                  "typeSimple": "SmartSoftware.Account.ResetPasswordDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IAccountAppService"
+            }
+          }
+        },
+        "SmartSoftware.Account.Web.Areas.Account.Controllers.AccountController": {
+          "controllerName": "Account",
+          "controllerGroupName": "Login",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.AccountController",
+          "interfaces": [],
+          "actions": {
+            "LoginByLogin": {
+              "uniqueName": "LoginByLogin",
+              "name": "Login",
+              "httpMethod": "POST",
+              "url": "api/account/login",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "login",
+                  "typeAsString": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo, SmartSoftware.Account.Web",
+                  "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "login",
+                  "name": "login",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.SmartSoftwareLoginResult",
+                "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.SmartSoftwareLoginResult"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.Web.Areas.Account.Controllers.AccountController"
+            },
+            "Logout": {
+              "uniqueName": "Logout",
+              "name": "Logout",
+              "httpMethod": "GET",
+              "url": "api/account/logout",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.Web.Areas.Account.Controllers.AccountController"
+            },
+            "CheckPasswordByLogin": {
+              "uniqueName": "CheckPasswordByLogin",
+              "name": "CheckPassword",
+              "httpMethod": "POST",
+              "url": "api/account/check-password",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "login",
+                  "typeAsString": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo, SmartSoftware.Account.Web",
+                  "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "login",
+                  "name": "login",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.UserLoginInfo",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.SmartSoftwareLoginResult",
+                "typeSimple": "SmartSoftware.Account.Web.Areas.Account.Controllers.Models.SmartSoftwareLoginResult"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.Web.Areas.Account.Controllers.AccountController"
+            }
+          }
+        },
+        "SmartSoftware.Account.DynamicClaimsController": {
+          "controllerName": "DynamicClaims",
+          "controllerGroupName": "DynamicClaims",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Account.DynamicClaimsController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Account.IDynamicClaimsAppService",
+              "name": "IDynamicClaimsAppService",
+              "methods": [
+                {
+                  "name": "RefreshAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "RefreshAsync": {
+              "uniqueName": "RefreshAsync",
+              "name": "RefreshAsync",
+              "httpMethod": "POST",
+              "url": "api/account/dynamic-claims/refresh",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IDynamicClaimsAppService"
+            }
+          }
+        },
+        "SmartSoftware.Account.ProfileController": {
+          "controllerName": "Profile",
+          "controllerGroupName": "Profile",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Account.ProfileController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Account.IProfileAppService",
+              "name": "IProfileAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "SmartSoftware.Account.ProfileDto",
+                    "typeSimple": "SmartSoftware.Account.ProfileDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.UpdateProfileDto, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.UpdateProfileDto",
+                      "typeSimple": "SmartSoftware.Account.UpdateProfileDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Account.ProfileDto",
+                    "typeSimple": "SmartSoftware.Account.ProfileDto"
+                  }
+                },
+                {
+                  "name": "ChangePasswordAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Account.ChangePasswordInput, SmartSoftware.Account.Application.Contracts",
+                      "type": "SmartSoftware.Account.ChangePasswordInput",
+                      "typeSimple": "SmartSoftware.Account.ChangePasswordInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/account/my-profile",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SmartSoftware.Account.ProfileDto",
+                "typeSimple": "SmartSoftware.Account.ProfileDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IProfileAppService"
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/account/my-profile",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.UpdateProfileDto, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.UpdateProfileDto",
+                  "typeSimple": "SmartSoftware.Account.UpdateProfileDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.UpdateProfileDto",
+                  "typeSimple": "SmartSoftware.Account.UpdateProfileDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Account.ProfileDto",
+                "typeSimple": "SmartSoftware.Account.ProfileDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IProfileAppService"
+            },
+            "ChangePasswordAsyncByInput": {
+              "uniqueName": "ChangePasswordAsyncByInput",
+              "name": "ChangePasswordAsync",
+              "httpMethod": "POST",
+              "url": "api/account/my-profile/change-password",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Account.ChangePasswordInput, SmartSoftware.Account.Application.Contracts",
+                  "type": "SmartSoftware.Account.ChangePasswordInput",
+                  "typeSimple": "SmartSoftware.Account.ChangePasswordInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Account.ChangePasswordInput",
+                  "typeSimple": "SmartSoftware.Account.ChangePasswordInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Account.IProfileAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

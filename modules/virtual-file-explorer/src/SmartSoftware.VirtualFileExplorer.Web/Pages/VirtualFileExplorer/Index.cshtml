@@ -1,0 +1,93 @@
+﻿@page
+@using Localization.Resources.SmartSoftwareUi
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.VirtualFileExplorer.Web.Localization
+@using SmartSoftware.VirtualFileExplorer.Web.Navigation
+@using SmartSoftware.VirtualFileExplorer.Web.Pages.VirtualFileExplorer
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<VirtualFileExplorerResource> L
+@inject IHtmlLocalizer<SmartSoftwareUiResource> UiLocalizer
+@{
+    PageLayout.Content.Title = L["VirtualFileExplorer"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:VirtualFileExplorer"].Value);
+    PageLayout.Content.MenuItemName = VirtualFileExplorerMenuNames.Index;
+}
+
+@section styles {
+    <ss-style-bundle name="@typeof(IndexModel).FullName">
+        <ss-style src="/Pages/VirtualFileExplorer/index.css"/>
+    </ss-style-bundle>
+}
+
+@section scripts {
+    <ss-script-bundle name="@typeof(IndexModel).FullName">
+        <ss-script src="/Pages/VirtualFileExplorer/index.js"/>
+    </ss-script-bundle>
+}
+
+<ss-card id="VirtualFileExplorerWrapper">
+    <ss-card-body>
+
+        @Html.Raw(Model.PathNavigation)
+
+        <ss-table  class="nowrap dataTable no-footer">
+            <thead>
+            <tr>
+                <th>@UiLocalizer["Actions"]</th>
+                <th>@L["VirtualFileName"]</th>
+                <th>@L["VirtualFileType"]</th>
+                <th>@L["LastUpdateTime"]</th>
+                <th>@L["Size"]</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            @{
+                if (!Model.FileInfoList.Any())
+                {
+                    <tr>
+                        <td colspan="5" style="text-align: center">@L["EmptyFileInfoList"]</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var item in Model.FileInfoList)
+                    {
+                        <tr>
+                            <td>
+                                @if (!item.IsDirectory)
+                                {
+                                    <div class="dropdown action-button">
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a onclick="showContent('@item.FilePath')">@L["FileContent"]</a>
+                                            </li>
+                                        </ul>
+                                        <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-cog me-1"></i>@UiLocalizer["Actions"]
+                                        </button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span>/</span>
+                                }
+                            </td>
+                            <td>@Html.Raw(item.FileName)</td>
+                            <td>
+                                <i class="@item.Icon"></i>
+                                <span>@item.FileType</span>
+                            </td>
+                            <td>@item.LastUpdateTime</td>
+                            <td>@item.Length</td>
+                        </tr>
+                    }
+                }
+            }
+            </tbody>
+        </ss-table>
+        <ss-paginator model="Model.PagerModel" show-info="true"/>
+    </ss-card-body>
+</ss-card>

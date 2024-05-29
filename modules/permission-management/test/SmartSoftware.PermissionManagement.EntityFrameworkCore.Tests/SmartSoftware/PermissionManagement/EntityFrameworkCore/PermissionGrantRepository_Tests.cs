@@ -1,0 +1,6 @@
+﻿namespace SmartSoftware.PermissionManagement.EntityFrameworkCore;
+
+public class PermissionGrantRepository_Tests : PermissionGrantRepository_Tests<SmartSoftwarePermissionManagementEntityFrameworkCoreTestModule>
+{
+
+}

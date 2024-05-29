@@ -1,0 +1,95 @@
+{
+  "name": "SmartSoftware.SettingManagement.Domain.Shared",
+  "hash": "2f93f4bc80c473a7680b5edd11fe138a",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.SettingManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Localization",
+          "namespace": "SmartSoftware.Localization",
+          "name": "SmartSoftwareLocalizationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "namespace": "SmartSoftware.Validation",
+          "name": "SmartSoftwareValidationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Features",
+          "namespace": "SmartSoftware.Features",
+          "name": "SmartSoftwareFeaturesModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareSettingManagementDomainSharedModule",
+      "summary": null
+    },
+    {
+      "valueType": "ToggleStringValueType",
+      "defaultValue": "true",
+      "displayName": "Enable setting management",
+      "description": "Enable setting management system in the application.",
+      "isAvailableToHost": false,
+      "isVisibleToClients": true,
+      "contentType": "feature",
+      "name": "SettingManagement.Enable",
+      "summary": null
+    },
+    {
+      "valueType": "ToggleStringValueType",
+      "defaultValue": "false",
+      "displayName": "Allow changing email settings.",
+      "description": null,
+      "isAvailableToHost": false,
+      "isVisibleToClients": true,
+      "contentType": "feature",
+      "name": "SettingManagement.AllowChangingEmailSettings",
+      "summary": null
+    }
+  ]
+}

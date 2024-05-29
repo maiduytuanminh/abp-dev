@@ -1,0 +1,887 @@
+{
+  "modules": {
+    "docs": {
+      "rootPath": "docs",
+      "remoteServiceName": "SmartSoftwareDocs",
+      "controllers": {
+        "SmartSoftware.Docs.Projects.DocsProjectController": {
+          "controllerName": "DocsProject",
+          "controllerGroupName": "Project",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Docs.Projects.DocsProjectController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Docs.Projects.IProjectAppService",
+              "name": "IProjectAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.ProjectDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.ProjectDto>"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "shortName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Projects.ProjectDto",
+                    "typeSimple": "SmartSoftware.Docs.Projects.ProjectDto"
+                  }
+                },
+                {
+                  "name": "GetVersionsAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "shortName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.VersionInfoDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.VersionInfoDto>"
+                  }
+                },
+                {
+                  "name": "GetDefaultLanguageCodeAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "shortName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "version",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.String",
+                    "typeSimple": "string"
+                  }
+                },
+                {
+                  "name": "GetLanguageListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "shortName",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "version",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.LanguageConfig",
+                    "typeSimple": "SmartSoftware.Docs.Documents.LanguageConfig"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/projects",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.ProjectDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.ProjectDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Projects.IProjectAppService"
+            },
+            "GetAsyncByShortName": {
+              "uniqueName": "GetAsyncByShortName",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/projects/{shortName}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "shortName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "shortName",
+                  "name": "shortName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Projects.ProjectDto",
+                "typeSimple": "SmartSoftware.Docs.Projects.ProjectDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Projects.IProjectAppService"
+            },
+            "GetDefaultLanguageCodeAsyncByShortNameAndVersion": {
+              "uniqueName": "GetDefaultLanguageCodeAsyncByShortNameAndVersion",
+              "name": "GetDefaultLanguageCodeAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/projects/{shortName}/defaultLanguage",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "shortName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "version",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "shortName",
+                  "name": "shortName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "version",
+                  "name": "version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.String",
+                "typeSimple": "string"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Projects.IProjectAppService"
+            },
+            "GetVersionsAsyncByShortName": {
+              "uniqueName": "GetVersionsAsyncByShortName",
+              "name": "GetVersionsAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/projects/{shortName}/versions",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "shortName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "shortName",
+                  "name": "shortName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.VersionInfoDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.ListResultDto<SmartSoftware.Docs.Projects.VersionInfoDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Projects.IProjectAppService"
+            },
+            "GetLanguageListAsyncByShortNameAndVersion": {
+              "uniqueName": "GetLanguageListAsyncByShortNameAndVersion",
+              "name": "GetLanguageListAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/projects/{shortName}/{version}/languageList",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "shortName",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "version",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "shortName",
+                  "name": "shortName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "version",
+                  "name": "version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.LanguageConfig",
+                "typeSimple": "SmartSoftware.Docs.Documents.LanguageConfig"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Projects.IProjectAppService"
+            }
+          }
+        },
+        "SmartSoftware.Docs.Documents.DocsDocumentController": {
+          "controllerName": "DocsDocument",
+          "controllerGroupName": "Document",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Docs.Documents.DocsDocumentController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Docs.Documents.IDocumentAppService",
+              "name": "IDocumentAppService",
+              "methods": [
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.GetDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.GetDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.GetDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "GetDefaultAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto",
+                    "typeSimple": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto"
+                  }
+                },
+                {
+                  "name": "GetNavigationAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.NavigationNode",
+                    "typeSimple": "SmartSoftware.Docs.Documents.NavigationNode"
+                  }
+                },
+                {
+                  "name": "GetParametersAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.GetParametersDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.GetParametersDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.GetParametersDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.DocumentParametersDto",
+                    "typeSimple": "SmartSoftware.Docs.Documents.DocumentParametersDto"
+                  }
+                },
+                {
+                  "name": "GetResourceAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.GetDocumentResourceInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.GetDocumentResourceInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.GetDocumentResourceInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Documents.DocumentResourceDto",
+                    "typeSimple": "SmartSoftware.Docs.Documents.DocumentResourceDto"
+                  }
+                },
+                {
+                  "name": "SearchAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Documents.DocumentSearchInput, SmartSoftware.Docs.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                      "typeSimple": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Documents.DocumentSearchOutput>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Documents.DocumentSearchOutput>"
+                  }
+                },
+                {
+                  "name": "FullSearchEnabledAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Boolean",
+                    "typeSimple": "boolean"
+                  }
+                },
+                {
+                  "name": "GetUrlsAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "prefix",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<System.String>",
+                    "typeSimple": "[string]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetAsyncByInput": {
+              "uniqueName": "GetAsyncByInput",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.GetDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.GetDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.GetDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto",
+                "typeSimple": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "GetDefaultAsyncByInput": {
+              "uniqueName": "GetDefaultAsyncByInput",
+              "name": "GetDefaultAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/default",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.GetDefaultDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto",
+                "typeSimple": "SmartSoftware.Docs.Documents.DocumentWithDetailsDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "GetNavigationAsyncByInput": {
+              "uniqueName": "GetNavigationAsyncByInput",
+              "name": "GetNavigationAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/navigation",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.GetNavigationDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.NavigationNode",
+                "typeSimple": "SmartSoftware.Docs.Documents.NavigationNode"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "GetResourceAsyncByInput": {
+              "uniqueName": "GetResourceAsyncByInput",
+              "name": "GetResourceAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/resource",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.GetDocumentResourceInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.GetDocumentResourceInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.GetDocumentResourceInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.DocumentResourceDto",
+                "typeSimple": "SmartSoftware.Docs.Documents.DocumentResourceDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "SearchAsyncByInput": {
+              "uniqueName": "SearchAsyncByInput",
+              "name": "SearchAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/documents/search",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.DocumentSearchInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.DocumentSearchInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Documents.DocumentSearchOutput>",
+                "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Documents.DocumentSearchOutput>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "FullSearchEnabledAsync": {
+              "uniqueName": "FullSearchEnabledAsync",
+              "name": "FullSearchEnabledAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/full-search-enabled",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "GetUrlsAsyncByPrefix": {
+              "uniqueName": "GetUrlsAsyncByPrefix",
+              "name": "GetUrlsAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/links",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "prefix",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "prefix",
+                  "name": "prefix",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<System.String>",
+                "typeSimple": "[string]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            },
+            "GetParametersAsyncByInput": {
+              "uniqueName": "GetParametersAsyncByInput",
+              "name": "GetParametersAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/documents/parameters",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Documents.GetParametersDocumentInput, SmartSoftware.Docs.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Documents.GetParametersDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Documents.GetParametersDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Documents.DocumentParametersDto",
+                "typeSimple": "SmartSoftware.Docs.Documents.DocumentParametersDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Documents.IDocumentAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

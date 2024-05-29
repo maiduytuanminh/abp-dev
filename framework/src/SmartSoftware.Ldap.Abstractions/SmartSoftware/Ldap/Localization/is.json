@@ -1,0 +1,19 @@
+{
+  "culture": "is",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "LDAP yfir SSL",
+    "Description:SmartSoftware.Ldap.Ldaps": "LDAP yfir SSL",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "Server host",
+    "Description:SmartSoftware.Ldap.ServerHost": "Server host",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "Server port",
+    "Description:SmartSoftware.Ldap.ServerPort": "Server port",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "Grunn léna hlutur",
+    "Description:SmartSoftware.Ldap.BaseDc": "Grunn léna hluturt",
+    "DisplayName:SmartSoftware.Ldap.Domain": "Lén",
+    "Description:SmartSoftware.Ldap.Domain": "Lén",
+    "DisplayName:SmartSoftware.Ldap.UserName": "Notanda nafn",
+    "Description:SmartSoftware.Ldap.UserName": "Notanda nafn",
+    "DisplayName:SmartSoftware.Ldap.Password": "Lykilorð",
+    "Description:SmartSoftware.Ldap.Password": "Lykilorð"
+  }
+}

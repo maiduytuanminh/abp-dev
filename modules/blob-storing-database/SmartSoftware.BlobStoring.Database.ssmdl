@@ -1,0 +1,55 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {
+        "items": {
+          "BlobStoring.Database.Host.ConsoleApp": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "packages": {
+    "BlobStoring.Database.Host.ConsoleApp.ConsoleApp": {
+      "path": "host/BlobStoring.Database.Host.ConsoleApp/src/BlobStoring.Database.Host.ConsoleApp.ConsoleApp/BlobStoring.Database.Host.ConsoleApp.ConsoleApp.sspkg",
+      "folder": "host/BlobStoring.Database.Host.ConsoleApp/src"
+    },
+    "SmartSoftware.BlobStoring.Database.Domain": {
+      "path": "src/SmartSoftware.BlobStoring.Database.Domain/SmartSoftware.BlobStoring.Database.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Database.Domain.Shared": {
+      "path": "src/SmartSoftware.BlobStoring.Database.Domain.Shared/SmartSoftware.BlobStoring.Database.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Database.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.BlobStoring.Database.EntityFrameworkCore/SmartSoftware.BlobStoring.Database.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Database.MongoDB": {
+      "path": "src/SmartSoftware.BlobStoring.Database.MongoDB/SmartSoftware.BlobStoring.Database.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Database.TestBase": {
+      "path": "test/SmartSoftware.BlobStoring.Database.TestBase/SmartSoftware.BlobStoring.Database.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Database.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Database.EntityFrameworkCore.Tests/SmartSoftware.BlobStoring.Database.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Database.MongoDB.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Database.MongoDB.Tests/SmartSoftware.BlobStoring.Database.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Database.Domain.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Database.Domain.Tests/SmartSoftware.BlobStoring.Database.Domain.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

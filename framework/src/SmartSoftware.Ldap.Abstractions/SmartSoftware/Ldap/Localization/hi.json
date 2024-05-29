@@ -1,0 +1,19 @@
+{
+  "culture": "hi",
+  "texts": {
+    "DisplayName:SmartSoftware.Ldap.Ldaps": "एसएसएल पर एलडीएपी",
+    "Description:SmartSoftware.Ldap.Ldaps": "एसएसएल पर एलडीएपी",
+    "DisplayName:SmartSoftware.Ldap.ServerHost": "सर्वर होस्ट",
+    "Description:SmartSoftware.Ldap.ServerHost": "सर्वर होस्ट",
+    "DisplayName:SmartSoftware.Ldap.ServerPort": "सर्वर पोर्ट",
+    "Description:SmartSoftware.Ldap.ServerPort": "सर्वर पोर्ट",
+    "DisplayName:SmartSoftware.Ldap.BaseDc": "बेस डोमेन घटक",
+    "Description:SmartSoftware.Ldap.BaseDc": "बेस डोमेन घटक",
+    "DisplayName:SmartSoftware.Ldap.Domain": "कार्यक्षेत्र",
+    "Description:SmartSoftware.Ldap.Domain": "कार्यक्षेत्र",
+    "DisplayName:SmartSoftware.Ldap.UserName": "उपयोगकर्ता नाम",
+    "Description:SmartSoftware.Ldap.UserName": "उपयोगकर्ता नाम",
+    "DisplayName:SmartSoftware.Ldap.Password": "कुंजिका",
+    "Description:SmartSoftware.Ldap.Password": "कुंजिका"
+  }
+}

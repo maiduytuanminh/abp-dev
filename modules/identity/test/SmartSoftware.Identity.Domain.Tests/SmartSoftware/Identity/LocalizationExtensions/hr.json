@@ -1,0 +1,7 @@
+{
+  "culture": "hr",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Dužina lozinke mora biti veća od {0} znakova.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Lozinka mora sadržavati barem jedan znak koji nije alfanumerički."
+  }
+}

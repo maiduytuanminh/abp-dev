@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Application\SmartSoftware.Ddd.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching\SmartSoftware.Caching.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Common.Application.Contracts\SmartSoftware.CmsKit.Common.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Domain\SmartSoftware.CmsKit.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>SmartSoftware.Blogging.Admin.Application</AssemblyName>
+        <PackageId>SmartSoftware.Blogging.Admin.Application</PackageId>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SixLabors.ImageSharp" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.Blogging.Admin.Application.Contracts\SmartSoftware.Blogging.Admin.Application.Contracts.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Blogging.Domain\SmartSoftware.Blogging.Domain.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AutoMapper\SmartSoftware.AutoMapper.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching\SmartSoftware.Caching.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Ddd.Application\SmartSoftware.Ddd.Application.csproj" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Layout
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.SmartSoftwarePageToolbar
+@using SmartSoftware.FeatureManagement
+@using SmartSoftware.TenantManagement
+@using SmartSoftware.TenantManagement.Localization
+@using SmartSoftware.TenantManagement.Web.Navigation
+@using SmartSoftware.TenantManagement.Web.Pages.TenantManagement.Tenants
+@model IndexModel
+@inject IHtmlLocalizer<SmartSoftwareTenantManagementResource> L
+@inject IAuthorizationService Authorization
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["Tenants"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:TenantManagement"].Value);
+    PageLayout.Content.MenuItemName = TenantManagementMenuNames.Tenants;
+}
+@section scripts {
+    <ss-script-bundle name="@typeof(IndexModel).FullName">
+        <ss-script src="/client-proxies/multi-tenancy-proxy.js" />
+        <ss-script src="/Pages/FeatureManagement/feature-management-modal.js"/>
+        <ss-script src="/Pages/TenantManagement/Tenants/Index.js" />
+        <ss-script src="/Pages/TenantManagement/Tenants/Create.js" />
+    </ss-script-bundle>
+}
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(SmartSoftwarePageToolbarViewComponent), new { pageName = typeof(IndexModel).FullName })
+}
+<ss-card id="TenantsWrapper">
+    <ss-card-body>
+        <ss-table  class="nowrap"></ss-table>
+    </ss-card-body>
+</ss-card>

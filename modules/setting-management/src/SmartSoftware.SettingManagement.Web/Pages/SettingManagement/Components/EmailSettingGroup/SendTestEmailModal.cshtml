@@ -1,0 +1,31 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.SettingManagement.Localization
+@using SmartSoftware.SettingManagement.Web.Pages.SettingManagement.Components.EmailSettingGroup
+@model SendTestEmailModal
+@inject IHtmlLocalizer<SmartSoftwareSettingManagementResource> L
+@{
+    Layout = null;
+}
+
+<form asp-page="/SettingManagement/Components/EmailSettingGroup/SendTestEmailModal">
+    <ss-modal>
+        <ss-modal-header title="@L["SendTestEmail"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-input asp-for="Input.SenderEmailAddress" />
+            <ss-input asp-for="Input.TargetEmailAddress" />
+            <ss-input asp-for="Input.Subject" />
+            <ss-input asp-for="Input.Body" />
+        </ss-modal-body>
+        <ss-modal-footer>
+            <ss-button data-bs-dismiss="modal" button-type="Secondary">@L["Cancel"]</ss-button>
+            <ss-button button-type="Primary" type="submit">
+                <i class="fa fa-send"></i> @L["Send"]
+            </ss-button>
+        </ss-modal-footer>
+        
+    </ss-modal>
+</form>

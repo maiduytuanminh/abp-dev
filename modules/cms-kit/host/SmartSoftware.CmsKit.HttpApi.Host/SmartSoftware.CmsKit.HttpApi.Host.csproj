@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartSoftware.CmsKit</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>SmartSoftware.CmsKit-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="IdentityModel" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.Caching.StackExchangeRedis\SmartSoftware.Caching.StackExchangeRedis.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy\SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore.SqlServer\SmartSoftware.EntityFrameworkCore.SqlServer.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.AspNetCore.Serilog\SmartSoftware.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.EntityFrameworkCore\SmartSoftware.PermissionManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.EntityFrameworkCore\SmartSoftware.SettingManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.EntityFrameworkCore\SmartSoftware.AuditLogging.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\blob-storing-database\src\SmartSoftware.BlobStoring.Database.EntityFrameworkCore\SmartSoftware.BlobStoring.Database.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.HttpApi\SmartSoftware.CmsKit.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.Application\SmartSoftware.CmsKit.Application.csproj" />
+    <ProjectReference Include="..\..\src\SmartSoftware.CmsKit.EntityFrameworkCore\SmartSoftware.CmsKit.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Host.Shared\SmartSoftware.CmsKit.Host.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>

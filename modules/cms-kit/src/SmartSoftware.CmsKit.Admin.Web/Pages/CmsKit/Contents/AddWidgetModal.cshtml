@@ -1,0 +1,52 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.CmsKit.Localization
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Contents;
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@model AddWidgetModal;
+@{
+    Layout = null;
+}
+
+@section scripts {
+    <ss-script src="/Pages/CmsKit/Contents/addWidgetModal.js" />
+}
+@{
+    bool isDefinedWidget = Model.Widgets.Count() > 1;
+}
+<ss-modal size="Large" id="addWidgetModal">
+    <ss-modal-header title="@L["AddWidget"].Value"></ss-modal-header>
+    <ss-modal-body>
+        <div class="container">
+            @if (isDefinedWidget)
+            {
+                <ss-select asp-for="ViewModel.Widget" />
+
+                foreach (var item in Model.ViewModel.Details)
+                {
+                    if (item.EditorComponentName is not null)
+                    {
+                        <div hidden id="editor-@item.Name">
+                            <form data-check-form-on-close="false">
+                                @await Component.InvokeAsync(@item.EditorComponentName)
+                            </form>
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+                <p>@L["PleaseConfigureWidgets"].Value</p>
+            }
+        </div>
+    </ss-modal-body>
+    <ss-modal-footer>
+        @if (isDefinedWidget)
+        {
+            <button class="btn btn-primary float-end save-changes" type="submit">@L["Add"]</button>
+        }
+    </ss-modal-footer>
+</ss-modal>

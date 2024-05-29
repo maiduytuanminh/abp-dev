@@ -1,0 +1,190 @@
+{
+  "name": "SmartSoftware.SettingManagement.Application",
+  "hash": "e101768281ffae14eab8cdfd970a3b0f",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.SettingManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application",
+          "namespace": "SmartSoftware.Application",
+          "name": "SmartSoftwareDddApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.Domain",
+          "namespace": "SmartSoftware.SettingManagement",
+          "name": "SmartSoftwareSettingManagementDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.Application.Contracts",
+          "namespace": "SmartSoftware.SettingManagement",
+          "name": "SmartSoftwareSettingManagementApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Emailing",
+          "namespace": "SmartSoftware.Emailing",
+          "name": "SmartSoftwareEmailingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareSettingManagementApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.SettingManagement",
+      "baseClass": {
+        "name": "SettingManagementAppServiceBase",
+        "namespace": "SmartSoftware.SettingManagement",
+        "declaringAssemblyName": "SmartSoftware.SettingManagement.Application",
+        "fullName": "SmartSoftware.SettingManagement.SettingManagementAppServiceBase"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "SmartSoftware.Application.Services",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Application.Contracts",
+          "fullName": "SmartSoftware.Application.Services.IApplicationService"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IRemoteService"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "SmartSoftware.Aspects",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Aspects.IAvoidDuplicateCrossCuttingConcerns"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "SmartSoftware.Validation",
+          "declaringAssemblyName": "SmartSoftware.Validation",
+          "fullName": "SmartSoftware.Validation.IValidationEnabled"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "SmartSoftware.Uow",
+          "declaringAssemblyName": "SmartSoftware.Uow",
+          "fullName": "SmartSoftware.Uow.IUnitOfWorkEnabled"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "SmartSoftware.Auditing",
+          "declaringAssemblyName": "SmartSoftware.Auditing.Contracts",
+          "fullName": "SmartSoftware.Auditing.IAuditingEnabled"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "SmartSoftware.GlobalFeatures",
+          "declaringAssemblyName": "SmartSoftware.GlobalFeatures",
+          "fullName": "SmartSoftware.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "IEmailSettingsAppService",
+          "namespace": "SmartSoftware.SettingManagement",
+          "declaringAssemblyName": "SmartSoftware.SettingManagement.Application.Contracts",
+          "fullName": "SmartSoftware.SettingManagement.IEmailSettingsAppService"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "EmailSettingsDto",
+          "name": "GetAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": []
+        },
+        {
+          "returnType": "Void",
+          "name": "UpdateAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "UpdateEmailSettingsDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "SendTestEmailAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "SendTestEmailInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "EmailSettingsAppService",
+      "summary": null
+    }
+  ]
+}

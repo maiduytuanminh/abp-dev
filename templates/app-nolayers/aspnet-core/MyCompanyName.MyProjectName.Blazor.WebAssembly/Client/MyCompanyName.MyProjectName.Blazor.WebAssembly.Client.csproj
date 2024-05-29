@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <TEMPLATE-REMOVE> -->
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.WebAssembly.Theming\SmartSoftware.AspNetCore.Components.WebAssembly.Theming.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Http.Client.IdentityModel.WebAssembly\SmartSoftware.Http.Client.IdentityModel.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.Web.Theming\SmartSoftware.AspNetCore.Components.Web.Theming.csproj" />
+    <!-- </TEMPLATE-REMOVE> -->
+    <PackageReference Include="SmartSoftware.AspNetCore.Components.WebAssembly.LeptonXLiteTheme" Version="3.2.*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.Autofac.WebAssembly\SmartSoftware.Autofac.WebAssembly.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.Blazor.WebAssembly\SmartSoftware.Identity.Blazor.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.Blazor.WebAssembly\SmartSoftware.TenantManagement.Blazor.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.Blazor.WebAssembly\SmartSoftware.SettingManagement.Blazor.WebAssembly.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\account\src\SmartSoftware.Account.HttpApi.Client\SmartSoftware.Account.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.HttpApi.Client\SmartSoftware.Identity.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.HttpApi.Client\SmartSoftware.PermissionManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.HttpApi.Client\SmartSoftware.TenantManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.HttpApi.Client\SmartSoftware.FeatureManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.HttpApi.Client\SmartSoftware.SettingManagement.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\openiddict\src\SmartSoftware.OpenIddict.Domain.Shared\SmartSoftware.OpenIddict.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\MyCompanyName.MyProjectName.Blazor.WebAssembly.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="$(UserProfile)\.nuget\packages\*\*\contentFiles\any\*\*.sspkg*" />
+  </ItemGroup>
+
+</Project>

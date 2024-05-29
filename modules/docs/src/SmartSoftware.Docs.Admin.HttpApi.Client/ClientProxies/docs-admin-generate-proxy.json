@@ -1,0 +1,1008 @@
+{
+  "modules": {
+    "docs-admin": {
+      "rootPath": "docs-admin",
+      "remoteServiceName": "SmartSoftwareDocsAdmin",
+      "controllers": {
+        "SmartSoftware.Docs.Admin.DocumentsAdminController": {
+          "controllerName": "DocumentsAdmin",
+          "controllerGroupName": "DocumentsAdmin",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Docs.Admin.DocumentsAdminController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService",
+              "name": "IDocumentAdminAppService",
+              "methods": [
+                {
+                  "name": "ClearCacheAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "PullAllAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "PullAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetAllAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Documents.GetAllInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Documents.GetAllInput",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Documents.GetAllInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Documents.DocumentDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Documents.DocumentDto>"
+                  }
+                },
+                {
+                  "name": "RemoveFromCacheAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "documentId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "ReindexAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "documentId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetFilterItemsAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Docs.Admin.Documents.DocumentInfoDto>",
+                    "typeSimple": "[SmartSoftware.Docs.Admin.Documents.DocumentInfoDto]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "ClearCacheAsyncByInput": {
+              "uniqueName": "ClearCacheAsyncByInput",
+              "name": "ClearCacheAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/documents/ClearCache",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.ClearCacheInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "PullAllAsyncByInput": {
+              "uniqueName": "PullAllAsyncByInput",
+              "name": "PullAllAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/documents/PullAll",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullAllDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "PullAsyncByInput": {
+              "uniqueName": "PullAsyncByInput",
+              "name": "PullAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/documents/Pull",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.PullDocumentInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "GetAllAsyncByInput": {
+              "uniqueName": "GetAllAsyncByInput",
+              "name": "GetAllAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/admin/documents/GetAll",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Documents.GetAllInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Documents.GetAllInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Documents.GetAllInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ProjectId",
+                  "jsonName": null,
+                  "type": "System.Guid?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Version",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LanguageCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "FileName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Format",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "CreationTimeMin",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "CreationTimeMax",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastUpdatedTimeMin",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastUpdatedTimeMax",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastSignificantUpdateTimeMin",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastSignificantUpdateTimeMax",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastCachedTimeMin",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LastCachedTimeMax",
+                  "jsonName": null,
+                  "type": "System.DateTime?",
+                  "typeSimple": "string?",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Documents.DocumentDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Documents.DocumentDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "RemoveFromCacheAsyncByDocumentId": {
+              "uniqueName": "RemoveFromCacheAsyncByDocumentId",
+              "name": "RemoveFromCacheAsync",
+              "httpMethod": "PUT",
+              "url": "api/docs/admin/documents/RemoveDocumentFromCache",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "documentId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "documentId",
+                  "name": "documentId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "ReindexAsyncByDocumentId": {
+              "uniqueName": "ReindexAsyncByDocumentId",
+              "name": "ReindexAsync",
+              "httpMethod": "PUT",
+              "url": "api/docs/admin/documents/ReindexDocument",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "documentId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "documentId",
+                  "name": "documentId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            },
+            "GetFilterItemsAsync": {
+              "uniqueName": "GetFilterItemsAsync",
+              "name": "GetFilterItemsAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/admin/documents/GetFilterItems",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Docs.Admin.Documents.DocumentInfoDto>",
+                "typeSimple": "[SmartSoftware.Docs.Admin.Documents.DocumentInfoDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Documents.IDocumentAdminAppService"
+            }
+          }
+        },
+        "SmartSoftware.Docs.Admin.ProjectsAdminController": {
+          "controllerName": "ProjectsAdmin",
+          "controllerGroupName": "ProjectsAdmin",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "SmartSoftware.Docs.Admin.ProjectsAdminController",
+          "interfaces": [
+            {
+              "type": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService",
+              "name": "IProjectAdminAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto, SmartSoftware.Ddd.Application.Contracts",
+                      "type": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto",
+                      "typeSimple": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Projects.ProjectDto>",
+                    "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Projects.ProjectDto>"
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                    "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                    "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    },
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                    "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "ReindexAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "SmartSoftware.Docs.Admin.Projects.ReindexInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                      "type": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                      "typeSimple": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "ReindexAllAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetListWithoutDetailsAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<SmartSoftware.Docs.Admin.Projects.ProjectWithoutDetailsDto>",
+                    "typeSimple": "[SmartSoftware.Docs.Admin.Projects.ProjectWithoutDetailsDto]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/admin/projects",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto, SmartSoftware.Ddd.Application.Contracts",
+                  "type": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "typeSimple": "SmartSoftware.Application.Dtos.PagedAndSortedResultRequestDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Projects.ProjectDto>",
+                "typeSimple": "SmartSoftware.Application.Dtos.PagedResultDto<SmartSoftware.Docs.Admin.Projects.ProjectDto>"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/admin/projects/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/projects",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.CreateProjectDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/docs/admin/projects/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.UpdateProjectDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SmartSoftware.Docs.Admin.Projects.ProjectDto",
+                "typeSimple": "SmartSoftware.Docs.Admin.Projects.ProjectDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/docs/admin/projects",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "ReindexAllAsync": {
+              "uniqueName": "ReindexAllAsync",
+              "name": "ReindexAllAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/projects/ReindexAll",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "GetListWithoutDetailsAsync": {
+              "uniqueName": "GetListWithoutDetailsAsync",
+              "name": "GetListWithoutDetailsAsync",
+              "httpMethod": "GET",
+              "url": "api/docs/admin/projects/GetListProjectWithoutDetailsAsync",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<SmartSoftware.Docs.Admin.Projects.ProjectWithoutDetailsDto>",
+                "typeSimple": "[SmartSoftware.Docs.Admin.Projects.ProjectWithoutDetailsDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            },
+            "ReindexAsyncByInput": {
+              "uniqueName": "ReindexAsyncByInput",
+              "name": "ReindexAsync",
+              "httpMethod": "POST",
+              "url": "api/docs/admin/projects/Reindex",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SmartSoftware.Docs.Admin.Projects.ReindexInput, SmartSoftware.Docs.Admin.Application.Contracts",
+                  "type": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                  "typeSimple": "SmartSoftware.Docs.Admin.Projects.ReindexInput",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "SmartSoftware.Docs.Admin.Projects.IProjectAdminAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

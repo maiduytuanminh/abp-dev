@@ -1,0 +1,103 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "app": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.BloggingTestApp": {
+      "path": "app/SmartSoftware.BloggingTestApp/SmartSoftware.BloggingTestApp.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.Blogging.Domain": {
+      "path": "src/SmartSoftware.Blogging.Domain/SmartSoftware.Blogging.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Domain.Shared": {
+      "path": "src/SmartSoftware.Blogging.Domain.Shared/SmartSoftware.Blogging.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Application": {
+      "path": "src/SmartSoftware.Blogging.Application/SmartSoftware.Blogging.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Application.Contracts": {
+      "path": "src/SmartSoftware.Blogging.Application.Contracts/SmartSoftware.Blogging.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.Blogging.EntityFrameworkCore/SmartSoftware.Blogging.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.HttpApi": {
+      "path": "src/SmartSoftware.Blogging.HttpApi/SmartSoftware.Blogging.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.HttpApi.Client": {
+      "path": "src/SmartSoftware.Blogging.HttpApi.Client/SmartSoftware.Blogging.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Web": {
+      "path": "src/SmartSoftware.Blogging.Web/SmartSoftware.Blogging.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BloggingTestApp.EntityFrameworkCore": {
+      "path": "app/SmartSoftware.BloggingTestApp.EntityFrameworkCore/SmartSoftware.BloggingTestApp.EntityFrameworkCore.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.Blogging.TestBase": {
+      "path": "test/SmartSoftware.Blogging.TestBase/SmartSoftware.Blogging.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Blogging.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.Blogging.EntityFrameworkCore.Tests/SmartSoftware.Blogging.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Blogging.Application.Tests": {
+      "path": "test/SmartSoftware.Blogging.Application.Tests/SmartSoftware.Blogging.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Blogging.MongoDB": {
+      "path": "src/SmartSoftware.Blogging.MongoDB/SmartSoftware.Blogging.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BloggingTestApp.MongoDB": {
+      "path": "app/SmartSoftware.BloggingTestApp.MongoDB/SmartSoftware.BloggingTestApp.MongoDB.sspkg",
+      "folder": "app"
+    },
+    "SmartSoftware.Blogging.MongoDB.Tests": {
+      "path": "test/SmartSoftware.Blogging.MongoDB.Tests/SmartSoftware.Blogging.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Blogging.Domain.Tests": {
+      "path": "test/SmartSoftware.Blogging.Domain.Tests/SmartSoftware.Blogging.Domain.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Blogging.Admin.Application.Contracts": {
+      "path": "src/SmartSoftware.Blogging.Admin.Application.Contracts/SmartSoftware.Blogging.Admin.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Admin.Application": {
+      "path": "src/SmartSoftware.Blogging.Admin.Application/SmartSoftware.Blogging.Admin.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Admin.HttpApi": {
+      "path": "src/SmartSoftware.Blogging.Admin.HttpApi/SmartSoftware.Blogging.Admin.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Admin.HttpApi.Client": {
+      "path": "src/SmartSoftware.Blogging.Admin.HttpApi.Client/SmartSoftware.Blogging.Admin.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Admin.Web": {
+      "path": "src/SmartSoftware.Blogging.Admin.Web/SmartSoftware.Blogging.Admin.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Blogging.Application.Contracts.Shared": {
+      "path": "src/SmartSoftware.Blogging.Application.Contracts.Shared/SmartSoftware.Blogging.Application.Contracts.Shared.sspkg",
+      "folder": "src"
+    }
+  }
+}

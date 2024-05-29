@@ -1,0 +1,180 @@
+{
+  "name": "SmartSoftware.CmsKit.MongoDB",
+  "hash": "0a97f3dd5afa54002ac001896c098325",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.CmsKit.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.CmsKit.Domain",
+          "namespace": "SmartSoftware.CmsKit",
+          "name": "CmsKitDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Users.MongoDB",
+          "namespace": "SmartSoftware.Users.MongoDB",
+          "name": "SmartSoftwareUsersMongoDbModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "CmsKitMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.CmsKit.MongoDB",
+      "connectionStringName": "CmsKit",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Tags.Tag",
+          "contentType": "databaseCollection",
+          "name": "CmsTags",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Reactions.UserReaction",
+          "contentType": "databaseCollection",
+          "name": "CmsUserReactions",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Pages.Page",
+          "contentType": "databaseCollection",
+          "name": "CmsPages",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Comments.Comment",
+          "contentType": "databaseCollection",
+          "name": "CmsComments",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Ratings.Rating",
+          "contentType": "databaseCollection",
+          "name": "CmsRatings",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Blogs.BlogFeature",
+          "contentType": "databaseCollection",
+          "name": "CmsBlogFeatures",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Users.CmsUser",
+          "contentType": "databaseCollection",
+          "name": "CmsUsers",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Blogs.BlogPost",
+          "contentType": "databaseCollection",
+          "name": "CmsBlogPosts",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Menus.MenuItem",
+          "contentType": "databaseCollection",
+          "name": "CmsMenuItems",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Blogs.Blog",
+          "contentType": "databaseCollection",
+          "name": "CmsBlogs",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.Tags.EntityTag",
+          "contentType": "databaseCollection",
+          "name": "CmsEntityTags",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.MediaDescriptors.MediaDescriptor",
+          "contentType": "databaseCollection",
+          "name": "CmsMediaDescriptors",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.CmsKit.GlobalResources.GlobalResource",
+          "contentType": "databaseCollection",
+          "name": "CmsGlobalResources",
+          "summary": null
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareMongoDbContext",
+          "namespace": "SmartSoftware.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "fullName": "SmartSoftware.MongoDB.ISmartSoftwareMongoDbContext"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "SmartSoftware.DependencyInjection",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.DependencyInjection.ITransientDependency"
+        },
+        {
+          "name": "ICmsKitMongoDbContext",
+          "namespace": "SmartSoftware.CmsKit.MongoDB",
+          "declaringAssemblyName": "SmartSoftware.CmsKit.MongoDB",
+          "fullName": "SmartSoftware.CmsKit.MongoDB.ICmsKitMongoDbContext"
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "CmsKitMongoDbContext",
+      "summary": null
+    }
+  ]
+}

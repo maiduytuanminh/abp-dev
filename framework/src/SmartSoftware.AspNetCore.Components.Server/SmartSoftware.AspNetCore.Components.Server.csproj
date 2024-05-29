@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\configureawait.props" />
+    <Import Project="..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <IsPackable>true</IsPackable>
+        <OutputType>Library</OutputType>
+        <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Components.Web\SmartSoftware.AspNetCore.Components.Web.csproj" />
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.Mvc.Contracts\SmartSoftware.AspNetCore.Mvc.Contracts.csproj" />
+        <ProjectReference Include="..\SmartSoftware.EventBus\SmartSoftware.EventBus.csproj" />
+        <ProjectReference Include="..\SmartSoftware.Http.Client\SmartSoftware.Http.Client.csproj" />
+        <ProjectReference Include="..\SmartSoftware.AspNetCore.SignalR\SmartSoftware.AspNetCore.SignalR.csproj" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+        <PackageReference Include="IdentityModel" />
+    </ItemGroup>
+
+</Project>

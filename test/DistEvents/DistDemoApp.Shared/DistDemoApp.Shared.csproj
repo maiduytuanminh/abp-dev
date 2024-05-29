@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>DistDemoApp</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DistributedLock.Redis" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" />
+        <PackageReference Include="Serilog.Extensions.Hosting" />
+        <PackageReference Include="Serilog.Sinks.Async" />
+        <PackageReference Include="Serilog.Sinks.Console" />
+        <PackageReference Include="Serilog.Sinks.File" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.Autofac\SmartSoftware.Autofac.csproj" />
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.Ddd.Domain\SmartSoftware.Ddd.Domain.csproj" />
+        <ProjectReference Include="..\..\..\framework\src\SmartSoftware.EventBus\SmartSoftware.EventBus.csproj" />
+    </ItemGroup>
+
+</Project>

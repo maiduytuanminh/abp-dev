@@ -1,0 +1,29 @@
+{
+  "name": "BlobStoring.Database.Host.ConsoleApp.ConsoleApp",
+  "hash": "586af594c8eddeb485df1d06e051e2c3",
+  "contents": [
+    {
+      "namespace": "BlobStoring.Database.Host.ConsoleApp.ConsoleApp",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.Autofac",
+          "namespace": "SmartSoftware.Autofac",
+          "name": "SmartSoftwareAutofacModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "namespace": "SmartSoftware.EntityFrameworkCore.SqlServer",
+          "name": "SmartSoftwareEntityFrameworkCoreSqlServerModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+          "namespace": "SmartSoftware.BlobStoring.Database.EntityFrameworkCore",
+          "name": "BlobStoringDatabaseEntityFrameworkCoreModule"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "ConsoleAppConsoleAppModule",
+      "summary": null
+    }
+  ]
+}

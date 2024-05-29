@@ -1,0 +1,223 @@
+@using SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.Views.Components.Themes.Shared.Demos.GridsDemo
+
+<ss-component-demo-section title="Equal-width" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column>1 of 2</ss-column>
+            <ss-column>2 of 2</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column>1 of 3</ss-column>
+            <ss-column>2 of 3</ss-column>
+            <ss-column>3 of 3</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Column Breaker" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+            <ss-column-breaker />
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Setting one column width" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column>1 of 3</ss-column>
+            <ss-column size="_6">2 of 3 (wider)</ss-column>
+            <ss-column>3 of 3</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column>1 of 3</ss-column>
+            <ss-column size="_5">2 of 3 (wider)</ss-column>
+            <ss-column>3 of 3</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Variable width content" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row h-align="Center">
+            <ss-column size-lg="_2">1 of 3</ss-column>
+            <ss-column size-md="Auto">Variable width content</ss-column>
+            <ss-column size-lg="_2">3 of 3</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column>1 of 3</ss-column>
+            <ss-column size-md="Auto">Variable width content</ss-column>
+            <ss-column size-lg="_2">3 of 3</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Responsive classes" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-row>
+        <ss-column>col</ss-column>
+        <ss-column>col</ss-column>
+        <ss-column>col</ss-column>
+        <ss-column>col</ss-column>
+    </ss-row>
+    <ss-row>
+        <ss-column size="_8">col-8</ss-column>
+        <ss-column size="_4">col-4</ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="All breakpoints" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-row>
+        <ss-column size-sm="_8">col-sm-8</ss-column>
+        <ss-column size-sm="_4">col-sm-4</ss-column>
+    </ss-row>
+    <ss-row>
+        <ss-column size-sm="_">col-sm</ss-column>
+        <ss-column size-sm="_">col-sm</ss-column>
+        <ss-column size-sm="_">col-sm</ss-column>
+        <ss-column size-sm="_">col-sm</ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Mix and match" view-path="@GridsDemoViewComponent.ViewPath">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <ss-row>
+        <ss-column size="_12" size-md="_8">.col-12 .col-md-8</ss-column>
+        <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+    </ss-row>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <ss-row>
+        <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+        <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+        <ss-column size="_6" size-md="_4">.col-6 .col-md-4</ss-column>
+    </ss-row>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <ss-row>
+        <ss-column size="_6">.col-6</ss-column>
+        <ss-column size="_6">.col-6</ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Vertical Alignment" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row v-align="Start">
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+        </ss-row>
+        <ss-row v-align="Center">
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+        </ss-row>
+        <ss-row v-align="End">
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+            <ss-column>column</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Vertical Alignment 2" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row v-align="Start">
+            <ss-column v-align="Start">column</ss-column>
+            <ss-column v-align="Center">column</ss-column>
+            <ss-column v-align="End">column</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Horizontal alignment" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row h-align="Start">
+            <ss-column size="_4">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+        <ss-row h-align="Center">
+            <ss-column size="_4">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+        <ss-row h-align="End">
+            <ss-column size="_4">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+        <ss-row h-align="Around">
+            <ss-column size="_4">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+        <ss-row h-align="Between">
+            <ss-column size="_4">One of two columns</ss-column>
+            <ss-column size="_4">One of two columns</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="No gutters" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-row gutters="false">
+        <ss-column size="_8">One of two columns</ss-column>
+        <ss-column size="_4">One of two columns</ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Column wrapping" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-row>
+        <ss-column size="_9">.col-9</ss-column>
+        <ss-column size="_4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</ss-column>
+        <ss-column size="_6">.col-6<br>Subsequent columns continue along the new line.s</ss-column>
+    </ss-row>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Reordering" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column order="_12">First, but Last</ss-column>
+            <ss-column>Second, but unordered</ss-column>
+            <ss-column order="_6">Third, but Second</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Reordering 2" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column order="Last">First, but Last</ss-column>
+            <ss-column>Second, but unordered</ss-column>
+            <ss-column order="First">Third, but First</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Offsetting columns" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column size-md="_4">.col-md-4</ss-column>
+            <ss-column size-md="_4" offset-md="_4">.col-md-4 .offset-md-4</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size-md="_3" offset-md="_3">.col-md-3 .offset-md-3</ss-column>
+            <ss-column size-md="_3" offset-md="_3">.col-md-3 .offset-md-3</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size-md="_6" offset-md="_3">.col-md-6 .offset-md-3</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>
+
+<ss-component-demo-section title="Offsetting columns 2" view-path="@GridsDemoViewComponent.ViewPath">
+    <ss-container>
+        <ss-row>
+            <ss-column size-sm="_5" size-md="_6">.col-sm-5 .col-md-6</ss-column>
+            <ss-column size-sm="_5" offset-sm="_2" size-md="_6" offset-md="_">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</ss-column>
+        </ss-row>
+        <ss-row>
+            <ss-column size-sm="_6" size-md="_5" size-lg="_6">col-sm-6 .col-md-5 .col-lg-6</ss-column>
+            <ss-column size-sm="_6" size-md="_5" offset-md="_2" size-lg="_6" offset-lg="_">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</ss-column>
+        </ss-row>
+    </ss-container>
+</ss-component-demo-section>

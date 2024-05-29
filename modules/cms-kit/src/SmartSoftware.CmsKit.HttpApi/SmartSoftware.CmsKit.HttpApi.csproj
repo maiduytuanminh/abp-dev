@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Admin.HttpApi\SmartSoftware.CmsKit.Admin.HttpApi.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Application.Contracts\SmartSoftware.CmsKit.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SmartSoftware.CmsKit.Public.HttpApi\SmartSoftware.CmsKit.Public.HttpApi.csproj" />
+  </ItemGroup>
+
+</Project>

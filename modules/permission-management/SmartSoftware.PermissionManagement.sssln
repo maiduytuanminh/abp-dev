@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.PermissionManagement": {
+      "path": "SmartSoftware.PermissionManagement.ssmdl"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "culture": "fr",
+  "texts": {
+    "SmartSoftware.Authorization:010001": "L'autorisation à échouée! Compte tenu de la stratégie n'a été pas accordé.",
+    "SmartSoftware.Authorization:010002": "L'autorisation à échouée! La stratégie donnée n'a pas été accordé: {PolicyName}",
+    "SmartSoftware.Authorization:010003": "L'autorisation à échouée! La stratégie donnée n'a pas été accordée pour une ressource donnée: {ResourceName}",
+    "SmartSoftware.Authorization:010004": "L'autorisation à échouée! L'exigence donnée n'a pas été accordée pour une ressource donnée: {ResourceName}",
+    "SmartSoftware.Authorization:010005": "L'autorisation à échouée! Les exigences données ne sont pas accordées pour une ressource donnée: {ResourceName}"
+  }
+}

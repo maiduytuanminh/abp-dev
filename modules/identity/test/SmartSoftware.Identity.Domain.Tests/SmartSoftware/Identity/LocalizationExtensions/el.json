@@ -1,0 +1,7 @@
+{
+  "culture": "el",
+  "texts": {
+    "SmartSoftware.Identity:PasswordTooShort": "Το μήκος του κωδικού πρόσβασης πρέπει να είναι μεγαλύτερο από {0} χαρακτήρες.",
+    "SmartSoftware.Identity:PasswordRequiresNonAlphanumeric": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν μη αλφαριθμητικό χαρακτήρα."
+  }
+}

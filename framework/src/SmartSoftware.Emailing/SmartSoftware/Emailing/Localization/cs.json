@@ -1,0 +1,25 @@
+{
+  "culture": "cs",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Výchozí adresa odesílatele",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Výchozí zobrazované jméno odesilátele",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Hostitel",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Uživatelské jméno",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Heslo",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Doména",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Povolit SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Použít výchozí přihlašovací údaje",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Výchozí adresa odesílatele",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Výchozí zobrazované jméno odesilátele",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Název nebo IP adresa hostitele použitého pro SMTP transakce.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Port použitý pro SMTP tansakce",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Uživatelské jméno spojené s přihlašovacími údaji.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Heslo pro uživatelské jméno spojené s přihlašovacími údaji.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Název domény nebo počítače, který ověřuje přihlašovací údaje.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Zda SmtpClient používá SSL k šifrování připojení.",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Zda jsou výchozí přihlašovací údaje odesílány s požadavky.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Výchozí šablona rozložení emailu",
+    "TextTemplate:StandardEmailTemplates.Message": "Jednoduchá šablona zprávy pro emaily"
+  }
+}

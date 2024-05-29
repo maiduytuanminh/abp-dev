@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SmartSoftware.Blogging.MongoDB\SmartSoftware.Blogging.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.MongoDB\SmartSoftware.PermissionManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.MongoDB\SmartSoftware.SettingManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\identity\src\SmartSoftware.Identity.MongoDB\SmartSoftware.Identity.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\blob-storing-database\src\SmartSoftware.BlobStoring.Database.MongoDB\SmartSoftware.BlobStoring.Database.MongoDB.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,46 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.PermissionManagement.Domain.IdentityServer": {
+      "path": "src/SmartSoftware.PermissionManagement.Domain.IdentityServer/SmartSoftware.PermissionManagement.Domain.IdentityServer.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityServer.Domain": {
+      "path": "src/SmartSoftware.IdentityServer.Domain/SmartSoftware.IdentityServer.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityServer.Domain.Shared": {
+      "path": "src/SmartSoftware.IdentityServer.Domain.Shared/SmartSoftware.IdentityServer.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityServer.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.IdentityServer.EntityFrameworkCore/SmartSoftware.IdentityServer.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityServer.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.IdentityServer.EntityFrameworkCore.Tests/SmartSoftware.IdentityServer.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.IdentityServer.MongoDB": {
+      "path": "src/SmartSoftware.IdentityServer.MongoDB/SmartSoftware.IdentityServer.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityServer.TestBase": {
+      "path": "test/SmartSoftware.IdentityServer.TestBase/SmartSoftware.IdentityServer.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.IdentityServer.MongoDB.Tests": {
+      "path": "test/SmartSoftware.IdentityServer.MongoDB.Tests/SmartSoftware.IdentityServer.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.IdentityServer.Domain.Tests": {
+      "path": "test/SmartSoftware.IdentityServer.Domain.Tests/SmartSoftware.IdentityServer.Domain.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

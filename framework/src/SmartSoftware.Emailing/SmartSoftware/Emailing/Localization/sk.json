@@ -1,0 +1,25 @@
+{
+  "culture": "sk",
+  "texts": {
+    "DisplayName:SmartSoftware.Mailing.DefaultFromAddress": "Predvolená adresa Od",
+    "DisplayName:SmartSoftware.Mailing.DefaultFromDisplayName": "Predvolené meno Od",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Host": "Host server",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Port": "Port",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UserName": "Meno používateľa",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Password": "Heslo",
+    "DisplayName:SmartSoftware.Mailing.Smtp.Domain": "Doména",
+    "DisplayName:SmartSoftware.Mailing.Smtp.EnableSsl": "Povoliť SSL",
+    "DisplayName:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Použiť predovlené prihlasovacie údaje",
+    "Description:SmartSoftware.Mailing.DefaultFromAddress": "Predvolené adresa Od",
+    "Description:SmartSoftware.Mailing.DefaultFromDisplayName": "Predvolené meno Od",
+    "Description:SmartSoftware.Mailing.Smtp.Host": "Názov alebo IP adresa host servera používaného pre SMTP transakcie.",
+    "Description:SmartSoftware.Mailing.Smtp.Port": "Port používaný pre SMTP transakcie.",
+    "Description:SmartSoftware.Mailing.Smtp.UserName": "Meno používateľa spojené s prihlasovacími údajmi.",
+    "Description:SmartSoftware.Mailing.Smtp.Password": "Heslo pre používateľské meno spojené s prihlasovacími údajmi.",
+    "Description:SmartSoftware.Mailing.Smtp.Domain": "Názov domény alebo počítača, ktorý overuje prihlasovacie údaje.",
+    "Description:SmartSoftware.Mailing.Smtp.EnableSsl": "Či SMTP klient používa na šifrovanie spojenia Secure Sockets Layer (SSL).",
+    "Description:SmartSoftware.Mailing.Smtp.UseDefaultCredentials": "Či sa spolu s požiadavkami posielajú aj predvolené prihlasovacie údaje.",
+    "TextTemplate:StandardEmailTemplates.Layout": "Predvolená šablóna rozloženia emailu",
+    "TextTemplate:StandardEmailTemplates.Message": "Jednoduchá šablóna správy pre emaily"
+  }
+}

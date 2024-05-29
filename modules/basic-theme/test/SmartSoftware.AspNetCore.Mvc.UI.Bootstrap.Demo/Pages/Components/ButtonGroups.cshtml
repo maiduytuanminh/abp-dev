@@ -1,0 +1,271 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo
+@model SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Pages.Components.ButtonGroupsModel
+@{
+    ViewData["Title"] = "ButtonGroups";
+}
+
+<h2>Button groups</h2>
+
+<p>Based on <a href="@BootstrapUrlHelper.GetDocUrl("components/button-group")" target="_blank"> Bootstrap Button group</a>.</p>
+
+<h4>Basic example</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+
+        <ss-button-group>
+            <ss-button button-type="Secondary">Left</ss-button>
+            <ss-button button-type="Secondary">Middle</ss-button>
+            <ss-button button-type="Secondary">Right</ss-button>
+        </ss-button-group>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-button-group&gt;
+    &lt;ss-button button-type=&quot;Secondary&quot;&gt;Left&lt;/ss-button&gt;
+    &lt;ss-button button-type=&quot;Secondary&quot;&gt;Middle&lt;/ss-button&gt;
+    &lt;ss-button button-type=&quot;Secondary&quot;&gt;Right&lt;/ss-button&gt;
+&lt;/ss-button-group&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Left&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Middle&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Button toolbar</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-button-toolbar>
+            <ss-button-group class="me-2">
+                <ss-button button-type="Secondary">1</ss-button>
+                <ss-button button-type="Secondary">2</ss-button>
+                <ss-button button-type="Secondary">3</ss-button>
+                <ss-button button-type="Secondary">4</ss-button>
+            </ss-button-group>
+            <ss-button-group class="me-2">
+                <ss-button button-type="Secondary">5</ss-button>
+                <ss-button button-type="Secondary">6</ss-button>
+                <ss-button button-type="Secondary">7</ss-button>
+            </ss-button-group>
+            <ss-button-group>
+                <ss-button button-type="Secondary">8</ss-button>
+            </ss-button-group>
+        </ss-button-toolbar>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+        &lt;ss-button-toolbar&gt;
+            &lt;ss-button-group class=&quot;mr-2&quot;&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;1&lt;/ss-button&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;2&lt;/ss-button&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;3&lt;/ss-button&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;4&lt;/ss-button&gt;
+            &lt;/ss-button-group&gt;
+            &lt;ss-button-group class=&quot;mr-2&quot;&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;5&lt;/ss-button&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;6&lt;/ss-button&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;7&lt;/ss-button&gt;
+            &lt;/ss-button-group&gt;
+            &lt;ss-button-group&gt;
+                &lt;ss-button button-type=&quot;Secondary&quot;&gt;8&lt;/ss-button&gt;
+            &lt;/ss-button-group&gt;
+        &lt;/ss-button-toolbar&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-toolbar&quot; role=&quot;toolbar&quot;&gt;
+  &lt;div class=&quot;btn-group me-2&quot; role=&quot;group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;1&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;2&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;3&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;4&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group me-2&quot; role=&quot;group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;5&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;6&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;7&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;8&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Sizing</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-button-group size="Large">
+            <ss-button button-type="Secondary">Left</ss-button>
+            <ss-button button-type="Secondary">Middle</ss-button>
+            <ss-button button-type="Secondary">Right</ss-button>
+        </ss-button-group>
+        <br><br>
+        <ss-button-group>
+            <ss-button button-type="Secondary">Left</ss-button>
+            <ss-button button-type="Secondary">Middle</ss-button>
+            <ss-button button-type="Secondary">Right</ss-button>
+        </ss-button-group>
+        <br><br>
+        <ss-button-group size="Small">
+            <ss-button button-type="Secondary">Left</ss-button>
+            <ss-button button-type="Secondary">Middle</ss-button>
+            <ss-button button-type="Secondary">Right</ss-button>
+        </ss-button-group>
+    </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-button-group size=&quot;Large&quot;&gt;
+    ...
+&lt;/ss-button-group&gt;
+
+&lt;ss-button-group&gt;
+    ...
+&lt;/ss-button-group&gt;
+
+&lt;ss-button-group size=&quot;Small&quot;&gt;
+    ...
+&lt;/ss-button-group&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group btn-group-lg&quot; role=&quot;group&quot;&gt;
+    ...
+&lt;/div&gt;
+
+&lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+    ...
+&lt;/div&gt;
+
+&lt;div class=&quot;btn-group btn-group-sm&quot; role=&quot;group&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Nesting</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area">
+        <ss-button-group>
+            <ss-button button-type="Secondary">1</ss-button>
+            <ss-button button-type="Secondary">2</ss-button>
+            <ss-dropdown>
+                <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+                <ss-dropdown-menu>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                </ss-dropdown-menu>
+            </ss-dropdown>
+        </ss-button-group>
+        </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-button-group&gt;
+    &lt;ss-button button-type=&quot;Secondary&quot;&gt;1&lt;/ss-button&gt;
+    &lt;ss-button button-type=&quot;Secondary&quot;&gt;2&lt;/ss-button&gt;
+    &lt;ss-dropdown&gt;
+        &lt;ss-dropdown-button button-type=&quot;Secondary&quot; text=&quot;Dropdown&quot; /&gt;
+        &lt;ss-dropdown-menu&gt;
+            &lt;ss-dropdown-item href=&quot;#&quot;&gt; Dropdown link &lt;/ss-dropdown-item&gt;
+            &lt;ss-dropdown-item href=&quot;#&quot;&gt; Dropdown link &lt;/ss-dropdown-item&gt;
+        &lt;/ss-dropdown-menu&gt;
+    &lt;/ss-dropdown&gt;
+&lt;/ss-button-group&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;Button group with nested dropdown&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;2&lt;/button&gt;
+
+  &lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+    &lt;button id=&quot;btnGroupDrop1&quot; type=&quot;button&quot; class=&quot;btn btn-secondary dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+      Dropdown
+    &lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;btnGroupDrop1&quot;&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>
+
+<h4>Vertical variation</h4>
+
+<div class="demo-with-code">
+    <div class="demo-area text-center">
+        <ss-button-group direction="Vertical">
+            <ss-button button-type="Secondary">button</ss-button>
+            <ss-button button-type="Secondary">button</ss-button>
+            <ss-dropdown direction="Right">
+                <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+                <ss-dropdown-menu>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                </ss-dropdown-menu>
+            </ss-dropdown>
+            <ss-button button-type="Secondary">button</ss-button>
+            <ss-button button-type="Secondary">button</ss-button>
+            <ss-dropdown direction="Left">
+                <ss-dropdown-button button-type="Secondary" text="Dropdown" />
+                <ss-dropdown-menu>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                    <ss-dropdown-item href="#"> Dropdown link </ss-dropdown-item>
+                </ss-dropdown-menu>
+            </ss-dropdown>
+            <ss-button button-type="Secondary">button</ss-button>
+        </ss-button-group>
+        </div>
+    <div class="code-area">
+        <ss-tabs>
+            <ss-tab title="Tag Helper">
+                <pre><code>
+&lt;ss-button-group direction=&quot;Vertical&quot;&gt;
+    ...
+&lt;/ss-button-group&gt;
+</code></pre>
+            </ss-tab>
+            <ss-tab title="Rendered">
+                <pre><code>
+&lt;div class=&quot;btn-group-vertical&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+            </ss-tab>
+        </ss-tabs>
+    </div>
+</div>

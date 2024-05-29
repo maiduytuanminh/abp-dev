@@ -1,0 +1,8 @@
+using SmartSoftware.DependencyInjection;
+
+namespace SmartSoftware.MemoryDb.DependencyInjection;
+
+public interface ISmartSoftwareMemoryDbContextRegistrationOptionsBuilder : ISmartSoftwareCommonDbContextRegistrationOptionsBuilder
+{
+
+}

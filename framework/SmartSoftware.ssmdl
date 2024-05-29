@@ -1,0 +1,846 @@
+{
+  "folders": {
+    "items": {
+      "test": {},
+      "src": {}
+    }
+  },
+  "packages": {
+    "SmartSoftwareTestBase": {
+      "path": "test/SmartSoftwareTestBase/SmartSoftwareTestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore": {
+      "path": "src/SmartSoftware.AspNetCore/SmartSoftware.AspNetCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Tests/SmartSoftware.AspNetCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MultiTenancy.Tests": {
+      "path": "test/SmartSoftware.MultiTenancy.Tests/SmartSoftware.MultiTenancy.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.MultiTenancy": {
+      "path": "src/SmartSoftware.AspNetCore.MultiTenancy/SmartSoftware.AspNetCore.MultiTenancy.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.MultiTenancy.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.MultiTenancy.Tests/SmartSoftware.AspNetCore.MultiTenancy.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.TestBase": {
+      "path": "src/SmartSoftware.AspNetCore.TestBase/SmartSoftware.AspNetCore.TestBase.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.EntityFrameworkCore/SmartSoftware.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc/SmartSoftware.AspNetCore.Mvc.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TestBase": {
+      "path": "src/SmartSoftware.TestBase/SmartSoftware.TestBase.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.MongoDB": {
+      "path": "src/SmartSoftware.MongoDB/SmartSoftware.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI/SmartSoftware.AspNetCore.Mvc.UI.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Autofac": {
+      "path": "src/SmartSoftware.Autofac/SmartSoftware.Autofac.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Castle.Core": {
+      "path": "src/SmartSoftware.Castle.Core/SmartSoftware.Castle.Core.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Autofac.Tests": {
+      "path": "test/SmartSoftware.Autofac.Tests/SmartSoftware.Autofac.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Castle.Core.Tests": {
+      "path": "test/SmartSoftware.Castle.Core.Tests/SmartSoftware.Castle.Core.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AutoMapper": {
+      "path": "src/SmartSoftware.AutoMapper/SmartSoftware.AutoMapper.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AutoMapper.Tests": {
+      "path": "test/SmartSoftware.AutoMapper.Tests/SmartSoftware.AutoMapper.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.Tests/SmartSoftware.AspNetCore.Mvc.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TestApp": {
+      "path": "test/SmartSoftware.TestApp/SmartSoftware.TestApp.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MemoryDb": {
+      "path": "src/SmartSoftware.MemoryDb/SmartSoftware.MemoryDb.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.MemoryDb.Tests": {
+      "path": "test/SmartSoftware.MemoryDb.Tests/SmartSoftware.MemoryDb.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TestApp.Tests": {
+      "path": "test/SmartSoftware.TestApp.Tests/SmartSoftware.TestApp.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http": {
+      "path": "src/SmartSoftware.Http/SmartSoftware.Http.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Http.Client": {
+      "path": "src/SmartSoftware.Http.Client/SmartSoftware.Http.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Http.Client.Tests": {
+      "path": "test/SmartSoftware.Http.Client.Tests/SmartSoftware.Http.Client.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.EntityFrameworkCore.Tests/SmartSoftware.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SimpleConsoleDemo": {
+      "path": "test/SimpleConsoleDemo/SimpleConsoleDemo.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.Tests.SecondContext": {
+      "path": "test/SmartSoftware.EntityFrameworkCore.Tests.SecondContext/SmartSoftware.EntityFrameworkCore.Tests.SecondContext.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Versioning.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.Versioning.Tests/SmartSoftware.AspNetCore.Mvc.Versioning.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.VirtualFileSystem": {
+      "path": "src/SmartSoftware.VirtualFileSystem/SmartSoftware.VirtualFileSystem.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.VirtualFileSystem.Tests": {
+      "path": "test/SmartSoftware.VirtualFileSystem.Tests/SmartSoftware.VirtualFileSystem.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Core": {
+      "path": "src/SmartSoftware.Core/SmartSoftware.Core.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Localization": {
+      "path": "src/SmartSoftware.Localization/SmartSoftware.Localization.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Localization.Tests": {
+      "path": "test/SmartSoftware.Localization.Tests/SmartSoftware.Localization.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Core.Tests": {
+      "path": "test/SmartSoftware.Core.Tests/SmartSoftware.Core.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.ApiVersioning.Abstractions": {
+      "path": "src/SmartSoftware.ApiVersioning.Abstractions/SmartSoftware.ApiVersioning.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Data": {
+      "path": "src/SmartSoftware.Data/SmartSoftware.Data.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Data.Tests": {
+      "path": "test/SmartSoftware.Data.Tests/SmartSoftware.Data.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MultiTenancy": {
+      "path": "src/SmartSoftware.MultiTenancy/SmartSoftware.MultiTenancy.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.ObjectMapping": {
+      "path": "src/SmartSoftware.ObjectMapping/SmartSoftware.ObjectMapping.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Validation": {
+      "path": "src/SmartSoftware.Validation/SmartSoftware.Validation.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Validation.Tests": {
+      "path": "test/SmartSoftware.Validation.Tests/SmartSoftware.Validation.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Security": {
+      "path": "src/SmartSoftware.Security/SmartSoftware.Security.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Guids": {
+      "path": "src/SmartSoftware.Guids/SmartSoftware.Guids.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Threading": {
+      "path": "src/SmartSoftware.Threading/SmartSoftware.Threading.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Ddd.Tests": {
+      "path": "test/SmartSoftware.Ddd.Tests/SmartSoftware.Ddd.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http.Abstractions": {
+      "path": "src/SmartSoftware.Http.Abstractions/SmartSoftware.Http.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Authorization": {
+      "path": "src/SmartSoftware.Authorization/SmartSoftware.Authorization.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Json": {
+      "path": "src/SmartSoftware.Json/SmartSoftware.Json.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Timing": {
+      "path": "src/SmartSoftware.Timing/SmartSoftware.Timing.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.UI": {
+      "path": "src/SmartSoftware.UI/SmartSoftware.UI.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.UI.Navigation": {
+      "path": "src/SmartSoftware.UI.Navigation/SmartSoftware.UI.Navigation.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.UI.Navigation.Tests": {
+      "path": "test/SmartSoftware.UI.Navigation.Tests/SmartSoftware.UI.Navigation.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Settings": {
+      "path": "src/SmartSoftware.Settings/SmartSoftware.Settings.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Caching": {
+      "path": "src/SmartSoftware.Caching/SmartSoftware.Caching.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus": {
+      "path": "src/SmartSoftware.EventBus/SmartSoftware.EventBus.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Tests": {
+      "path": "test/SmartSoftware.EventBus.Tests/SmartSoftware.EventBus.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Caching.Tests": {
+      "path": "test/SmartSoftware.Caching.Tests/SmartSoftware.Caching.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Serialization": {
+      "path": "src/SmartSoftware.Serialization/SmartSoftware.Serialization.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Serialization.Tests": {
+      "path": "test/SmartSoftware.Serialization.Tests/SmartSoftware.Serialization.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Authorization.Tests": {
+      "path": "test/SmartSoftware.Authorization.Tests/SmartSoftware.Authorization.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Authentication.OAuth": {
+      "path": "src/SmartSoftware.AspNetCore.Authentication.OAuth/SmartSoftware.AspNetCore.Authentication.OAuth.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Authentication.OAuth.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Authentication.OAuth.Tests/SmartSoftware.AspNetCore.Authentication.OAuth.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Uow": {
+      "path": "src/SmartSoftware.Uow/SmartSoftware.Uow.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Uow.Tests": {
+      "path": "test/SmartSoftware.Uow.Tests/SmartSoftware.Uow.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Ddd.Domain": {
+      "path": "src/SmartSoftware.Ddd.Domain/SmartSoftware.Ddd.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Ddd.Application": {
+      "path": "src/SmartSoftware.Ddd.Application/SmartSoftware.Ddd.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Auditing": {
+      "path": "src/SmartSoftware.Auditing/SmartSoftware.Auditing.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Auditing.Tests": {
+      "path": "test/SmartSoftware.Auditing.Tests/SmartSoftware.Auditing.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MongoDB.Tests": {
+      "path": "test/SmartSoftware.MongoDB.Tests/SmartSoftware.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.SqlServer": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.SqlServer/SmartSoftware.EntityFrameworkCore.SqlServer.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.RabbitMQ": {
+      "path": "src/SmartSoftware.EventBus.RabbitMQ/SmartSoftware.EventBus.RabbitMQ.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.UI.Tests/SmartSoftware.AspNetCore.Mvc.UI.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Emailing": {
+      "path": "src/SmartSoftware.Emailing/SmartSoftware.Emailing.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Sms": {
+      "path": "src/SmartSoftware.Sms/SmartSoftware.Sms.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Bundling": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Bundling/SmartSoftware.AspNetCore.Mvc.UI.Bundling.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Packages": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Packages/SmartSoftware.AspNetCore.Mvc.UI.Packages.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EntityFrameworkCore.MySQL": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.MySQL/SmartSoftware.EntityFrameworkCore.MySQL.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs": {
+      "path": "src/SmartSoftware.BackgroundJobs/SmartSoftware.BackgroundJobs.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundWorkers": {
+      "path": "src/SmartSoftware.BackgroundWorkers/SmartSoftware.BackgroundWorkers.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.Tests": {
+      "path": "test/SmartSoftware.BackgroundJobs.Tests/SmartSoftware.BackgroundJobs.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BackgroundJobs.Abstractions": {
+      "path": "src/SmartSoftware.BackgroundJobs.Abstractions/SmartSoftware.BackgroundJobs.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.HangFire": {
+      "path": "src/SmartSoftware.BackgroundJobs.HangFire/SmartSoftware.BackgroundJobs.HangFire.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.HangFire": {
+      "path": "src/SmartSoftware.HangFire/SmartSoftware.HangFire.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.RabbitMQ": {
+      "path": "src/SmartSoftware.BackgroundJobs.RabbitMQ/SmartSoftware.BackgroundJobs.RabbitMQ.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.RabbitMQ": {
+      "path": "src/SmartSoftware.RabbitMQ/SmartSoftware.RabbitMQ.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Emailing.Tests": {
+      "path": "test/SmartSoftware.Emailing.Tests/SmartSoftware.Emailing.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy/SmartSoftware.AspNetCore.Mvc.UI.MultiTenancy.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EntityFrameworkCore.PostgreSql": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.PostgreSql/SmartSoftware.EntityFrameworkCore.PostgreSql.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Localization.Abstractions": {
+      "path": "src/SmartSoftware.Localization.Abstractions/SmartSoftware.Localization.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Security.Tests": {
+      "path": "test/SmartSoftware.Security.Tests/SmartSoftware.Security.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Settings.Tests": {
+      "path": "test/SmartSoftware.Settings.Tests/SmartSoftware.Settings.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http.Client.IdentityModel": {
+      "path": "src/SmartSoftware.Http.Client.IdentityModel/SmartSoftware.Http.Client.IdentityModel.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.IdentityModel": {
+      "path": "src/SmartSoftware.IdentityModel/SmartSoftware.IdentityModel.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Client": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.Client/SmartSoftware.AspNetCore.Mvc.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Contracts": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.Contracts/SmartSoftware.AspNetCore.Mvc.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Features": {
+      "path": "src/SmartSoftware.Features/SmartSoftware.Features.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Features.Tests": {
+      "path": "test/SmartSoftware.Features.Tests/SmartSoftware.Features.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Authentication.JwtBearer": {
+      "path": "src/SmartSoftware.AspNetCore.Authentication.JwtBearer/SmartSoftware.AspNetCore.Authentication.JwtBearer.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Cli": {
+      "path": "src/SmartSoftware.Cli/SmartSoftware.Cli.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FluentValidation": {
+      "path": "src/SmartSoftware.FluentValidation/SmartSoftware.FluentValidation.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.FluentValidation.Tests": {
+      "path": "test/SmartSoftware.FluentValidation.Tests/SmartSoftware.FluentValidation.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.Sqlite": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.Sqlite/SmartSoftware.EntityFrameworkCore.Sqlite.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Cli.Core": {
+      "path": "src/SmartSoftware.Cli.Core/SmartSoftware.Cli.Core.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Specifications": {
+      "path": "src/SmartSoftware.Specifications/SmartSoftware.Specifications.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Specifications.Tests": {
+      "path": "test/SmartSoftware.Specifications.Tests/SmartSoftware.Specifications.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Cli.Core.Tests": {
+      "path": "test/SmartSoftware.Cli.Core.Tests/SmartSoftware.Cli.Core.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Widgets": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Widgets/SmartSoftware.AspNetCore.Mvc.UI.Widgets.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Ldap": {
+      "path": "src/SmartSoftware.Ldap/SmartSoftware.Ldap.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Ldap.Tests": {
+      "path": "test/SmartSoftware.Ldap.Tests/SmartSoftware.Ldap.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Dapper": {
+      "path": "src/SmartSoftware.Dapper/SmartSoftware.Dapper.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Dapper.Tests": {
+      "path": "test/SmartSoftware.Dapper.Tests/SmartSoftware.Dapper.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MailKit": {
+      "path": "src/SmartSoftware.MailKit/SmartSoftware.MailKit.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.MailKit.Tests": {
+      "path": "test/SmartSoftware.MailKit.Tests/SmartSoftware.MailKit.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.ObjectMapping.Tests": {
+      "path": "test/SmartSoftware.ObjectMapping.Tests/SmartSoftware.ObjectMapping.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Ddd.Application.Contracts": {
+      "path": "src/SmartSoftware.Ddd.Application.Contracts/SmartSoftware.Ddd.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Minify": {
+      "path": "src/SmartSoftware.Minify/SmartSoftware.Minify.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Minify.Tests": {
+      "path": "test/SmartSoftware.Minify.Tests/SmartSoftware.Minify.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Serilog": {
+      "path": "src/SmartSoftware.AspNetCore.Serilog/SmartSoftware.AspNetCore.Serilog.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Serilog.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Serilog.Tests/SmartSoftware.AspNetCore.Serilog.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http.Client.IdentityModel.Web": {
+      "path": "src/SmartSoftware.Http.Client.IdentityModel.Web/SmartSoftware.Http.Client.IdentityModel.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundJobs.Quartz": {
+      "path": "src/SmartSoftware.BackgroundJobs.Quartz/SmartSoftware.BackgroundJobs.Quartz.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Quartz": {
+      "path": "src/SmartSoftware.Quartz/SmartSoftware.Quartz.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BackgroundWorkers.Quartz": {
+      "path": "src/SmartSoftware.BackgroundWorkers.Quartz/SmartSoftware.BackgroundWorkers.Quartz.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Demo.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Http.Client.IdentityModel.Web.Tests": {
+      "path": "test/SmartSoftware.Http.Client.IdentityModel.Web.Tests/SmartSoftware.Http.Client.IdentityModel.Web.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.ObjectExtending": {
+      "path": "src/SmartSoftware.ObjectExtending/SmartSoftware.ObjectExtending.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.ObjectExtending.Tests": {
+      "path": "test/SmartSoftware.ObjectExtending.Tests/SmartSoftware.ObjectExtending.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TextTemplating": {
+      "path": "src/SmartSoftware.TextTemplating/SmartSoftware.TextTemplating.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TextTemplating.Tests": {
+      "path": "test/SmartSoftware.TextTemplating.Tests/SmartSoftware.TextTemplating.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Validation.Abstractions": {
+      "path": "src/SmartSoftware.Validation.Abstractions/SmartSoftware.Validation.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.SignalR": {
+      "path": "src/SmartSoftware.AspNetCore.SignalR/SmartSoftware.AspNetCore.SignalR.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.SignalR.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.SignalR.Tests/SmartSoftware.AspNetCore.SignalR.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Tests/SmartSoftware.AspNetCore.Mvc.UI.Theme.Shared.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring": {
+      "path": "src/SmartSoftware.BlobStoring/SmartSoftware.BlobStoring.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Tests/SmartSoftware.BlobStoring.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.FileSystem": {
+      "path": "src/SmartSoftware.BlobStoring.FileSystem/SmartSoftware.BlobStoring.FileSystem.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.FileSystem.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.FileSystem.Tests/SmartSoftware.BlobStoring.FileSystem.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.Oracle.Devart": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.Oracle.Devart/SmartSoftware.EntityFrameworkCore.Oracle.Devart.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Azure": {
+      "path": "src/SmartSoftware.BlobStoring.Azure/SmartSoftware.BlobStoring.Azure.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Azure.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Azure.Tests/SmartSoftware.BlobStoring.Azure.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Minio": {
+      "path": "src/SmartSoftware.BlobStoring.Minio/SmartSoftware.BlobStoring.Minio.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Minio.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Minio.Tests/SmartSoftware.BlobStoring.Minio.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.EntityFrameworkCore.Oracle": {
+      "path": "src/SmartSoftware.EntityFrameworkCore.Oracle/SmartSoftware.EntityFrameworkCore.Oracle.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Caching.StackExchangeRedis": {
+      "path": "src/SmartSoftware.Caching.StackExchangeRedis/SmartSoftware.Caching.StackExchangeRedis.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Caching.StackExchangeRedis.Tests": {
+      "path": "test/SmartSoftware.Caching.StackExchangeRedis.Tests/SmartSoftware.Caching.StackExchangeRedis.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Aliyun": {
+      "path": "src/SmartSoftware.BlobStoring.Aliyun/SmartSoftware.BlobStoring.Aliyun.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Aliyun.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Aliyun.Tests/SmartSoftware.BlobStoring.Aliyun.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BlobStoring.Aws": {
+      "path": "src/SmartSoftware.BlobStoring.Aws/SmartSoftware.BlobStoring.Aws.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.BlobStoring.Aws.Tests": {
+      "path": "test/SmartSoftware.BlobStoring.Aws.Tests/SmartSoftware.BlobStoring.Aws.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Kafka": {
+      "path": "src/SmartSoftware.Kafka/SmartSoftware.Kafka.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Kafka": {
+      "path": "src/SmartSoftware.EventBus.Kafka/SmartSoftware.EventBus.Kafka.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.GlobalFeatures": {
+      "path": "src/SmartSoftware.GlobalFeatures/SmartSoftware.GlobalFeatures.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.GlobalFeatures.Tests": {
+      "path": "test/SmartSoftware.GlobalFeatures.Tests/SmartSoftware.GlobalFeatures.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MultiLingualObjects": {
+      "path": "src/SmartSoftware.MultiLingualObjects/SmartSoftware.MultiLingualObjects.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.MultiLingualObjects.Tests": {
+      "path": "test/SmartSoftware.MultiLingualObjects.Tests/SmartSoftware.MultiLingualObjects.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http.Client.IdentityModel.WebAssembly": {
+      "path": "src/SmartSoftware.Http.Client.IdentityModel.WebAssembly/SmartSoftware.Http.Client.IdentityModel.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Client.Common": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.Client.Common/SmartSoftware.AspNetCore.Mvc.Client.Common.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.WebAssembly": {
+      "path": "src/SmartSoftware.AspNetCore.Components.WebAssembly/SmartSoftware.AspNetCore.Components.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.WebAssembly.Theming": {
+      "path": "src/SmartSoftware.AspNetCore.Components.WebAssembly.Theming/SmartSoftware.AspNetCore.Components.WebAssembly.Theming.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Autofac.WebAssembly": {
+      "path": "src/SmartSoftware.Autofac.WebAssembly/SmartSoftware.Autofac.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Authentication.OpenIdConnect": {
+      "path": "src/SmartSoftware.AspNetCore.Authentication.OpenIdConnect/SmartSoftware.AspNetCore.Authentication.OpenIdConnect.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Rebus": {
+      "path": "src/SmartSoftware.EventBus.Rebus/SmartSoftware.EventBus.Rebus.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.ExceptionHandling": {
+      "path": "src/SmartSoftware.ExceptionHandling/SmartSoftware.ExceptionHandling.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components": {
+      "path": "src/SmartSoftware.AspNetCore.Components/SmartSoftware.AspNetCore.Components.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Swashbuckle": {
+      "path": "src/SmartSoftware.Swashbuckle/SmartSoftware.Swashbuckle.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Json.Tests": {
+      "path": "test/SmartSoftware.Json.Tests/SmartSoftware.Json.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Http.Tests": {
+      "path": "test/SmartSoftware.Http.Tests/SmartSoftware.Http.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Components.Web": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Web/SmartSoftware.AspNetCore.Components.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.Web.Theming": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Web.Theming/SmartSoftware.AspNetCore.Components.Web.Theming.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Abstractions": {
+      "path": "src/SmartSoftware.EventBus.Abstractions/SmartSoftware.EventBus.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Sms.Aliyun": {
+      "path": "src/SmartSoftware.Sms.Aliyun/SmartSoftware.Sms.Aliyun.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Sms.Aliyun.Tests": {
+      "path": "test/SmartSoftware.Sms.Aliyun.Tests/SmartSoftware.Sms.Aliyun.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Components.Server": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Server/SmartSoftware.AspNetCore.Components.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.Server.Theming": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Server.Theming/SmartSoftware.AspNetCore.Components.Server.Theming.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Bundling.Abstractions": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Bundling.Abstractions/SmartSoftware.AspNetCore.Mvc.UI.Bundling.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AzureServiceBus": {
+      "path": "src/SmartSoftware.AzureServiceBus/SmartSoftware.AzureServiceBus.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Azure": {
+      "path": "src/SmartSoftware.EventBus.Azure/SmartSoftware.EventBus.Azure.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Authorization.Abstractions": {
+      "path": "src/SmartSoftware.Authorization.Abstractions/SmartSoftware.Authorization.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TextTemplating.Core": {
+      "path": "src/SmartSoftware.TextTemplating.Core/SmartSoftware.TextTemplating.Core.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TextTemplating.Scriban": {
+      "path": "src/SmartSoftware.TextTemplating.Scriban/SmartSoftware.TextTemplating.Scriban.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TextTemplating.Razor": {
+      "path": "src/SmartSoftware.TextTemplating.Razor/SmartSoftware.TextTemplating.Razor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TextTemplating.Razor.Tests": {
+      "path": "test/SmartSoftware.TextTemplating.Razor.Tests/SmartSoftware.TextTemplating.Razor.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TextTemplating.Scriban.Tests": {
+      "path": "test/SmartSoftware.TextTemplating.Scriban.Tests/SmartSoftware.TextTemplating.Scriban.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.MongoDB.Tests.SecondContext": {
+      "path": "test/SmartSoftware.MongoDB.Tests.SecondContext/SmartSoftware.MongoDB.Tests.SecondContext.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.IdentityModel.Tests": {
+      "path": "test/SmartSoftware.IdentityModel.Tests/SmartSoftware.IdentityModel.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Threading.Tests": {
+      "path": "test/SmartSoftware.Threading.Tests/SmartSoftware.Threading.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.DistributedLocking": {
+      "path": "src/SmartSoftware.DistributedLocking/SmartSoftware.DistributedLocking.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Auditing.Contracts": {
+      "path": "src/SmartSoftware.Auditing.Contracts/SmartSoftware.Auditing.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Http.Client.Web": {
+      "path": "src/SmartSoftware.Http.Client.Web/SmartSoftware.Http.Client.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.DistributedLocking.Abstractions": {
+      "path": "src/SmartSoftware.DistributedLocking.Abstractions/SmartSoftware.DistributedLocking.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.DistributedLocking.Abstractions.Tests": {
+      "path": "test/SmartSoftware.DistributedLocking.Abstractions.Tests/SmartSoftware.DistributedLocking.Abstractions.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.BackgroundWorkers.Hangfire": {
+      "path": "src/SmartSoftware.BackgroundWorkers.Hangfire/SmartSoftware.BackgroundWorkers.Hangfire.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Gdpr.Abstractions": {
+      "path": "src/SmartSoftware.Gdpr.Abstractions/SmartSoftware.Gdpr.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.RemoteServices": {
+      "path": "src/SmartSoftware.RemoteServices/SmartSoftware.RemoteServices.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.PlugIn": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.PlugIn/SmartSoftware.AspNetCore.Mvc.PlugIn.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.Json.Newtonsoft": {
+      "path": "src/SmartSoftware.Json.Newtonsoft/SmartSoftware.Json.Newtonsoft.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Json.SystemTextJson": {
+      "path": "src/SmartSoftware.Json.SystemTextJson/SmartSoftware.Json.SystemTextJson.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Json.Abstractions": {
+      "path": "src/SmartSoftware.Json.Abstractions/SmartSoftware.Json.Abstractions.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.NewtonsoftJson": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.NewtonsoftJson/SmartSoftware.AspNetCore.Mvc.NewtonsoftJson.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Dapr": {
+      "path": "src/SmartSoftware.Dapr/SmartSoftware.Dapr.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.EventBus.Dapr": {
+      "path": "src/SmartSoftware.EventBus.Dapr/SmartSoftware.EventBus.Dapr.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.Http.Client.Dapr": {
+      "path": "src/SmartSoftware.Http.Client.Dapr/SmartSoftware.Http.Client.Dapr.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Dapr": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.Dapr/SmartSoftware.AspNetCore.Mvc.Dapr.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.Dapr.EventBus": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.Dapr.EventBus/SmartSoftware.AspNetCore.Mvc.Dapr.EventBus.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.DistributedLocking.Dapr": {
+      "path": "src/SmartSoftware.DistributedLocking.Dapr/SmartSoftware.DistributedLocking.Dapr.sspkg",
+      "folder": "src"
+    }
+  }
+}

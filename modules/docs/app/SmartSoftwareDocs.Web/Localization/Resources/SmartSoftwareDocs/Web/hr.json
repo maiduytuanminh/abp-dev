@@ -1,0 +1,10 @@
+{
+    "culture": "hr",
+    "texts": {
+        "DocsTitle": "SmartSoftwareDocs",
+        "WelcomeSmartSoftwareDocs": "Dobrodošli u SmartSoftwareDocs!",
+        "NoProjectWarning": "Još nema definiranog projekta!",
+        "CreateYourFirstProject": "Kliknite ovdje kako biste započeli svoj prvi projekt",
+        "NoProject": "Nema projekta!"
+    }
+}

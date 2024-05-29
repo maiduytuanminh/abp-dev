@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\configureawait.props" />
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        
+        <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.VirtualFileSystem\SmartSoftware.VirtualFileSystem.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="..\..\SmartSoftware.BlobStoring.Database.ssmdl" />
+      <Content Include="..\..\SmartSoftware.BlobStoring.Database.ssmdl">
+        <Pack>true</Pack>
+        <PackagePath>content\</PackagePath>
+      </Content>
+      <None Remove="..\..\**\*.sspkg*" />
+      <Content Include="..\..\**\*.sspkg*">
+        <Pack>true</Pack>
+        <PackagePath>content\</PackagePath>
+      </Content>
+    </ItemGroup>
+
+</Project>

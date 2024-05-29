@@ -1,0 +1,673 @@
+{
+  "name": "SmartSoftware.FeatureManagement.Domain",
+  "hash": "7dc58fbace956cd5b28d943e0568d553",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.FeatureManagement.Domain.Shared",
+          "namespace": "SmartSoftware.FeatureManagement",
+          "name": "SmartSoftwareFeatureManagementDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Features",
+          "namespace": "SmartSoftware.Features",
+          "name": "SmartSoftwareFeaturesModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.Caching",
+          "namespace": "SmartSoftware.Caching",
+          "name": "SmartSoftwareCachingModule"
+        }
+      ],
+      "implementingInterfaces": [
+        {
+          "name": "ISmartSoftwareModule",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.ISmartSoftwareModule"
+        },
+        {
+          "name": "IOnPreApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPreApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationInitialization",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationInitialization"
+        },
+        {
+          "name": "IOnPostApplicationInitialization",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IOnPostApplicationInitialization"
+        },
+        {
+          "name": "IOnApplicationShutdown",
+          "namespace": "SmartSoftware",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.IOnApplicationShutdown"
+        },
+        {
+          "name": "IPreConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPreConfigureServices"
+        },
+        {
+          "name": "IPostConfigureServices",
+          "namespace": "SmartSoftware.Modularity",
+          "declaringAssemblyName": "SmartSoftware.Core",
+          "fullName": "SmartSoftware.Modularity.IPostConfigureServices"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "SmartSoftwareFeatureManagementDomainModule",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "BasicAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.BasicAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Boolean",
+          "name": "HasSameData",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "FeatureDefinitionRecord",
+              "name": "otherRecord",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "Patch",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "FeatureDefinitionRecord",
+              "name": "otherRecord",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.FeatureManagement",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "Id",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "GroupName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ParentName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DisplayName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Description",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DefaultValue",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "IsVisibleToClients",
+          "summary": null
+        },
+        {
+          "type": "System.Boolean",
+          "name": "IsAvailableToHost",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "AllowedProviders",
+          "summary": "Comma separated list of provider names."
+        },
+        {
+          "type": "System.String",
+          "name": "ValueType",
+          "summary": "Serialized string to store info about the ValueType."
+        },
+        {
+          "type": "SmartSoftware.Data.ExtraPropertyDictionary",
+          "name": "ExtraProperties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "FeatureDefinitionRecord",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "BasicAggregateRoot<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.BasicAggregateRoot<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        },
+        {
+          "name": "IGeneratesDomainEvents",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IGeneratesDomainEvents"
+        },
+        {
+          "name": "IHasExtraProperties",
+          "namespace": "SmartSoftware.Data",
+          "declaringAssemblyName": "SmartSoftware.ObjectExtending",
+          "fullName": "SmartSoftware.Data.IHasExtraProperties"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Boolean",
+          "name": "HasSameData",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "FeatureGroupDefinitionRecord",
+              "name": "otherRecord",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "Patch",
+          "summary": null,
+          "isAsync": false,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "FeatureGroupDefinitionRecord",
+              "name": "otherRecord",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.FeatureManagement",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.Guid",
+          "name": "Id",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "DisplayName",
+          "summary": null
+        },
+        {
+          "type": "SmartSoftware.Data.ExtraPropertyDictionary",
+          "name": "ExtraProperties",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "FeatureGroupDefinitionRecord",
+      "summary": null
+    },
+    {
+      "baseClass": {
+        "name": "Entity<Guid>",
+        "namespace": "SmartSoftware.Domain.Entities",
+        "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+        "fullName": "SmartSoftware.Domain.Entities.Entity<Guid>"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IEntity",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity"
+        },
+        {
+          "name": "IEntity<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IEntity<Guid>"
+        },
+        {
+          "name": "IAggregateRoot<Guid>",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot<Guid>"
+        },
+        {
+          "name": "IAggregateRoot",
+          "namespace": "SmartSoftware.Domain.Entities",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Entities.IAggregateRoot"
+        }
+      ],
+      "methods": [],
+      "collectionProperties": {},
+      "navigationProperties": {},
+      "namespace": "SmartSoftware.FeatureManagement",
+      "primaryKeyType": "Guid",
+      "properties": [
+        {
+          "type": "System.String",
+          "name": "Name",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "Value",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ProviderName",
+          "summary": null
+        },
+        {
+          "type": "System.String",
+          "name": "ProviderKey",
+          "summary": null
+        }
+      ],
+      "contentType": "aggregateRoot",
+      "name": "FeatureValue",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.FeatureManagement",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "FeatureDefinitionRecord",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<FeatureDefinitionRecord, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureDefinitionRecord, Guid>"
+        },
+        {
+          "name": "IBasicRepository<FeatureDefinitionRecord>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureDefinitionRecord>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureDefinitionRecord>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureDefinitionRecord>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureDefinitionRecord, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureDefinitionRecord, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "FeatureDefinitionRecord",
+          "name": "FindByNameAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IFeatureDefinitionRecordRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.FeatureManagement",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "FeatureGroupDefinitionRecord",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<FeatureGroupDefinitionRecord, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureGroupDefinitionRecord, Guid>"
+        },
+        {
+          "name": "IBasicRepository<FeatureGroupDefinitionRecord>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureGroupDefinitionRecord>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureGroupDefinitionRecord>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureGroupDefinitionRecord>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureGroupDefinitionRecord, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureGroupDefinitionRecord, Guid>"
+        }
+      ],
+      "methods": [],
+      "contentType": "repositoryInterface",
+      "name": "IFeatureGroupDefinitionRecordRepository",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.FeatureManagement",
+      "entityAnalyzeModel": {
+        "namespace": "SmartSoftware.FeatureManagement",
+        "primaryKeyType": "Guid",
+        "properties": [],
+        "contentType": "entity",
+        "name": "FeatureValue",
+        "summary": null
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IBasicRepository<FeatureValue, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureValue, Guid>"
+        },
+        {
+          "name": "IBasicRepository<FeatureValue>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IBasicRepository<FeatureValue>"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureValue>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureValue>"
+        },
+        {
+          "name": "IRepository",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IRepository"
+        },
+        {
+          "name": "IReadOnlyBasicRepository<FeatureValue, Guid>",
+          "namespace": "SmartSoftware.Domain.Repositories",
+          "declaringAssemblyName": "SmartSoftware.Ddd.Domain",
+          "fullName": "SmartSoftware.Domain.Repositories.IReadOnlyBasicRepository<FeatureValue, Guid>"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "FeatureValue",
+          "name": "FindAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<FeatureValue>",
+          "name": "FindAllAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "name",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "List<FeatureValue>",
+          "name": "GetListAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "name": "DeleteAsync",
+          "summary": null,
+          "isAsync": true,
+          "isPublic": true,
+          "isPrivate": false,
+          "isStatic": false,
+          "parameters": [
+            {
+              "type": "String",
+              "name": "providerName",
+              "isOptional": false
+            },
+            {
+              "type": "String",
+              "name": "providerKey",
+              "isOptional": false
+            },
+            {
+              "type": "CancellationToken",
+              "name": "cancellationToken",
+              "isOptional": true
+            }
+          ]
+        }
+      ],
+      "contentType": "repositoryInterface",
+      "name": "IFeatureValueRepository",
+      "summary": null
+    }
+  ]
+}

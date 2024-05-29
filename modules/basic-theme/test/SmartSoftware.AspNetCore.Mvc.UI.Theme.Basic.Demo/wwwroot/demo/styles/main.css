@@ -1,0 +1,29 @@
+.ss-component-demo-section {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+.ss-component-demo-section-body {
+    padding-bottom: 10px;
+}
+
+.ss-component-demo-section-raw-source {
+    background-color: #eee;
+    padding: 5px;
+}
+
+    .ss-component-demo-section-raw-source pre {
+        border: 1px solid #999;
+        margin: 5px;
+    }
+
+
+.ss-component-demo-section-bs-source {
+    background-color: #ddd;
+    padding: 5px;
+}
+
+    .ss-component-demo-section-bs-source pre {
+        border: 1px solid #999;
+        margin: 5px;
+    }

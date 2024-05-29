@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.Domain\MyCompanyName.MyProjectName.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\permission-management\src\SmartSoftware.PermissionManagement.MongoDB\SmartSoftware.PermissionManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\setting-management\src\SmartSoftware.SettingManagement.MongoDB\SmartSoftware.SettingManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\identity\src\SmartSoftware.Identity.MongoDB\SmartSoftware.Identity.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\background-jobs\src\SmartSoftware.BackgroundJobs.MongoDB\SmartSoftware.BackgroundJobs.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\audit-logging\src\SmartSoftware.AuditLogging.MongoDB\SmartSoftware.AuditLogging.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\tenant-management\src\SmartSoftware.TenantManagement.MongoDB\SmartSoftware.TenantManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\feature-management\src\SmartSoftware.FeatureManagement.MongoDB\SmartSoftware.FeatureManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\..\modules\openiddict\src\SmartSoftware.OpenIddict.MongoDB\SmartSoftware.OpenIddict.MongoDB.csproj" />
+  </ItemGroup>
+
+</Project>

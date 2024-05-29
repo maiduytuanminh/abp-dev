@@ -1,0 +1,78 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.TenantManagement.Web": {
+      "path": "src/SmartSoftware.TenantManagement.Web/SmartSoftware.TenantManagement.Web.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Blazor": {
+      "path": "src/SmartSoftware.TenantManagement.Blazor/SmartSoftware.TenantManagement.Blazor.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Blazor.WebAssembly": {
+      "path": "src/SmartSoftware.TenantManagement.Blazor.WebAssembly/SmartSoftware.TenantManagement.Blazor.WebAssembly.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Blazor.Server": {
+      "path": "src/SmartSoftware.TenantManagement.Blazor.Server/SmartSoftware.TenantManagement.Blazor.Server.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.HttpApi": {
+      "path": "src/SmartSoftware.TenantManagement.HttpApi/SmartSoftware.TenantManagement.HttpApi.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.HttpApi.Client": {
+      "path": "src/SmartSoftware.TenantManagement.HttpApi.Client/SmartSoftware.TenantManagement.HttpApi.Client.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Application": {
+      "path": "src/SmartSoftware.TenantManagement.Application/SmartSoftware.TenantManagement.Application.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Application.Contracts": {
+      "path": "src/SmartSoftware.TenantManagement.Application.Contracts/SmartSoftware.TenantManagement.Application.Contracts.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Domain": {
+      "path": "src/SmartSoftware.TenantManagement.Domain/SmartSoftware.TenantManagement.Domain.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Domain.Shared": {
+      "path": "src/SmartSoftware.TenantManagement.Domain.Shared/SmartSoftware.TenantManagement.Domain.Shared.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.EntityFrameworkCore": {
+      "path": "src/SmartSoftware.TenantManagement.EntityFrameworkCore/SmartSoftware.TenantManagement.EntityFrameworkCore.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.Application.Tests": {
+      "path": "test/SmartSoftware.TenantManagement.Application.Tests/SmartSoftware.TenantManagement.Application.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TenantManagement.EntityFrameworkCore.Tests": {
+      "path": "test/SmartSoftware.TenantManagement.EntityFrameworkCore.Tests/SmartSoftware.TenantManagement.EntityFrameworkCore.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TenantManagement.MongoDB": {
+      "path": "src/SmartSoftware.TenantManagement.MongoDB/SmartSoftware.TenantManagement.MongoDB.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.TenantManagement.MongoDB.Tests": {
+      "path": "test/SmartSoftware.TenantManagement.MongoDB.Tests/SmartSoftware.TenantManagement.MongoDB.Tests.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TenantManagement.TestBase": {
+      "path": "test/SmartSoftware.TenantManagement.TestBase/SmartSoftware.TenantManagement.TestBase.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.TenantManagement.Domain.Tests": {
+      "path": "test/SmartSoftware.TenantManagement.Domain.Tests/SmartSoftware.TenantManagement.Domain.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

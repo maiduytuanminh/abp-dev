@@ -1,0 +1,38 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Demo": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Demo/SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.Demo.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.sspkg",
+      "folder": "test"
+    },
+    "SmartSoftware.AspNetCore.Components.Server.BasicTheme": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Server.BasicTheme/SmartSoftware.AspNetCore.Components.Server.BasicTheme.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.Web.BasicTheme": {
+      "path": "src/SmartSoftware.AspNetCore.Components.Web.BasicTheme/SmartSoftware.AspNetCore.Components.Web.BasicTheme.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme": {
+      "path": "src/SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme/SmartSoftware.AspNetCore.Components.WebAssembly.BasicTheme.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic": {
+      "path": "src/SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic/SmartSoftware.AspNetCore.Mvc.UI.Theme.Basic.sspkg",
+      "folder": "src"
+    },
+    "SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Tests": {
+      "path": "test/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Tests/SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.Demo.Tests.sspkg",
+      "folder": "test"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "culture": "zh-Hant",
+  "texts": {
+    "SmartSoftware.GlobalFeature:010001": "'{ServiceName}'服務需要啟用'{GlobalFeatureName}'功能."
+  }
+}

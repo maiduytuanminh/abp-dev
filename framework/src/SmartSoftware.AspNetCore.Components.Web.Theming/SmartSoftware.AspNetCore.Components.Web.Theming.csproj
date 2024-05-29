@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.BlazoriseUI\SmartSoftware.BlazoriseUI.csproj" />
+    <ProjectReference Include="..\SmartSoftware.UI.Navigation\SmartSoftware.UI.Navigation.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+﻿@page
+
+@using SmartSoftware.CmsKit.Admin.Web.Pages.CmsKit.Blogs
+@using SmartSoftware.CmsKit.Admin.Web.Pages
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+
+@inherits CmsKitAdminPageBase
+
+@model FeaturesModalModel
+
+@{
+    Layout = null;
+}
+
+<form action="/CmsKit/Blogs/FeaturesModal">
+    <ss-modal>
+        <ss-modal-header title="@L["Features"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-input asp-for="BlogId"></ss-input>
+            @for (int i = 0; i < Model.Items.Count; i++)
+            {
+                <div class="mb-3">
+
+                    @if (Model.Items[i].IsAvailable)
+                    {
+                        <ss-input asp-for="Items[i].IsEnabled"
+                                   label="@L[Model.Items[i].FeatureName]" />
+                    }
+                    else
+                    {
+                        <div data-toggle="tooltip" title="@L["BlogFeatureNotAvailable"]">
+                            <ss-input asp-for="Items[i].IsEnabled"
+                                       label="@L[Model.Items[i].FeatureName]"
+                                       disabled="true" />
+                        </div>
+                    }
+                    <ss-input asp-for="Items[i].FeatureName" />
+                </div>
+            }
+
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Close | SmartSoftwareModalButtons.Save)"></ss-modal-footer>
+    </ss-modal>
+</form>

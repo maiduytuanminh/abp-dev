@@ -1,0 +1,45 @@
+{
+  "name": "SmartSoftware.BlobStoring.Database.MongoDB",
+  "hash": "d0d45fc623e9180d60e60935449cb69b",
+  "contents": [
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database.MongoDB",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "SmartSoftware.BlobStoring.Database.Domain",
+          "namespace": "SmartSoftware.BlobStoring.Database",
+          "name": "BlobStoringDatabaseDomainModule"
+        },
+        {
+          "declaringAssemblyName": "SmartSoftware.MongoDB",
+          "namespace": "SmartSoftware.MongoDB",
+          "name": "SmartSoftwareMongoDbModule"
+        }
+      ],
+      "contentType": "ssModule",
+      "name": "BlobStoringDatabaseMongoDbModule",
+      "summary": null
+    },
+    {
+      "namespace": "SmartSoftware.BlobStoring.Database.MongoDB",
+      "connectionStringName": "SmartSoftwareBlobStoring",
+      "databaseCollections": [
+        {
+          "entityFullName": "SmartSoftware.BlobStoring.Database.DatabaseBlobContainer",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareBlobContainers",
+          "summary": null
+        },
+        {
+          "entityFullName": "SmartSoftware.BlobStoring.Database.DatabaseBlob",
+          "contentType": "databaseCollection",
+          "name": "SmartSoftwareBlobs",
+          "summary": null
+        }
+      ],
+      "contentType": "mongoDbContext",
+      "name": "BlobStoringMongoDbContext",
+      "summary": null
+    }
+  ]
+}

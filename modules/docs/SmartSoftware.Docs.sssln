@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "SmartSoftware.Docs": {
+      "path": "SmartSoftware.Docs.ssmdl"
+    }
+  }
+}

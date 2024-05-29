@@ -1,0 +1,4 @@
+src/SmartSoftware.Identity.HttpApi/Properties/launchSettings.json
+src/SmartSoftware.Identity.Web/Properties/launchSettings.json
+test/SmartSoftware.Identity.AspNetCore.Tests/Properties/launchSettings.json
+src/SmartSoftware.Identity.AspNetCore/Properties/launchSettings.json

@@ -1,0 +1,25 @@
+@inject NavigationManager Navigation
+@using SmartSoftware.DependencyInjection
+@using SmartSoftware.AspNetCore.Components.Web.BasicTheme.Themes.Basic
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.Extensions.Options
+@using SmartSoftware.AspNetCore.Components.Server
+@inherits RedirectToLogin
+@attribute [ExposeServices(typeof(RedirectToLogin))]
+@attribute [Dependency(ReplaceServices = true)]
+@inject IOptions<AuthenticationOptions> AuthenticationOptions
+@inject IOptions<SmartSoftwareAspNetCoreComponentsWebOptions> SmartSoftwareAspNetCoreComponentsWebOptions
+
+@code {
+    protected override void OnInitialized()
+    {
+        if (SmartSoftwareAspNetCoreComponentsWebOptions.Value.IsBlazorWebApp)
+        {
+            Navigation.NavigateTo(AuthenticationOptions.Value.LogoutUrl, forceLoad: true);
+        }
+        else
+        {
+            Navigation.NavigateToLogin(AuthenticationOptions.Value.LoginUrl);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\configureawait.props" />
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SmartSoftware.Blogging.EntityFrameworkCore</AssemblyName>
+    <PackageId>SmartSoftware.Blogging.EntityFrameworkCore</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Blogging.Domain\SmartSoftware.Blogging.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\SmartSoftware.EntityFrameworkCore\SmartSoftware.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\users\src\SmartSoftware.Users.EntityFrameworkCore\SmartSoftware.Users.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

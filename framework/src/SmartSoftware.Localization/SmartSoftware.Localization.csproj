@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\configureawait.props" />
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SmartSoftware.Localization</AssemblyName>
+    <PackageId>SmartSoftware.Localization</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SmartSoftware\Localization\Resources\**\*.json" />
+    <EmbeddedResource Include="SmartSoftware\Localization\Resources\**\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSoftware.Localization.Abstractions\SmartSoftware.Localization.Abstractions.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Settings\SmartSoftware.Settings.csproj" />
+    <ProjectReference Include="..\SmartSoftware.Threading\SmartSoftware.Threading.csproj" />
+    <ProjectReference Include="..\SmartSoftware.VirtualFileSystem\SmartSoftware.VirtualFileSystem.csproj" />
+  </ItemGroup>
+  
+</Project>

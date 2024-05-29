@@ -1,0 +1,21 @@
+﻿@page
+@using SmartSoftware.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@inherits SmartSoftware.Blogging.Admin.Pages.Blogging.BloggingAdminPage
+@model SmartSoftware.Blogging.Admin.Pages.Blogging.Admin.Blogs.EditModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SmartSoftware.Blogging.Localization
+@inject IHtmlLocalizer<BloggingResource> L
+@{
+    Layout = null;
+}
+
+<ss-dynamic-form ss-model="Blog" asp-page="/Blogging/Admin/Blogs/Edit">
+    <ss-modal size="@(SmartSoftwareModalSize.Large)">
+        <ss-modal-header title="@L["Edit"].Value"></ss-modal-header>
+        <ss-modal-body>
+            <ss-form-content />
+        </ss-modal-body>
+        <ss-modal-footer buttons="@(SmartSoftwareModalButtons.Cancel|SmartSoftwareModalButtons.Save)">
+        </ss-modal-footer>
+    </ss-modal>
+</ss-dynamic-form>

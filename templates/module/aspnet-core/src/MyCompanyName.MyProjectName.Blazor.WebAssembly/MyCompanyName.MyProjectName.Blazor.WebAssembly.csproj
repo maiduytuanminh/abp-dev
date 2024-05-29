@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <Import Project="..\..\common.props"/>
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\..\framework\src\SmartSoftware.AspNetCore.Components.WebAssembly.Theming\SmartSoftware.AspNetCore.Components.WebAssembly.Theming.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MyCompanyName.MyProjectName.Blazor\MyCompanyName.MyProjectName.Blazor.csproj"/>
+        <ProjectReference Include="..\MyCompanyName.MyProjectName.HttpApi.Client\MyCompanyName.MyProjectName.HttpApi.Client.csproj"/>
+    </ItemGroup>
+
+</Project>
