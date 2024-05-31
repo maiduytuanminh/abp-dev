@@ -1,0 +1,4 @@
+**/*
+!dist/**/*
+!ss.resourcemapping.js
+!ngcc.config.js

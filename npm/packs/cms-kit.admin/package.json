@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "name": "@smartsoftware/cms-kit.admin",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@smartsoftware/codemirror": "~1.0.0",
+    "@smartsoftware/jstree": "~1.0.0",
+    "@smartsoftware/slugify": "~1.0.0",
+    "@smartsoftware/tui-editor": "~1.0.0",
+    "@smartsoftware/uppy": "~1.0.0"
+  },
+  "gitHead": "bb4ea17d5996f01889134c138d00b6c8f858a431",
+  "homepage": "https://ss-framework.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ss-framework/ss-framework.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "aspnetcore",
+    "boilerplate",
+    "framework",
+    "web",
+    "best-practices",
+    "angular",
+    "react-native",
+    "maui",
+    "blazor",
+    "mvc",
+    "csharp",
+    "webapp"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "@smartsoftware/bootstrap-daterangepicker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ss-framework/ss-framework.git",
+    "directory": "npm/packs/bootstrap-daterangepicker"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "bootstrap-daterangepicker": "^3.1.0"
+  },
+  "gitHead": "bb4ea17d5996f01889134c138d00b6c8f858a431",
+  "homepage": "https://ss-framework.github.io",
+  "license": "MIT",
+  "keywords": [
+    "aspnetcore",
+    "boilerplate",
+    "framework",
+    "web",
+    "best-practices",
+    "angular",
+    "react-native",
+    "maui",
+    "blazor",
+    "mvc",
+    "csharp",
+    "webapp"
+  ]
+}

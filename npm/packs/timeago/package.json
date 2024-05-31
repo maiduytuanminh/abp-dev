@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "@smartsoftware/timeago",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ss-framework/ss-framework.git",
+    "directory": "npm/packs/timeago"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@smartsoftware/jquery": "~1.0.0",
+    "timeago": "^1.6.7"
+  },
+  "gitHead": "bb4ea17d5996f01889134c138d00b6c8f858a431",
+  "homepage": "https://ss-framework.github.io",
+  "license": "MIT",
+  "keywords": [
+    "aspnetcore",
+    "boilerplate",
+    "framework",
+    "web",
+    "best-practices",
+    "angular",
+    "react-native",
+    "maui",
+    "blazor",
+    "mvc",
+    "csharp",
+    "webapp"
+  ]
+}
